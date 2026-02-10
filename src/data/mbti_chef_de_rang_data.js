@@ -63,6 +63,40 @@ export const MBTI_CHEF_DE_RANG_DATA = {
         }
     },
 
+    "pretest_alert": {
+        "titre": "Phase 1 : Profil Chef de Rang",
+        "sous_titre": "Diriger un rang, c'est orchestrer l'excellence à chaque service.",
+        "message_principal": "Cette première étape définit ton style de leadership en salle.",
+        "conditions_requises": {
+            "physique": [
+                "12 à 15 minutes de disponibilité",
+                "Pas de distraction (mode avion conseillé)",
+                "Connexion stable"
+            ],
+            "mental": [
+                "Répondre instinctivement",
+                "Pas de 'bonne' ou 'mauvaise' réponse",
+                "Être honnête sur sa réalité terrain"
+            ],
+            "environnement": [
+                "Endroit calme si possible",
+                "Son activé (recommandé)",
+                "Luminosité adaptée"
+            ]
+        },
+        "avertissement": "Attention : Ce test n'est pas un examen de connaissances, mais une analyse de personnalité professionnelle. Tes résultats influenceront les questions de la phase technique.",
+        "apercu_test": {
+            "phase_1": "Profil MBTI",
+            "phase_2": "Test Technique",
+            "pause": "Pause",
+            "phase_3": "Mise en Situation"
+        },
+        "boutons": {
+            "reporter": "Reporter",
+            "commencer": "Commencer l'analyse"
+        }
+    },
+
     "questions": [
         // --- DIMENSION 1 : EXTRAVERSION (Capitaine) vs INTROVERSION (Maestro) ---
 

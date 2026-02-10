@@ -1,0 +1,943 @@
+{
+    "test_manager_restaurant": {
+        "meta": {
+            "poste": "Manager de Restaurant",
+            "total_questions": 100,
+            "total_reponses": 500,
+            "duree_estimee": "25-30 minutes",
+            "hierarchie": {
+                "superieur": "Directeur",
+                "subordonne_direct": "Manager Adjoint",
+                "subordonne_indirect": [
+                    "Chef de Rang",
+                    "Serveur",
+                    "Barman"
+                ]
+            }
+        },
+        "traits_mesures": [
+            "LEADER",
+            "SUIVEUR",
+            "DIPLOMATE",
+            "FRANC",
+            "STRATEGIQUE",
+            "OPERATIONNEL",
+            "AUTONOME",
+            "OBÉISSANT",
+            "PROTECTEUR",
+            "AUTORITAIRE",
+            "PÉDAGOGUE",
+            "EXIGEANT",
+            "FLEXIBLE",
+            "RIGOUREUX",
+            "VISIONNAIRE",
+            "PRAGMATIQUE",
+            "AMBITIEUX",
+            "HUMBLE",
+            "RÉSILIENT",
+            "SENSIBLE"
+        ],
+        "questions": [
+            {
+                "id": "Q001",
+                "situation": "Samedi soir plein, ton Manager Adjoint appelle malade 30 min avant le service.",
+                "A": "Je gère seul, je redistribue les rangs [AUTONOME,LEADER,RÉSILIENT]",
+                "B": "J'appelle un extra en urgence [PRAGMATIQUE,STRATEGIQUE]",
+                "C": "J'annule des réservations [SENSIBLE,PROTECTEUR]",
+                "D": "J'appelle le Directeur pour qu'il vienne [SUIVEUR,OBÉISSANT]",
+                "E": "Je fais monter un Chef de Rang [PÉDAGOGUE,FLEXIBLE]"
+            },
+            {
+                "id": "Q002",
+                "situation": "Ton Chef de Rang contredit tes ordres devant les serveurs.",
+                "A": "Je le remets à sa place immédiatement devant tout le monde [AUTORITAIRE,FRANC,EXIGEANT]",
+                "B": "Je laisse passer, on en parle après en privé [DIPLOMATE,HUMBLE,STRATEGIQUE]",
+                "C": "Je lui demande de s'expliquer devant l'équipe [FRANC,PÉDAGOGUE]",
+                "D": "Je change mes ordres pour éviter le conflit [FLEXIBLE,SENSIBLE,SUIVEUR]",
+                "E": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]"
+            },
+            {
+                "id": "Q003",
+                "situation": "Un serveur pleure dans la réserve, son ex vient de débarquer en salle avec une autre.",
+                "A": "Ressaisis-toi, on a un service [AUTORITAIRE,EXIGEANT,PRAGMATIQUE]",
+                "B": "Je le mets en pause 10 min, quelqu'un d'autre prend sa section [PROTECTEUR,SENSIBLE,FLEXIBLE]",
+                "C": "Je le renvoie chez lui, on gère sans lui [PROTECTEUR,PRAGMATIQUE]",
+                "D": "Je vire l'ex de la salle [PROTECTEUR,AUTORITAIRE]",
+                "E": "J'en parle au Directeur pour décider [OBÉISSANT,SUIVEUR]"
+            },
+            {
+                "id": "Q004",
+                "situation": "Ton meilleur serveur est défoncé, tu le vois dans les yeux. Gros service dans 1h.",
+                "A": "Je le vire sur-le-champ [AUTORITAIRE,RIGOUREUX,EXIGEANT]",
+                "B": "Je le laisse bosser, on règle ça après [PRAGMATIQUE,FLEXIBLE]",
+                "C": "Je le mets en cuisine/plonge, pas en salle [PRAGMATIQUE,PROTECTEUR]",
+                "D": "Discussion maintenant : il rentre chez lui [FRANC,RIGOUREUX]",
+                "E": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]"
+            },
+            {
+                "id": "Q005",
+                "situation": "Ton Manager Adjoint veut ton poste, il te sabote discrètement.",
+                "A": "Je le confronte directement en privé [FRANC,LEADER,AUTORITAIRE]",
+                "B": "J'en parle au Directeur [OBÉISSANT,DIPLOMATE]",
+                "C": "Je joue le jeu politique, je le neutralise [STRATEGIQUE,PRAGMATIQUE]",
+                "D": "Je lui propose qu'on bosse ensemble [DIPLOMATE,HUMBLE]",
+                "E": "Je demande sa mutation [AUTORITAIRE,PRAGMATIQUE]"
+            },
+            {
+                "id": "Q006",
+                "situation": "Conflit violent cuisine/salle : le Chef engueule tes serveurs.",
+                "A": "Je défends mes serveurs, je vais voir le Chef [PROTECTEUR,LEADER,FRANC]",
+                "B": "Je laisse faire, c'est pas mon problème [SUIVEUR,FLEXIBLE]",
+                "C": "Je recadre mes serveurs : respectez la cuisine [AUTORITAIRE,EXIGEANT]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Médiation : je réunis Chef + serveurs [DIPLOMATE,PÉDAGOGUE]"
+            },
+            {
+                "id": "Q007",
+                "situation": "Un serveur arrive bourré au service du soir.",
+                "A": "Je le renvoie immédiatement chez lui [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je le laisse travailler, il gère [FLEXIBLE,SUIVEUR]",
+                "C": "Je le mets au bar/plonge [PRAGMATIQUE,FLEXIBLE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le couvre, je redistribue ses tables [PROTECTEUR,SENSIBLE]"
+            },
+            {
+                "id": "Q008",
+                "situation": "Ton équipe est épuisée, le Directeur demande des heures sup ce week-end.",
+                "A": "J'accepte et je force l'équipe [OBÉISSANT,AUTORITAIRE]",
+                "B": "Je refuse pour protéger mon équipe [PROTECTEUR,LEADER]",
+                "C": "Je demande des compensations (primes, repos) [DIPLOMATE,STRATEGIQUE]",
+                "D": "Je demande des extras plutôt que forcer mes gens [PROTECTEUR,PRAGMATIQUE]",
+                "E": "J'accepte mais je sais qu'ils vont craquer [SUIVEUR,SENSIBLE]"
+            },
+            {
+                "id": "Q009",
+                "situation": "Un nouveau serveur est nul, il fait que des erreurs depuis 1 semaine.",
+                "A": "Je le vire direct [AUTORITAIRE,EXIGEANT]",
+                "B": "Je le forme mieux, je lui donne encore 1 semaine [PÉDAGOGUE,PROTECTEUR]",
+                "C": "Je le mets en observation, sanction si pas d'amélioration [RIGOUREUX,EXIGEANT]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le laisse, il va apprendre [FLEXIBLE,HUMBLE]"
+            },
+            {
+                "id": "Q010",
+                "situation": "Deux serveurs couchent ensemble, ça crée des tensions dans l'équipe.",
+                "A": "Je leur interdis de se voir [AUTORITAIRE,RIGOUREUX]",
+                "B": "Je les sépare : différents jours de service [PRAGMATIQUE,STRATEGIQUE]",
+                "C": "Je les laisse gérer, tant que ça marche [FLEXIBLE,HUMBLE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je vire l'un des deux [AUTORITAIRE,EXIGEANT]"
+            },
+            {
+                "id": "Q011",
+                "situation": "Ton Manager Adjoint est excellent mais arrive 15 min en retard tous les jours.",
+                "A": "Je ferme les yeux, il est trop bon [FLEXIBLE,PRAGMATIQUE]",
+                "B": "Discussion privée : je comprends pourquoi + ultimatum [DIPLOMATE,RIGOUREUX]",
+                "C": "Sanction immédiate [AUTORITAIRE,EXIGEANT]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le recadre devant l'équipe [AUTORITAIRE,FRANC]"
+            },
+            {
+                "id": "Q012",
+                "situation": "Un serveur balance que tu as des favoris dans l'équipe.",
+                "A": "Je l'ignore, c'est des conneries [AUTORITAIRE,SUIVEUR]",
+                "B": "Je me remets en question : c'est vrai ? [HUMBLE,SENSIBLE]",
+                "C": "Je le convoque pour qu'il s'explique [FRANC,LEADER]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le vire pour mauvaise ambiance [AUTORITAIRE,EXIGEANT]"
+            },
+            {
+                "id": "Q013",
+                "situation": "Le Chef de Rang drague lourdement une serveuse qui est mal à l'aise.",
+                "A": "Je le recadre immédiatement en privé [PROTECTEUR,RIGOUREUX]",
+                "B": "Je les laisse gérer entre eux [SUIVEUR,FLEXIBLE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je mute le Chef de Rang [PROTECTEUR,AUTORITAIRE]",
+                "E": "Avertissement écrit immédiat [RIGOUREUX,EXIGEANT]"
+            },
+            {
+                "id": "Q014",
+                "situation": "Ton équipe veut une augmentation collective, sinon ils menacent de partir.",
+                "A": "Je les menace en retour : partez si vous voulez [AUTORITAIRE,FRANC]",
+                "B": "Je négocie avec le Directeur [DIPLOMATE,STRATEGIQUE]",
+                "C": "J'explique que c'est pas possible, je cherche d'autres avantages [DIPLOMATE,PRAGMATIQUE]",
+                "D": "J'accepte leurs demandes [SUIVEUR,SENSIBLE]",
+                "E": "Je vire les meneurs [AUTORITAIRE,EXIGEANT]"
+            },
+            {
+                "id": "Q015",
+                "situation": "Un serveur t'accuse de harcèlement devant toute l'équipe.",
+                "A": "Je le vire immédiatement [AUTORITAIRE,EXIGEANT]",
+                "B": "Je demande des preuves devant tout le monde [FRANC,RIGOUREUX]",
+                "C": "J'en parle au Directeur immédiatement [OBÉISSANT,SUIVEUR]",
+                "D": "Je m'excuse même si c'est faux [DIPLOMATE,SENSIBLE]",
+                "E": "Je porte plainte pour diffamation [AUTORITAIRE,FRANC]"
+            },
+            {
+                "id": "Q016",
+                "situation": "Le Directeur te demande de virer quelqu'un mais tu ne sais pas qui.",
+                "A": "Je vire le moins performant [PRAGMATIQUE,EXIGEANT]",
+                "B": "Je refuse, je garde tout le monde [PROTECTEUR,LEADER]",
+                "C": "Je demande au Directeur qui virer [OBÉISSANT,SUIVEUR]",
+                "D": "Je vire le dernier arrivé [PRAGMATIQUE,AUTORITAIRE]",
+                "E": "Je négocie pour garder tout le monde [DIPLOMATE,PROTECTEUR]"
+            },
+            {
+                "id": "Q017",
+                "situation": "Un serveur vole dans la caisse, tu l'as vu. 200€.",
+                "A": "Je le confronte en privé [FRANC,DIPLOMATE]",
+                "B": "J'en parle au Directeur avant d'agir [OBÉISSANT,STRATEGIQUE]",
+                "C": "Je le vire sur-le-champ [AUTORITAIRE,RIGOUREUX]",
+                "D": "Je porte plainte [RIGOUREUX,AUTORITAIRE]",
+                "E": "Je lui demande de rembourser et je ferme les yeux [FLEXIBLE,PROTECTEUR]"
+            },
+            {
+                "id": "Q018",
+                "situation": "Ton équipe se plaint que tu es trop dur avec eux.",
+                "A": "Je m'en fous, c'est comme ça [AUTORITAIRE,EXIGEANT]",
+                "B": "Je me remets en question [HUMBLE,SENSIBLE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "J'explique pourquoi je suis exigeant [FRANC,PÉDAGOGUE]",
+                "E": "Je deviens plus cool [FLEXIBLE,SENSIBLE]"
+            },
+            {
+                "id": "Q019",
+                "situation": "Un serveur refuse de faire une tâche (nettoyage, plonge).",
+                "A": "Je le force [AUTORITAIRE,EXIGEANT]",
+                "B": "Je fais à sa place [HUMBLE,PROTECTEUR]",
+                "C": "Je le sanctionne [RIGOUREUX,AUTORITAIRE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je négocie : tu fais ça, je te donne autre chose [DIPLOMATE,FLEXIBLE]"
+            },
+            {
+                "id": "Q020",
+                "situation": "Le Chef de Rang veut démissionner, il en a marre.",
+                "A": "Tant pis, qu'il parte [AUTORITAIRE,PRAGMATIQUE]",
+                "B": "Je discute : qu'est-ce qui va pas ? [DIPLOMATE,PÉDAGOGUE]",
+                "C": "Je lui propose une augmentation [PROTECTEUR,FLEXIBLE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le retiens à tout prix [PROTECTEUR,SENSIBLE]"
+            },
+            {
+                "id": "Q021",
+                "situation": "Deux serveurs se battent en cuisine pendant le service.",
+                "A": "Je les sépare, ils finissent le service [PRAGMATIQUE,AUTORITAIRE]",
+                "B": "Je les vire tous les deux immédiatement [RIGOUREUX,AUTORITAIRE]",
+                "C": "Je renvoie un des deux chez lui [PRAGMATIQUE,EXIGEANT]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je les laisse régler leur compte [SUIVEUR,FLEXIBLE]"
+            },
+            {
+                "id": "Q022",
+                "situation": "Un serveur critique ton management sur les réseaux sociaux.",
+                "A": "Je le vire [AUTORITAIRE,EXIGEANT]",
+                "B": "Je l'ignore [FLEXIBLE,HUMBLE]",
+                "C": "Je le convoque pour discuter [FRANC,DIPLOMATE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je réponds publiquement [FRANC,AUTORITAIRE]"
+            },
+            {
+                "id": "Q023",
+                "situation": "Ton Manager Adjoint est meilleur que toi, tout le monde le préfère.",
+                "A": "Je le vire avant qu'il prenne ma place [AUTORITAIRE,STRATEGIQUE]",
+                "B": "J'apprends de lui [HUMBLE,PÉDAGOGUE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je le rabaisse devant l'équipe [AUTORITAIRE,EXIGEANT]",
+                "E": "Je lui propose qu'on échange nos postes [HUMBLE,DIPLOMATE]"
+            },
+            {
+                "id": "Q024",
+                "situation": "Un serveur demande un jour off pour un anniversaire important.",
+                "A": "Refus : on a besoin de lui [AUTORITAIRE,EXIGEANT]",
+                "B": "J'accepte, je trouve une solution [PROTECTEUR,FLEXIBLE]",
+                "C": "Je négocie : il bosse midi, off le soir [DIPLOMATE,PRAGMATIQUE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "J'accepte mais il me devra un service [STRATEGIQUE,EXIGEANT]"
+            },
+            {
+                "id": "Q025",
+                "situation": "Le Directeur te demande de bosser 70h cette semaine.",
+                "A": "J'accepte sans discuter [OBÉISSANT,RÉSILIENT]",
+                "B": "Je refuse net [LEADER,FRANC]",
+                "C": "Je négocie : OK mais compensation [DIPLOMATE,STRATEGIQUE]",
+                "D": "J'accepte mais je cherche un autre job [SUIVEUR,SENSIBLE]",
+                "E": "Je demande pourquoi et je propose des solutions [STRATEGIQUE,AUTONOME]"
+            },
+            {
+                "id": "Q026",
+                "situation": "Table de 8, addition 850€, refusent de payer 'service inadmissible'.",
+                "A": "J'appelle la police [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je négocie : je retire 10-15% pour éviter l'escalade [DIPLOMATE,PRAGMATIQUE]",
+                "C": "Je tiens bon : soit ils paient, soit police [AUTORITAIRE,EXIGEANT]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je laisse partir, tant pis [FLEXIBLE,SENSIBLE]"
+            },
+            {
+                "id": "Q027",
+                "situation": "Client régulier VIP te demande une table alors que c'est complet.",
+                "A": "Désolé, c'est complet [RIGOUREUX,FRANC]",
+                "B": "Je vire une réservation normale pour lui [FLEXIBLE,PRAGMATIQUE]",
+                "C": "Je lui propose le bar + priorité si désistement [DIPLOMATE,STRATEGIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je rajoute une table dans un coin [FLEXIBLE,PRAGMATIQUE]"
+            },
+            {
+                "id": "Q028",
+                "situation": "Un client insulte violemment un serveur.",
+                "A": "Je vire le client immédiatement [PROTECTEUR,AUTORITAIRE]",
+                "B": "Je calme le jeu, j'écoute le client [DIPLOMATE,FLEXIBLE]",
+                "C": "Je défends mon serveur, je recadre le client [PROTECTEUR,FRANC]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je laisse le serveur gérer [SUIVEUR,AUTONOME]"
+            },
+            {
+                "id": "Q029",
+                "situation": "Client trouve un cheveu dans son plat.",
+                "A": "Je m'excuse, plat offert [DIPLOMATE,SENSIBLE]",
+                "B": "Je refais le plat [PRAGMATIQUE,RIGOUREUX]",
+                "C": "Je vérifie si c'est vrai d'abord [RIGOUREUX,STRATEGIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "J'offre un dessert [DIPLOMATE,FLEXIBLE]"
+            },
+            {
+                "id": "Q030",
+                "situation": "Client mécontent menace d'un avis Google 1 étoile.",
+                "A": "Je m'en fous, qu'il le fasse [AUTORITAIRE,FRANC]",
+                "B": "J'offre une réduction pour éviter l'avis [DIPLOMATE,FLEXIBLE]",
+                "C": "J'écoute, je résous le problème, je suis après [DIPLOMATE,STRATEGIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le menace en retour [AUTORITAIRE,EXIGEANT]"
+            },
+            {
+                "id": "Q031",
+                "situation": "Un client demande à parler au 'responsable' pour se plaindre.",
+                "A": "J'y vais direct, c'est moi le Manager [LEADER,AUTONOME]",
+                "B": "J'envoie mon Manager Adjoint d'abord [STRATEGIQUE,OBÉISSANT]",
+                "C": "Je prends 2 minutes pour comprendre le problème avant [STRATEGIQUE,DIPLOMATE]",
+                "D": "Je dis que le responsable est absent [SUIVEUR,FLEXIBLE]",
+                "E": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]"
+            },
+            {
+                "id": "Q032",
+                "situation": "Table de 12, ils veulent séparer l'addition en 12 tickets.",
+                "A": "Refus : on fait pas ça [RIGOUREUX,AUTORITAIRE]",
+                "B": "J'accepte, on se démerde [FLEXIBLE,PRAGMATIQUE]",
+                "C": "Je négocie : max 3-4 tickets [DIPLOMATE,STRATEGIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "J'accepte mais je leur fais payer le service [STRATEGIQUE,EXIGEANT]"
+            },
+            {
+                "id": "Q033",
+                "situation": "Client arrive 45 min en retard, sa table est donnée.",
+                "A": "Tant pis pour lui, pas de table [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je trouve une solution, je rajoute une table [FLEXIBLE,DIPLOMATE]",
+                "C": "Je lui propose d'attendre 30 min [DIPLOMATE,PRAGMATIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je vire une autre réservation pour lui [FLEXIBLE,AUTORITAIRE]"
+            },
+            {
+                "id": "Q034",
+                "situation": "Un client filme tout le service pour TikTok/Instagram.",
+                "A": "Je lui demande d'arrêter [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je le laisse faire [FLEXIBLE,HUMBLE]",
+                "C": "Je lui demande de flouter les visages équipe [PROTECTEUR,DIPLOMATE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le vire [AUTORITAIRE,EXIGEANT]"
+            },
+            {
+                "id": "Q035",
+                "situation": "Client ivre, il gueule, il dérange les autres tables.",
+                "A": "Je le vire immédiatement [AUTORITAIRE,RIGOUREUX]",
+                "B": "Je lui propose un café, je calme [DIPLOMATE,PROTECTEUR]",
+                "C": "J'appelle la sécurité/police [RIGOUREUX,PRAGMATIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le laisse finir, je surveille [FLEXIBLE,SUIVEUR]"
+            },
+            {
+                "id": "Q036",
+                "situation": "Un client demande un plat qui n'est pas sur la carte.",
+                "A": "Refus : pas sur la carte [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je demande au Chef si c'est possible [DIPLOMATE,FLEXIBLE]",
+                "C": "J'accepte direct [FLEXIBLE,SUIVEUR]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je propose un plat similaire [DIPLOMATE,STRATEGIQUE]"
+            },
+            {
+                "id": "Q037",
+                "situation": "Table de 6, un seul paie, les autres sont partis sans payer.",
+                "A": "Je cours après eux [RÉSILIENT,AUTORITAIRE]",
+                "B": "Je fais payer le dernier pour tout le monde [PRAGMATIQUE,AUTORITAIRE]",
+                "C": "Je note les caméras, je porte plainte [RIGOUREUX,STRATEGIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Tant pis, je laisse partir [FLEXIBLE,SENSIBLE]"
+            },
+            {
+                "id": "Q038",
+                "situation": "Client allergique au gluten, cuisine se trompe, il fait un malaise.",
+                "A": "J'appelle les urgences immédiatement [RIGOUREUX,PROTECTEUR]",
+                "B": "Je m'excuse, j'offre le repas [DIPLOMATE,SENSIBLE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je nie, c'est pas notre faute [AUTORITAIRE,SUIVEUR]",
+                "E": "Je propose de l'amener à l'hôpital [PROTECTEUR,RÉSILIENT]"
+            },
+            {
+                "id": "Q039",
+                "situation": "Un influenceur demande un repas gratuit en échange de visibilité.",
+                "A": "Refus : on paie pas pour de la pub [RIGOUREUX,FRANC]",
+                "B": "J'accepte si il a +100k abonnés [STRATEGIQUE,PRAGMATIQUE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "J'accepte direct [FLEXIBLE,SUIVEUR]",
+                "E": "Je négocie : 50% de réduc [DIPLOMATE,STRATEGIQUE]"
+            },
+            {
+                "id": "Q040",
+                "situation": "Client régulier ne paie jamais les additions à temps, toujours en retard.",
+                "A": "Je refuse de le servir tant qu'il paie pas [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je continue, il finira par payer [FLEXIBLE,HUMBLE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je lui impose paiement immédiat [AUTORITAIRE,EXIGEANT]",
+                "E": "Je le bannis du resto [AUTORITAIRE,RIGOUREUX]"
+            },
+            {
+                "id": "Q041",
+                "situation": "Un client demande à changer de serveur 'il me plaît pas'.",
+                "A": "Refus : vous prenez ce serveur ou rien [PROTECTEUR,AUTORITAIRE]",
+                "B": "J'accepte, je change [FLEXIBLE,DIPLOMATE]",
+                "C": "Je demande pourquoi [FRANC,STRATEGIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je gère sa table moi-même [PROTECTEUR,RÉSILIENT]"
+            },
+            {
+                "id": "Q042",
+                "situation": "Table qui campe 3h après avoir fini, d'autres clients attendent.",
+                "A": "Je leur demande poliment de libérer [DIPLOMATE,RIGOUREUX]",
+                "B": "Je les laisse, tant pis pour les autres [FLEXIBLE,SUIVEUR]",
+                "C": "J'offre un digestif au bar [DIPLOMATE,STRATEGIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je monte le son de la musique [PRAGMATIQUE,AUTORITAIRE]"
+            },
+            {
+                "id": "Q043",
+                "situation": "Client te propose un pourboire de 200€ pour passer devant tout le monde.",
+                "A": "Je refuse, c'est pas comme ça que ça marche [RIGOUREUX,FRANC]",
+                "B": "J'accepte, 200€ c'est 200€ [FLEXIBLE,PRAGMATIQUE]",
+                "C": "J'accepte mais je le donne à l'équipe [PROTECTEUR,HUMBLE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je négocie une meilleure table pour lui [DIPLOMATE,STRATEGIQUE]"
+            },
+            {
+                "id": "Q044",
+                "situation": "Un client te drague lourdement pendant le service.",
+                "A": "Je reste pro, je gère [RIGOUREUX,AUTONOME]",
+                "B": "Je lui dis d'arrêter [FRANC,AUTORITAIRE]",
+                "C": "Je laisse faire, c'est flatteur [FLEXIBLE,SENSIBLE]",
+                "D": "J'envoie quelqu'un d'autre [DIPLOMATE,PRAGMATIQUE]",
+                "E": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]"
+            },
+            {
+                "id": "Q045",
+                "situation": "Groupe de 15 arrive sans réservation, réclame une table immédiatement.",
+                "A": "Refus : on prend pas sans résa [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je trouve une solution, on s'arrange [FLEXIBLE,DIPLOMATE]",
+                "C": "Je leur propose d'attendre 1h [DIPLOMATE,PRAGMATIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je vire d'autres réservations [FLEXIBLE,AUTORITAIRE]"
+            },
+            {
+                "id": "Q046",
+                "situation": "Gros coup de feu, cuisine débordée, 1h30 d'attente. Que fais-tu en PRIORITÉ ?",
+                "A": "Je vais en cuisine aider [RÉSILIENT,OPERATIONNEL]",
+                "B": "Je gère la salle, je rassure les clients [LEADER,DIPLOMATE]",
+                "C": "J'arrête de prendre des réservations [PRAGMATIQUE,RIGOUREUX]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je laisse faire, ça va passer [SUIVEUR,FLEXIBLE]"
+            },
+            {
+                "id": "Q047",
+                "situation": "3 serveurs absents le même jour, gros service ce soir.",
+                "A": "J'appelle des extras en urgence [PRAGMATIQUE,STRATEGIQUE]",
+                "B": "On gère avec l'équipe présente [RÉSILIENT,LEADER]",
+                "C": "J'annule des réservations [PRAGMATIQUE,PROTECTEUR]",
+                "D": "J'appelle le Directeur pour qu'il vienne [OBÉISSANT,SUIVEUR]",
+                "E": "Je ferme le service [AUTORITAIRE,RIGOUREUX]"
+            },
+            {
+                "id": "Q048",
+                "situation": "Coupure d'électricité totale, service dans 2h.",
+                "A": "J'annule le service [RIGOUREUX,PRAGMATIQUE]",
+                "B": "Groupe électrogène + carte adaptée [STRATEGIQUE,RÉSILIENT]",
+                "C": "Service à la bougie uniquement [FLEXIBLE,PRAGMATIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "J'attends que ça revienne [SUIVEUR,FLEXIBLE]"
+            },
+            {
+                "id": "Q049",
+                "situation": "Le frigo tombe en panne, 5000€ de marchandises en danger.",
+                "A": "J'appelle un réparateur en urgence [PRAGMATIQUE,RÉSILIENT]",
+                "B": "Je transfère tout dans d'autres frigos [STRATEGIQUE,OPERATIONNEL]",
+                "C": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je cuisine tout ce qui peut l'être [PRAGMATIQUE,FLEXIBLE]",
+                "E": "Je mets tout dehors s'il fait froid [PRAGMATIQUE,RÉSILIENT]"
+            },
+            {
+                "id": "Q050",
+                "situation": "Livraison de 2000€ de marchandises pas conformes, service dans 3h.",
+                "A": "Je refuse la livraison [RIGOUREUX,AUTORITAIRE]",
+                "B": "J'accepte, on s'adapte [FLEXIBLE,PRAGMATIQUE]",
+                "C": "J'appelle le fournisseur en urgence [STRATEGIQUE,DIPLOMATE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "J'achète en supermarché au prix fort [PRAGMATIQUE,RÉSILIENT]"
+            },
+            {
+                "id": "Q051",
+                "situation": "Inspection sanitaire surprise dans 10 minutes.",
+                "A": "Je panique, on refait tout [SENSIBLE,RÉSILIENT]",
+                "B": "Je mobilise l'équipe, priorités [LEADER,STRATEGIQUE]",
+                "C": "J'assume, on verra bien [HUMBLE,RÉSILIENT]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je repousse l'inspection [STRATEGIQUE,AUTORITAIRE]"
+            },
+            {
+                "id": "Q052",
+                "situation": "Le Chef et toi êtes en désaccord sur l'organisation du service.",
+                "A": "C'est moi qui décide, point final [AUTORITAIRE,LEADER]",
+                "B": "On discute, on trouve un compromis [DIPLOMATE,HUMBLE]",
+                "C": "Je laisse le Chef décider [SUIVEUR,FLEXIBLE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "On teste les deux méthodes [PRAGMATIQUE,PÉDAGOGUE]"
+            },
+            {
+                "id": "Q053",
+                "situation": "Tu dois faire le planning de la semaine, tout le monde veut le week-end off.",
+                "A": "Rotation équitable [RIGOUREUX,HUMBLE]",
+                "B": "Les anciens ont la priorité [PROTECTEUR,HUMBLE]",
+                "C": "Les meilleurs ont la priorité [EXIGEANT,PRAGMATIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Tirage au sort [FLEXIBLE,HUMBLE]"
+            },
+            {
+                "id": "Q054",
+                "situation": "Service catastrophique hier : 2h d'attente, clients furieux. Qu'est-ce que tu changes ?",
+                "A": "Je revois toute l'organisation [STRATEGIQUE,VISIONNAIRE]",
+                "B": "Je recadre l'équipe [AUTORITAIRE,EXIGEANT]",
+                "C": "J'analyse chaque erreur [RIGOUREUX,PÉDAGOGUE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Rien, c'était exceptionnel [FLEXIBLE,HUMBLE]"
+            },
+            {
+                "id": "Q055",
+                "situation": "Le système de réservation plante, tu as 50 réservations ce soir, tout est perdu.",
+                "A": "Je gère au feeling [RÉSILIENT,FLEXIBLE]",
+                "B": "J'appelle tous les clients pour reconfirmer [RIGOUREUX,PROTECTEUR]",
+                "C": "J'annule tout [AUTORITAIRE,RIGOUREUX]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je note sur papier en urgence [PRAGMATIQUE,RÉSILIENT]"
+            },
+            {
+                "id": "Q056",
+                "situation": "Caisse qui ne marche plus en plein service.",
+                "A": "Je note tout sur papier [PRAGMATIQUE,RIGOUREUX]",
+                "B": "J'appelle un technicien [STRATEGIQUE,PRAGMATIQUE]",
+                "C": "Je ferme jusqu'à réparation [RIGOUREUX,AUTORITAIRE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je fais payer par carte uniquement [PRAGMATIQUE,FLEXIBLE]"
+            },
+            {
+                "id": "Q057",
+                "situation": "Fuite d'eau majeure dans les toilettes clients.",
+                "A": "Je ferme les toilettes, je gère [PRAGMATIQUE,RÉSILIENT]",
+                "B": "J'appelle un plombier [STRATEGIQUE,RIGOUREUX]",
+                "C": "Je ferme le resto [RIGOUREUX,AUTORITAIRE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je mets des seaux, on continue [PRAGMATIQUE,RÉSILIENT]"
+            },
+            {
+                "id": "Q058",
+                "situation": "Tu reçois 80 couverts alors que tu en attendais 50.",
+                "A": "Je refuse les clients en trop [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je prends tout, on se démerde [RÉSILIENT,FLEXIBLE]",
+                "C": "Je rallonge les temps d'attente [DIPLOMATE,PRAGMATIQUE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je fais tourner les tables plus vite [STRATEGIQUE,EXIGEANT]"
+            },
+            {
+                "id": "Q059",
+                "situation": "Le Chef part en plein service suite à un clash.",
+                "A": "Je le retiens à tout prix [DIPLOMATE,PROTECTEUR]",
+                "B": "Tant pis, je fais sans lui [RÉSILIENT,AUTONOME]",
+                "C": "Je le laisse partir, je gère la cuisine [RÉSILIENT,LEADER]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je ferme le service [RIGOUREUX,AUTORITAIRE]"
+            },
+            {
+                "id": "Q060",
+                "situation": "Ton planning est fait, le Directeur te demande de tout changer.",
+                "A": "Je refuse, c'est fait [AUTORITAIRE,FRANC]",
+                "B": "Je refais tout [OBÉISSANT,RÉSILIENT]",
+                "C": "Je négocie : pourquoi changer ? [DIPLOMATE,STRATEGIQUE]",
+                "D": "J'accepte en râlant [SUIVEUR,SENSIBLE]",
+                "E": "Je demande de l'aide pour refaire [HUMBLE,DIPLOMATE]"
+            },
+            {
+                "id": "Q061",
+                "situation": "Il te manque 3 serveurs pour le service de demain.",
+                "A": "J'appelle des extras [PRAGMATIQUE,STRATEGIQUE]",
+                "B": "Je bosse en salle moi-même [RÉSILIENT,LEADER]",
+                "C": "J'annule des réservations [PRAGMATIQUE,RIGOUREUX]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je fais avec l'équipe présente [RÉSILIENT,FLEXIBLE]"
+            },
+            {
+                "id": "Q062",
+                "situation": "Alarme incendie se déclenche en plein service.",
+                "A": "J'évacue immédiatement [RIGOUREUX,PROTECTEUR]",
+                "B": "Je vérifie si c'est une fausse alerte [STRATEGIQUE,PRAGMATIQUE]",
+                "C": "J'appelle les pompiers [RIGOUREUX,PROTECTEUR]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je laisse finir le service [SUIVEUR,FLEXIBLE]"
+            },
+            {
+                "id": "Q063",
+                "situation": "Le Directeur te demande de faire un inventaire complet ce soir après le service.",
+                "A": "J'accepte, je reste [OBÉISSANT,RÉSILIENT]",
+                "B": "Je refuse, je suis crevé [FRANC,PROTECTEUR]",
+                "C": "Je propose demain matin [DIPLOMATE,STRATEGIQUE]",
+                "D": "Je le fais à moitié [SUIVEUR,FLEXIBLE]",
+                "E": "Je délègue au Manager Adjoint [STRATEGIQUE,AUTORITAIRE]"
+            },
+            {
+                "id": "Q064",
+                "situation": "Tu découvres que la chambre froide est à 12°C au lieu de 4°C depuis hier.",
+                "A": "Je jette tout [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je vérifie ce qui est encore bon [PRAGMATIQUE,STRATEGIQUE]",
+                "C": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je continue à utiliser [FLEXIBLE,SUIVEUR]",
+                "E": "J'appelle la maintenance [PRAGMATIQUE,RIGOUREUX]"
+            },
+            {
+                "id": "Q065",
+                "situation": "Le système de ventilation tombe en panne, il fait 35°C en cuisine.",
+                "A": "Je continue, on gère [RÉSILIENT,EXIGEANT]",
+                "B": "J'appelle un réparateur [PRAGMATIQUE,STRATEGIQUE]",
+                "C": "Je ferme le service [RIGOUREUX,PROTECTEUR]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "J'achète des ventilateurs [PRAGMATIQUE,RÉSILIENT]"
+            },
+            {
+                "id": "Q066",
+                "situation": "Grosse erreur de commande : tu as 50kg de viande en trop.",
+                "A": "Je congèle tout [PRAGMATIQUE,STRATEGIQUE]",
+                "B": "Je fais des promos [STRATEGIQUE,FLEXIBLE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je renvoie au fournisseur [RIGOUREUX,FRANC]",
+                "E": "Je change la carte pour écouler [STRATEGIQUE,PRAGMATIQUE]"
+            },
+            {
+                "id": "Q067",
+                "situation": "Le Directeur te demande de travailler le jour de ton mariage.",
+                "A": "J'accepte, je reporte le mariage [OBÉISSANT,RÉSILIENT]",
+                "B": "Je refuse catégoriquement [FRANC,AUTORITAIRE]",
+                "C": "Je propose une solution de remplacement [DIPLOMATE,STRATEGIQUE]",
+                "D": "Je démissionne [FRANC,SENSIBLE]",
+                "E": "Je négocie mes congés [DIPLOMATE,PROTECTEUR]"
+            },
+            {
+                "id": "Q068",
+                "situation": "Tu te rends compte que tu as oublié de commander pour demain.",
+                "A": "Je commande en urgence ce soir [RÉSILIENT,PRAGMATIQUE]",
+                "B": "J'adapte la carte avec ce qu'on a [FLEXIBLE,STRATEGIQUE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "J'achète en supermarché demain matin [PRAGMATIQUE,RÉSILIENT]",
+                "E": "Je panique [SENSIBLE,SUIVEUR]"
+            },
+            {
+                "id": "Q069",
+                "situation": "Le wifi tombe en panne, les clients râlent.",
+                "A": "Tant pis, pas de wifi [RIGOUREUX,AUTORITAIRE]",
+                "B": "J'appelle le technicien [PRAGMATIQUE,STRATEGIQUE]",
+                "C": "J'offre un digestif pour compenser [DIPLOMATE,FLEXIBLE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je partage mon 4G [FLEXIBLE,PROTECTEUR]"
+            },
+            {
+                "id": "Q070",
+                "situation": "Incendie en cuisine, petit feu contrôlable.",
+                "A": "J'éteins avec l'extincteur [RÉSILIENT,PRAGMATIQUE]",
+                "B": "J'évacue et j'appelle les pompiers [RIGOUREUX,PROTECTEUR]",
+                "C": "Je laisse le Chef gérer [SUIVEUR,FLEXIBLE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je jette de l'eau [PRAGMATIQUE,RÉSILIENT]"
+            },
+            {
+                "id": "Q071",
+                "situation": "Tu reçois une livraison de 10 000€, mais c'est pas pour ton resto.",
+                "A": "Je refuse la livraison [RIGOUREUX,FRANC]",
+                "B": "J'accepte, je gère après [FLEXIBLE,PRAGMATIQUE]",
+                "C": "J'appelle le fournisseur [STRATEGIQUE,DIPLOMATE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je garde, cadeau [FLEXIBLE,AUTORITAIRE]"
+            },
+            {
+                "id": "Q072",
+                "situation": "Le Directeur te demande un rapport détaillé du service ce soir, à rendre demain 8h.",
+                "A": "J'accepte, je fais des heures sup [OBÉISSANT,RÉSILIENT]",
+                "B": "Je refuse, pas le temps [FRANC,PROTECTEUR]",
+                "C": "Je demande plus de temps [DIPLOMATE,STRATEGIQUE]",
+                "D": "Je bâcle le rapport [SUIVEUR,FLEXIBLE]",
+                "E": "Je délègue [STRATEGIQUE,AUTORITAIRE]"
+            },
+            {
+                "id": "Q073",
+                "situation": "Réservation de 30 personnes samedi soir avec acompte 500€, annulée 1h avant.",
+                "A": "Je garde l'acompte, c'est dans les CGV [RIGOUREUX,AUTORITAIRE]",
+                "B": "Je rembourse quand même pour garder le client [FLEXIBLE,DIPLOMATE]",
+                "C": "Je propose un avoir pour plus tard [DIPLOMATE,STRATEGIQUE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je garde l'acompte ET j'ouvre en walk-in pour remplir [PRAGMATIQUE,STRATEGIQUE]"
+            },
+            {
+                "id": "Q074",
+                "situation": "Le lave-vaisselle tombe en panne en plein service.",
+                "A": "On fait la plonge à la main [RÉSILIENT,PRAGMATIQUE]",
+                "B": "J'appelle un réparateur [STRATEGIQUE,RIGOUREUX]",
+                "C": "Je ferme le service [RIGOUREUX,AUTORITAIRE]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je loue un lave-vaisselle en urgence [STRATEGIQUE,RÉSILIENT]"
+            },
+            {
+                "id": "Q075",
+                "situation": "Ton Manager Adjoint fait n'importe quoi, le service part en vrille.",
+                "A": "Je le recadre en plein service [AUTORITAIRE,FRANC]",
+                "B": "Je prends le relais, je gère moi-même [LEADER,RÉSILIENT]",
+                "C": "Je le laisse se planter [SUIVEUR,EXIGEANT]",
+                "D": "J'appelle le Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je l'aide discrètement [PÉDAGOGUE,PROTECTEUR]"
+            },
+            {
+                "id": "Q076",
+                "situation": "Tu remarques que le food cost explose à +8% ce mois.",
+                "A": "J'analyse les bons de commande et les ventes [RIGOUREUX,STRATEGIQUE]",
+                "B": "Je surveille discrètement l'équipe (vols ?) [STRATEGIQUE,AUTORITAIRE]",
+                "C": "Je pèse les portions en cuisine [RIGOUREUX,OPERATIONNEL]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "J'attends de voir si ça continue [FLEXIBLE,SUIVEUR]"
+            },
+            {
+                "id": "Q077",
+                "situation": "Le Chef te dit qu'il manque 15kg de viande à l'inventaire.",
+                "A": "J'accuse directement quelqu'un [AUTORITAIRE,FRANC]",
+                "B": "Je refais l'inventaire avec lui [RIGOUREUX,DIPLOMATE]",
+                "C": "J'en parle au Directeur immédiatement [OBÉISSANT,SUIVEUR]",
+                "D": "J'enquête : qui avait accès ? [STRATEGIQUE,RIGOUREUX]",
+                "E": "Je note et je surveille [PRAGMATIQUE,STRATEGIQUE]"
+            },
+            {
+                "id": "Q078",
+                "situation": "Tu surprends un serveur en train de manger un plat complet en cuisine pendant le service.",
+                "A": "Je le recadre immédiatement [AUTORITAIRE,RIGOUREUX]",
+                "B": "Je le laisse finir, on en parle après [DIPLOMATE,FLEXIBLE]",
+                "C": "Je comprends : il n'a pas mangé ? [SENSIBLE,PROTECTEUR]",
+                "D": "Je le vire [AUTORITAIRE,EXIGEANT]",
+                "E": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]"
+            },
+            {
+                "id": "Q079",
+                "situation": "Tu vois ton Manager Adjoint donner des portions doubles à ses potes.",
+                "A": "Je le confronte immédiatement [FRANC,AUTORITAIRE]",
+                "B": "Je note, je surveille [STRATEGIQUE,RIGOUREUX]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je laisse passer [FLEXIBLE,HUMBLE]",
+                "E": "Je recadre devant l'équipe [AUTORITAIRE,FRANC]"
+            },
+            {
+                "id": "Q080",
+                "situation": "Le Directeur te demande de réduire le food cost de 3% ce mois.",
+                "A": "Je surveille les portions [RIGOUREUX,OPERATIONNEL]",
+                "B": "Je réduis le gaspillage [PRAGMATIQUE,STRATEGIQUE]",
+                "C": "J'optimise avec le Chef [DIPLOMATE,STRATEGIQUE]",
+                "D": "Je dis que c'est impossible [FRANC,SUIVEUR]",
+                "E": "J'accepte sans savoir comment [OBÉISSANT,SUIVEUR]"
+            },
+            {
+                "id": "Q081",
+                "situation": "Tu constates que 20% de la nourriture part à la poubelle chaque soir.",
+                "A": "Je recadre l'équipe sur le gaspillage [AUTORITAIRE,EXIGEANT]",
+                "B": "J'adapte les quantités de production [STRATEGIQUE,PRAGMATIQUE]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "C'est normal en restauration [FLEXIBLE,HUMBLE]",
+                "E": "Je donne aux employés [PROTECTEUR,FLEXIBLE]"
+            },
+            {
+                "id": "Q082",
+                "situation": "Un fournisseur te propose une ristourne de 15% si tu commandes le double.",
+                "A": "J'accepte direct [FLEXIBLE,PRAGMATIQUE]",
+                "B": "Je calcule si on peut écouler [STRATEGIQUE,RIGOUREUX]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je refuse, trop risqué [RIGOUREUX,HUMBLE]",
+                "E": "Je négocie 10% sans doubler [DIPLOMATE,STRATEGIQUE]"
+            },
+            {
+                "id": "Q083",
+                "situation": "Tu découvres que le Chef utilise des produits périmés depuis 3 jours.",
+                "A": "Je le vire immédiatement [AUTORITAIRE,RIGOUREUX]",
+                "B": "Je jette tout [RIGOUREUX,PROTECTEUR]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je le recadre sévèrement [AUTORITAIRE,FRANC]",
+                "E": "Je ferme les yeux, c'est 3 jours [FLEXIBLE,SUIVEUR]"
+            },
+            {
+                "id": "Q084",
+                "situation": "Les portions servies sont beaucoup trop grosses, le food cost explose.",
+                "A": "Je recadre la cuisine [AUTORITAIRE,RIGOUREUX]",
+                "B": "Je pèse moi-même les portions [RIGOUREUX,OPERATIONNEL]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je laisse faire, les clients sont contents [FLEXIBLE,SENSIBLE]",
+                "E": "Je fais des fiches techniques [STRATEGIQUE,RIGOUREUX]"
+            },
+            {
+                "id": "Q085",
+                "situation": "Tu vois des produits de qualité inférieure livrés à la place de ce que tu as commandé.",
+                "A": "Je refuse la livraison [RIGOUREUX,AUTORITAIRE]",
+                "B": "J'accepte, je râle après [SUIVEUR,FLEXIBLE]",
+                "C": "J'appelle le fournisseur immédiatement [FRANC,STRATEGIQUE]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "J'accepte avec une ristourne [DIPLOMATE,PRAGMATIQUE]"
+            },
+            {
+                "id": "Q086",
+                "situation": "Le Chef commande pour 3000€ sans te demander.",
+                "A": "Je refuse la livraison [AUTORITAIRE,RIGOUREUX]",
+                "B": "J'accepte, on en parle après [FLEXIBLE,DIPLOMATE]",
+                "C": "Je le recadre sévèrement [AUTORITAIRE,FRANC]",
+                "D": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "E": "Je le vire [AUTORITAIRE,EXIGEANT]"
+            },
+            {
+                "id": "Q087",
+                "situation": "Tu constates que les poubelles sont pleines de bouteilles de vin à moitié vides.",
+                "A": "Je recadre l'équipe [AUTORITAIRE,RIGOUREUX]",
+                "B": "J'enquête : qui gaspille ? [STRATEGIQUE,RIGOUREUX]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "Je mets un système de contrôle [STRATEGIQUE,AUTORITAIRE]",
+                "E": "C'est normal [FLEXIBLE,HUMBLE]"
+            },
+            {
+                "id": "Q088",
+                "situation": "Un serveur te demande à emporter les restes pour chez lui.",
+                "A": "Refus catégorique [RIGOUREUX,AUTORITAIRE]",
+                "B": "J'accepte, c'est mieux que jeter [FLEXIBLE,PROTECTEUR]",
+                "C": "J'en parle au Directeur [OBÉISSANT,SUIVEUR]",
+                "D": "J'accepte mais je contrôle ce qu'il prend [DIPLOMATE,RIGOUREUX]",
+                "E": "Je laisse faire [FLEXIBLE,HUMBLE]"
+            },
+            {
+                "id": "Q089",
+                "situation": "Le Directeur te demande de faire l'inventaire toutes les semaines.",
+                "A": "J'accepte [OBÉISSANT,RIGOUREUX]",
+                "B": "Je refuse, c'est trop [FRANC,PROTECTEUR]",
+                "C": "Je propose toutes les 2 semaines [DIPLOMATE,STRATEGIQUE]",
+                "D": "Je délègue au Manager Adjoint [STRATEGIQUE,AUTORITAIRE]",
+                "E": "Je le fais à moitié [SUIVEUR,FLEXIBLE]"
+            },
+            {
+                "id": "Q090",
+                "situation": "Tu découvres qu'un plat coûte 18€ à produire mais se vend 22€.",
+                "A": "J'en parle au Directeur pour augmenter le prix [STRATEGIQUE,OBÉISSANT]",
+                "B": "Je retire le plat de la carte [PRAGMATIQUE,AUTORITAIRE]",
+                "C": "J'optimise la recette pour baisser le coût [STRATEGIQUE,PRAGMATIQUE]",
+                "D": "Je laisse, c'est le Directeur qui décide [SUIVEUR,HUMBLE]",
+                "E": "Je réduis les portions [PRAGMATIQUE,RIGOUREUX]"
+            },
+            {
+                "id": "Q091",
+                "situation": "Le Directeur te hurle dessus devant toute l'équipe.",
+                "A": "Je lui réponds sur le même ton [FRANC,AUTORITAIRE]",
+                "B": "J'encaisse, j'en parle en privé après [DIPLOMATE,HUMBLE]",
+                "C": "J'encaisse et je cherche un autre job [SUIVEUR,SENSIBLE]",
+                "D": "Je démissionne sur-le-champ [FRANC,SENSIBLE]",
+                "E": "Je m'excuse même si j'ai rien fait [OBÉISSANT,SENSIBLE]"
+            },
+            {
+                "id": "Q092",
+                "situation": "Le Directeur te demande de mentir sur les chiffres.",
+                "A": "Je refuse catégoriquement [RIGOUREUX,FRANC]",
+                "B": "J'accepte, c'est lui le patron [OBÉISSANT,SUIVEUR]",
+                "C": "Je fais semblant d'accepter [STRATEGIQUE,DIPLOMATE]",
+                "D": "Je démissionne [RIGOUREUX,FRANC]",
+                "E": "J'en parle à quelqu'un d'autre [STRATEGIQUE,PROTECTEUR]"
+            },
+            {
+                "id": "Q093",
+                "situation": "Le Directeur te fixe des objectifs impossibles.",
+                "A": "J'accepte sans discuter [OBÉISSANT,RÉSILIENT]",
+                "B": "Je négocie des objectifs réalistes [DIPLOMATE,STRATEGIQUE]",
+                "C": "J'accepte mais je sais que je vais échouer [SUIVEUR,SENSIBLE]",
+                "D": "Je refuse [FRANC,AUTORITAIRE]",
+                "E": "Je démissionne [FRANC,SENSIBLE]"
+            },
+            {
+                "id": "Q094",
+                "situation": "Le Directeur te demande ton avis, puis fait l'inverse.",
+                "A": "Je m'en fous, c'est lui qui décide [HUMBLE,SUIVEUR]",
+                "B": "Je lui dis que ça me saoule [FRANC,AUTORITAIRE]",
+                "C": "J'arrête de donner mon avis [SUIVEUR,SENSIBLE]",
+                "D": "Je démissionne [FRANC,SENSIBLE]",
+                "E": "J'exécute sans discuter [OBÉISSANT,RÉSILIENT]"
+            },
+            {
+                "id": "Q095",
+                "situation": "Le Directeur te propose une promotion mais sans augmentation.",
+                "A": "J'accepte, c'est une opportunité [AMBITIEUX,HUMBLE]",
+                "B": "Je refuse, pas d'augmentation = pas de promotion [FRANC,STRATEGIQUE]",
+                "C": "Je négocie l'augmentation [DIPLOMATE,STRATEGIQUE]",
+                "D": "J'accepte en attendant mieux ailleurs [STRATEGIQUE,FLEXIBLE]",
+                "E": "Je démissionne [FRANC,SENSIBLE]"
+            },
+            {
+                "id": "Q096",
+                "situation": "Le Directeur est absent 3 semaines, tout repose sur toi.",
+                "A": "Je gère, c'est l'occasion de briller [AMBITIEUX,LEADER]",
+                "B": "Je panique, c'est trop [SENSIBLE,SUIVEUR]",
+                "C": "Je demande de l'aide [HUMBLE,DIPLOMATE]",
+                "D": "Je fais au minimum [SUIVEUR,FLEXIBLE]",
+                "E": "Je démissionne [SENSIBLE,FRANC]"
+            },
+            {
+                "id": "Q097",
+                "situation": "Le Directeur fait une erreur grave, tu es le seul à le savoir.",
+                "A": "Je lui en parle en privé [DIPLOMATE,PROTECTEUR]",
+                "B": "Je le balance à sa hiérarchie [FRANC,RIGOUREUX]",
+                "C": "Je ferme les yeux [FLEXIBLE,HUMBLE]",
+                "D": "Je le couvre [PROTECTEUR,OBÉISSANT]",
+                "E": "J'en profite pour négocier [STRATEGIQUE,AUTORITAIRE]"
+            },
+            {
+                "id": "Q098",
+                "situation": "Le Directeur te demande de faire quelque chose d'illégal (fausses factures, etc).",
+                "A": "Je refuse catégoriquement [RIGOUREUX,FRANC]",
+                "B": "J'accepte par peur [OBÉISSANT,SENSIBLE]",
+                "C": "Je démissionne [RIGOUREUX,FRANC]",
+                "D": "Je dénonce [RIGOUREUX,PROTECTEUR]",
+                "E": "Je fais semblant d'accepter [STRATEGIQUE,DIPLOMATE]"
+            },
+            {
+                "id": "Q099",
+                "situation": "Le Directeur te critique constamment en public.",
+                "A": "Je lui dis d'arrêter [FRANC,AUTORITAIRE]",
+                "B": "J'encaisse [HUMBLE,RÉSILIENT]",
+                "C": "Je démissionne [FRANC,SENSIBLE]",
+                "D": "Je le critique en retour [AUTORITAIRE,FRANC]",
+                "E": "J'en parle à sa hiérarchie [STRATEGIQUE,PROTECTEUR]"
+            },
+            {
+                "id": "Q100",
+                "situation": "Le Directeur évolue dans le groupe, il te propose de prendre sa place.",
+                "A": "J'accepte immédiatement, c'est une opportunité [AMBITIEUX,LEADER]",
+                "B": "Je demande les conditions (salaire, responsabilités) [STRATEGIQUE,PRAGMATIQUE]",
+                "C": "Je refuse, je suis bien Manager [HUMBLE,SUIVEUR]",
+                "D": "Je négocie (formation, période d'essai) [DIPLOMATE,STRATEGIQUE]",
+                "E": "J'hésite, je réfléchis longtemps [SENSIBLE,HUMBLE]"
+            }
+        ]
+    }
+}

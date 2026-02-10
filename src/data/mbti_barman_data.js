@@ -63,6 +63,40 @@ export const MBTI_BARMAN_DATA = {
         }
     },
 
+    "pretest_alert": {
+        "titre": "Phase 1 : Profil Barman",
+        "sous_titre": "Derrière chaque comptoir se cache une personnalité unique.",
+        "message_principal": "Cette première étape définit ton style de bar naturel.",
+        "conditions_requises": {
+            "physique": [
+                "12 à 15 minutes de disponibilité",
+                "Pas de distraction (mode avion conseillé)",
+                "Connexion stable"
+            ],
+            "mental": [
+                "Répondre instinctivement",
+                "Pas de 'bonne' ou 'mauvaise' réponse",
+                "Être honnête sur sa réalité terrain"
+            ],
+            "environnement": [
+                "Endroit calme si possible",
+                "Son activé (recommandé)",
+                "Luminosité adaptée"
+            ]
+        },
+        "avertissement": "Attention : Ce test n'est pas un examen de connaissances, mais une analyse de personnalité professionnelle. Tes résultats influenceront les questions de la phase technique.",
+        "apercu_test": {
+            "phase_1": "Profil MBTI",
+            "phase_2": "Test Technique",
+            "pause": "Pause",
+            "phase_3": "Mise en Situation"
+        },
+        "boutons": {
+            "reporter": "Reporter",
+            "commencer": "Commencer l'analyse"
+        }
+    },
+
     "questions": [
         // --- DIMENSION 1 : EXTRAVERSION (Showman) vs INTROVERSION (Alchimiste) ---
 

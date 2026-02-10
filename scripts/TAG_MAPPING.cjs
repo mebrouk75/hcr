@@ -1,0 +1,23 @@
+const TAG_MAPPING = {
+    'AUTUNOME': 'ADA', 'AUTONOME': 'ADA',
+    'LEADER': 'AUT',
+    'RÉSILIENT': 'RES', 'RESILIENT': 'RES',
+    'PRAGMATIQUE': 'ADA',
+    'STRATÉGIQUE': 'INT', 'STRATEGIQUE': 'INT',
+    'SENSIBLE': 'EMP',
+    'PROTECTEUR': 'EMP',
+    'SUIVEUR': 'None',
+    'OBÉISSANT': 'INT', 'OBEISSANT': 'INT',
+    'PÉDAGOGUE': 'EMP', 'PEDAGOGUE': 'EMP',
+    'FLEXIBLE': 'ADA',
+    'AUTORITAIRE': 'AUT',
+    'FRANC': 'AUT',
+    'EXIGEANT': 'INT',
+    'DIPLOMATE': 'EMP',
+    'HUMBLE': 'EMP',
+    'RIGOUREUX': 'INT',
+    'AMBITIEUX': 'AMB',
+    'VISIONNAIRE': 'AUT',
+    'OPÉRATIONNEL': 'INT', 'OPERATIONNEL': 'INT'
+};
+exports.TAG_MAPPING = TAG_MAPPING;

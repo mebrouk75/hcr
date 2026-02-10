@@ -112,6 +112,17 @@ export class SentinelEngine {
                     const p = selectedOption.profile.toUpperCase();
                     profileCounts[p] = (profileCounts[p] || 0) + 1;
                 }
+
+                // NEW: Handle Custom Option Scoring (Manager Sentinel with tags)
+                if (selectedOption && selectedOption.scores) {
+                    Object.entries(selectedOption.scores).forEach(([d, val]) => {
+                        if (dimensions[d] !== undefined) {
+                            // Scale: 2 -> 100 (Strong), 1 -> 50 (Weak)
+                            dimensions[d] += val * 50;
+                            counts[d] += 1;
+                        }
+                    });
+                }
             }
         });
 

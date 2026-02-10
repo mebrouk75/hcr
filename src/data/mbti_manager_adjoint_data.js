@@ -33,6 +33,41 @@ export const MBTI_MANAGER_ADJOINT_DATA = {
         "method": "MAJORITY_PER_DIMENSION",
         "description": "Pour chaque dimension (E/I, S/N, T/F, J/P), compter le nombre de réponses pour chaque pôle. La lettre majoritaire est retenue. Assembler les 4 lettres pour obtenir le code MBTI final (ex: ENTJ)."
     },
+
+    "pretest_alert": {
+        "titre": "Phase 1 : Profil Manager Adjoint",
+        "sous_titre": "Le bras droit qui fait tourner la machine au quotidien.",
+        "message_principal": "Cette première étape définit ton style de management opérationnel.",
+        "conditions_requises": {
+            "physique": [
+                "12 à 15 minutes de disponibilité",
+                "Pas de distraction (mode avion conseillé)",
+                "Connexion stable"
+            ],
+            "mental": [
+                "Répondre instinctivement",
+                "Pas de 'bonne' ou 'mauvaise' réponse",
+                "Être honnête sur sa réalité terrain"
+            ],
+            "environnement": [
+                "Endroit calme si possible",
+                "Son activé (recommandé)",
+                "Luminosité adaptée"
+            ]
+        },
+        "avertissement": "Attention : Ce test n'est pas un examen de connaissances, mais une analyse de personnalité professionnelle. Tes résultats influenceront les questions de la phase technique.",
+        "apercu_test": {
+            "phase_1": "Profil MBTI",
+            "phase_2": "Test Technique",
+            "pause": "Pause",
+            "phase_3": "Mise en Situation"
+        },
+        "boutons": {
+            "reporter": "Reporter",
+            "commencer": "Commencer l'analyse"
+        }
+    },
+
     "questions": [
         { "id": "MAD_EI_01", "dimension": "EI", "text": "Le Manager est absent, grosse soirée ce soir.", "options": [{ "text": "Je descends en salle, je motive l'équipe, je suis visible.", "val": "E" }, { "text": "Je pilote depuis le bureau, je surveille les chiffres et j'interviens si nécessaire.", "val": "I" }] },
         { "id": "MAD_EI_02", "dimension": "EI", "text": "Un conflit éclate entre deux chefs de rang.", "options": [{ "text": "Je les réunis tous les deux immédiatement et on règle ça ensemble.", "val": "E" }, { "text": "Je les convoque séparément pour comprendre chaque version.", "val": "I" }] },
