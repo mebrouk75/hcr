@@ -1,0 +1,1325 @@
+[
+    {
+        "id": "Q096",
+        "numero": 96,
+        "situation": "Le coût matière (Food Cost) explose +4%. Le Chef accuse l'inflation.",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "J'accepte son excuse, c'est la crise."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Je hurle et menace de le virer."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Je plonge dans les poubelles et factures avec lui pour trouver la cause."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je demande un rapport écrit détaillé pour le siège."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je change de fournisseur immédiatement."
+            }
+        }
+    },
+    {
+        "id": "Q097",
+        "numero": 97,
+        "situation": "Vos serveurs sortent boire des verres ensemble tous les soirs. Ils sont soudés mais fatigués.",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Je surveille la performance. Si le job est fait, je me tais."
+            },
+            "B": {
+                "profil": "BUREAUCRATE",
+                "texte": "Rappel charte bonne conduite et repos légal."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "J'interdis formellement les sorties."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "C'est génial ! L'ambiance avant tout."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Je me joins parfois pour garder le lien."
+            }
+        }
+    },
+    {
+        "id": "Q098",
+        "numero": 98,
+        "situation": "On vous propose des QR Codes pour que les clients commandent seuls.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "J'installe tout. Moins de masse salariale."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Jamais. Je refuse le progrès déshumanisant."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "J'attends validation groupe."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Test déjeuner (vitesse), humain le soir (expérience)."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "J'intègre dans une expérience digitale complète innovante."
+            }
+        }
+    },
+    {
+        "id": "Q099",
+        "numero": 99,
+        "situation": "Le Sous-Chef du concurrent veut venir travailler chez vous.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Je le prends pour couler le concurrent."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Je l'auditionne durement : talent ou fuite ?"
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Refus par code d'honneur entre patrons."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "CV et lettre motivation pour pile d'attente."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je le recrute immédiatement avant qu'il change d'avis."
+            }
+        }
+    },
+    {
+        "id": "Q100",
+        "numero": 100,
+        "situation": "Une association locale demande de sponsoriser un événement caritatif.",
+        "reponses": {
+            "A": {
+                "profil": "BUREAUCRATE",
+                "texte": "Dossier demande subvention page 14."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Refus, pas de cash direct."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Échange marchandise (buffet vs visibilité)."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Je donne de l'argent pour être gentil."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je calcule le ROI potentiel avant."
+            }
+        }
+    },
+    {
+        "id": "Q101",
+        "numero": 101,
+        "situation": "Vous partez en vacances 3 jours. Comment gérez-vous ?",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "Je coupe mon téléphone."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Check rapports 1x/jour. Je surveille de loin."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "J'appelle 10 fois par jour."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je nomme un responsable par note de service."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Ça dépend de la confiance en l'équipe."
+            }
+        }
+    },
+    {
+        "id": "Q102",
+        "numero": 102,
+        "situation": "Promouvoir un Génie Rebelle ou un Soldat Loyal ?",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Le Génie. Performance avant tout."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Le Génie, pour lui faire plaisir."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Celui avec le plus d'ancienneté."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Le Soldat. Structure pour diriger, Génie sur terrain."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Le Génie si je peux canaliser sa créativité."
+            }
+        }
+    },
+    {
+        "id": "Q103",
+        "numero": 103,
+        "situation": "Il reste 1000€ de budget marketing à dépenser.",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Soirée privée pour fidéliser les 50 meilleurs clients."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Rien. Je garde pour le net."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Pubs Facebook au hasard."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Service marketing décide."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Promo flash pour remplir la semaine creuse."
+            }
+        }
+    },
+    {
+        "id": "Q104",
+        "numero": 104,
+        "situation": "Vous avez une base de 5000 emails clients.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Je bombarde de promos chaque semaine."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "1 mail/mois si vraie valeur ajoutée."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Calendrier éditorial standard."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Jamais, peur de déranger."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Segmentation et ciblage agressif."
+            }
+        }
+    },
+    {
+        "id": "Q105",
+        "numero": 105,
+        "situation": "Le service a été parfait ce soir.",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "Tournée générale, vous êtes merveilleux."
+            },
+            "B": {
+                "profil": "BUREAUCRATE",
+                "texte": "Note RAS sur le cahier."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Rien. Ils sont payés pour ça."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Débrief précis valorisant l'effort technique."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Selon les personnes, j'adapte mon feedback."
+            }
+        }
+    },
+    {
+        "id": "Q106",
+        "numero": 106,
+        "situation": "Les tomates locales ont pris +20%.",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Je garde locale mais j'ajuste portion/recette."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Tomate 1er prix, le client ne verra rien."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je garde et je perds de la marge."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Hausse prix automatique via formule."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Je crée un plat signature qui sublime la tomate rare."
+            }
+        }
+    },
+    {
+        "id": "Q107",
+        "numero": 107,
+        "situation": "L'ambiance retombe vers 23h car le staff oublie la musique.",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "Pas grave, fin de service."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Je hurle à chaque oubli."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Procédure auto (playlist + variateur)."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Note de service vestiaire."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "J'embauche un DJ pour gérer."
+            }
+        }
+    },
+    {
+        "id": "Q108",
+        "numero": 108,
+        "situation": "Candidat avec contrainte logistique cachée (enfants/transport).",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Avez-vous des enfants ? (Illégal)"
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Le poste finit à 2h. Est-ce gérable durablement ?"
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je ne dis rien, je risque."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Case Disponibilité et je continue."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "J'observe les réactions et je creuse subtilement."
+            }
+        }
+    },
+    {
+        "id": "Q109",
+        "numero": 109,
+        "situation": "Ça marche fort. Faut-il ouvrir un 2ème restaurant ?",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Oui tout de suite, cash."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Non, peur de grandir."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Seulement si j'ai un Clone de confiance prêt."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Étude de marché 6 mois."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Oui, je teste le concept minimum viable."
+            }
+        }
+    },
+    {
+        "id": "Q110",
+        "numero": 110,
+        "situation": "Un chef très connu postule. Il a un ego énorme.",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "Je le prends direct pour le buzz."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Essai sur tâche ingrate. S'il accepte, je prends."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Vérif diplômes vs fiche de poste."
+            },
+            "D": {
+                "profil": "TYRAN",
+                "texte": "Refus, pas de diva."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Je le prends pour co-créer un nouveau concept."
+            }
+        }
+    },
+    {
+        "id": "Q111",
+        "numero": 111,
+        "situation": "Impossible de payer le fournisseur de vin à temps.",
+        "reponses": {
+            "A": {
+                "profil": "BUREAUCRATE",
+                "texte": "Recommandé pour contester."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Je fais le mort."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je change de fournisseur."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Appel transparence : moitié maintenant, reste le 15."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je négocie un deal en nature."
+            }
+        }
+    },
+    {
+        "id": "Q112",
+        "numero": 112,
+        "situation": "Comment fixer les primes des managers ?",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Mix : CA + Coûts + Satisfaction client."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "CA uniquement (Vente forcée)."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Grille ancienneté conventionnelle."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "À la tête du client."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Variable agressif sur objectifs court terme."
+            }
+        }
+    },
+    {
+        "id": "Q113",
+        "numero": 113,
+        "situation": "Montrer votre famille sur les réseaux du restaurant ?",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Oui, ça fait pleurer, ça vend."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Jamais de la vie."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Parfois pour storytelling, frontière claire."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Charte interdit photos perso."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Je crée un personal branding stratégique autour de ça."
+            }
+        }
+    },
+    {
+        "id": "Q114",
+        "numero": 114,
+        "situation": "Serveur poste photo doigt d'honneur en tenue.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Licenciement immédiat."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Convoque : Tu engages l'image, supprime."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Règlement intérieur, sanction alinéa 4."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Je m'en fous, compte perso."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Ça dépend du contexte de la photo."
+            }
+        }
+    },
+    {
+        "id": "Q115",
+        "numero": 115,
+        "situation": "Coupure d'électricité en plein service.",
+        "reponses": {
+            "A": {
+                "profil": "BUREAUCRATE",
+                "texte": "Attends instructions pompiers."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Évacuation et fermeture."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Je gueule sur EDF devant clients."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Système D : Bougies, tournée, on sauve l'ambiance."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Ambiance chandelles romantiques, je transforme."
+            }
+        }
+    },
+    {
+        "id": "Q116",
+        "numero": 116,
+        "situation": "Marque alcool propose 5000€ pour exclusivité.",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Je goûte. Qualité avant chèque."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Je prends l'argent, on s'en fout du goût."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Refus par principe d'indépendance."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Contrat service juridique."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je prends et je vois si je peux renégocier plus."
+            }
+        }
+    },
+    {
+        "id": "Q117",
+        "numero": 117,
+        "situation": "Machine café Auto (rapide) ou Manuelle (meilleure) ?",
+        "reponses": {
+            "A": {
+                "profil": "BUREAUCRATE",
+                "texte": "Référencée par le groupe."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Selon concept. Adapté promesse client."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Auto. Débit max."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Manuelle. Puristes."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Machine innovante qui fait spectacle."
+            }
+        }
+    },
+    {
+        "id": "Q118",
+        "numero": 118,
+        "situation": "Clients réservent et ne viennent pas (no-show).",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Plus de réservations du tout."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Empreinte bancaire / SMS reconfirm."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je m'énerve seul."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Tableau Excel des absents."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Surbooking calculé comme les airlines."
+            }
+        }
+    },
+    {
+        "id": "Q119",
+        "numero": 119,
+        "situation": "Manager dit une bêtise technique en briefing.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Contredit devant tout le monde."
+            },
+            "B": {
+                "profil": "BUREAUCRATE",
+                "texte": "Email rectificatif après."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Complète subtilement, débrief privé."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Rien dire pour pas gêner."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Selon gravité et personne."
+            }
+        }
+    },
+    {
+        "id": "Q120",
+        "numero": 120,
+        "situation": "Employé dénonce un collègue qui vole.",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "J'envoie paître, déteste rapporteurs."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Note info mais vérifie par moi-même."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Prime pour la délation."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Fiche d'incident signée."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "J'utilise l'info stratégiquement."
+            }
+        }
+    },
+    {
+        "id": "Q121",
+        "numero": 121,
+        "situation": "Convaincre banquier pour prêt travaux.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Maquille les bilans."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Plan pessimiste mais maîtrisé."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je supplie."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Documents obligatoires uniquement."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Pitch vision transformationnelle du projet."
+            }
+        }
+    },
+    {
+        "id": "Q122",
+        "numero": 122,
+        "situation": "Concurrent poste faux avis négatifs.",
+        "reponses": {
+            "A": {
+                "profil": "BUREAUCRATE",
+                "texte": "Signalement plateforme, attente 3 mois."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Je pleure."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Je fais pareil sur lui."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Réponse classe exposant incohérences."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Campagne avis positifs massive."
+            }
+        }
+    },
+    {
+        "id": "Q123",
+        "numero": 123,
+        "situation": "Amis viennent manger, s'attendent à gratuit.",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Offre apéro/dessert, ils paient le reste."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Plein pot, pas de pitié."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Tout gratuit."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Réduc personnel -15%."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Selon l'ami et la relation."
+            }
+        }
+    },
+    {
+        "id": "Q124",
+        "numero": 124,
+        "situation": "Sous-chef épuisé et agressif.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Calme-toi ou dégage."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Offre un café et écoute."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "2 jours repos forcé immédiat."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Vérif 11h repos légal."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je le remplace temporairement vite."
+            }
+        }
+    },
+    {
+        "id": "Q125",
+        "numero": 125,
+        "situation": "Donner tablettes aux serveurs ?",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Oui, SI ça aide vente face client."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Non, carnet papier."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Oui, pour surveiller la frappe."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Oui, évite erreurs."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Tablettes + AI suggestions automatiques."
+            }
+        }
+    },
+    {
+        "id": "Q126",
+        "numero": 126,
+        "situation": "Imposer phrases exactes aux serveurs ?",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Oui, robots parfaits."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Étapes clés imposées, mots libres."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Non, liberté totale."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Manuel 50 pages par cœur."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Selon personnalité du serveur."
+            }
+        }
+    },
+    {
+        "id": "Q127",
+        "numero": 127,
+        "situation": "Plongeur signale cafards en cuisine.",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "Spray moi-même."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Chut, le dis à personne."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Note registre hygiène."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Société pro immédiate. Tolérance Zéro."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Traitement discret rapide."
+            }
+        }
+    },
+    {
+        "id": "Q128",
+        "numero": 128,
+        "situation": "Manager prépare son départ (attitude fuyante).",
+        "reponses": {
+            "A": {
+                "profil": "BUREAUCRATE",
+                "texte": "Prépare solde tout compte RH."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Pourris la vie pour qu'il parte."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Confrontation gentille : Tu veux partir ?"
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "J'attends qu'il le dise."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je recrute en parallèle discrètement."
+            }
+        }
+    },
+    {
+        "id": "Q129",
+        "numero": 129,
+        "situation": "Vous avez 10 000€ à investir.",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "Déco (visible client)."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Four qui marche (outil staff)."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Ma prime."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Avis expert comptable."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Test nouveau concept innovant."
+            }
+        }
+    },
+    {
+        "id": "Q130",
+        "numero": 130,
+        "situation": "Booster Instagram.",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Staff et clients fidèles repostent."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Achat 10k followers."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Validation Dir Com 1 semaine avant."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Photos floues quand j'y pense."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Campagne influenceurs agressive."
+            }
+        }
+    },
+    {
+        "id": "Q131",
+        "numero": 131,
+        "situation": "La marge brute chute de 2 points. Le Chef accuse les portions.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Je réduis les portions discrètement."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "J'augmente les prix."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Audit pesée assiettes et fiches techniques."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "J'attends le mois suivant."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je change fournisseur immédiatement."
+            }
+        }
+    },
+    {
+        "id": "Q132",
+        "numero": 132,
+        "situation": "Un cadre veut une rupture conventionnelle.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Refus. Démission ou rien."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Accord immédiat pour bons rapports."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Négo : ok si passation nickel et formation successeur."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Dossier juridique jurisprudence."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "J'accepte si je trouve mieux moins cher."
+            }
+        }
+    },
+    {
+        "id": "Q133",
+        "numero": 133,
+        "situation": "On vous propose de franchiser votre concept.",
+        "reponses": {
+            "A": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Oui, argent facile."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Non, je perds contrôle qualité."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Je vends tout et je pars."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Étude faisabilité et manuel opératoire."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Oui, pour tester scalabilité du concept."
+            }
+        }
+    },
+    {
+        "id": "Q134",
+        "numero": 134,
+        "situation": "Une rumeur de liaison entre vous et une employée circule.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Je vire l'employée pour faire taire."
+            },
+            "B": {
+                "profil": "BUREAUCRATE",
+                "texte": "Démenti formel en réunion."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "Je laisse couler, ça assoit mon pouvoir."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Je suis dévasté et je me justifie."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Je m'adapte selon qui propage la rumeur."
+            }
+        }
+    },
+    {
+        "id": "Q135",
+        "numero": 135,
+        "situation": "Un journal local critique votre service.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Droit de réponse agressif."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Invitation du critique pour revérifier."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je pleure dans mon bureau."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je coupe budget pub de ce journal."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "J'utilise pour générer buzz et débat."
+            }
+        }
+    },
+    {
+        "id": "Q136",
+        "numero": 136,
+        "situation": "Faut-il se lancer sur UberEats ?",
+        "reponses": {
+            "A": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Oui, CA additionnel facile."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Non, ça tue l'image et la marge."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Oui si j'augmente prix de 30%."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Si cuisine peut suivre sans impacter salle."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Oui, mais concept delivery-only séparé."
+            }
+        }
+    },
+    {
+        "id": "Q137",
+        "numero": 137,
+        "situation": "Uniforme : chaussettes non conformes.",
+        "reponses": {
+            "A": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je renvoie chez lui se changer."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Je ne regarde pas les pieds."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Amende symbolique."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Remarque discrète pour le standing."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Selon importance du service."
+            }
+        }
+    },
+    {
+        "id": "Q138",
+        "numero": 138,
+        "situation": "Un nouveau concurrent très agressif ouvre en face.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Guerre des prix."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Je vais me présenter avec une bouteille."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je panique."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je vérifie si son enseigne est aux normes."
+            },
+            "E": {
+                "profil": "VISIONNAIRE",
+                "texte": "Je me différencie encore plus radicalement."
+            }
+        }
+    },
+    {
+        "id": "Q139",
+        "numero": 139,
+        "situation": "Beaucoup de pertes alimentaires. Solution ?",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Je vends les restes au staff."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Dons asso (défisc) ou paniers anti-gaspi."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je jette, hygiène avant tout."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Le staff mange gratuitement."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Revente à une appli anti-gaspi."
+            }
+        }
+    },
+    {
+        "id": "Q140",
+        "numero": 140,
+        "situation": "On retrouve un sachet de cocaïne dans les toilettes du personnel.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "J'appelle la police pour fouille avec chiens."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "Je convoque l'équipe pour dernier avertissement collectif."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je ne fais rien, tant que le service tourne."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je fais une note de service."
+            },
+            "E": {
+                "profil": "CAMÉLÉON",
+                "texte": "Je surveille discrètement pour identifier."
+            }
+        }
+    },
+    {
+        "id": "Q141",
+        "numero": 141,
+        "situation": "Un client très alcoolisé menace physiquement votre hôtesse d'accueil.",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "Je saute le comptoir et je le frappe."
+            },
+            "B": {
+                "profil": "RADAR",
+                "texte": "J'appelle la police et je mets mon staff en sécurité."
+            },
+            "C": {
+                "profil": "SAGE",
+                "texte": "Je lui offre un verre pour le calmer."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je lui rappelle les articles de loi."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je le vire dehors physiquement immédiatement."
+            }
+        }
+    },
+    {
+        "id": "Q142",
+        "numero": 142,
+        "situation": "Votre comptable vous propose une astuce pour ne pas payer les heures sup (illégal mais indétectable).",
+        "reponses": {
+            "A": {
+                "profil": "TYRAN",
+                "texte": "On fonce."
+            },
+            "B": {
+                "profil": "SAGE",
+                "texte": "Je refuse catégoriquement par principe moral."
+            },
+            "C": {
+                "profil": "RADAR",
+                "texte": "J'analyse le risque réel : si c'est pénal, non."
+            },
+            "D": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je change de comptable."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je teste sur un mois pour voir."
+            }
+        }
+    },
+    {
+        "id": "Q143",
+        "numero": 143,
+        "situation": "Un serveur arrive 45min en retard samedi soir. Il sent l'alcool mais tient debout.",
+        "reponses": {
+            "A": {
+                "profil": "RADAR",
+                "texte": "Il prend son rang, j'ai besoin de bras, on verra après."
+            },
+            "B": {
+                "profil": "BUREAUCRATE",
+                "texte": "Je le renvoie chez lui immédiatement."
+            },
+            "C": {
+                "profil": "TYRAN",
+                "texte": "Je lui fais passer un alcootest devant tout le monde."
+            },
+            "D": {
+                "profil": "SAGE",
+                "texte": "Je le mets à la plonge pour le cacher."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Je l'utilise en back-office invisible."
+            }
+        }
+    },
+    {
+        "id": "Q144",
+        "numero": 144,
+        "situation": "Si vous deviez virer quelqu'un ce soir : le Chef (compétent mais toxique) ou le Second (loyal mais lent) ?",
+        "reponses": {
+            "A": {
+                "profil": "SAGE",
+                "texte": "Le Chef. L'ambiance avant tout."
+            },
+            "B": {
+                "profil": "TYRAN",
+                "texte": "Le Second. La performance avant tout."
+            },
+            "C": {
+                "profil": "BUREAUCRATE",
+                "texte": "Les deux. Je repars à zéro."
+            },
+            "D": {
+                "profil": "RADAR",
+                "texte": "Aucun. Je ne vire personne sans remplaçant prêt."
+            },
+            "E": {
+                "profil": "OPPORTUNISTE",
+                "texte": "Le Second, je peux trouver un clone loyal facilement."
+            }
+        }
+    }
+]

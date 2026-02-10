@@ -1,0 +1,888 @@
+{
+    "phase_3_et_4_dimensions_hardcore": {
+        "phase_3_dimensions": {
+            "questions": [
+                {
+                    "id": "Q145",
+                    "numero": 145,
+                    "dimension": "INFLUENCE",
+                    "situation": "Vous devez convaincre le Directeur Général d'investir 100k€ dans votre projet.",
+                    "pole_faible": "Je présente les faits et j'attends sa décision sans insister",
+                    "pole_fort": "Je prépare une présentation percutante et je mobilise tous mes arguments pour le convaincre"
+                },
+                {
+                    "id": "Q146",
+                    "numero": 146,
+                    "dimension": "INFLUENCE",
+                    "situation": "L'équipe résiste à un changement nécessaire.",
+                    "pole_faible": "J'impose par autorité sans chercher à convaincre",
+                    "pole_fort": "Je prends le temps de les rallier un par un en montrant les bénéfices"
+                },
+                {
+                    "id": "Q147",
+                    "numero": 147,
+                    "dimension": "INFLUENCE",
+                    "situation": "Un fournisseur refuse de négocier ses prix.",
+                    "pole_faible": "J'accepte ou je change de fournisseur",
+                    "pole_fort": "Je trouve les arguments pour le faire céder (volume, visibilité, loyauté)"
+                },
+                {
+                    "id": "Q148",
+                    "numero": 148,
+                    "dimension": "INFLUENCE",
+                    "situation": "Le Directeur Général hésite entre vous et un concurrent pour un projet.",
+                    "pole_faible": "J'attends qu'il décide",
+                    "pole_fort": "Je le contacte pour influencer sa décision en ma faveur"
+                },
+                {
+                    "id": "Q149",
+                    "numero": 149,
+                    "dimension": "INFLUENCE",
+                    "situation": "Vous voulez recruter un candidat qui hésite entre vous et un autre restaurant.",
+                    "pole_faible": "Je lui fais une offre standard et j'attends",
+                    "pole_fort": "Je le séduis : vision, projet, ambiance, je vends le rêve"
+                },
+                {
+                    "id": "Q150",
+                    "numero": 150,
+                    "dimension": "INFLUENCE",
+                    "situation": "Votre capacité à mobiliser votre équipe autour d'un objectif ambitieux.",
+                    "pole_faible": "Je fixe l'objectif et ils se débrouillent",
+                    "pole_fort": "Je les inspire, je crée l'énergie collective, je fédère"
+                },
+                {
+                    "id": "Q151",
+                    "numero": 151,
+                    "dimension": "CONSIDERATION",
+                    "situation": "Un employé traverse une période difficile personnellement.",
+                    "pole_faible": "Je reste concentré sur le travail, c'est sa vie privée",
+                    "pole_fort": "Je prends de ses nouvelles, j'adapte si nécessaire"
+                },
+                {
+                    "id": "Q152",
+                    "numero": 152,
+                    "dimension": "CONSIDERATION",
+                    "situation": "Un Manager Adjoint fait une demande de congé pour raison familiale en période chargée.",
+                    "pole_faible": "Refus net, on a besoin de lui",
+                    "pole_fort": "J'écoute la situation et je trouve une solution ensemble"
+                },
+                {
+                    "id": "Q153",
+                    "numero": 153,
+                    "dimension": "CONSIDERATION",
+                    "situation": "Vous remarquez qu'un chef de rang est inhabituellement silencieux.",
+                    "pole_faible": "Tant qu'il fait son travail, je ne m'en mêle pas",
+                    "pole_fort": "Je prends 5 minutes pour lui demander si tout va bien"
+                },
+                {
+                    "id": "Q154",
+                    "numero": 154,
+                    "dimension": "CONSIDERATION",
+                    "situation": "L'équipe exprime des préoccupations sur les conditions de travail.",
+                    "pole_faible": "Je rappelle que c'est comme ça partout dans la restauration",
+                    "pole_fort": "J'écoute vraiment et je cherche ce que je peux améliorer"
+                },
+                {
+                    "id": "Q155",
+                    "numero": 155,
+                    "dimension": "CONSIDERATION",
+                    "situation": "Un serveur fait une erreur par fatigue en fin de service.",
+                    "pole_faible": "Je sanctionne, l'erreur est l'erreur",
+                    "pole_fort": "Je comprends la fatigue, on en parle calmement"
+                },
+                {
+                    "id": "Q156",
+                    "numero": 156,
+                    "dimension": "CONSIDERATION",
+                    "situation": "Votre approche générale envers les besoins personnels de l'équipe.",
+                    "pole_faible": "Le travail avant tout, leurs problèmes ne me concernent pas",
+                    "pole_fort": "Je considère que des employés bien dans leur vie sont plus performants"
+                },
+                {
+                    "id": "Q157",
+                    "numero": 157,
+                    "dimension": "CREATIVITE",
+                    "situation": "La carte actuelle fonctionne bien. Faut-il innover ?",
+                    "pole_faible": "Non, on ne change pas une équipe qui gagne",
+                    "pole_fort": "Oui, il faut toujours renouveler pour rester pertinent"
+                },
+                {
+                    "id": "Q158",
+                    "numero": 158,
+                    "dimension": "CREATIVITE",
+                    "situation": "Un problème récurrent n'a pas de solution standard.",
+                    "pole_faible": "Je continue comme d'habitude en attendant",
+                    "pole_fort": "Je teste des approches créatives jusqu'à trouver la solution"
+                },
+                {
+                    "id": "Q159",
+                    "numero": 159,
+                    "dimension": "CREATIVITE",
+                    "situation": "Le marché évolue, vos concurrents innovent.",
+                    "pole_faible": "Je renforce mes fondamentaux classiques",
+                    "pole_fort": "J'invente de nouvelles approches pour me différencier"
+                },
+                {
+                    "id": "Q160",
+                    "numero": 160,
+                    "dimension": "CREATIVITE",
+                    "situation": "Face à un imprévu majeur en plein service.",
+                    "pole_faible": "Je panique ou je suis le protocole standard",
+                    "pole_fort": "J'improvise une solution créative immédiatement"
+                },
+                {
+                    "id": "Q161",
+                    "numero": 161,
+                    "dimension": "CREATIVITE",
+                    "situation": "Un employé propose une idée originale mais risquée.",
+                    "pole_faible": "Trop risqué, on reste sur ce qui marche",
+                    "pole_fort": "Intéressant, on teste en petit comité"
+                },
+                {
+                    "id": "Q162",
+                    "numero": 162,
+                    "dimension": "CREATIVITE",
+                    "situation": "Votre approche de l'innovation dans votre restaurant.",
+                    "pole_faible": "Je préfère la stabilité et l'efficacité prouvée",
+                    "pole_fort": "J'encourage l'expérimentation et les nouvelles idées"
+                },
+                {
+                    "id": "Q163",
+                    "numero": 163,
+                    "dimension": "RIGUEUR",
+                    "situation": "Un manager oublie régulièrement de remplir les rapports quotidiens.",
+                    "pole_faible": "Tant que le service tourne, ce n'est pas grave",
+                    "pole_fort": "Je le recadre fermement, les rapports sont obligatoires"
+                },
+                {
+                    "id": "Q164",
+                    "numero": 164,
+                    "dimension": "RIGUEUR",
+                    "situation": "Contrôle des dates de péremption en chambre froide.",
+                    "pole_faible": "Je fais confiance à l'équipe",
+                    "pole_fort": "Je contrôle moi-même systématiquement chaque semaine"
+                },
+                {
+                    "id": "Q165",
+                    "numero": 165,
+                    "dimension": "RIGUEUR",
+                    "situation": "Les fiches techniques des plats.",
+                    "pole_faible": "Les chefs cuisinent à l'instinct, pas besoin de fiches",
+                    "pole_fort": "Fiches techniques précises obligatoires pour chaque plat"
+                },
+                {
+                    "id": "Q166",
+                    "numero": 166,
+                    "dimension": "RIGUEUR",
+                    "situation": "Un fournisseur livre avec 30 minutes de retard.",
+                    "pole_faible": "Pas grave, ça arrive",
+                    "pole_fort": "Je note, après 3 fois je change de fournisseur"
+                },
+                {
+                    "id": "Q167",
+                    "numero": 167,
+                    "dimension": "RIGUEUR",
+                    "situation": "Gestion de vos dossiers administratifs et financiers.",
+                    "pole_faible": "Organisé de manière approximative",
+                    "pole_fort": "Classement rigoureux, tout est à jour et tracé"
+                },
+                {
+                    "id": "Q168",
+                    "numero": 168,
+                    "dimension": "RIGUEUR",
+                    "situation": "Votre approche des standards et procédures.",
+                    "pole_faible": "Flexibles selon les circonstances",
+                    "pole_fort": "Stricts et non-négociables"
+                },
+                {
+                    "id": "Q169",
+                    "numero": 169,
+                    "dimension": "EQUILIBRE",
+                    "situation": "Il est 23h, le service est fini. Vous avez des dossiers urgents.",
+                    "pole_faible": "Je reste jusqu'à minuit pour finir",
+                    "pole_fort": "Je rentre, ça attendra demain"
+                },
+                {
+                    "id": "Q170",
+                    "numero": 170,
+                    "dimension": "EQUILIBRE",
+                    "situation": "Dimanche, votre jour de repos. Le restaurant appelle pour un problème.",
+                    "pole_faible": "J'y vais immédiatement",
+                    "pole_fort": "Je gère par téléphone, je ne me déplace pas"
+                },
+                {
+                    "id": "Q171",
+                    "numero": 171,
+                    "dimension": "EQUILIBRE",
+                    "situation": "Vos vacances annuelles.",
+                    "pole_faible": "Je n'en prends pas ou très peu",
+                    "pole_fort": "2-3 semaines par an minimum, déconnexion totale"
+                },
+                {
+                    "id": "Q172",
+                    "numero": 172,
+                    "dimension": "EQUILIBRE",
+                    "situation": "Votre rythme de travail hebdomadaire.",
+                    "pole_faible": "70-80h par semaine, je vis pour le restaurant",
+                    "pole_fort": "50-55h maximum, je préserve ma vie personnelle"
+                },
+                {
+                    "id": "Q173",
+                    "numero": 173,
+                    "dimension": "EQUILIBRE",
+                    "situation": "Un proche vous reproche de ne jamais être disponible.",
+                    "pole_faible": "C'est le prix du succès, ils doivent comprendre",
+                    "pole_fort": "J'entends et je rééquilibre mon temps"
+                },
+                {
+                    "id": "Q174",
+                    "numero": 174,
+                    "dimension": "EQUILIBRE",
+                    "situation": "Votre vision du work-life balance.",
+                    "pole_faible": "Le travail passe toujours en premier",
+                    "pole_fort": "L'équilibre personnel est essentiel à la performance"
+                },
+                {
+                    "id": "Q175",
+                    "numero": 175,
+                    "dimension": "STRESS",
+                    "situation": "Service catastrophique, clients mécontents, équipe débordée.",
+                    "pole_faible": "Je perds mes moyens, je m'énerve",
+                    "pole_fort": "Je garde mon calme et je gère méthodiquement"
+                },
+                {
+                    "id": "Q176",
+                    "numero": 176,
+                    "dimension": "STRESS",
+                    "situation": "Le Directeur Général vous convoque en urgence sans explication.",
+                    "pole_faible": "Je stresse énormément avant la réunion",
+                    "pole_fort": "Je reste serein, j'aviserai sur place"
+                },
+                {
+                    "id": "Q177",
+                    "numero": 177,
+                    "dimension": "STRESS",
+                    "situation": "Résultats du mois catastrophiques, -30% de CA.",
+                    "pole_faible": "Je panique et dors mal pendant des jours",
+                    "pole_fort": "J'analyse froidement et je prépare le plan d'action"
+                },
+                {
+                    "id": "Q178",
+                    "numero": 178,
+                    "dimension": "STRESS",
+                    "situation": "Conflit violent entre deux employés en plein service.",
+                    "pole_faible": "Ça me bouleverse, j'ai du mal à gérer",
+                    "pole_fort": "Je sépare, je gère, je reste stable"
+                },
+                {
+                    "id": "Q179",
+                    "numero": 179,
+                    "dimension": "STRESS",
+                    "situation": "Semaine infernale : 3 démissions + contrôle hygiène + grosse réservation.",
+                    "pole_faible": "Je suis au bord du burn-out",
+                    "pole_fort": "Je priorise et je gère un dossier après l'autre"
+                },
+                {
+                    "id": "Q180",
+                    "numero": 180,
+                    "dimension": "STRESS",
+                    "situation": "Votre capacité à encaisser la pression continue.",
+                    "pole_faible": "La pression me pèse et m'épuise",
+                    "pole_fort": "Je performe mieux sous pression"
+                },
+                {
+                    "id": "Q181",
+                    "numero": 181,
+                    "dimension": "DARK_EMPATHY",
+                    "situation": "Vous savez qu'un employé a peur de vous.",
+                    "pole_faible": "Je cherche à le rassurer et créer la confiance",
+                    "pole_fort": "C'est utile, ça le rend plus obéissant"
+                },
+                {
+                    "id": "Q182",
+                    "numero": 182,
+                    "dimension": "DARK_EMPATHY",
+                    "situation": "Vous découvrez la faiblesse d'un concurrent.",
+                    "pole_faible": "Je me concentre sur mes propres forces",
+                    "pole_fort": "Je l'exploite pour le couler"
+                },
+                {
+                    "id": "Q183",
+                    "numero": 183,
+                    "dimension": "DARK_EMPATHY",
+                    "situation": "Un fournisseur est en difficulté financière.",
+                    "pole_faible": "J'aide si je peux ou je trouve une solution équitable",
+                    "pole_fort": "Je négocie des prix cassés en profitant de sa faiblesse"
+                },
+                {
+                    "id": "Q184",
+                    "numero": 184,
+                    "dimension": "DARK_EMPATHY",
+                    "situation": "Vous entendez un employé pleurer dans les vestiaires.",
+                    "pole_faible": "Je vais voir ce qui ne va pas",
+                    "pole_fort": "Pas mon problème, qu'il gère ses émotions"
+                },
+                {
+                    "id": "Q185",
+                    "numero": 185,
+                    "dimension": "DARK_EMPATHY",
+                    "situation": "Manipuler les émotions de votre équipe pour atteindre vos objectifs.",
+                    "pole_faible": "Jamais, je préfère la transparence",
+                    "pole_fort": "C'est un outil de management comme un autre"
+                },
+                {
+                    "id": "Q186",
+                    "numero": 186,
+                    "dimension": "DARK_EMPATHY",
+                    "situation": "Votre rapport général à l'empathie en management.",
+                    "pole_faible": "L'empathie est une force essentielle",
+                    "pole_fort": "L'empathie est une faiblesse qui nuit à l'efficacité"
+                }
+            ]
+        },
+        "phase_4_hardcore": {
+            "questions": [
+                {
+                    "id": "Q187",
+                    "numero": 187,
+                    "situation": "Vous trouvez 50€ par terre en salle en fin de service. Personne ne les réclame.",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je les garde pour moi."
+                        },
+                        "B": {
+                            "profil": "RADAR",
+                            "texte": "Je les mets dans les pourboires de l'équipe."
+                        },
+                        "C": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je les enregistre en 'Divers Caisse'."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "Je les donne à une association."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je les utilise pour un besoin du restaurant."
+                        }
+                    }
+                },
+                {
+                    "id": "Q188",
+                    "numero": 188,
+                    "situation": "Acceptez-vous de travailler 70h par semaine sans être payé plus ?",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Oui, je suis un guerrier, je ne compte pas."
+                        },
+                        "B": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Non, je respecte mon contrat de 39h."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Oui, si j'ai un intéressement aux résultats."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "Non, c'est illégal et mauvais exemple."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Oui temporairement si ça me fait avancer."
+                        }
+                    }
+                },
+                {
+                    "id": "Q189",
+                    "numero": 189,
+                    "situation": "Un inspecteur du travail demande les plannings réels. Vous avez des trous illégaux.",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je lui donne les faux plannings officiels."
+                        },
+                        "B": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je refuse de donner les documents."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Je donne ce qui est affiché. S'il trouve, il trouve."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "J'avoue tout en demandant la clémence."
+                        },
+                        "E": {
+                            "profil": "CAMÉLÉON",
+                            "texte": "Je négocie et j'adapte selon son attitude."
+                        }
+                    }
+                },
+                {
+                    "id": "Q190",
+                    "numero": 190,
+                    "situation": "Votre meilleur ami (fournisseur) augmente ses prix de 20% sans prévenir.",
+                    "reponses": {
+                        "A": {
+                            "profil": "SAGE",
+                            "texte": "J'accepte, c'est mon ami."
+                        },
+                        "B": {
+                            "profil": "RADAR",
+                            "texte": "Je change de fournisseur. Le business n'a pas d'amis."
+                        },
+                        "C": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je négocie 10% pour couper la poire en deux."
+                        },
+                        "D": {
+                            "profil": "TYRAN",
+                            "texte": "Je lui fais la gueule et je le presse."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je teste un autre fournisseur en parallèle."
+                        }
+                    }
+                },
+                {
+                    "id": "Q191",
+                    "numero": 191,
+                    "situation": "Un client très riche commande une bouteille à 2000€. Il est visiblement très ivre.",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je sers. C'est du chiffre facile."
+                        },
+                        "B": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je refuse. Ma responsabilité pénale est engagée."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Je sers, mais je le force à manger."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "J'appelle sa femme pour demander l'autorisation."
+                        },
+                        "E": {
+                            "profil": "CAMÉLÉON",
+                            "texte": "Ça dépend de sa dangerosité réelle."
+                        }
+                    }
+                },
+                {
+                    "id": "Q192",
+                    "numero": 192,
+                    "situation": "Votre Chef vous demande une avance sur salaire pour payer ses dettes de jeu urgentes.",
+                    "reponses": {
+                        "A": {
+                            "profil": "SAGE",
+                            "texte": "Oui, je l'aide, c'est humain."
+                        },
+                        "B": {
+                            "profil": "RADAR",
+                            "texte": "Non. Je ne finance pas une addiction."
+                        },
+                        "C": {
+                            "profil": "TYRAN",
+                            "texte": "Oui au noir pour qu'il me soit redevable."
+                        },
+                        "D": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je lui fais la morale sur sa gestion."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je négocie quelque chose en échange."
+                        }
+                    }
+                },
+                {
+                    "id": "Q193",
+                    "numero": 193,
+                    "situation": "Un serveur renverse de la soupe brûlante sur un enfant.",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je gueule sur le serveur."
+                        },
+                        "B": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "J'appelle l'assurance tout de suite."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Je gère l'urgence médicale. Le reste attendra."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "J'offre l'addition complète."
+                        },
+                        "E": {
+                            "profil": "CAMÉLÉON",
+                            "texte": "Je m'adapte selon la réaction des parents."
+                        }
+                    }
+                },
+                {
+                    "id": "Q194",
+                    "numero": 194,
+                    "situation": "Vous découvrez que votre prédécesseur volait dans la caisse. Il est parti il y a un mois.",
+                    "reponses": {
+                        "A": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je porte plainte contre lui."
+                        },
+                        "B": {
+                            "profil": "RADAR",
+                            "texte": "Je sécurise pour l'avenir. Le passé est mort."
+                        },
+                        "C": {
+                            "profil": "TYRAN",
+                            "texte": "Je le traque pour lui casser la figure."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "Je le dis à tout le monde par transparence."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "J'utilise l'info pour négocier ma prime."
+                        }
+                    }
+                },
+                {
+                    "id": "Q195",
+                    "numero": 195,
+                    "situation": "Tricheriez-vous pour sauver l'entreprise de la faillite ?",
+                    "reponses": {
+                        "A": {
+                            "profil": "SAGE",
+                            "texte": "Jamais."
+                        },
+                        "B": {
+                            "profil": "TYRAN",
+                            "texte": "Oui, toujours."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Ça dépend du risque pénal."
+                        },
+                        "D": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Seulement si personne ne le sait."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Oui si le gain dépasse le risque."
+                        }
+                    }
+                },
+                {
+                    "id": "Q196",
+                    "numero": 196,
+                    "situation": "Le client a-t-il toujours raison ?",
+                    "reponses": {
+                        "A": {
+                            "profil": "SAGE",
+                            "texte": "Oui, c'est la règle d'or."
+                        },
+                        "B": {
+                            "profil": "TYRAN",
+                            "texte": "Non, jamais."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Non, mais il doit avoir l'impression d'avoir raison."
+                        },
+                        "D": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "C'est un partenaire, pas un juge."
+                        },
+                        "E": {
+                            "profil": "CAMÉLÉON",
+                            "texte": "Ça dépend du client et du contexte."
+                        }
+                    }
+                },
+                {
+                    "id": "Q197",
+                    "numero": 197,
+                    "situation": "Une influenceuse menace de vous détruire sur Instagram si vous ne lui offrez pas l'addition.",
+                    "reponses": {
+                        "A": {
+                            "profil": "SAGE",
+                            "texte": "J'offre, j'ai peur."
+                        },
+                        "B": {
+                            "profil": "TYRAN",
+                            "texte": "Je la vire du restaurant."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Je lui fais payer. Je ne négocie pas avec les terroristes."
+                        },
+                        "D": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je lui fais 50%."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je transforme en deal marketing gagnant-gagnant."
+                        }
+                    }
+                },
+                {
+                    "id": "Q198",
+                    "numero": 198,
+                    "situation": "Le frigo tombe en panne. La viande est à 12°C. Perte : 2000€.",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "On cuit tout bien cuit, ça passera."
+                        },
+                        "B": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je jette tout par sécurité."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Je trie, je jette le sensible, assurance pour le reste."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "Je sers en priant que personne ne soit malade."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je revends à un autre resto rapidement."
+                        }
+                    }
+                },
+                {
+                    "id": "Q199",
+                    "numero": 199,
+                    "situation": "Votre Maître d'Hôtel et votre Chef sont en couple. Ils s'engueulent pendant le service.",
+                    "reponses": {
+                        "A": {
+                            "profil": "SAGE",
+                            "texte": "Je m'en fous, c'est leur vie."
+                        },
+                        "B": {
+                            "profil": "TYRAN",
+                            "texte": "Je vire l'un des deux."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Vos histoires restent dehors. Au moindre problème, je vire les deux."
+                        },
+                        "D": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je leur conseille une thérapie de couple."
+                        },
+                        "E": {
+                            "profil": "CAMÉLÉON",
+                            "texte": "Je gère selon la gravité et l'impact."
+                        }
+                    }
+                },
+                {
+                    "id": "Q200",
+                    "numero": 200,
+                    "situation": "Un fournisseur vous propose une enveloppe de cash (pot-de-vin) pour Noël.",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je prends sans hésiter."
+                        },
+                        "B": {
+                            "profil": "SAGE",
+                            "texte": "Je refuse choqué."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Je transforme ça en avoir sur la prochaine facture."
+                        },
+                        "D": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je demande à mon patron."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je prends et je teste s'il y en a plus."
+                        }
+                    }
+                },
+                {
+                    "id": "Q201",
+                    "numero": 201,
+                    "situation": "LA FINALE : Tout brûler pour toucher l'assurance ? (Vous êtes en faillite totale).",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je craque l'allumette sans hésitation."
+                        },
+                        "B": {
+                            "profil": "RADAR",
+                            "texte": "Je liquide proprement et j'assume l'échec."
+                        },
+                        "C": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je relis mon contrat d'assurance pour voir."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "Je pleure et demande de l'aide."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je cherche une dernière solution avant."
+                        }
+                    }
+                },
+                {
+                    "id": "Q202",
+                    "numero": 202,
+                    "situation": "Un concurrent vous propose 50k€ pour saboter son rival (votre autre concurrent).",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "J'accepte et je sabote."
+                        },
+                        "B": {
+                            "profil": "SAGE",
+                            "texte": "Je refuse horrifié."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Je refuse mais je garde l'info."
+                        },
+                        "D": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je consulte un avocat."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je joue les deux pour tirer profit."
+                        }
+                    }
+                },
+                {
+                    "id": "Q203",
+                    "numero": 203,
+                    "situation": "Vous découvrez que votre Chef vend de la drogue aux employés.",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je prends une commission sur ses ventes."
+                        },
+                        "B": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "J'appelle la police immédiatement."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "Je le vire discrètement sans faire de vagues."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "Je lui propose de l'aide pour arrêter."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je le fais chanter pour obtenir ce que je veux."
+                        }
+                    }
+                },
+                {
+                    "id": "Q204",
+                    "numero": 204,
+                    "situation": "Le Directeur Général vous demande de licencier votre meilleur ami (employé).",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je le fais sans états d'âme, business is business."
+                        },
+                        "B": {
+                            "profil": "SAGE",
+                            "texte": "Je refuse et je démissionne."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "J'exécute mais j'aide mon ami à rebondir ailleurs."
+                        },
+                        "D": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "Je demande les raisons écrites officielles."
+                        },
+                        "E": {
+                            "profil": "CAMÉLÉON",
+                            "texte": "Je négocie une autre solution avec le DG."
+                        }
+                    }
+                },
+                {
+                    "id": "Q205",
+                    "numero": 205,
+                    "situation": "Vous êtes témoin d'un viol dans les vestiaires du personnel.",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Je règle ça à ma façon violemment."
+                        },
+                        "B": {
+                            "profil": "RADAR",
+                            "texte": "J'interviens, je protège la victime, police immédiate."
+                        },
+                        "C": {
+                            "profil": "BUREAUCRATE",
+                            "texte": "J'appelle les RH et j'attends les instructions."
+                        },
+                        "D": {
+                            "profil": "SAGE",
+                            "texte": "Je console la victime d'abord."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "Je fais le sourd pour éviter les problèmes."
+                        }
+                    }
+                },
+                {
+                    "id": "Q206",
+                    "numero": 206,
+                    "situation": "ULTIME : Si vous pouviez recommencer votre carrière, que changeriez-vous ?",
+                    "reponses": {
+                        "A": {
+                            "profil": "TYRAN",
+                            "texte": "Rien. J'aurais été encore plus dur."
+                        },
+                        "B": {
+                            "profil": "SAGE",
+                            "texte": "J'aurais été plus humain et moins carriériste."
+                        },
+                        "C": {
+                            "profil": "RADAR",
+                            "texte": "J'aurais trouvé l'équilibre plus tôt."
+                        },
+                        "D": {
+                            "profil": "VISIONNAIRE",
+                            "texte": "J'aurais pris plus de risques créatifs."
+                        },
+                        "E": {
+                            "profil": "OPPORTUNISTE",
+                            "texte": "J'aurais changé plus souvent pour monter plus vite."
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

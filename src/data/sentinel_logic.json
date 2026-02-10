@@ -1,0 +1,230 @@
+{
+    "project": "HCR SENTINELLE v3.0",
+    "global_settings": {
+        "reliability_threshold": 70,
+        "stress_test_multiplier": 1.2,
+        "dark_empathy_detection": true
+    },
+    "dimensions": {
+        "RES": "Résilience (Capacité à tenir sous la pression du rush)",
+        "EMP": "Empathie Tactique (Gestion émotionnelle du client/équipe)",
+        "AUT": "Autorité & Leadership (Capacité à diriger/trancher)",
+        "INT": "Intégrité & Fiabilité (Honnêteté et respect des process)",
+        "TOX": "Indice Organisationnel (Niveau de friction/toxicité)",
+        "ADA": "Adaptabilité (Réaction face à l'imprévu)"
+    },
+    "roles_logic": {
+        "ADN_ENTREPRISE": {
+            "focus": [
+                "TOX",
+                "INT",
+                "EMP"
+            ],
+            "weights": {
+                "TOX": 2.0,
+                "INT": 1.5,
+                "EMP": 0.5,
+                "RES": 1.0
+            },
+            "verdict_labels": {
+                "high": "Structure à haute résilience, environnement sain.",
+                "medium": "Frictions managériales détectées, vigilance requise.",
+                "low": "Alerte : Environnement à risque, turnover prévisible élevé."
+            }
+        },
+        "BARMAN": {
+            "focus": [
+                "RES",
+                "INT",
+                "ADA"
+            ],
+            "weights": {
+                "RES": 1.8,
+                "INT": 1.5,
+                "ADA": 1.2,
+                "EMP": 1.0
+            },
+            "critical_fail": "INT < 50"
+        },
+        "SERVEUR": {
+            "focus": [
+                "EMP",
+                "RES",
+                "ADA"
+            ],
+            "weights": {
+                "EMP": 1.8,
+                "RES": 1.5,
+                "ADA": 1.3,
+                "INT": 1.0
+            }
+        },
+        "CHEF_RANG": {
+            "focus": [
+                "EMP",
+                "AUT",
+                "RES"
+            ],
+            "weights": {
+                "EMP": 1.5,
+                "AUT": 1.5,
+                "RES": 1.5,
+                "ADA": 1.0
+            }
+        },
+        "MANAGER": {
+            "focus": [
+                "AUT",
+                "RES",
+                "EMP"
+            ],
+            "weights": {
+                "AUT": 1.6,
+                "RES": 1.6,
+                "EMP": 1.2,
+                "INT": 1.4
+            }
+        },
+        "MANAGER_PRINCIPAL": {
+            "focus": [
+                "AUT",
+                "INT",
+                "RES"
+            ],
+            "weights": {
+                "AUT": 2.0,
+                "INT": 1.5,
+                "RES": 1.5,
+                "EMP": 0.8
+            },
+            "special_check": "Dark Empathy Analysis"
+        },
+        "DIRECTEUR": {
+            "focus": [
+                "AUT",
+                "ADA",
+                "RES"
+            ],
+            "weights": {
+                "AUT": 2.2,
+                "ADA": 1.8,
+                "RES": 1.5,
+                "INT": 1.5
+            }
+        },
+        "RH_AUDIT": {
+            "focus": [
+                "INT",
+                "EMP",
+                "AUT"
+            ],
+            "weights": {
+                "INT": 2.0,
+                "EMP": 1.8,
+                "AUT": 1.2,
+                "RES": 1.0
+            },
+            "alert_flag": "Dark Empathy > 80%"
+        },
+        "CUISINE": {
+            "focus": [
+                "RES",
+                "ADA",
+                "INT"
+            ],
+            "weights": {
+                "RES": 2.2,
+                "ADA": 1.5,
+                "INT": 1.2,
+                "EMP": 0.5
+            }
+        },
+        "RECEPTION": {
+            "focus": [
+                "EMP",
+                "INT",
+                "ADA"
+            ],
+            "weights": {
+                "EMP": 2.0,
+                "INT": 1.5,
+                "ADA": 1.5,
+                "RES": 1.0
+            }
+        }
+    },
+    "consistency_check": {
+        "pairs": [
+            {
+                "q_ref": 12,
+                "q_mirror": 45,
+                "penalty": 15,
+                "desc": "Ordre vs Désordre"
+            },
+            {
+                "q_ref": 5,
+                "q_mirror": 82,
+                "penalty": 20,
+                "desc": "Argent vs Passion"
+            },
+            {
+                "q_ref": 18,
+                "q_mirror": 93,
+                "penalty": 25,
+                "desc": "Pardon vs Autorité"
+            }
+        ]
+    },
+    "feedback_library": {
+        "RES": {
+            "high": "Résistance au stress exceptionnelle. Maintient sa lucidité même en chaos opérationnel.",
+            "low": "Fragilité sous pression. Risque de perte de moyens ou d'agressivité en situation de crise."
+        },
+        "EMP": {
+            "high": "Intelligence émotionnelle tactique. Sait désamorcer les conflits avant qu'ils n'éclatent.",
+            "low": "Déficit d'empathie. Approche mécanique du client, risque de froissements relationnels."
+        },
+        "AUT": {
+            "high": "Leadership naturel. Capacité à trancher et à fédérer sans imposer par la force.",
+            "low": "Manque d'affirmation. Difficulté à tenir un cadre ou à se faire respecter par l'équipe."
+        },
+        "INT": {
+            "high": "Rigueur morale exemplaire. Respect absolu des standards et de la hiérarchie.",
+            "low": "Risque éthique. Tendance à accommoder les règles pour son confort personnel."
+        },
+        "TOX": {
+            "high": "Vigilance exacerbée. Capacité à détecter les dysfonctionnements invisibles.",
+            "low": "Naïveté organisationnelle. Ne voit pas venir les jeux politiques ou les manipulations."
+        },
+        "ADA": {
+            "high": "Haute plasticité mentale. S'ajuste immédiatement aux changements de rythme ou de poste.",
+            "low": "Rigidité cognitive. Besoin de routine, difficulté à gérer l'imprévu ou l'urgence."
+        }
+    },
+    "profiles_library": {
+        "SENTINEL": {
+            "title": "LEADER SENTINEL",
+            "subtitle": "Profil de Référence HCR",
+            "desc": "Profil équilibré capable de basculer du directif au participatif.",
+            "full_text": "Candidat idéal pour les postes à responsabilités. Le Sentinel combine une haute résilience opérationnelle avec une autorité naturelle tempérée par une bonne écoute. Il sait imposer un cadre strict (standards) tout en désamorçant les conflits par la diplomatie. Fiabilité et engagement maximal détectés."
+        },
+        "PETIT_CHEF": {
+            "title": "LE PETIT CHEF",
+            "subtitle": "Risque Managérial Élevé",
+            "desc": "Excès d'autorité, manque de régulation émotionnelle.",
+            "full_text": "Profil performant techniquement mais dangereux humainement. Le 'Petit Chef' compense son insécurité par une autorité écrasante et un manque d'empathie. Risque élevé de créer du turnover dans les équipes et de froisser la clientèle par une rigidité excessive. À canaliser impérativement."
+        },
+        "PASSIF": {
+            "title": "PASSIF CONCILIANT",
+            "subtitle": "Fragilité Structurelle",
+            "desc": "Trop d'empathie, difficulté à tenir le cadre.",
+            "full_text": "Candidat attachant et très apprécié pour sa gentillesse, mais inadapté aux fonctions de commandement ou de haute pression. Tendance à se laisser déborder par le service ou par les requêtes de l'équipe. Manque d'assertivité pour faire respecter les standards. Excellent exécutant encadré, mais pas leader."
+        },
+        "OPS": {
+            "title": "PROFIL EXÉCUTANT",
+            "subtitle": "Technicien Pur",
+            "desc": "Bon technicien mais manque de hauteur de vue.",
+            "full_text": "Profil utilitaire. Fait le job techniquement mais ne s'investit pas dans la vision globale ou la dynamique d'équipe. Ni leader, ni toxique, c'est un 'mercenaire' opérationnel qui a besoin d'instructions claires et précises. Fiabilité correcte mais initiative limitée."
+        }
+    }
+}

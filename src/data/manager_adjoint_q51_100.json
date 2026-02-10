@@ -1,0 +1,1354 @@
+{
+    "questions": [
+        {
+            "id": "MADJ_051",
+            "numero": 51,
+            "situation": "Le Directeur te demande de choisir entre le Manager et un Chef de Rang performant.",
+            "reponses": {
+                "A": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je choisis le plus performant objectivement"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je garde le Manager"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je propose une autre solution"
+                },
+                "D": {
+                    "trait": "FRANC",
+                    "texte": "Je dis que ce n'est pas à moi de choisir"
+                },
+                "E": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je défends les deux"
+                }
+            }
+        },
+        {
+            "id": "MADJ_052",
+            "numero": 52,
+            "situation": "Le Manager te demande de licencier ton meilleur Chef de Rang.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je refuse et je le défends"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'exécute l'ordre"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je demande les raisons et je négocie"
+                },
+                "D": {
+                    "trait": "FRANC",
+                    "texte": "Je dis que c'est injuste"
+                },
+                "E": {
+                    "trait": "AUTONOME",
+                    "texte": "J'en parle au Directeur"
+                }
+            }
+        },
+        {
+            "id": "MADJ_053",
+            "numero": 53,
+            "situation": "Un serveur te demande de l'argent en urgence.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je lui prête sans hésiter"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je l'aide à trouver une solution"
+                },
+                "C": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse, ce n'est pas mon rôle"
+                },
+                "D": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je prête un petit montant"
+                },
+                "E": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je le dirige vers les RH"
+                }
+            }
+        },
+        {
+            "id": "MADJ_054",
+            "numero": 54,
+            "situation": "Le Manager te fait des remarques sexistes/racistes.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je lui dis que c'est inacceptable"
+                },
+                "B": {
+                    "trait": "AUTONOME",
+                    "texte": "J'alerte le Directeur"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je recadre avec tact"
+                },
+                "D": {
+                    "trait": "SUIVEUR",
+                    "texte": "Je ne dis rien"
+                },
+                "E": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je documente et je porte plainte"
+                }
+            }
+        },
+        {
+            "id": "MADJ_055",
+            "numero": 55,
+            "situation": "Ton équipe te demande de les laisser partir plus tôt régulièrement.",
+            "reponses": {
+                "A": {
+                    "trait": "FLEXIBLE",
+                    "texte": "J'accepte si le travail est fait"
+                },
+                "B": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je refuse, les horaires sont les horaires"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je négocie un système équitable"
+                },
+                "D": {
+                    "trait": "PROTECTEUR",
+                    "texte": "J'accepte et j'assume face au Manager"
+                },
+                "E": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je demande au Manager"
+                }
+            }
+        },
+        {
+            "id": "MADJ_056",
+            "numero": 56,
+            "situation": "Le Directeur te propose d'ouvrir un nouveau restaurant en tant que Manager.",
+            "reponses": {
+                "A": {
+                    "trait": "AMBITIEUX",
+                    "texte": "J'accepte avec enthousiasme"
+                },
+                "B": {
+                    "trait": "HUMBLE",
+                    "texte": "Je ne me sens pas prêt"
+                },
+                "C": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je négocie les conditions"
+                },
+                "D": {
+                    "trait": "VISIONNAIRE",
+                    "texte": "J'accepte et je présente ma vision"
+                },
+                "E": {
+                    "trait": "DIPLOMATE",
+                    "texte": "J'en parle au Manager actuel"
+                }
+            }
+        },
+        {
+            "id": "MADJ_057",
+            "numero": 57,
+            "situation": "Un Chef de Rang te défie ouvertement en plein service.",
+            "reponses": {
+                "A": {
+                    "trait": "AUTORITAIRE",
+                    "texte": "Je le recadre immédiatement et violemment"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je gère le service et on parle après"
+                },
+                "C": {
+                    "trait": "LEADER",
+                    "texte": "Je tranche avec autorité mais sans violence"
+                },
+                "D": {
+                    "trait": "FLEXIBLE",
+                    "texte": "J'écoute son point de vue"
+                },
+                "E": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je suis déstabilisé"
+                }
+            }
+        },
+        {
+            "id": "MADJ_058",
+            "numero": 58,
+            "situation": "Le Manager te demande de falsifier les chiffres du CA.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse catégoriquement"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je le fais comme demandé"
+                },
+                "C": {
+                    "trait": "AUTONOME",
+                    "texte": "J'alerte le Directeur"
+                },
+                "D": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je demande pourquoi avant de refuser"
+                },
+                "E": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je documente et je contacte les autorités"
+                }
+            }
+        },
+        {
+            "id": "MADJ_059",
+            "numero": 59,
+            "situation": "Ton équipe te demande de choisir entre eux et le Manager toxique.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je choisis mon équipe"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je refuse de choisir et je médie"
+                },
+                "C": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je soutiens le Manager"
+                },
+                "D": {
+                    "trait": "LEADER",
+                    "texte": "Je monte au Directeur pour trancher"
+                },
+                "E": {
+                    "trait": "AUTONOME",
+                    "texte": "Je démissionne"
+                }
+            }
+        },
+        {
+            "id": "MADJ_060",
+            "numero": 60,
+            "situation": "Le Directeur te demande ton avis sur le licenciement du Manager.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je suis 100% honnête"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je donne un avis nuancé"
+                },
+                "C": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je défends le Manager"
+                },
+                "D": {
+                    "trait": "AMBITIEUX",
+                    "texte": "Je dis qu'il faut le virer pour prendre sa place"
+                },
+                "E": {
+                    "trait": "SUIVEUR",
+                    "texte": "Je ne donne pas d'avis"
+                }
+            }
+        },
+        {
+            "id": "MADJ_061",
+            "numero": 61,
+            "situation": "Un Chef de Rang gagne plus que toi.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je demande une augmentation au Manager"
+                },
+                "B": {
+                    "trait": "HUMBLE",
+                    "texte": "C'est normal s'il est meilleur"
+                },
+                "C": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je suis frustré et jaloux"
+                },
+                "D": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je négocie en montrant ma valeur"
+                },
+                "E": {
+                    "trait": "RÉSILIENT",
+                    "texte": "Je prouve que je vaux plus"
+                }
+            }
+        },
+        {
+            "id": "MADJ_062",
+            "numero": 62,
+            "situation": "Le Manager te demande de mentir au Directeur sur un incident grave.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse et je dis la vérité"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je mens comme demandé"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "J'arrange la vérité sans mentir complètement"
+                },
+                "D": {
+                    "trait": "AUTONOME",
+                    "texte": "J'alerte le Directeur"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je couvre cette fois mais c'est la dernière"
+                }
+            }
+        },
+        {
+            "id": "MADJ_063",
+            "numero": 63,
+            "situation": "Ton équipe performe moins bien que prévu. Le Manager te met la pression.",
+            "reponses": {
+                "A": {
+                    "trait": "LEADER",
+                    "texte": "Je remotivé mon équipe et je relève le défi"
+                },
+                "B": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je défends mon équipe et j'assume"
+                },
+                "C": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je stresse et je doute de moi"
+                },
+                "D": {
+                    "trait": "AUTORITAIRE",
+                    "texte": "Je mets la pression sur l'équipe"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "J'analyse et je corrige"
+                }
+            }
+        },
+        {
+            "id": "MADJ_064",
+            "numero": 64,
+            "situation": "Un serveur te dit que tu es devenu comme le Manager toxique.",
+            "reponses": {
+                "A": {
+                    "trait": "HUMBLE",
+                    "texte": "Je me remets en question profondément"
+                },
+                "B": {
+                    "trait": "FLEXIBLE",
+                    "texte": "J'écoute et je change"
+                },
+                "C": {
+                    "trait": "AUTORITAIRE",
+                    "texte": "Il exagère, je maintiens"
+                },
+                "D": {
+                    "trait": "DIPLOMATE",
+                    "texte": "On discute pour comprendre"
+                },
+                "E": {
+                    "trait": "SENSIBLE",
+                    "texte": "Ça me blesse énormément"
+                }
+            }
+        },
+        {
+            "id": "MADJ_065",
+            "numero": 65,
+            "situation": "Le Directeur te demande de recruter quelqu'un de moins compétent que ton candidat idéal.",
+            "reponses": {
+                "A": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'exécute"
+                },
+                "B": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse et j'explique pourquoi"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je négocie un compromis"
+                },
+                "D": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "J'accepte mais je garde mon candidat en backup"
+                },
+                "E": {
+                    "trait": "AUTONOME",
+                    "texte": "Je recrute mon candidat quand même"
+                }
+            }
+        },
+        {
+            "id": "MADJ_066",
+            "numero": 66,
+            "situation": "Un Chef de Rang démissionne à cause de toi.",
+            "reponses": {
+                "A": {
+                    "trait": "HUMBLE",
+                    "texte": "Je me remets en question complètement"
+                },
+                "B": {
+                    "trait": "RÉSILIENT",
+                    "texte": "Tant pis, je recrute mieux"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "J'essaie de le retenir et de m'améliorer"
+                },
+                "D": {
+                    "trait": "AUTORITAIRE",
+                    "texte": "Qu'il parte, je n'ai pas besoin de lui"
+                },
+                "E": {
+                    "trait": "SENSIBLE",
+                    "texte": "Ça me marque longtemps"
+                }
+            }
+        },
+        {
+            "id": "MADJ_067",
+            "numero": 67,
+            "situation": "Le Manager te demande de gérer une crise alors qu'il est présent.",
+            "reponses": {
+                "A": {
+                    "trait": "LEADER",
+                    "texte": "Je prends le commandement avec plaisir"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je demande s'il veut gérer ou si je gère"
+                },
+                "C": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je gère comme demandé"
+                },
+                "D": {
+                    "trait": "HUMBLE",
+                    "texte": "Je lui propose de gérer ensemble"
+                },
+                "E": {
+                    "trait": "AUTONOME",
+                    "texte": "Je gère et j'assume"
+                }
+            }
+        },
+        {
+            "id": "MADJ_068",
+            "numero": 68,
+            "situation": "Ton équipe te demande de devenir Manager à la place du Manager actuel.",
+            "reponses": {
+                "A": {
+                    "trait": "AMBITIEUX",
+                    "texte": "Je me positionne activement"
+                },
+                "B": {
+                    "trait": "HUMBLE",
+                    "texte": "Je refuse, je ne suis pas prêt"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je valorise l'équipe sans trahir le Manager"
+                },
+                "D": {
+                    "trait": "FRANC",
+                    "texte": "Je leur dis que ce n'est pas comme ça que ça marche"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je note mentalement et j'attends ma chance"
+                }
+            }
+        },
+        {
+            "id": "MADJ_069",
+            "numero": 69,
+            "situation": "Le Directeur te demande de choisir entre une augmentation ou une promotion.",
+            "reponses": {
+                "A": {
+                    "trait": "AMBITIEUX",
+                    "texte": "Promotion sans hésiter"
+                },
+                "B": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Augmentation, c'est du concret"
+                },
+                "C": {
+                    "trait": "VISIONNAIRE",
+                    "texte": "Promotion, pour le potentiel long terme"
+                },
+                "D": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je négocie pour avoir les deux"
+                },
+                "E": {
+                    "trait": "HUMBLE",
+                    "texte": "Je demande ce que le Directeur préfère"
+                }
+            }
+        },
+        {
+            "id": "MADJ_070",
+            "numero": 70,
+            "situation": "Un Chef de Rang fait mieux que toi sur tous les plans.",
+            "reponses": {
+                "A": {
+                    "trait": "HUMBLE",
+                    "texte": "J'apprends de lui"
+                },
+                "B": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je me sens illégitime"
+                },
+                "C": {
+                    "trait": "LEADER",
+                    "texte": "Je le pousse vers le haut"
+                },
+                "D": {
+                    "trait": "AUTORITAIRE",
+                    "texte": "Je marque mon autorité"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je capitalise sur ses compétences"
+                }
+            }
+        },
+        {
+            "id": "MADJ_071",
+            "numero": 71,
+            "situation": "Le Manager part définitivement sans préavis. Chaos total.",
+            "reponses": {
+                "A": {
+                    "trait": "LEADER",
+                    "texte": "Je prends le commandement immédiatement"
+                },
+                "B": {
+                    "trait": "RÉSILIENT",
+                    "texte": "Je garde mon calme et je stabilise"
+                },
+                "C": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je panique"
+                },
+                "D": {
+                    "trait": "AUTONOME",
+                    "texte": "J'appelle le Directeur et je gère en attendant"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je fais l'essentiel et je vois après"
+                }
+            }
+        },
+        {
+            "id": "MADJ_072",
+            "numero": 72,
+            "situation": "Un serveur te demande de l'aide pour un problème personnel grave.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je l'aide au maximum"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je l'écoute et je le dirige vers les bonnes ressources"
+                },
+                "C": {
+                    "trait": "FRANC",
+                    "texte": "Ce n'est pas mon rôle"
+                },
+                "D": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je l'aide dans la mesure du raisonnable"
+                },
+                "E": {
+                    "trait": "FLEXIBLE",
+                    "texte": "J'adapte son planning pour l'aider"
+                }
+            }
+        },
+        {
+            "id": "MADJ_073",
+            "numero": 73,
+            "situation": "Le Directeur te demande de virer le Manager.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse, c'est son job"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'exécute l'ordre"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je propose qu'on le fasse ensemble"
+                },
+                "D": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je préviens le Manager"
+                },
+                "E": {
+                    "trait": "AMBITIEUX",
+                    "texte": "J'accepte et je prends sa place"
+                }
+            }
+        },
+        {
+            "id": "MADJ_074",
+            "numero": 74,
+            "situation": "Ton équipe te demande de cacher une erreur grave au Manager.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je couvre mon équipe"
+                },
+                "B": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse de mentir"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je gère l'erreur et j'informe avec tact"
+                },
+                "D": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je remonte immédiatement"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Ça dépend de la gravité"
+                }
+            }
+        },
+        {
+            "id": "MADJ_075",
+            "numero": 75,
+            "situation": "Le Manager te demande de travailler 80h par semaine.",
+            "reponses": {
+                "A": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'accepte sans discuter"
+                },
+                "B": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse, c'est illégal et malsain"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je négocie un compromis raisonnable"
+                },
+                "D": {
+                    "trait": "RÉSILIENT",
+                    "texte": "J'accepte temporairement"
+                },
+                "E": {
+                    "trait": "AUTONOME",
+                    "texte": "J'en parle au Directeur"
+                }
+            }
+        },
+        {
+            "id": "MADJ_076",
+            "numero": 76,
+            "situation": "Un Chef de Rang te demande une augmentation méritée mais le budget est serré.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je me bats pour qu'il l'obtienne"
+                },
+                "B": {
+                    "trait": "FRANC",
+                    "texte": "Je lui explique honnêtement la situation"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je trouve des alternatives (primes, avantages)"
+                },
+                "D": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je refuse car le budget ne permet pas"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je négocie une augmentation plus petite"
+                }
+            }
+        },
+        {
+            "id": "MADJ_077",
+            "numero": 77,
+            "situation": "Le Manager te demande de favoriser certains employés.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse, c'est injuste"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je le fais comme demandé"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je fais semblant mais je reste équitable"
+                },
+                "D": {
+                    "trait": "AUTONOME",
+                    "texte": "J'en parle au Directeur"
+                },
+                "E": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je traite tout le monde pareil"
+                }
+            }
+        },
+        {
+            "id": "MADJ_078",
+            "numero": 78,
+            "situation": "Le Directeur te demande ton avis : garder le Manager ou le virer.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je suis 100% honnête"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je donne un avis nuancé"
+                },
+                "C": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je défends le Manager"
+                },
+                "D": {
+                    "trait": "AMBITIEUX",
+                    "texte": "Je dis de le virer pour prendre sa place"
+                },
+                "E": {
+                    "trait": "SUIVEUR",
+                    "texte": "Je ne me prononce pas"
+                }
+            }
+        },
+        {
+            "id": "MADJ_079",
+            "numero": 79,
+            "situation": "Un serveur te dit que tu es devenu aussi toxique que le Manager.",
+            "reponses": {
+                "A": {
+                    "trait": "HUMBLE",
+                    "texte": "Je me remets en question profondément"
+                },
+                "B": {
+                    "trait": "FLEXIBLE",
+                    "texte": "J'écoute et je change"
+                },
+                "C": {
+                    "trait": "AUTORITAIRE",
+                    "texte": "Il exagère, je suis juste exigeant"
+                },
+                "D": {
+                    "trait": "DIPLOMATE",
+                    "texte": "On discute calmement"
+                },
+                "E": {
+                    "trait": "SENSIBLE",
+                    "texte": "Ça me blesse énormément"
+                }
+            }
+        },
+        {
+            "id": "MADJ_080",
+            "numero": 80,
+            "situation": "Le Manager démissionne brutalement. Le Directeur est absent. Gros service ce soir.",
+            "reponses": {
+                "A": {
+                    "trait": "LEADER",
+                    "texte": "Je prends le commandement total"
+                },
+                "B": {
+                    "trait": "RÉSILIENT",
+                    "texte": "Je garde mon calme et je coordonne"
+                },
+                "C": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je panique intérieurement"
+                },
+                "D": {
+                    "trait": "AUTONOME",
+                    "texte": "Je gère et j'informe le Directeur après"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je fais l'essentiel, on verra après"
+                }
+            }
+        },
+        {
+            "id": "MADJ_081",
+            "numero": 81,
+            "situation": "Un Chef de Rang te manque de respect systématiquement.",
+            "reponses": {
+                "A": {
+                    "trait": "AUTORITAIRE",
+                    "texte": "Je le recadre violemment"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je le prends en privé"
+                },
+                "C": {
+                    "trait": "FLEXIBLE",
+                    "texte": "Je cherche à comprendre pourquoi"
+                },
+                "D": {
+                    "trait": "FRANC",
+                    "texte": "Je lui pose un ultimatum"
+                },
+                "E": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je le vis mal"
+                }
+            }
+        },
+        {
+            "id": "MADJ_082",
+            "numero": 82,
+            "situation": "Le Directeur te demande de choisir entre ta vie perso et ta carrière.",
+            "reponses": {
+                "A": {
+                    "trait": "AMBITIEUX",
+                    "texte": "Carrière sans hésiter"
+                },
+                "B": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse ce chantage"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je cherche un équilibre"
+                },
+                "D": {
+                    "trait": "HUMBLE",
+                    "texte": "Vie perso, la carrière peut attendre"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Ça dépend du moment"
+                }
+            }
+        },
+        {
+            "id": "MADJ_083",
+            "numero": 83,
+            "situation": "Le Manager te propose de monter une arnaque ensemble.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse catégoriquement"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'accepte"
+                },
+                "C": {
+                    "trait": "AUTONOME",
+                    "texte": "J'alerte le Directeur"
+                },
+                "D": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je fais semblant d'accepter pour gagner du temps"
+                },
+                "E": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je contacte les autorités"
+                }
+            }
+        },
+        {
+            "id": "MADJ_084",
+            "numero": 84,
+            "situation": "Ton équipe te demande de démissionner avec eux contre le Manager.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je démissionne avec eux"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je les retiens et je monte au Directeur"
+                },
+                "C": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je refuse, je reste loyal au Manager"
+                },
+                "D": {
+                    "trait": "LEADER",
+                    "texte": "Je gère le problème sans démissionner"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je les laisse partir et je recrute"
+                }
+            }
+        },
+        {
+            "id": "MADJ_085",
+            "numero": 85,
+            "situation": "Le Manager part en burn-out. Le Directeur te demande si tu peux gérer seul 3 mois.",
+            "reponses": {
+                "A": {
+                    "trait": "AMBITIEUX",
+                    "texte": "Oui, c'est ma chance de montrer ma valeur"
+                },
+                "B": {
+                    "trait": "RÉSILIENT",
+                    "texte": "Oui, je vais tenir"
+                },
+                "C": {
+                    "trait": "HUMBLE",
+                    "texte": "Je ne suis pas sûr d'être prêt"
+                },
+                "D": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Oui si j'ai du support"
+                },
+                "E": {
+                    "trait": "SENSIBLE",
+                    "texte": "Non, c'est trop de pression"
+                }
+            }
+        },
+        {
+            "id": "MADJ_086",
+            "numero": 86,
+            "situation": "Un Chef de Rang te demande de couvrir son trafic de drogue.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse et je le vire"
+                },
+                "B": {
+                    "trait": "AUTONOME",
+                    "texte": "J'alerte le Directeur et la police"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je lui donne une chance d'arrêter"
+                },
+                "D": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Ce n'est pas mon problème"
+                },
+                "E": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je le vire et je contacte les autorités"
+                }
+            }
+        },
+        {
+            "id": "MADJ_087",
+            "numero": 87,
+            "situation": "Le Directeur te demande de licencier ton meilleur ami employé.",
+            "reponses": {
+                "A": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'exécute même si ça me détruit"
+                },
+                "B": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je refuse et je le défends"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je négocie une alternative"
+                },
+                "D": {
+                    "trait": "FRANC",
+                    "texte": "Je demande au Directeur de le faire lui-même"
+                },
+                "E": {
+                    "trait": "AUTONOME",
+                    "texte": "Je démissionne"
+                }
+            }
+        },
+        {
+            "id": "MADJ_088",
+            "numero": 88,
+            "situation": "Le Manager te harcèle sexuellement.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je pose immédiatement les limites"
+                },
+                "B": {
+                    "trait": "AUTONOME",
+                    "texte": "J'alerte le Directeur"
+                },
+                "C": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je porte plainte"
+                },
+                "D": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je subis en silence"
+                },
+                "E": {
+                    "trait": "DIPLOMATE",
+                    "texte": "J'essaie de gérer sans conflit"
+                }
+            }
+        },
+        {
+            "id": "MADJ_089",
+            "numero": 89,
+            "situation": "Le restaurant ferme définitivement. Le Directeur disparaît.",
+            "reponses": {
+                "A": {
+                    "trait": "LEADER",
+                    "texte": "J'organise l'équipe pour récupérer nos dus"
+                },
+                "B": {
+                    "trait": "RÉSILIENT",
+                    "texte": "Je cherche un nouveau job immédiatement"
+                },
+                "C": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je suis effondré"
+                },
+                "D": {
+                    "trait": "AUTONOME",
+                    "texte": "Je contacte les Prud'hommes"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je passe à autre chose"
+                }
+            }
+        },
+        {
+            "id": "MADJ_090",
+            "numero": 90,
+            "situation": "Un concurrent te propose le double du salaire pour venir chez eux.",
+            "reponses": {
+                "A": {
+                    "trait": "AMBITIEUX",
+                    "texte": "J'accepte immédiatement"
+                },
+                "B": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je refuse par loyauté"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "J'en parle au Directeur pour négocier"
+                },
+                "D": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "J'écoute l'offre et je compare"
+                },
+                "E": {
+                    "trait": "HUMBLE",
+                    "texte": "Je réfléchis longuement"
+                }
+            }
+        },
+        {
+            "id": "MADJ_091",
+            "numero": 91,
+            "situation": "Le Manager te demande de travailler pendant ton congé maternité/paternité.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse, c'est illégal"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'accepte"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je propose un compromis minimal"
+                },
+                "D": {
+                    "trait": "AUTONOME",
+                    "texte": "J'en parle au Directeur"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je fais le minimum à distance"
+                }
+            }
+        },
+        {
+            "id": "MADJ_092",
+            "numero": 92,
+            "situation": "Un Chef de Rang fait un burn-out à cause de ta pression.",
+            "reponses": {
+                "A": {
+                    "trait": "HUMBLE",
+                    "texte": "Je me remets en question profondément"
+                },
+                "B": {
+                    "trait": "FLEXIBLE",
+                    "texte": "J'ajuste complètement mon management"
+                },
+                "C": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je culpabilise énormément"
+                },
+                "D": {
+                    "trait": "AUTORITAIRE",
+                    "texte": "C'est un faible, tant pis"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "J'analyse et je corrige ce qui doit l'être"
+                }
+            }
+        },
+        {
+            "id": "MADJ_093",
+            "numero": 93,
+            "situation": "Le Directeur te demande de virer quelqu'un pour raison discriminatoire.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse catégoriquement"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'exécute l'ordre"
+                },
+                "C": {
+                    "trait": "AUTONOME",
+                    "texte": "Je contacte les autorités"
+                },
+                "D": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je trouve une excuse légale"
+                },
+                "E": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je démissionne"
+                }
+            }
+        },
+        {
+            "id": "MADJ_094",
+            "numero": 94,
+            "situation": "Ton équipe te demande de choisir : eux ou le Directeur.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je choisis mon équipe"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je refuse de choisir"
+                },
+                "C": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Je choisis le Directeur"
+                },
+                "D": {
+                    "trait": "LEADER",
+                    "texte": "Je choisis ce qui est juste"
+                },
+                "E": {
+                    "trait": "AUTONOME",
+                    "texte": "Je démissionne"
+                }
+            }
+        },
+        {
+            "id": "MADJ_095",
+            "numero": 95,
+            "situation": "Le Manager te propose de partager 50k€ volés au restaurant.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Je refuse et je le dénonce"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "J'accepte par peur"
+                },
+                "C": {
+                    "trait": "AUTONOME",
+                    "texte": "J'alerte le Directeur"
+                },
+                "D": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je fais semblant d'accepter et je prépare des preuves"
+                },
+                "E": {
+                    "trait": "RIGOUREUX",
+                    "texte": "Je contacte la police"
+                }
+            }
+        },
+        {
+            "id": "MADJ_096",
+            "numero": 96,
+            "situation": "Un Chef de Rang te demande conseil : rester ou partir.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Je le retiens par tous les moyens"
+                },
+                "B": {
+                    "trait": "FRANC",
+                    "texte": "Je lui dis honnêtement ce que je ferais"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je l'aide à analyser objectivement"
+                },
+                "D": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "S'il part, je le laisse"
+                },
+                "E": {
+                    "trait": "HUMBLE",
+                    "texte": "Je lui dis que je ne suis pas légitime pour conseiller"
+                }
+            }
+        },
+        {
+            "id": "MADJ_097",
+            "numero": 97,
+            "situation": "Le Directeur te demande ton rêve professionnel ultime.",
+            "reponses": {
+                "A": {
+                    "trait": "AMBITIEUX",
+                    "texte": "Devenir Directeur Général"
+                },
+                "B": {
+                    "trait": "HUMBLE",
+                    "texte": "Être un bon Manager"
+                },
+                "C": {
+                    "trait": "VISIONNAIRE",
+                    "texte": "Créer mon propre concept"
+                },
+                "D": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Avoir un bon salaire et équilibre vie perso"
+                },
+                "E": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Former la prochaine génération"
+                }
+            }
+        },
+        {
+            "id": "MADJ_098",
+            "numero": 98,
+            "situation": "Un serveur te dit qu'il a pensé au suicide à cause du travail.",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "J'alerte immédiatement les secours et je l'accompagne"
+                },
+                "B": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je l'écoute et je trouve de l'aide professionnelle"
+                },
+                "C": {
+                    "trait": "FRANC",
+                    "texte": "Je le mets en arrêt et j'en parle au Directeur"
+                },
+                "D": {
+                    "trait": "SENSIBLE",
+                    "texte": "Je suis bouleversé"
+                },
+                "E": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Je le dirige vers les ressources adaptées"
+                }
+            }
+        },
+        {
+            "id": "MADJ_099",
+            "numero": 99,
+            "situation": "Le Manager te demande de choisir : ta conscience ou ton job.",
+            "reponses": {
+                "A": {
+                    "trait": "FRANC",
+                    "texte": "Ma conscience, je démissionne"
+                },
+                "B": {
+                    "trait": "OBÉISSANT",
+                    "texte": "Mon job, je fais ce qu'on me demande"
+                },
+                "C": {
+                    "trait": "DIPLOMATE",
+                    "texte": "Je trouve un compromis"
+                },
+                "D": {
+                    "trait": "AUTONOME",
+                    "texte": "J'alerte le Directeur"
+                },
+                "E": {
+                    "trait": "RÉSILIENT",
+                    "texte": "Je tiens jusqu'à trouver mieux"
+                }
+            }
+        },
+        {
+            "id": "MADJ_100",
+            "numero": 100,
+            "situation": "ULTIME : Si tu pouvais changer UNE chose dans ce métier, ce serait quoi ?",
+            "reponses": {
+                "A": {
+                    "trait": "PROTECTEUR",
+                    "texte": "Le respect et la protection des équipes"
+                },
+                "B": {
+                    "trait": "PRAGMATIQUE",
+                    "texte": "Les horaires et le salaire"
+                },
+                "C": {
+                    "trait": "FRANC",
+                    "texte": "La culture de la peur et de la toxicité"
+                },
+                "D": {
+                    "trait": "VISIONNAIRE",
+                    "texte": "Réinventer le modèle pour le rendre durable"
+                },
+                "E": {
+                    "trait": "HUMBLE",
+                    "texte": "Rien, j'aime ce métier tel qu'il est"
+                }
+            }
+        }
+    ]
+}
