@@ -1,0 +1,1445 @@
+{
+    "test_cognitif_management": {
+        "meta": {
+            "postes": [
+                "Directeur",
+                "Manager",
+                "Manager Adjoint"
+            ],
+            "total_questions": 100,
+            "dimensions": 5,
+            "questions_par_dimension": 20,
+            "duree_estimee": "35-40 minutes",
+            "scoring": "Chaque bonne réponse = 1 point. Score total sur 100."
+        },
+        "dimensions": [
+            {
+                "id": "logique",
+                "nom": "Logique / Raisonnement",
+                "description": "Capacité à analyser des situations, identifier des patterns et tirer des conclusions logiques"
+            },
+            {
+                "id": "memoire",
+                "nom": "Mémoire",
+                "description": "Capacité à retenir et rappeler des informations importantes"
+            },
+            {
+                "id": "calcul",
+                "nom": "Calcul Mental",
+                "description": "Capacité à effectuer des calculs rapides et précis"
+            },
+            {
+                "id": "resolution",
+                "nom": "Résolution de Problèmes",
+                "description": "Capacité à trouver des solutions efficaces face à des situations complexes"
+            },
+            {
+                "id": "vitesse",
+                "nom": "Vitesse de Traitement",
+                "description": "Capacité à traiter l'information rapidement et prendre des décisions rapides"
+            }
+        ],
+        "questions": [
+            {
+                "id": "LOG_001",
+                "numero": 1,
+                "dimension": "logique",
+                "question": "Si tous les Managers sont des leaders, et que tous les leaders prennent des décisions, alors :",
+                "options": [
+                    "Tous ceux qui prennent des décisions sont des Managers",
+                    "Tous les Managers prennent des décisions",
+                    "Certains leaders ne sont pas des Managers",
+                    "Aucune de ces réponses"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Si tous les Managers sont des leaders ET tous les leaders prennent des décisions, alors tous les Managers prennent des décisions (syllogisme)."
+            },
+            {
+                "id": "LOG_002",
+                "numero": 2,
+                "dimension": "logique",
+                "question": "Quelle est la prochaine lettre dans la séquence : D, M, M, A, C, R, ?",
+                "options": [
+                    "S",
+                    "T",
+                    "P",
+                    "A"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Ce sont les premières lettres des postes hiérarchiques : Directeur, Manager, Manager Adjoint, Chef de Rang, puis Serveur."
+            },
+            {
+                "id": "LOG_003",
+                "numero": 3,
+                "dimension": "logique",
+                "question": "Un restaurant fait 30% de marge sur un plat à 20€. Si le food cost augmente de 2€, quelle doit être la nouvelle marge (en %) pour maintenir le même profit en euros ?",
+                "options": [
+                    "20%",
+                    "25%",
+                    "27.3%",
+                    "32%"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Profit initial = 6€ (30% de 20€). Nouveau coût = coût+2€. Pour garder 6€ de profit : 6/(20+X) où X est l'augmentation de prix nécessaire. Nouvelle marge ≈ 27.3%."
+            },
+            {
+                "id": "LOG_004",
+                "numero": 4,
+                "dimension": "logique",
+                "question": "Si le CA baisse de 20% puis augmente de 25%, le CA final par rapport à l'initial est :",
+                "options": [
+                    "Égal",
+                    "Supérieur de 5%",
+                    "Inférieur de 5%",
+                    "Égal à zéro"
+                ],
+                "reponse_correcte": 0,
+                "explication": "100 → 80 (-20%) → 100 (+25% de 80). Le CA revient exactement au niveau initial."
+            },
+            {
+                "id": "LOG_005",
+                "numero": 5,
+                "dimension": "logique",
+                "question": "Trois restaurants A, B, C. A fait plus de CA que B. C fait moins que B. Donc :",
+                "options": [
+                    "A fait le plus de CA",
+                    "C fait le moins de CA",
+                    "A fait plus que C",
+                    "Impossible à déterminer"
+                ],
+                "reponse_correcte": 2,
+                "explication": "A > B et C < B, donc forcément A > C. Mais on ne sait pas si A est le plus haut ni si C est le plus bas (il pourrait y avoir un restaurant D)."
+            },
+            {
+                "id": "LOG_006",
+                "numero": 6,
+                "dimension": "logique",
+                "question": "Un Manager affirme : 'Si un serveur est en retard, il perd sa prime.' Un serveur perd sa prime. Donc :",
+                "options": [
+                    "Le serveur était en retard",
+                    "Le serveur n'était pas en retard",
+                    "Impossible à déterminer avec certitude",
+                    "Le Manager ment"
+                ],
+                "reponse_correcte": 2,
+                "explication": "La règle dit : retard → perte prime. Mais perte de prime ne signifie pas forcément retard (il peut y avoir d'autres raisons)."
+            },
+            {
+                "id": "LOG_007",
+                "numero": 7,
+                "dimension": "logique",
+                "question": "Complétez la série : 2, 6, 12, 20, 30, ?",
+                "options": [
+                    "40",
+                    "42",
+                    "44",
+                    "48"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Différences : +4, +6, +8, +10, donc +12 = 42. Pattern : n×(n+1) où n = 1,2,3,4,5,6..."
+            },
+            {
+                "id": "LOG_008",
+                "numero": 8,
+                "dimension": "logique",
+                "question": "Si 'Aucun bon Manager n'ignore ses équipes' est vrai, laquelle est forcément vraie ?",
+                "options": [
+                    "Tous les Managers écoutent leurs équipes",
+                    "Un Manager qui ignore ses équipes n'est pas bon",
+                    "Les bons Managers sont rares",
+                    "Ignorer ses équipes est toujours mauvais"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Contraposée logique : Si aucun bon Manager n'ignore → Si quelqu'un ignore, il n'est pas un bon Manager."
+            },
+            {
+                "id": "LOG_009",
+                "numero": 9,
+                "dimension": "logique",
+                "question": "Analogie : DIRECTEUR est à RESTAURANT ce que CHEF est à :",
+                "options": [
+                    "Cuisine",
+                    "Plat",
+                    "Recette",
+                    "Brigade"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Le Directeur dirige le restaurant entier, le Chef dirige la cuisine. Relation de direction/domaine."
+            },
+            {
+                "id": "LOG_010",
+                "numero": 10,
+                "dimension": "logique",
+                "question": "Un problème peut être résolu par A OU B. A est impossible. B coûte cher. Donc :",
+                "options": [
+                    "Le problème ne peut pas être résolu",
+                    "Il faut choisir B malgré le coût",
+                    "Il faut trouver une option C",
+                    "A et B sont équivalents"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Si seulement A ou B sont possibles et A est impossible, alors B est la seule solution, quel que soit son coût."
+            },
+            {
+                "id": "MEM_001",
+                "numero": 11,
+                "dimension": "memoire",
+                "question": "MÉMORISEZ : Le food cost est à 28%, la masse salariale à 35%, le loyer à 8%, les charges à 12%. \n\nQuel est le food cost ?",
+                "options": [
+                    "28%",
+                    "35%",
+                    "8%",
+                    "12%"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Information directement donnée dans l'énoncé."
+            },
+            {
+                "id": "MEM_002",
+                "numero": 12,
+                "dimension": "memoire",
+                "question": "Suite de la question précédente : Quelle est la masse salariale ?",
+                "options": [
+                    "28%",
+                    "35%",
+                    "8%",
+                    "12%"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Information mémorisée de la question précédente."
+            },
+            {
+                "id": "MEM_003",
+                "numero": 13,
+                "dimension": "memoire",
+                "question": "MÉMORISEZ cette liste de fournisseurs et leurs jours de livraison :\n- Metro : Lundi, Jeudi\n- Rungis : Mardi, Vendredi\n- Boulanger local : Mercredi, Samedi\n\nQuel jour Metro livre-t-il ?",
+                "options": [
+                    "Lundi et Jeudi",
+                    "Mardi et Vendredi",
+                    "Mercredi et Samedi",
+                    "Tous les jours"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Information directement donnée."
+            },
+            {
+                "id": "MEM_004",
+                "numero": 14,
+                "dimension": "memoire",
+                "question": "Suite : Quel fournisseur livre le vendredi ?",
+                "options": [
+                    "Metro",
+                    "Rungis",
+                    "Boulanger local",
+                    "Aucun"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Rungis livre Mardi et Vendredi (mémorisé de la question 13)."
+            },
+            {
+                "id": "MEM_005",
+                "numero": 15,
+                "dimension": "memoire",
+                "question": "MÉMORISEZ ce planning :\n- Lundi : Réunion managers 9h\n- Mardi : Inventaire 14h\n- Mercredi : Formation équipe 10h\n- Jeudi : Bilan hebdo 16h\n\nÀ quelle heure est la réunion managers ?",
+                "options": [
+                    "9h",
+                    "10h",
+                    "14h",
+                    "16h"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Lundi : Réunion managers à 9h."
+            },
+            {
+                "id": "MEM_006",
+                "numero": 16,
+                "dimension": "memoire",
+                "question": "Suite : Quel jour est l'inventaire ?",
+                "options": [
+                    "Lundi",
+                    "Mardi",
+                    "Mercredi",
+                    "Jeudi"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Mardi : Inventaire à 14h (mémorisé question 15)."
+            },
+            {
+                "id": "MEM_007",
+                "numero": 17,
+                "dimension": "memoire",
+                "question": "Retour à la question 11 : Quel était le montant des charges ?",
+                "options": [
+                    "28%",
+                    "35%",
+                    "8%",
+                    "12%"
+                ],
+                "reponse_correcte": 3,
+                "explication": "Les charges étaient à 12% (mémorisé depuis la question 11)."
+            },
+            {
+                "id": "MEM_008",
+                "numero": 18,
+                "dimension": "memoire",
+                "question": "MÉMORISEZ : Code wifi = RESTO2025 / Code alarme = 4782 / Code coffre = 1963\n\nQuel est le code wifi ?",
+                "options": [
+                    "RESTO2025",
+                    "4782",
+                    "1963",
+                    "WIFI2025"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Code wifi = RESTO2025"
+            },
+            {
+                "id": "MEM_009",
+                "numero": 19,
+                "dimension": "memoire",
+                "question": "Suite : Quel est le code alarme ?",
+                "options": [
+                    "RESTO2025",
+                    "4782",
+                    "1963",
+                    "2025"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Code alarme = 4782 (mémorisé question 18)."
+            },
+            {
+                "id": "MEM_010",
+                "numero": 20,
+                "dimension": "memoire",
+                "question": "Retour question 13 : Quel jour le boulanger local livre-t-il ?",
+                "options": [
+                    "Lundi et Jeudi",
+                    "Mardi et Vendredi",
+                    "Mercredi et Samedi",
+                    "Dimanche uniquement"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Boulanger local : Mercredi et Samedi (mémorisé depuis question 13)."
+            },
+            {
+                "id": "CALC_001",
+                "numero": 21,
+                "dimension": "calcul",
+                "question": "Ticket moyen : 45€. 120 couverts. CA du service ?",
+                "options": [
+                    "5 200€",
+                    "5 400€",
+                    "5 600€",
+                    "6 000€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "45 × 120 = 5 400€"
+            },
+            {
+                "id": "CALC_002",
+                "numero": 22,
+                "dimension": "calcul",
+                "question": "Food cost 28% sur CA de 15 000€. Coût matières ?",
+                "options": [
+                    "4 000€",
+                    "4 200€",
+                    "4 500€",
+                    "5 000€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "15 000 × 0.28 = 4 200€"
+            },
+            {
+                "id": "CALC_003",
+                "numero": 23,
+                "dimension": "calcul",
+                "question": "Plat vendu 32€, marge 68%. Prix d'achat matières ?",
+                "options": [
+                    "10.24€",
+                    "11.52€",
+                    "9.60€",
+                    "12.80€"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Si marge = 68%, alors coût = 32% → 32 × 0.32 = 10.24€"
+            },
+            {
+                "id": "CALC_004",
+                "numero": 24,
+                "dimension": "calcul",
+                "question": "Salaire brut 2 400€, charges patronales 42%. Coût total employeur ?",
+                "options": [
+                    "3 200€",
+                    "3 408€",
+                    "3 600€",
+                    "3 800€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "2 400 × 1.42 = 3 408€"
+            },
+            {
+                "id": "CALC_005",
+                "numero": 25,
+                "dimension": "calcul",
+                "question": "CA janvier : 28 000€. Objectif +15% en février. CA cible février ?",
+                "options": [
+                    "30 200€",
+                    "32 200€",
+                    "31 500€",
+                    "32 000€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "28 000 × 1.15 = 32 200€"
+            },
+            {
+                "id": "CALC_006",
+                "numero": 26,
+                "dimension": "calcul",
+                "question": "Bouteille vin achetée 8€, coefficient multiplicateur 3.5. Prix vente ?",
+                "options": [
+                    "24€",
+                    "26€",
+                    "28€",
+                    "30€"
+                ],
+                "reponse_correcte": 2,
+                "explication": "8 × 3.5 = 28€"
+            },
+            {
+                "id": "CALC_007",
+                "numero": 27,
+                "dimension": "calcul",
+                "question": "Resto 50 places, taux remplissage 72%, 2 services. Couverts jour ?",
+                "options": [
+                    "68",
+                    "72",
+                    "76",
+                    "80"
+                ],
+                "reponse_correcte": 1,
+                "explication": "50 × 0.72 × 2 = 72 couverts"
+            },
+            {
+                "id": "CALC_008",
+                "numero": 28,
+                "dimension": "calcul",
+                "question": "Masse salariale 42 000€, CA 120 000€. Ratio masse salariale ?",
+                "options": [
+                    "30%",
+                    "35%",
+                    "40%",
+                    "45%"
+                ],
+                "reponse_correcte": 1,
+                "explication": "42 000 / 120 000 = 0.35 = 35%"
+            },
+            {
+                "id": "CALC_009",
+                "numero": 29,
+                "dimension": "calcul",
+                "question": "Réduction -20% sur addition 85€. Montant final ?",
+                "options": [
+                    "65€",
+                    "68€",
+                    "70€",
+                    "72€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "85 × 0.80 = 68€"
+            },
+            {
+                "id": "CALC_010",
+                "numero": 30,
+                "dimension": "calcul",
+                "question": "6 serveurs, 8h/jour, 25 jours, 12€/h. Masse salariale mois ?",
+                "options": [
+                    "13 200€",
+                    "14 400€",
+                    "15 600€",
+                    "16 800€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "6 × 8 × 25 × 12 = 14 400€"
+            },
+            {
+                "id": "RES_001",
+                "numero": 31,
+                "dimension": "resolution",
+                "question": "Le food cost explose à 38% (objectif 28%). Quelle action PRIORITAIRE ?",
+                "options": [
+                    "Augmenter les prix de 10%",
+                    "Analyser les pertes et gaspillages",
+                    "Changer de fournisseur",
+                    "Réduire les portions"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Avant toute action, il faut diagnostiquer : analyser où part l'argent (gaspillage, vol, portions, erreurs)."
+            },
+            {
+                "id": "RES_002",
+                "numero": 32,
+                "dimension": "resolution",
+                "question": "3 serveurs malades le même jour. Gros service ce soir. Que fais-tu ?",
+                "options": [
+                    "Annuler les réservations",
+                    "Appeler des extras + réorganiser les rangs",
+                    "Faire avec l'équipe présente",
+                    "Fermer exceptionnellement"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Solution qui maintient le service : extras + réorganisation intelligente."
+            },
+            {
+                "id": "RES_003",
+                "numero": 33,
+                "dimension": "resolution",
+                "question": "Client mécontent menace d'un avis Google 1 étoile. Approche ?",
+                "options": [
+                    "Ignorer, c'est juste un avis",
+                    "Offrir réduction pour éviter l'avis",
+                    "Écouter, résoudre le problème, suivre après",
+                    "Menacer de poursuites"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Approche professionnelle : écoute, résolution, suivi. Pas de chantage ni d'ignorance."
+            },
+            {
+                "id": "RES_004",
+                "numero": 34,
+                "dimension": "resolution",
+                "question": "CA -15% en 2 mois. Budget marketing limité. Action la plus efficace ?",
+                "options": [
+                    "Pub radio locale",
+                    "Optimiser Google My Business + réseaux sociaux",
+                    "Distribuer des flyers",
+                    "Attendre que ça passe"
+                ],
+                "reponse_correcte": 1,
+                "explication": "ROI maximal avec budget limité : digital gratuit/peu coûteux avant la pub payante."
+            },
+            {
+                "id": "RES_005",
+                "numero": 35,
+                "dimension": "resolution",
+                "question": "Conflit ouvert entre 2 Managers. Impact sur les équipes. Approche ?",
+                "options": [
+                    "Virer l'un des deux",
+                    "Les laisser régler entre eux",
+                    "Médiation immédiate en privé",
+                    "Mutation de l'un vers autre restaurant"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Médiation rapide en privé pour éviter l'escalade et préserver l'équipe."
+            },
+            {
+                "id": "RES_006",
+                "numero": 36,
+                "dimension": "resolution",
+                "question": "Fournisseur principal en rupture de stock. Service dans 4h. Solution ?",
+                "options": [
+                    "Paniquer",
+                    "Adapter la carte + fournisseur de secours",
+                    "Annuler le service",
+                    "Acheter en supermarché au prix fort"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Solution professionnelle : adapter + backup, pas de panique ni d'annulation."
+            },
+            {
+                "id": "RES_007",
+                "numero": 37,
+                "dimension": "resolution",
+                "question": "Turnover élevé (50%/an). Cause probable et solution ?",
+                "options": [
+                    "Salaires trop bas → Augmenter",
+                    "Management toxique → Former ou changer",
+                    "Métier difficile → Rien à faire",
+                    "Recruter plus vite"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Turnover = souvent management. Former/changer avant d'augmenter les salaires."
+            },
+            {
+                "id": "RES_008",
+                "numero": 38,
+                "dimension": "resolution",
+                "question": "Inspection sanitaire demain. Cuisine pas aux normes. Que fais-tu ?",
+                "options": [
+                    "Repousser l'inspection",
+                    "Mobiliser toute l'équipe pour mise aux normes urgente",
+                    "Accepter l'amende",
+                    "Mentir à l'inspecteur"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Mobilisation urgente pour corriger le maximum. Pas de mensonge ni d'acceptation passive."
+            },
+            {
+                "id": "RES_009",
+                "numero": 39,
+                "dimension": "resolution",
+                "question": "Plat signature ne se vend plus. Que fais-tu ?",
+                "options": [
+                    "Le retirer immédiatement",
+                    "Le garder par tradition",
+                    "Le moderniser/réinventer",
+                    "Baisser son prix"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Sauver un plat signature par réinvention plutôt que suppression brutale."
+            },
+            {
+                "id": "RES_010",
+                "numero": 40,
+                "dimension": "resolution",
+                "question": "Manager démissionne brutalement. Pas de remplaçant. Action immédiate ?",
+                "options": [
+                    "Paniquer",
+                    "Prendre le relais temporairement + recruter vite",
+                    "Promouvoir quelqu'un sans préparation",
+                    "Fermer temporairement"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Assurer la continuité soi-même + recrutement rapide mais structuré."
+            },
+            {
+                "id": "VIT_001",
+                "numero": 41,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 15 + 27 = ?",
+                "options": [
+                    "40",
+                    "42",
+                    "44",
+                    "45"
+                ],
+                "reponse_correcte": 1,
+                "explication": "15 + 27 = 42"
+            },
+            {
+                "id": "VIT_002",
+                "numero": 42,
+                "dimension": "vitesse",
+                "question": "RAPIDE : Combien de E dans 'RESTAURANT' ?",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "0"
+                ],
+                "reponse_correcte": 0,
+                "explication": "1 seul E dans RESTAURANT"
+            },
+            {
+                "id": "VIT_003",
+                "numero": 43,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 8 × 7 = ?",
+                "options": [
+                    "54",
+                    "56",
+                    "58",
+                    "60"
+                ],
+                "reponse_correcte": 1,
+                "explication": "8 × 7 = 56"
+            },
+            {
+                "id": "VIT_004",
+                "numero": 44,
+                "dimension": "vitesse",
+                "question": "RAPIDE : Quel mot n'appartient pas : SERVEUR, CHEF, MANAGER, POMME ?",
+                "options": [
+                    "SERVEUR",
+                    "CHEF",
+                    "MANAGER",
+                    "POMME"
+                ],
+                "reponse_correcte": 3,
+                "explication": "POMME n'est pas un métier de la restauration"
+            },
+            {
+                "id": "VIT_005",
+                "numero": 45,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 100 - 37 = ?",
+                "options": [
+                    "63",
+                    "67",
+                    "73",
+                    "77"
+                ],
+                "reponse_correcte": 0,
+                "explication": "100 - 37 = 63"
+            },
+            {
+                "id": "VIT_006",
+                "numero": 46,
+                "dimension": "vitesse",
+                "question": "RAPIDE : DIRECTEUR inversé = ?",
+                "options": [
+                    "RUETCERID",
+                    "RUETCERID",
+                    "RUETCARID",
+                    "DIRECTOR"
+                ],
+                "reponse_correcte": 0,
+                "explication": "DIRECTEUR → RUETCERID"
+            },
+            {
+                "id": "VIT_007",
+                "numero": 47,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 25% de 80 = ?",
+                "options": [
+                    "15",
+                    "20",
+                    "25",
+                    "30"
+                ],
+                "reponse_correcte": 1,
+                "explication": "80 × 0.25 = 20"
+            },
+            {
+                "id": "VIT_008",
+                "numero": 48,
+                "dimension": "vitesse",
+                "question": "RAPIDE : Combien de chiffres dans '2024' ?",
+                "options": [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "reponse_correcte": 2,
+                "explication": "4 chiffres : 2, 0, 2, 4"
+            },
+            {
+                "id": "VIT_009",
+                "numero": 49,
+                "dimension": "vitesse",
+                "question": "RAPIDE : CLIENT sans les voyelles = ?",
+                "options": [
+                    "CLNT",
+                    "CLENT",
+                    "CLT",
+                    "CLIN"
+                ],
+                "reponse_correcte": 0,
+                "explication": "CLIENT - I - E = CLNT"
+            },
+            {
+                "id": "VIT_010",
+                "numero": 50,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 12 × 5 - 10 = ?",
+                "options": [
+                    "50",
+                    "55",
+                    "60",
+                    "70"
+                ],
+                "reponse_correcte": 0,
+                "explication": "12 × 5 = 60, 60 - 10 = 50"
+            },
+            {
+                "id": "LOG_011",
+                "numero": 51,
+                "dimension": "logique",
+                "question": "Si le CA augmente de 10% puis baisse de 10%, le résultat final est :",
+                "options": [
+                    "Identique au départ",
+                    "Inférieur de 1%",
+                    "Supérieur de 1%",
+                    "Inférieur de 2%"
+                ],
+                "reponse_correcte": 1,
+                "explication": "100 → 110 (+10%) → 99 (-10% de 110). Résultat : -1%"
+            },
+            {
+                "id": "LOG_012",
+                "numero": 52,
+                "dimension": "logique",
+                "question": "Aucun restaurant parfait n'a de problèmes. Certains restaurants ont des problèmes. Donc :",
+                "options": [
+                    "Aucun restaurant n'est parfait",
+                    "Certains restaurants ne sont pas parfaits",
+                    "Tous les restaurants ont des problèmes",
+                    "Les restaurants parfaits existent"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Si certains ont des problèmes, alors ces restaurants ne sont pas parfaits."
+            },
+            {
+                "id": "LOG_013",
+                "numero": 53,
+                "dimension": "logique",
+                "question": "Suite logique : 1, 4, 9, 16, 25, ?",
+                "options": [
+                    "30",
+                    "32",
+                    "36",
+                    "40"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Carrés parfaits : 1², 2², 3², 4², 5², 6² = 36"
+            },
+            {
+                "id": "LOG_014",
+                "numero": 54,
+                "dimension": "logique",
+                "question": "Un Manager qui réussit est toujours rigoureux. Marc est rigoureux. Donc :",
+                "options": [
+                    "Marc réussit",
+                    "Marc est Manager",
+                    "Marc pourrait réussir comme Manager",
+                    "Impossible à déterminer"
+                ],
+                "reponse_correcte": 3,
+                "explication": "La rigueur est nécessaire mais pas suffisante. On ne peut rien conclure sur Marc."
+            },
+            {
+                "id": "LOG_015",
+                "numero": 55,
+                "dimension": "logique",
+                "question": "SERVEUR est à SERVICE ce que CUISINIER est à :",
+                "options": [
+                    "Plat",
+                    "Cuisine",
+                    "Recette",
+                    "Chef"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Relation personne/lieu de travail : SERVEUR → SERVICE, CUISINIER → CUISINE"
+            },
+            {
+                "id": "LOG_016",
+                "numero": 56,
+                "dimension": "logique",
+                "question": "Tous les bons Managers délèguent. Pierre ne délègue jamais. Donc :",
+                "options": [
+                    "Pierre n'est pas Manager",
+                    "Pierre est un mauvais Manager",
+                    "Pierre n'est pas un bon Manager",
+                    "Pierre devrait démissionner"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Contraposée : Si tous les bons délèguent, alors qui ne délègue pas n'est pas bon."
+            },
+            {
+                "id": "LOG_017",
+                "numero": 57,
+                "dimension": "logique",
+                "question": "Suite : 3, 6, 12, 24, 48, ?",
+                "options": [
+                    "72",
+                    "84",
+                    "96",
+                    "108"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Chaque nombre × 2 : 3×2=6, 6×2=12... 48×2=96"
+            },
+            {
+                "id": "LOG_018",
+                "numero": 58,
+                "dimension": "logique",
+                "question": "Si A>B et B>C et C>D, alors forcément :",
+                "options": [
+                    "A>D",
+                    "A=D",
+                    "D>A",
+                    "Impossible à dire"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Transitivité : A>B>C>D donc A>D"
+            },
+            {
+                "id": "LOG_019",
+                "numero": 59,
+                "dimension": "logique",
+                "question": "Complétez : LUNDI, MARDI, ?, JEUDI, VENDREDI",
+                "options": [
+                    "SAMEDI",
+                    "MERCREDI",
+                    "DIMANCHE",
+                    "REPOS"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Jours de la semaine : MERCREDI manque"
+            },
+            {
+                "id": "LOG_020",
+                "numero": 60,
+                "dimension": "logique",
+                "question": "Un problème a 3 solutions : A (rapide, chère), B (lente, gratuite), C (moyenne, moyenne). Laquelle choisir si budget limité et temps OK ?",
+                "options": [
+                    "A",
+                    "B",
+                    "C",
+                    "Aucune"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Budget limité + temps OK → solution B (lente mais gratuite)"
+            },
+            {
+                "id": "MEM_011",
+                "numero": 61,
+                "dimension": "memoire",
+                "question": "MÉMORISEZ : Réservations demain → 12h: table 5 (4 pers), 13h: table 8 (6 pers), 20h: table 3 (2 pers), 21h: table 12 (8 pers). \n\nCombien de personnes à 13h ?",
+                "options": [
+                    "2",
+                    "4",
+                    "6",
+                    "8"
+                ],
+                "reponse_correcte": 2,
+                "explication": "13h : table 8, 6 personnes"
+            },
+            {
+                "id": "MEM_012",
+                "numero": 62,
+                "dimension": "memoire",
+                "question": "Suite : Quelle table à 20h ?",
+                "options": [
+                    "Table 3",
+                    "Table 5",
+                    "Table 8",
+                    "Table 12"
+                ],
+                "reponse_correcte": 0,
+                "explication": "20h : table 3 (mémorisé question 61)"
+            },
+            {
+                "id": "MEM_013",
+                "numero": 63,
+                "dimension": "memoire",
+                "question": "MÉMORISEZ les allergies : Table 5 = Gluten, Table 8 = Lactose, Table 3 = Fruits à coque, Table 12 = Crustacés.\n\nTable 5 allergie ?",
+                "options": [
+                    "Gluten",
+                    "Lactose",
+                    "Fruits à coque",
+                    "Crustacés"
+                ],
+                "reponse_correcte": 0,
+                "explication": "Table 5 = Gluten"
+            },
+            {
+                "id": "MEM_014",
+                "numero": 64,
+                "dimension": "memoire",
+                "question": "Suite : Quelle table allergique aux crustacés ?",
+                "options": [
+                    "Table 3",
+                    "Table 5",
+                    "Table 8",
+                    "Table 12"
+                ],
+                "reponse_correcte": 3,
+                "explication": "Table 12 = Crustacés (mémorisé Q63)"
+            },
+            {
+                "id": "MEM_015",
+                "numero": 65,
+                "dimension": "memoire",
+                "question": "Retour Q61 : Combien de couverts à 21h ?",
+                "options": [
+                    "2",
+                    "4",
+                    "6",
+                    "8"
+                ],
+                "reponse_correcte": 3,
+                "explication": "21h : table 12, 8 personnes (mémorisé Q61)"
+            },
+            {
+                "id": "MEM_016",
+                "numero": 66,
+                "dimension": "memoire",
+                "question": "MÉMORISEZ prix plats : Entrée 12€, Plat 28€, Dessert 9€, Formule 42€, Menu dégustation 85€.\n\nPrix du plat ?",
+                "options": [
+                    "12€",
+                    "28€",
+                    "42€",
+                    "85€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Plat = 28€"
+            },
+            {
+                "id": "MEM_017",
+                "numero": 67,
+                "dimension": "memoire",
+                "question": "Suite : Prix menu dégustation ?",
+                "options": [
+                    "28€",
+                    "42€",
+                    "85€",
+                    "9€"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Menu dégustation = 85€ (mémorisé Q66)"
+            },
+            {
+                "id": "MEM_018",
+                "numero": 68,
+                "dimension": "memoire",
+                "question": "Retour Q63 : Table 8 allergie à quoi ?",
+                "options": [
+                    "Gluten",
+                    "Lactose",
+                    "Fruits à coque",
+                    "Crustacés"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Table 8 = Lactose (mémorisé Q63)"
+            },
+            {
+                "id": "MEM_019",
+                "numero": 69,
+                "dimension": "memoire",
+                "question": "MÉMORISEZ codes : Porte cuisine 2847, Coffre 5193, Réserve 8264, Bureau 3751.\n\nCode coffre ?",
+                "options": [
+                    "2847",
+                    "5193",
+                    "8264",
+                    "3751"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Coffre = 5193"
+            },
+            {
+                "id": "MEM_020",
+                "numero": 70,
+                "dimension": "memoire",
+                "question": "Suite : Code bureau ?",
+                "options": [
+                    "2847",
+                    "5193",
+                    "8264",
+                    "3751"
+                ],
+                "reponse_correcte": 3,
+                "explication": "Bureau = 3751 (mémorisé Q69)"
+            },
+            {
+                "id": "CALC_011",
+                "numero": 71,
+                "dimension": "calcul",
+                "question": "Marge brute 18 000€, CA 60 000€. Marge en % ?",
+                "options": [
+                    "25%",
+                    "30%",
+                    "35%",
+                    "40%"
+                ],
+                "reponse_correcte": 1,
+                "explication": "18 000 / 60 000 = 0.30 = 30%"
+            },
+            {
+                "id": "CALC_012",
+                "numero": 72,
+                "dimension": "calcul",
+                "question": "Prix HT 42€, TVA 10%. Prix TTC ?",
+                "options": [
+                    "44.20€",
+                    "46.20€",
+                    "48.20€",
+                    "50.20€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "42 × 1.10 = 46.20€"
+            },
+            {
+                "id": "CALC_013",
+                "numero": 73,
+                "dimension": "calcul",
+                "question": "Objectif : 100 couverts/jour. Réalisé : 78. Écart en % ?",
+                "options": [
+                    "-18%",
+                    "-20%",
+                    "-22%",
+                    "-25%"
+                ],
+                "reponse_correcte": 2,
+                "explication": "(78-100)/100 = -22%"
+            },
+            {
+                "id": "CALC_014",
+                "numero": 74,
+                "dimension": "calcul",
+                "question": "Addition 156€, pourboire 15%. Montant total ?",
+                "options": [
+                    "175.40€",
+                    "179.40€",
+                    "183.40€",
+                    "187.40€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "156 × 1.15 = 179.40€"
+            },
+            {
+                "id": "CALC_015",
+                "numero": 75,
+                "dimension": "calcul",
+                "question": "Bouteille 15€, marge 70%. Prix vente ?",
+                "options": [
+                    "25.50€",
+                    "30€",
+                    "35€",
+                    "50€"
+                ],
+                "reponse_correcte": 3,
+                "explication": "Si marge = 70%, alors coût = 30% → 15 / 0.30 = 50€"
+            },
+            {
+                "id": "CALC_016",
+                "numero": 76,
+                "dimension": "calcul",
+                "question": "7 employés × 35h/semaine × 13€/h. Coût semaine ?",
+                "options": [
+                    "2 905€",
+                    "3 185€",
+                    "3 455€",
+                    "3 725€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "7 × 35 × 13 = 3 185€"
+            },
+            {
+                "id": "CALC_017",
+                "numero": 77,
+                "dimension": "calcul",
+                "question": "CA 145 000€, charges 112 000€. Résultat net ?",
+                "options": [
+                    "31 000€",
+                    "32 000€",
+                    "33 000€",
+                    "34 000€"
+                ],
+                "reponse_correcte": 2,
+                "explication": "145 000 - 112 000 = 33 000€"
+            },
+            {
+                "id": "CALC_018",
+                "numero": 78,
+                "dimension": "calcul",
+                "question": "Remise -35% sur 180€. Nouveau prix ?",
+                "options": [
+                    "115€",
+                    "117€",
+                    "119€",
+                    "121€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "180 × 0.65 = 117€"
+            },
+            {
+                "id": "CALC_019",
+                "numero": 79,
+                "dimension": "calcul",
+                "question": "90 couverts, ticket moyen 38€. CA service ?",
+                "options": [
+                    "3 320€",
+                    "3 420€",
+                    "3 520€",
+                    "3 620€"
+                ],
+                "reponse_correcte": 1,
+                "explication": "90 × 38 = 3 420€"
+            },
+            {
+                "id": "CALC_020",
+                "numero": 80,
+                "dimension": "calcul",
+                "question": "Panier moyen 52€, objectif +12%. Nouveau panier ?",
+                "options": [
+                    "56.24€",
+                    "57.24€",
+                    "58.24€",
+                    "59.24€"
+                ],
+                "reponse_correcte": 2,
+                "explication": "52 × 1.12 = 58.24€"
+            },
+            {
+                "id": "RES_011",
+                "numero": 81,
+                "dimension": "resolution",
+                "question": "Équipe démotivée, turnover 60%. Première action ?",
+                "options": [
+                    "Augmenter les salaires",
+                    "Recruter plus vite",
+                    "Diagnostiquer les causes réelles",
+                    "Changer tout le management"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Diagnostic avant action : comprendre pourquoi ils partent"
+            },
+            {
+                "id": "RES_012",
+                "numero": 82,
+                "dimension": "resolution",
+                "question": "Concurrent baisse ses prix de 20%. Ta réaction ?",
+                "options": [
+                    "Baisser aussi de 20%",
+                    "Renforcer qualité/service/différenciation",
+                    "Ignorer complètement",
+                    "Baisser de 25% pour tuer le concurrent"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Ne pas entrer dans guerre des prix, jouer sur la différenciation"
+            },
+            {
+                "id": "RES_013",
+                "numero": 83,
+                "dimension": "resolution",
+                "question": "Avis Google 1 étoile injuste et mensonger. Que faire ?",
+                "options": [
+                    "Répondre avec colère",
+                    "Ignorer totalement",
+                    "Réponse professionnelle factuelle + invitation dialogue privé",
+                    "Payer pour le supprimer"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Réponse pro + proposition de contact privé, jamais de colère publique"
+            },
+            {
+                "id": "RES_014",
+                "numero": 84,
+                "dimension": "resolution",
+                "question": "Fuite d'eau majeure, cuisine hors service. Service dans 2h. Action ?",
+                "options": [
+                    "Annuler le service",
+                    "Carte réduite froide + plombier urgence",
+                    "Servir quand même comme si de rien",
+                    "Fermer définitivement"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Solution pragmatique : adapter carte + réparer en urgence"
+            },
+            {
+                "id": "RES_015",
+                "numero": 85,
+                "dimension": "resolution",
+                "question": "Manager performant mais alcoolique. Approche ?",
+                "options": [
+                    "Ignorer tant qu'il performe",
+                    "Le virer immédiatement",
+                    "Confrontation + aide + ultimatum",
+                    "Mutation discrète"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Intervention: proposer aide + poser limites claires"
+            },
+            {
+                "id": "RES_016",
+                "numero": 86,
+                "dimension": "resolution",
+                "question": "Budget marketing 5k€. Meilleure stratégie pour visibilité locale ?",
+                "options": [
+                    "Affichage 4x3 en ville",
+                    "Pub radio locale",
+                    "Google Ads + réseaux sociaux + influenceurs locaux",
+                    "Flyers distribués"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Digital offre meilleur ROI avec budget limité + ciblage précis"
+            },
+            {
+                "id": "RES_017",
+                "numero": 87,
+                "dimension": "resolution",
+                "question": "Serveur harcelé par Chef de Rang. Que fais-tu ?",
+                "options": [
+                    "Dire au serveur de se défendre seul",
+                    "Enquête + protection serveur + sanction harceleur",
+                    "Mutation du serveur",
+                    "Ne rien faire, ça va passer"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Obligation légale et morale: enquête + protection victime + sanction"
+            },
+            {
+                "id": "RES_018",
+                "numero": 88,
+                "dimension": "resolution",
+                "question": "Plat à 35€, food cost 45%. Non rentable. Solution ?",
+                "options": [
+                    "Augmenter prix à 42€",
+                    "Réduire portions/qualité",
+                    "Optimiser recette + négocier fournisseurs",
+                    "Retirer de la carte"
+                ],
+                "reponse_correcte": 2,
+                "explication": "Optimiser avant d'augmenter prix ou retirer"
+            },
+            {
+                "id": "RES_019",
+                "numero": 89,
+                "dimension": "resolution",
+                "question": "Coupure électrique générale quartier. Service ce soir. Solution ?",
+                "options": [
+                    "Annuler",
+                    "Groupe électrogène + carte adaptée",
+                    "Service à la bougie uniquement",
+                    "Fermer et rentrer chez soi"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Solution pro: générateur + adaptation intelligente de la carte"
+            },
+            {
+                "id": "RES_020",
+                "numero": 90,
+                "dimension": "resolution",
+                "question": "2 Managers compétents veulent le même poste. Que fais-tu ?",
+                "options": [
+                    "Choisir le plus ancien",
+                    "Processus transparent: critères clairs + évaluation objective",
+                    "Choisir ton préféré",
+                    "Promouvoir les deux"
+                ],
+                "reponse_correcte": 1,
+                "explication": "Processus équitable et transparent pour éviter frustrations"
+            },
+            {
+                "id": "VIT_011",
+                "numero": 91,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 63 / 9 = ?",
+                "options": [
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ],
+                "reponse_correcte": 1,
+                "explication": "63 / 9 = 7"
+            },
+            {
+                "id": "VIT_012",
+                "numero": 92,
+                "dimension": "vitesse",
+                "question": "RAPIDE : Mot intrus : SERVEUR, CUISINIER, MANAGER, ORDINATEUR ?",
+                "options": [
+                    "SERVEUR",
+                    "CUISINIER",
+                    "MANAGER",
+                    "ORDINATEUR"
+                ],
+                "reponse_correcte": 3,
+                "explication": "ORDINATEUR n'est pas un métier"
+            },
+            {
+                "id": "VIT_013",
+                "numero": 93,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 200 - 73 = ?",
+                "options": [
+                    "125",
+                    "127",
+                    "129",
+                    "131"
+                ],
+                "reponse_correcte": 1,
+                "explication": "200 - 73 = 127"
+            },
+            {
+                "id": "VIT_014",
+                "numero": 94,
+                "dimension": "vitesse",
+                "question": "RAPIDE : Combien de syllabes dans RESTAURANT ?",
+                "options": [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "reponse_correcte": 1,
+                "explication": "RES-TAU-RANT = 3 syllabes"
+            },
+            {
+                "id": "VIT_015",
+                "numero": 95,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 14 × 6 = ?",
+                "options": [
+                    "78",
+                    "82",
+                    "84",
+                    "88"
+                ],
+                "reponse_correcte": 2,
+                "explication": "14 × 6 = 84"
+            },
+            {
+                "id": "VIT_016",
+                "numero": 96,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 50% de 140 = ?",
+                "options": [
+                    "60",
+                    "65",
+                    "70",
+                    "75"
+                ],
+                "reponse_correcte": 2,
+                "explication": "140 / 2 = 70"
+            },
+            {
+                "id": "VIT_017",
+                "numero": 97,
+                "dimension": "vitesse",
+                "question": "RAPIDE : PARIS inversé = ?",
+                "options": [
+                    "SIRAP",
+                    "SIRAPL",
+                    "PARIS",
+                    "PIRAS"
+                ],
+                "reponse_correcte": 0,
+                "explication": "PARIS → SIRAP"
+            },
+            {
+                "id": "VIT_018",
+                "numero": 98,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 9 + 16 + 5 = ?",
+                "options": [
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                ],
+                "reponse_correcte": 2,
+                "explication": "9 + 16 + 5 = 30"
+            },
+            {
+                "id": "VIT_019",
+                "numero": 99,
+                "dimension": "vitesse",
+                "question": "RAPIDE : MANAGER sans les A = ?",
+                "options": [
+                    "MNGR",
+                    "MNGER",
+                    "MANGER",
+                    "MGR"
+                ],
+                "reponse_correcte": 1,
+                "explication": "MANAGER - A - A = MNGER"
+            },
+            {
+                "id": "VIT_020",
+                "numero": 100,
+                "dimension": "vitesse",
+                "question": "RAPIDE : 11 × 9 = ?",
+                "options": [
+                    "97",
+                    "99",
+                    "101",
+                    "103"
+                ],
+                "reponse_correcte": 1,
+                "explication": "11 × 9 = 99"
+            }
+        ]
+    }
+}

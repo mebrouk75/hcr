@@ -62,9 +62,17 @@ const MbtiTest = () => {
         ].join('');
         const profile = data.profiles[profileCode];
         localStorage.setItem(`mbti_result_${roleId}`, JSON.stringify(profile));
-        navigate(`/test/${roleId}`, {
-            state: { mbtiProfile: profile, mbtiScores: scores, skipAlert: true }
-        });
+
+        // REDIRECT TO COGNITIVE TEST FOR MANAGER
+        if (roleId.toLowerCase() === 'manager') {
+            navigate(`/test-cognitif/${roleId}`, {
+                state: { mbtiProfile: profile, mbtiScores: scores, skipAlert: true }
+            });
+        } else {
+            navigate(`/test/${roleId}`, {
+                state: { mbtiProfile: profile, mbtiScores: scores, skipAlert: true }
+            });
+        }
     };
 
     const handleCircleClick = (val) => {

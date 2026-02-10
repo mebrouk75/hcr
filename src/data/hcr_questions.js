@@ -2493,7 +2493,8 @@ const FULL_DIRECTEUR = [
         id: "PHASE1",
         items: MBTI_DIRECTEUR_DATA.questions
     },
-    ...DIRECTOR_SENTINEL_DATA
+    ...DIRECTOR_SENTINEL_DATA,
+    ...DIRECTOR_PHASE3_DATA
 ];
 
 const PLACEHOLDER_DATA = FULL_BARMAN;
