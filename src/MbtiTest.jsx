@@ -71,6 +71,19 @@ const MbtiTest = () => {
 
     const handleCircleClick = (val) => {
         setSelectedValue(val);
+        // Auto-advance after a short delay
+        setTimeout(() => {
+            const question = questions[currentQuestionIndex];
+            const newAnswers = { ...answers, [question.id]: val };
+            setAnswers(newAnswers);
+
+            if (currentQuestionIndex < questions.length - 1) {
+                setCurrentQuestionIndex(prev => prev + 1);
+                setSelectedValue(newAnswers[questions[currentQuestionIndex + 1]?.id] ?? null);
+            } else {
+                calculateProfile(newAnswers);
+            }
+        }, 300);
     };
 
     const handleNext = () => {
@@ -148,7 +161,7 @@ const MbtiTest = () => {
                     <div style={{ background: '#f8fafc', borderRadius: 12, padding: 16, marginBottom: 32 }}>
                         <h3 style={{ fontSize: 12, fontWeight: 700, color: COLORS.dark, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>📋 Aperçu du test</h3>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                            {[alert.apercu_test.phase_1, alert.apercu_test.phase_2, alert.apercu_test.pause, alert.apercu_test.phase_3, alert.apercu_test.phase_4].map((p, i) => (
+                            {[alert.apercu_test.phase_1, alert.apercu_test.phase_2, alert.apercu_test.pause, alert.apercu_test.phase_3, alert.apercu_test.phase_4].filter(Boolean).map((p, i) => (
                                 <div key={i} style={{ background: '#e2e8f0', borderRadius: 8, padding: '8px 12px', fontSize: 11, color: COLORS.text, flex: '1 1 120px', textAlign: 'center' }}>{p}</div>
                             ))}
                         </div>
@@ -290,42 +303,8 @@ const MbtiTest = () => {
                         <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', minWidth: 80, color: COLORS.gold, textAlign: 'right' }}>Option B →</div>
                     </div>
 
-                    {/* Navigation */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 40 }}>
-                        <button
-                            onClick={handlePrevious}
-                            disabled={currentQuestionIndex === 0}
-                            style={{
-                                padding: '14px 32px', borderRadius: 12, fontSize: 15, fontWeight: 600, cursor: currentQuestionIndex === 0 ? 'not-allowed' : 'pointer',
-                                border: 'none', background: '#f1f5f9', color: COLORS.textMuted,
-                                opacity: currentQuestionIndex === 0 ? 0.4 : 1,
-                                transition: 'all 0.3s ease'
-                            }}
-                            onMouseEnter={e => { if (currentQuestionIndex > 0) e.currentTarget.style.background = '#e2e8f0'; }}
-                            onMouseLeave={e => { e.currentTarget.style.background = '#f1f5f9'; }}
-                        >
-                            ← Précédent
-                        </button>
-                        <button
-                            onClick={handleNext}
-                            disabled={selectedValue === null}
-                            style={{
-                                padding: '14px 32px', borderRadius: 12, fontSize: 15, fontWeight: 600,
-                                cursor: selectedValue === null ? 'not-allowed' : 'pointer',
-                                border: 'none',
-                                background: selectedValue === null ? '#94a3b8' : `linear-gradient(135deg, ${COLORS.blue}, #357ABD)`,
-                                color: 'white',
-                                opacity: selectedValue === null ? 0.5 : 1,
-                                transition: 'all 0.3s ease',
-                                boxShadow: selectedValue !== null ? `0 10px 25px rgba(74,144,226,0.4)` : 'none',
-                                transform: selectedValue !== null ? 'translateY(0)' : 'none',
-                            }}
-                            onMouseEnter={e => { if (selectedValue !== null) { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 14px 30px rgba(74,144,226,0.5)'; } }}
-                            onMouseLeave={e => { if (selectedValue !== null) { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(74,144,226,0.4)'; } }}
-                        >
-                            {currentQuestionIndex < questions.length - 1 ? 'Suivant →' : 'Terminer ✓'}
-                        </button>
-                    </div>
+
+
                 </div>
             </div>
         </div>

@@ -56,7 +56,7 @@ try {
         return {
             id: q.id || `MAN_${String(index + 1).padStart(3, '0')}`,
             category: 'SITUATION',
-            question: q.situation,
+            description: q.situation,
             options: options
         };
     });

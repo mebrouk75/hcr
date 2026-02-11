@@ -1,5 +1,5 @@
 
-import CONFIG from '../data/sentinel_logic.json';
+import CONFIG from '../src/data/sentinel_logic.json' with { type: 'json' };
 
 // Dimension Mapper: Maps specific Question Types/Categories to the 6 Core Dimensions
 // RES, EMP, AUT, INT, TOX, ADA
@@ -67,7 +67,8 @@ export class SentinelEngine {
             'Dépendance': ['SUIVEUR', 'OBÉISSANT', 'SENSIBLE', 'PROTECTEUR']
         };
 
-        // NEW: Profile Score Mapping for missing numeric scores (Added via Automation Fix)
+
+        // NEW: Profile Score Mapping for missing numeric scores
         const PROFILE_SCORES = {
             "TYRAN": { AUT: 2, TOX: 2, EMP: 0, RES: 1 },
             "VISIONNAIRE": { AUT: 2, ADA: 2, RES: 1 },
@@ -155,6 +156,7 @@ export class SentinelEngine {
                 }
             }
 
+
             // Only add to dimensions if it makes sense (numeric score OR profile boost)
             if (typeof answerValue === 'number' || (q.maxScore) || profileBoost) {
 
@@ -166,17 +168,19 @@ export class SentinelEngine {
                             counts[d]++;
                         }
                     });
+                    // Also add to primary mapped dimension if not covered? 
+                    // No, let profile override.
                 } else {
                     dimensions[dim] += normalized;
                     counts[dim]++;
                 }
 
-                // NEW: Track Specific Category Scores (for Director especially)
+                // NEW: Track Specific Category Scores
                 if (q.category) {
                     const cat = q.category.toUpperCase();
                     if (!dimensions[cat]) dimensions[cat] = 0;
                     if (!counts[cat]) counts[cat] = 0;
-                    dimensions[cat] += (profileBoost ? 50 : normalized);
+                    dimensions[cat] += (profileBoost ? 50 : normalized); // Approx
                     counts[cat]++;
                 }
             }
@@ -188,7 +192,7 @@ export class SentinelEngine {
                     profileCounts[p] = (profileCounts[p] || 0) + 1;
                 }
 
-                // NEW: Handle trait-based scoring (Manager 20-trait system)
+                // NEW: Handle trait-based scoring
                 if (selectedOption.traits && Array.isArray(selectedOption.traits)) {
                     selectedOption.traits.forEach(t => {
                         const trait = t.toUpperCase();
@@ -197,16 +201,14 @@ export class SentinelEngine {
                     });
                     hasTraitData = true;
                 }
-                // Fallback: single trait field
                 else if (selectedOption.trait && !selectedOption.profile) {
                     const trait = selectedOption.trait.toUpperCase();
                     traitCounts[trait] = (traitCounts[trait] || 0) + 1;
                     totalTraitSelections++;
                     hasTraitData = true;
                 }
-
-                // Legacy: Handle Custom Option Scoring (with scores object)
-                if (selectedOption && selectedOption.scores) {
+                // Legacy scores
+                if (selectedOption.scores) {
                     Object.entries(selectedOption.scores).forEach(([d, val]) => {
                         if (dimensions[d] !== undefined) {
                             dimensions[d] += val * 50;
@@ -230,11 +232,12 @@ export class SentinelEngine {
             traitPercentages[trait] = Math.round((count / totalQuestions) * 100);
         });
 
-        // Compute macro-category scores (average of trait percentages in each group)
+        // Compute macro-category scores (SUM of percentages, capped at 100 effectively by nature of distribution)
         const macroScores = {};
         Object.entries(TRAIT_MACROS).forEach(([macro, traits]) => {
             const traitValues = traits.map(t => traitPercentages[t] || 0);
             const sum = traitValues.reduce((a, b) => a + b, 0);
+            // FIX: Don't divide by trait length. The sum IS the category score (0-100%).
             macroScores[macro] = Math.round(sum);
         });
 

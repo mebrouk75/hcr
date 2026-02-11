@@ -102,7 +102,7 @@ export default function Sentinel() {
         // FISHER-YATES SHUFFLE
         // The user explicitly requested randomization ("questions were mixed")
         // BUT for DIRECTEUR, we must preserve Phase 1 (MBTI) -> Phase 2 (SJT) order.
-        if (selectedRole !== 'directeur') {
+        if (selectedRole !== 'directeur' && selectedRole !== 'manager') {
             for (let i = flatQuestions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [flatQuestions[i], flatQuestions[j]] = [flatQuestions[j], flatQuestions[i]];
@@ -666,45 +666,6 @@ export default function Sentinel() {
             </div>
 
 
-            {/* DEBUG: Force Finish Button (Visible for User Testing) */}
-            <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999 }}>
-                <button
-                    onClick={() => {
-                        console.log("DEBUG: Force Finishing Test");
-                        const randomScores = {};
-                        questions.forEach(q => {
-                            if (q.options) {
-                                // Pick random option value
-                                const randOpt = q.options[Math.floor(Math.random() * q.options.length)];
-                                randomScores[q.id] = randOpt.value;
-                            } else {
-                                // Default scaled
-                                randomScores[q.id] = Math.floor(Math.random() * 3);
-                            }
-                        });
-                        setScores(randomScores);
-                        // Trigger finish next tick
-                        setTimeout(() => {
-                            const results = engine.evaluateCandidate(selectedRole, questions, randomScores, textAnswers);
-                            setEvaluation(results);
-                            setShowResults(true);
-                        }, 100);
-                    }}
-                    style={{
-                        fontSize: '14px',
-                        fontWeight: 'bold',
-                        background: '#ef4444',
-                        color: 'white',
-                        padding: '12px 24px',
-                        borderRadius: '8px',
-                        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-                        border: '2px solid white',
-                        cursor: 'pointer'
-                    }}
-                >
-                    🚨 DEBUG: FINIR LE TEST
-                </button>
-            </div>
         </div>
     );
 }

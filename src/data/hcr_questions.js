@@ -4,7 +4,7 @@ import { CHEF_RANG_DATA } from './chef_de_rang_data.js';
 import { FULL_SERVEUR } from './serveur_data_v2.js';
 import { MANAGER_ADJOINT_DATA } from './manager_adjoint_data.js';
 import { MBTI_MANAGER_ADJOINT_DATA } from './mbti_manager_adjoint_data.js';
-import { SENTINEL_MANAGER_DATA } from './manager_sentinel_data.js';
+import { MANAGER_PRINCIPAL_SENTINEL_DATA } from './manager_principal_sentinel_data.js';
 
 export const HCR_ROLES = [
     { id: 'BARMAN', label: 'Barman / Barmaid', icon: 'Martini' },
@@ -2486,7 +2486,7 @@ const FULL_CHEF_RANG = [
     ...CHEF_RANG_PHASE2 // Using existing Phase 2 for now, or we can replace it later
 ];
 const FULL_MANAGER = [...MANAGER_ADJOINT_DATA]; // Only situational questions, MBTI is handled by MbtiTest.jsx
-const FULL_MANAGER_PRINCIPAL = SENTINEL_MANAGER_DATA;
+// const FULL_MANAGER_PRINCIPAL = SENTINEL_MANAGER_DATA;
 // const FULL_MANAGER_PRINCIPAL = [...MANAGER_PRINCIPAL_DATA, ...MANAGER_PRINCIPAL_PHASE2];
 // const FULL_DIRECTEUR = [...DIRECTEUR_DATA, ...DIRECTEUR_PHASE2, ...DIRECTEUR_PHASE3]; // OLD
 const FULL_DIRECTEUR = [
@@ -2557,7 +2557,7 @@ export const HCR_DATA = {
     SERVEUR: FULL_SERVEUR,
     CHEF_RANG: FULL_CHEF_RANG,
     MANAGER: FULL_MANAGER,
-    MANAGER_PRINCIPAL: FULL_MANAGER_PRINCIPAL,
+    MANAGER_PRINCIPAL: MANAGER_PRINCIPAL_SENTINEL_DATA,
     DIRECTEUR: FULL_DIRECTEUR,
     ADN_ENTREPRISE: FULL_CORPORATE
 };

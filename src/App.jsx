@@ -6,7 +6,6 @@ import AuthPage from './AuthPage';
 import RolesPage from './RolesPage';
 
 import MbtiTest from './MbtiTest';
-import CognitiveTest from './screens/CognitiveTest';
 
 export default function App() {
   return (
@@ -17,7 +16,6 @@ export default function App() {
         <Route path="/choix-du-poste" element={<RolesPage />} />
         <Route path="/mbti/:roleId" element={<MbtiTest />} />
         <Route path="/test/:roleId" element={<Sentinel />} />
-        <Route path="/test-cognitif/:roleId" element={<CognitiveTest />} />
       </Routes>
     </Router>
   );

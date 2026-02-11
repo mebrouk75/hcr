@@ -106,7 +106,9 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
     const {
         dimensions, reliability, verdict, verdictColor,
         adaptabilityVerdict, synthesisText, flags,
-        globalScore, synthesis, dominantProfile, profileData
+        globalScore, synthesis, dominantProfile, profileData,
+        // NEW: Trait-based data
+        hasTraitData, macroScores, topTraits, traitPercentages
     } = data;
 
     const config = ROLE_CONFIG[roleId] || ROLE_CONFIG['barman'];
@@ -117,15 +119,23 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
     const reliabilityColor = safeReliability > 89 ? 'text-emerald-500' : safeReliability > 59 ? 'text-amber-500' : 'text-rose-500';
     const reliabilityText = safeReliability > 89 ? 'Excellent' : safeReliability > 59 ? 'Moyen' : 'Faible';
 
-    // Radar data
-    const radarData = [
-        { subject: 'Résilience', A: dimensions?.RES || 0, fullMark: 100 },
-        { subject: 'Empathie', A: dimensions?.EMP || 0, fullMark: 100 },
-        { subject: 'Autorité', A: dimensions?.AUT || 0, fullMark: 100 },
-        { subject: 'Intégrité', A: dimensions?.INT || 0, fullMark: 100 },
-        { subject: 'Vigilance', A: dimensions?.TOX || 0, fullMark: 100 },
-        { subject: 'Adaptabilité', A: dimensions?.ADA || 0, fullMark: 100 },
-    ];
+    // Radar data — use trait macros for Manager, legacy 6-dim for others
+    const radarData = hasTraitData && macroScores
+        ? [
+            { subject: 'Leadership', A: macroScores['Leadership'] || 0, fullMark: 100 },
+            { subject: 'Diplomatie', A: macroScores['Diplomatie'] || 0, fullMark: 100 },
+            { subject: 'Opérationnel', A: macroScores['Opérationnel'] || 0, fullMark: 100 },
+            { subject: 'Autonomie', A: macroScores['Autonomie'] || 0, fullMark: 100 },
+            { subject: 'Dépendance', A: macroScores['Dépendance'] || 0, fullMark: 100 },
+        ]
+        : [
+            { subject: 'Résilience', A: dimensions?.RES || 0, fullMark: 100 },
+            { subject: 'Empathie', A: dimensions?.EMP || 0, fullMark: 100 },
+            { subject: 'Autorité', A: dimensions?.AUT || 0, fullMark: 100 },
+            { subject: 'Intégrité', A: dimensions?.INT || 0, fullMark: 100 },
+            { subject: 'Vigilance', A: dimensions?.TOX || 0, fullMark: 100 },
+            { subject: 'Adaptabilité', A: dimensions?.ADA || 0, fullMark: 100 },
+        ];
 
     // Score color helper
     const scoreColor = (val) => val > 75 ? 'text-emerald-400' : val < 40 ? 'text-rose-400' : 'text-blue-400';
@@ -289,7 +299,9 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
             >
                 <div className="flex items-center gap-4 mb-8 border-b border-slate-700 pb-4">
                     <BarChart2 className="text-orange-400" size={28} />
-                    <h2 className="text-2xl font-bold text-white tracking-wide">4. SCORES SUR 6 DIMENSIONS</h2>
+                    <h2 className="text-2xl font-bold text-white tracking-wide">
+                        {hasTraitData ? '4. PROFIL PAR TRAITS (20 Dimensions)' : '4. SCORES SUR 6 DIMENSIONS'}
+                    </h2>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12">
@@ -334,6 +346,37 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                             </div>
                         ))}
                     </div>
+
+                    {/* TRAIT TOP 5 — Only for trait-based roles */}
+                    {hasTraitData && topTraits && (
+                        <div className="space-y-4 mt-8 lg:mt-0">
+                            <h3 className="text-lg font-bold text-white mb-4 uppercase tracking-widest">Top 5 Traits Dominants</h3>
+                            {topTraits.map(([trait, count], i) => {
+                                const pct = traitPercentages?.[trait] || 0;
+                                return (
+                                    <div key={trait}>
+                                        <div className="flex justify-between items-end mb-2">
+                                            <span className="font-bold text-slate-300">
+                                                {i + 1}. {trait.charAt(0) + trait.slice(1).toLowerCase()}
+                                            </span>
+                                            <span className={`font-black text-xl ${scoreColor(pct)}`}>
+                                                {pct}%
+                                            </span>
+                                        </div>
+                                        <div className="h-3 bg-slate-700 rounded-full overflow-hidden">
+                                            <motion.div
+                                                initial={{ width: 0 }}
+                                                animate={{ width: `${pct}%` }}
+                                                transition={{ duration: 1, delay: 0.5 + (i * 0.1) }}
+                                                className="h-full rounded-full"
+                                                style={{ backgroundColor: barColor(pct) }}
+                                            />
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
                 </div>
             </motion.div>
 
