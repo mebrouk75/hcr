@@ -17,7 +17,7 @@ import TarifsPage from './TarifsPage';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <CookieBanner />
       <Routes>
         <Route path="/" element={<LaRelevePage />} />
