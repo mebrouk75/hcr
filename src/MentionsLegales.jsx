@@ -58,11 +58,10 @@ const MentionsLegales = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-5 py-4 text-xs font-black uppercase tracking-widest whitespace-nowrap transition-colors border-b-4 -mb-[2px] ${
-                  activeTab === tab.id
-                    ? 'border-orange-600 text-orange-600'
-                    : 'border-transparent text-stone-500 hover:text-stone-900'
-                }`}
+                className={`flex items-center gap-2 px-5 py-4 text-xs font-black uppercase tracking-widest whitespace-nowrap transition-colors border-b-4 -mb-[2px] ${activeTab === tab.id
+                  ? 'border-orange-600 text-orange-600'
+                  : 'border-transparent text-stone-500 hover:text-stone-900'
+                  }`}
               >
                 {tab.icon}
                 {tab.label}
@@ -80,7 +79,7 @@ const MentionsLegales = () => {
           <>
             <div className="bg-orange-50 border-2 border-orange-200 p-4">
               <p className="text-orange-800 font-bold text-sm">
-                ⚖️ Conformément à la loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), 
+                ⚖️ Conformément à la loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN),
                 voici les informations légales obligatoires.
               </p>
             </div>
@@ -92,7 +91,7 @@ const MentionsLegales = () => {
               <p><strong className="text-stone-900">SIRET :</strong> [À compléter avant mise en ligne]</p>
               <p><strong className="text-stone-900">Siège social :</strong> [Adresse complète]</p>
               <p><strong className="text-stone-900">Email :</strong>{' '}
-                <a href="mailto:contact@lareleve.fr" className="text-orange-600 underline">contact@lareleve.fr</a>
+                <a href="mailto:hcrsentinel@hotmail.com" className="text-orange-600 underline">hcrsentinel@hotmail.com</a>
               </p>
               <p><strong className="text-stone-900">Téléphone :</strong> [À compléter]</p>
             </Section>
@@ -102,41 +101,41 @@ const MentionsLegales = () => {
               <p><strong className="text-stone-900">Adresse :</strong> [Adresse de l'hébergeur]</p>
               <p><strong className="text-stone-900">Localisation des serveurs :</strong> [France / UE — à préciser]</p>
               <p className="text-sm text-orange-700 bg-orange-50 p-3 border border-orange-200">
-                <strong>Important RGPD :</strong> Si vos serveurs sont hors UE, vous devez mentionner les garanties 
+                <strong>Important RGPD :</strong> Si vos serveurs sont hors UE, vous devez mentionner les garanties
                 de transfert (clauses contractuelles types, etc.)
               </p>
             </Section>
 
             <Section icon={<Shield size={22} />} title="Propriété intellectuelle">
               <p>
-                L'ensemble des contenus présents sur ce site (textes, visuels, algorithmes de test, 
-                résultats de profils, logotypes) est la propriété exclusive de Sentinel HCR et est protégé 
+                L'ensemble des contenus présents sur ce site (textes, visuels, algorithmes de test,
+                résultats de profils, logotypes) est la propriété exclusive de Sentinel HCR et est protégé
                 par le droit d'auteur français et international.
               </p>
               <p>
-                Toute reproduction, représentation, modification, publication ou adaptation de tout ou 
-                partie des éléments du site, par quelque procédé que ce soit, est interdite sauf 
+                Toute reproduction, représentation, modification, publication ou adaptation de tout ou
+                partie des éléments du site, par quelque procédé que ce soit, est interdite sauf
                 autorisation écrite préalable.
               </p>
               <p>
-                <strong className="text-stone-900">Les résultats des tests de personnalité</strong> générés par la plateforme 
-                sont produits pour l'usage exclusif du candidat évalué et de l'employeur destinataire. 
+                <strong className="text-stone-900">Les résultats des tests de personnalité</strong> générés par la plateforme
+                sont produits pour l'usage exclusif du candidat évalué et de l'employeur destinataire.
                 Toute diffusion ou reproduction commerciale est interdite.
               </p>
             </Section>
 
             <Section icon={<FileText size={22} />} title="Activité réglementée — Recrutement HCR">
               <p>
-                Sentinel HCR opère en tant que <strong className="text-stone-900">intermédiaire de mise en relation</strong> entre 
+                Sentinel HCR opère en tant que <strong className="text-stone-900">intermédiaire de mise en relation</strong> entre
                 employeurs du secteur Hôtellerie-Restauration-Cafés (HCR) et candidats.
               </p>
               <p>
-                Conformément au <strong className="text-stone-900">Code du travail (art. L5321-1 et suivants)</strong>, 
+                Conformément au <strong className="text-stone-900">Code du travail (art. L5321-1 et suivants)</strong>,
                 les activités de placement de travailleurs sont soumises à déclaration.
               </p>
               <p>
-                Les évaluations de personnalité réalisées sur cette plateforme sont des outils d'aide à la 
-                décision. Elles ne constituent pas une décision d'embauche automatisée au sens de l'art. 22 
+                Les évaluations de personnalité réalisées sur cette plateforme sont des outils d'aide à la
+                décision. Elles ne constituent pas une décision d'embauche automatisée au sens de l'art. 22
                 du RGPD. L'employeur reste seul décisionnaire du recrutement.
               </p>
             </Section>
@@ -198,20 +197,20 @@ const MentionsLegales = () => {
 
             <Section icon={<Shield size={22} />} title="Partage des données">
               <p>
-                <strong className="text-stone-900">Avec les restaurateurs abonnés :</strong> uniquement votre profil 
-                de personnalité et votre poste cible — jamais vos données d'identité directe sans 
+                <strong className="text-stone-900">Avec les restaurateurs abonnés :</strong> uniquement votre profil
+                de personnalité et votre poste cible — jamais vos données d'identité directe sans
                 votre accord explicite.
               </p>
               <p>
-                <strong className="text-stone-900">Sous-traitants techniques :</strong> hébergement (voir mentions légales), 
-                éventuellement service d'emailing. Tous liés par un accord de traitement de données 
+                <strong className="text-stone-900">Sous-traitants techniques :</strong> hébergement (voir mentions légales),
+                éventuellement service d'emailing. Tous liés par un accord de traitement de données
                 conforme RGPD.
               </p>
               <p className="bg-green-50 border-2 border-green-200 p-3 text-green-800 font-bold">
                 ✅ Vos données ne sont JAMAIS vendues, louées ou cédées à des tiers commerciaux.
               </p>
               <p>
-                <strong className="text-stone-900">Obligations légales :</strong> Nous pouvons transmettre vos données 
+                <strong className="text-stone-900">Obligations légales :</strong> Nous pouvons transmettre vos données
                 si la loi l'exige (réquisition judiciaire, CNIL, etc.)
               </p>
             </Section>
@@ -226,7 +225,7 @@ const MentionsLegales = () => {
                 <li>• Journalisation des accès aux données sensibles</li>
               </ul>
               <p className="text-sm text-stone-500 mt-2">
-                En cas de violation de données susceptible d'engendrer un risque pour vos droits, 
+                En cas de violation de données susceptible d'engendrer un risque pour vos droits,
                 nous nous engageons à vous notifier dans les 72h conformément à l'art. 34 RGPD.
               </p>
             </Section>
@@ -238,13 +237,13 @@ const MentionsLegales = () => {
           <>
             <Section icon={<Eye size={22} />} title="Qu'est-ce qu'un cookie ?">
               <p>
-                Un cookie est un petit fichier texte déposé sur votre appareil lors de votre visite. 
-                Il permet de mémoriser vos préférences, votre session de connexion et d'analyser 
+                Un cookie est un petit fichier texte déposé sur votre appareil lors de votre visite.
+                Il permet de mémoriser vos préférences, votre session de connexion et d'analyser
                 l'utilisation du site.
               </p>
               <p>
-                Conformément à la directive ePrivacy et aux recommandations CNIL, nous demandons 
-                votre consentement <strong className="text-stone-900">avant</strong> tout dépôt de cookie 
+                Conformément à la directive ePrivacy et aux recommandations CNIL, nous demandons
+                votre consentement <strong className="text-stone-900">avant</strong> tout dépôt de cookie
                 non essentiel.
               </p>
             </Section>
@@ -277,10 +276,9 @@ const MentionsLegales = () => {
                   }
                 ].map((group, i) => (
                   <div key={i}>
-                    <h3 className={`text-xs font-black uppercase tracking-widest mb-2 ${
-                      group.color === 'green' ? 'text-green-700' :
+                    <h3 className={`text-xs font-black uppercase tracking-widest mb-2 ${group.color === 'green' ? 'text-green-700' :
                       group.color === 'orange' ? 'text-orange-600' : 'text-purple-600'
-                    }`}>{group.type}</h3>
+                      }`}>{group.type}</h3>
                     {group.items.map((cookie, j) => (
                       <div key={j} className="grid grid-cols-3 gap-2 p-3 bg-stone-50 border border-stone-200 text-sm mb-1">
                         <span className="font-mono font-bold text-stone-900">{cookie.nom}</span>
@@ -298,7 +296,7 @@ const MentionsLegales = () => {
 
             <Section icon={<Trash2 size={22} />} title="Gérer ou supprimer les cookies">
               <p>
-                Vous pouvez modifier vos préférences à tout moment en cliquant sur 
+                Vous pouvez modifier vos préférences à tout moment en cliquant sur
                 <button
                   onClick={() => {
                     localStorage.removeItem('hcr_cookie_consent');
@@ -327,7 +325,7 @@ const MentionsLegales = () => {
             <div className="bg-stone-900 text-white p-6">
               <p className="font-black text-lg uppercase mb-2">Vos droits RGPD — Art. 15 à 22</p>
               <p className="text-stone-300 font-medium">
-                En tant qu'utilisateur de Sentinel HCR, vous disposez des droits suivants sur vos données personnelles. 
+                En tant qu'utilisateur de Sentinel HCR, vous disposez des droits suivants sur vos données personnelles.
                 Toute demande est traitée <strong className="text-orange-400">dans un délai maximum de 30 jours</strong>.
               </p>
             </div>
@@ -388,8 +386,8 @@ const MentionsLegales = () => {
               <p>Pour toute demande relative à vos données personnelles :</p>
               <div className="bg-stone-900 text-white p-5 mt-3">
                 <p className="font-black text-lg mb-1">Par email :</p>
-                <a href="mailto:dpo@lareleve.fr" className="text-orange-400 font-bold text-lg underline">
-                  dpo@lareleve.fr
+                <a href="mailto:hcrsentinel@hotmail.com" className="text-orange-400 font-bold text-lg underline">
+                  hcrsentinel@hotmail.com
                 </a>
                 <p className="text-stone-400 text-sm mt-2">
                   Objet recommandé : "Exercice droit RGPD — [Type de droit]"<br />
@@ -397,7 +395,7 @@ const MentionsLegales = () => {
                 </p>
               </div>
               <p>
-                Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une 
+                Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une
                 réclamation auprès de la <strong className="text-stone-900">CNIL</strong> :
               </p>
               <a
@@ -412,17 +410,17 @@ const MentionsLegales = () => {
 
             <Section icon={<Shield size={22} />} title="Décision automatisée & profilage">
               <p>
-                <strong className="text-stone-900">Information importante :</strong> Sentinel HCR utilise un algorithme 
+                <strong className="text-stone-900">Information importante :</strong> Sentinel HCR utilise un algorithme
                 pour générer des profils de personnalité à partir de vos réponses au test.
               </p>
               <p>
-                Conformément à l'<strong className="text-stone-900">art. 22 RGPD</strong>, ce traitement 
-                <strong className="text-orange-600"> ne constitue pas une décision entièrement automatisée</strong> ayant 
-                des effets juridiques. Les résultats sont des <strong>outils d'aide à la décision</strong> — 
+                Conformément à l'<strong className="text-stone-900">art. 22 RGPD</strong>, ce traitement
+                <strong className="text-orange-600"> ne constitue pas une décision entièrement automatisée</strong> ayant
+                des effets juridiques. Les résultats sont des <strong>outils d'aide à la décision</strong> —
                 le recruteur humain reste décisionnaire de l'embauche.
               </p>
               <p>
-                Vous pouvez demander une explication de la logique de l'algorithme et contester 
+                Vous pouvez demander une explication de la logique de l'algorithme et contester
                 un résultat qui vous semblerait inexact ou injuste en nous contactant.
               </p>
             </Section>
@@ -437,8 +435,8 @@ const MentionsLegales = () => {
               <p className="font-medium text-stone-300">
                 Délégué à la Protection des Données : Sentinel HCR
               </p>
-              <a href="mailto:dpo@lareleve.fr" className="text-orange-400 font-bold underline">
-                dpo@lareleve.fr
+              <a href="mailto:hcrsentinel@hotmail.com" className="text-orange-400 font-bold underline">
+                hcrsentinel@hotmail.com
               </a>
             </div>
             <div className="text-right text-stone-400 text-xs">
