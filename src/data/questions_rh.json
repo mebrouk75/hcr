@@ -1,0 +1,705 @@
+[
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 1 — PROCESS & CONFORMITÉ (Q1-Q17)
+  // Le RH connaît les textes par cœur — les questions
+  // testent ce qu'il FAIT vraiment vs ce qu'il sait dire
+  // ═══════════════════════════════════════════════════
+
+  // Facette 1 — Application réelle du droit du travail
+  {
+    "id": 1,
+    "question": "Un manager opérationnel vous demande de valider un planning qui dépasse les maxima légaux 'juste pour cette semaine'. Il a une bonne raison. Que faites-vous ?",
+    "dim": "INT",
+    "facette": "Application droit du travail"
+  },
+  {
+    "id": 2,
+    "question": "La direction vous demande de trouver un moyen légal de ne pas payer les heures supplémentaires d'un mois exceptionnel. Vous avez des options à la limite. Votre positionnement ?",
+    "dim": "INT",
+    "facette": "Application droit du travail"
+  },
+
+  // Facette 2 — Gestion des zones grises contractuelles
+  {
+    "id": 3,
+    "question": "Un CDD est reconduit pour la 4ème fois de suite sur le même poste. Le manager veut continuer ainsi. Que faites-vous ?",
+    "dim": "INT",
+    "facette": "Zones grises contractuelles"
+  },
+  {
+    "id": 4,
+    "question": "La direction veut embaucher quelqu'un 'en période d'essai non officielle' avant de signer un contrat. Comment vous répondez à cette demande ?",
+    "dim": "INT",
+    "facette": "Zones grises contractuelles"
+  },
+
+  // Facette 3 — Rapport à l'inspection du travail
+  {
+    "id": 5,
+    "question": "L'inspection du travail annonce un contrôle dans 48h. Un manager vous avoue qu'il y a des irrégularités dans les plannings. Que faites-vous pendant ces 48h ?",
+    "dim": "INT",
+    "facette": "Inspection du travail"
+  },
+  {
+    "id": 6,
+    "question": "Suite à un contrôle, l'inspecteur relève une pratique que la direction considère 'normale dans le secteur'. Vous êtes le RH. Comment vous gérez la suite ?",
+    "dim": "INT",
+    "facette": "Inspection du travail"
+  },
+
+  // Facette 4 — Équité de traitement
+  {
+    "id": 7,
+    "question": "Deux employés au même poste ont des salaires différents sans raison documentée. C'est une situation héritée. Comment vous la traitez ?",
+    "dim": "INT",
+    "facette": "Équité de traitement"
+  },
+  {
+    "id": 8,
+    "question": "Un manager favorise clairement certains employés dans les attributions de shifts. Les autres se plaignent discrètement à vous. Votre approche ?",
+    "dim": "INT",
+    "facette": "Équité de traitement"
+  },
+
+  // Facette 5 — Gestion des plaintes internes
+  {
+    "id": 9,
+    "question": "Un employé vous signale verbalement qu'il subit des pressions de son manager. Il ne veut pas de procédure formelle — juste que ça s'arrête. Que faites-vous ?",
+    "dim": "INT",
+    "facette": "Plaintes internes"
+  },
+  {
+    "id": 10,
+    "question": "Vous recevez plusieurs plaintes anonymes contre le même manager performant. La direction ne veut pas y croire. Votre positionnement ?",
+    "dim": "INT",
+    "facette": "Plaintes internes"
+  },
+
+  // Facette 6 — Cohérence politique RH
+  {
+    "id": 11,
+    "question": "La direction veut licencier un employé pour 'insuffisance professionnelle' mais il n'y a aucun écrit de suivi ni d'avertissement. Que faites-vous ?",
+    "dim": "INT",
+    "facette": "Cohérence politique RH"
+  },
+  {
+    "id": 12,
+    "question": "Une règle interne est appliquée différemment selon les établissements du groupe. Les employés le savent. Comment vous gérez cette incohérence ?",
+    "dim": "INT",
+    "facette": "Cohérence politique RH"
+  },
+
+  // Facette 7 — Rapport à la confidentialité
+  {
+    "id": 13,
+    "question": "Un directeur vous demande des informations sur la situation personnelle d'un employé pour 'mieux gérer la situation'. Jusqu'où vous allez dans ce partage ?",
+    "dim": "INT",
+    "facette": "Confidentialité"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 2 — RECRUTEMENT & INTÉGRATION (Q14-Q30)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 8 — Biais de recrutement
+  {
+    "id": 14,
+    "question": "Vous passez en revue des CV. Vous réalisez que vous avez inconsciemment écarté des profils étrangers pour des postes en contact client. Comment vous réagissez à cette prise de conscience ?",
+    "dim": "EMP",
+    "facette": "Biais de recrutement"
+  },
+  {
+    "id": 15,
+    "question": "Un manager vous dit qu'il préfère recruter des hommes pour les postes de nuit 'pour des raisons de sécurité'. Comment vous traitez cette demande ?",
+    "dim": "INT",
+    "facette": "Biais de recrutement"
+  },
+
+  // Facette 9 — Qualité de l'intégration
+  {
+    "id": 16,
+    "question": "Un nouvel employé démissionne après 3 semaines en disant qu'il ne s'est jamais senti intégré. Quelle est votre analyse et votre réaction ?",
+    "dim": "EMP",
+    "facette": "Qualité intégration"
+  },
+  {
+    "id": 17,
+    "question": "Vous n'avez pas de processus d'onboarding structuré. Les managers font chacun à leur façon. Comment vous abordez ce sujet avec la direction ?",
+    "dim": "ADA",
+    "facette": "Qualité intégration"
+  },
+
+  // Facette 10 — Recrutement sous pression
+  {
+    "id": 18,
+    "question": "Un poste doit être pourvu en 48h. Vous avez un candidat acceptable mais pas idéal. Le manager fait pression. Quelle est votre recommandation ?",
+    "dim": "RES",
+    "facette": "Recrutement sous pression"
+  },
+  {
+    "id": 19,
+    "question": "La direction veut accélérer les recrutements et supprimer les entretiens RH 'pour gagner du temps'. Comment vous défendez votre valeur ajoutée dans ce processus ?",
+    "dim": "AUT",
+    "facette": "Recrutement sous pression"
+  },
+
+  // Facette 11 — Marque employeur
+  {
+    "id": 20,
+    "question": "Des avis sur Glassdoor décrivent votre entreprise comme un mauvais employeur. Ils reflètent partiellement une réalité que vous connaissez. Comment vous gérez ça ?",
+    "dim": "INT",
+    "facette": "Marque employeur"
+  },
+  {
+    "id": 21,
+    "question": "La direction veut que vous répondiez aux avis négatifs Glassdoor avec des messages corporate. Vous savez que les faits décrits sont vrais. Votre approche ?",
+    "dim": "INT",
+    "facette": "Marque employeur"
+  },
+
+  // Facette 12 — Diversité & inclusion
+  {
+    "id": 22,
+    "question": "Votre équipe de direction est composée à 90% d'hommes. La direction ne voit pas de problème. Comment vous traitez ce sujet — ou est-ce que vous le traitez ?",
+    "dim": "EMP",
+    "facette": "Diversité inclusion"
+  },
+
+  // Facette 13 — Gestion des talents
+  {
+    "id": 23,
+    "question": "Un talent identifié dans votre organisation veut partir parce qu'il ne voit pas d'évolution. Vous savez qu'il a raison — il n'y en a pas. Que lui dites-vous ?",
+    "dim": "INT",
+    "facette": "Gestion des talents"
+  },
+  {
+    "id": 24,
+    "question": "Vous avez identifié 3 hauts potentiels mais la direction n'a pas de budget pour les développer cette année. Comment vous gérez leurs attentes ?",
+    "dim": "ADA",
+    "facette": "Gestion des talents"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 3 — RELATION DIRECTION / TERRAIN (Q25-Q42)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 14 — Positionnement entre direction et employés
+  {
+    "id": 25,
+    "question": "Vous avez connaissance d'une décision de direction qui va impacter négativement les équipes mais que vous ne pouvez pas encore communiquer. Un manager vous questionne directement. Que dites-vous ?",
+    "dim": "INT",
+    "facette": "Positionnement direction/terrain"
+  },
+  {
+    "id": 26,
+    "question": "La direction vous demande d'annoncer une mauvaise nouvelle aux équipes en la présentant positivement. Vous savez que les employés ne seront pas dupes. Comment vous gérez ça ?",
+    "dim": "INT",
+    "facette": "Positionnement direction/terrain"
+  },
+
+  // Facette 15 — Courage managérial face à la direction
+  {
+    "id": 27,
+    "question": "Vous êtes convaincu qu'une décision RH de la direction est une erreur — légalement risquée et humainement mauvaise. Comment vous le faites remonter ?",
+    "dim": "AUT",
+    "facette": "Courage managérial"
+  },
+  {
+    "id": 28,
+    "question": "La direction vous demande de faire quelque chose qui ne viole pas la loi mais qui viole vos valeurs professionnelles. Votre réaction ?",
+    "dim": "INT",
+    "facette": "Courage managérial"
+  },
+
+  // Facette 16 — Crédibilité terrain
+  {
+    "id": 29,
+    "question": "Les managers opérationnels contournent le RH et gèrent les situations RH en direct. Comment vous analysez cette situation et qu'est-ce que vous faites ?",
+    "dim": "AUT",
+    "facette": "Crédibilité terrain"
+  },
+  {
+    "id": 30,
+    "question": "Un manager vous dit ouvertement que le RH 'ne comprend pas la réalité du terrain'. Comment vous répondez à ça — professionnellement et personnellement ?",
+    "dim": "AUT",
+    "facette": "Crédibilité terrain"
+  },
+
+  // Facette 17 — Gestion des conflits direction/employé
+  {
+    "id": 31,
+    "question": "Un employé vous consulte pour un litige avec son manager. Après investigation vous concluez que le manager a tort. Vous devez maintenant en parler à ce manager. Comment vous l'abordez ?",
+    "dim": "EMP",
+    "facette": "Gestion conflits"
+  },
+  {
+    "id": 32,
+    "question": "Un employé menace de saisir les prud'hommes. La direction vous demande de 'gérer ça discrètement'. Votre approche ?",
+    "dim": "INT",
+    "facette": "Gestion conflits"
+  },
+
+  // Facette 18 — Communication en temps de crise
+  {
+    "id": 33,
+    "question": "L'entreprise traverse une crise financière sérieuse. Les employés entendent des rumeurs. La direction ne veut pas communiquer. Quel est votre rôle dans cette situation ?",
+    "dim": "INT",
+    "facette": "Communication crise"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 4 — BIEN-ÊTRE & PRÉVENTION (Q34-Q55)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 19 — Détection du mal-être
+  {
+    "id": 34,
+    "question": "L'absentéisme augmente dans un département depuis 2 mois. Le manager dit que c'est normal pour la saison. Qu'est-ce que vous faites avec cette information ?",
+    "dim": "EMP",
+    "facette": "Détection mal-être"
+  },
+  {
+    "id": 35,
+    "question": "Plusieurs employés d'un même service sont en arrêt maladie simultanément. Le service reste en sous-effectif chronique depuis 6 mois. Comment vous analysez et intervenez ?",
+    "dim": "EMP",
+    "facette": "Détection mal-être"
+  },
+
+  // Facette 20 — Prévention des risques psychosociaux
+  {
+    "id": 36,
+    "question": "Un employé vient vous voir en larmes. Il dit qu'il n'en peut plus. Ce n'est pas la première fois que vous entendez ça dans cette équipe. Que faites-vous dans l'immédiat et sur le fond ?",
+    "dim": "EMP",
+    "facette": "Prévention RPS"
+  },
+  {
+    "id": 37,
+    "question": "Vous suspectez un cas de burn-out chez un manager. Il nie tout problème. La direction ne veut pas voir. Comment vous gérez cette situation sans l'aggraver ?",
+    "dim": "EMP",
+    "facette": "Prévention RPS"
+  },
+
+  // Facette 21 — Gestion du harcèlement
+  {
+    "id": 38,
+    "question": "Une employée vous signale des comportements déplacés de la part d'un client régulier — un client important pour le chiffre. La direction minimise. Votre position ?",
+    "dim": "INT",
+    "facette": "Harcèlement"
+  },
+  {
+    "id": 39,
+    "question": "Vous avez des indices sérieux de harcèlement moral mais pas de preuves formelles. L'accusé est un manager apprécié de la direction. Comment vous procédez ?",
+    "dim": "INT",
+    "facette": "Harcèlement"
+  },
+
+  // Facette 22 — Conditions de travail
+  {
+    "id": 40,
+    "question": "Les vestiaires et espaces de pause du personnel sont dans un état déplorable. La direction dit que ce n'est pas prioritaire. Comment vous portez ce sujet ?",
+    "dim": "EMP",
+    "facette": "Conditions de travail"
+  },
+  {
+    "id": 41,
+    "question": "Des employés se plaignent régulièrement de la chaleur en cuisine en été. Le problème persiste depuis 2 ans. Quel est votre rôle et vos actions concrètes ?",
+    "dim": "EMP",
+    "facette": "Conditions de travail"
+  },
+
+  // Facette 23 — Retour après arrêt maladie
+  {
+    "id": 42,
+    "question": "Un employé revient après 3 mois d'arrêt pour dépression. Son manager ne sait pas comment l'accueillir et vous demande quoi faire. Quelles sont vos recommandations concrètes ?",
+    "dim": "EMP",
+    "facette": "Retour arrêt maladie"
+  },
+
+  // Facette 24 — Charge de travail
+  {
+    "id": 43,
+    "question": "Un employé vous signale que sa charge de travail a doublé suite au départ d'un collègue non remplacé depuis 4 mois. Son manager dit qu'il 'gère'. Comment vous intervenez ?",
+    "dim": "EMP",
+    "facette": "Charge de travail"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 5 — DÉVELOPPEMENT & PERFORMANCE (Q44-Q62)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 25 — Entretiens annuels
+  {
+    "id": 44,
+    "question": "50% des entretiens annuels n'ont pas été faits cette année. Les managers disent qu'ils n'ont pas le temps. Comment vous traitez ce sujet avec eux et avec la direction ?",
+    "dim": "AUT",
+    "facette": "Entretiens annuels"
+  },
+  {
+    "id": 45,
+    "question": "Un manager fait ses entretiens annuels en 10 minutes sans préparation. Les employés s'en plaignent discrètement. Comment vous intervenez ?",
+    "dim": "AUT",
+    "facette": "Entretiens annuels"
+  },
+
+  // Facette 26 — Gestion de la sous-performance
+  {
+    "id": 46,
+    "question": "Un employé est clairement en sous-performance depuis 6 mois. Son manager ne veut pas l'affronter. Comment vous accompagnez cette situation ?",
+    "dim": "AUT",
+    "facette": "Sous-performance"
+  },
+  {
+    "id": 47,
+    "question": "La direction veut se séparer rapidement d'un employé en sous-performance sans avoir fait le travail de suivi nécessaire. Votre rôle dans cette situation ?",
+    "dim": "INT",
+    "facette": "Sous-performance"
+  },
+
+  // Facette 27 — Formation
+  {
+    "id": 48,
+    "question": "Le budget formation est coupé de 60% cette année. Les équipes en avaient besoin. Comment vous communiquez ça et comment vous gérez les attentes ?",
+    "dim": "ADA",
+    "facette": "Formation"
+  },
+  {
+    "id": 49,
+    "question": "Un employé vous demande une formation que son manager refuse sans explication valable. L'employé a un vrai besoin légitime. Comment vous traitez ça ?",
+    "dim": "EMP",
+    "facette": "Formation"
+  },
+
+  // Facette 28 — Mobilité interne
+  {
+    "id": 50,
+    "question": "Un bon employé postule en interne sur un poste. Son manager actuel s'y oppose parce qu'il ne veut pas le perdre. Comment vous gérez ce conflit d'intérêt ?",
+    "dim": "INT",
+    "facette": "Mobilité interne"
+  },
+
+  // Facette 29 — Gestion des hauts potentiels
+  {
+    "id": 51,
+    "question": "Vous avez identifié un haut potentiel que plusieurs managers se 'disputent'. Comment vous gérez cette situation pour le bien de l'employé et de l'organisation ?",
+    "dim": "ADA",
+    "facette": "Hauts potentiels"
+  },
+
+  // Facette 30 — Feedback et culture de l'amélioration
+  {
+    "id": 52,
+    "question": "La culture du feedback n'existe pas dans votre organisation — on ne dit jamais vraiment les choses. Comment vous créez les conditions pour que ça change ?",
+    "dim": "ADA",
+    "facette": "Culture feedback"
+  },
+  {
+    "id": 53,
+    "question": "Un sondage interne révèle que 60% des employés ne se sentent pas reconnus. La direction est surprise. Vous ne l'êtes pas. Comment vous présentez ça et quelles solutions vous proposez ?",
+    "dim": "ADA",
+    "facette": "Culture feedback"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 6 — INTELLIGENCE STRATÉGIQUE RH (Q54-Q76)
+  // Questions impossibles à déjouer même pour un RH expert
+  // ═══════════════════════════════════════════════════
+
+  // Facette 31 — Lucidité sur son propre rôle
+  {
+    "id": 54,
+    "question": "Êtes-vous du côté des employés, du côté de la direction, ou est-ce que vous avez trouvé un troisième chemin ? Expliquez avec un exemple concret.",
+    "dim": "INT",
+    "facette": "Positionnement RH"
+  },
+  {
+    "id": 55,
+    "question": "Quelle est la limite que vous ne franchirez jamais dans votre rôle de RH — même si la direction vous le demande ?",
+    "dim": "INT",
+    "facette": "Positionnement RH"
+  },
+
+  // Facette 32 — Rapport à la politique interne
+  {
+    "id": 56,
+    "question": "Dans votre organisation, certaines personnes ont plus de protection que d'autres indépendamment de leurs actes. Comment vous gérez cette réalité dans votre travail ?",
+    "dim": "INT",
+    "facette": "Politique interne"
+  },
+  {
+    "id": 57,
+    "question": "Une décision RH que vous avez prise a été annulée par la direction pour des raisons politiques sans rapport avec les faits. Comment vous avez réagi ?",
+    "dim": "AUT",
+    "facette": "Politique interne"
+  },
+
+  // Facette 33 — Vision long terme vs urgence opérationnelle
+  {
+    "id": 58,
+    "question": "Vous passez 80% de votre temps à gérer des urgences et 20% sur des sujets stratégiques. Est-ce que c'est le bon équilibre selon vous et qu'est-ce que vous faites pour le changer ?",
+    "dim": "ADA",
+    "facette": "Vision long terme"
+  },
+  {
+    "id": 59,
+    "question": "Quel indicateur RH vous donnerait le plus d'informations sur la santé réelle d'une organisation HCR — et est-ce que vous le mesurez actuellement ?",
+    "dim": "ADA",
+    "facette": "Vision long terme"
+  },
+
+  // Facette 34 — Rapport au changement organisationnel
+  {
+    "id": 60,
+    "question": "Une restructuration est annoncée. Vous savez avant tout le monde que des postes vont être supprimés. Comment vous vivez cette période et quel est votre rôle ?",
+    "dim": "INT",
+    "facette": "Changement organisationnel"
+  },
+  {
+    "id": 61,
+    "question": "La direction veut implémenter un nouveau système de management par objectifs. Les managers y sont hostiles. Vous pensez que c'est une bonne idée mais mal présentée. Comment vous agissez ?",
+    "dim": "ADA",
+    "facette": "Changement organisationnel"
+  },
+
+  // Facette 35 — Mesure de l'impact RH
+  {
+    "id": 62,
+    "question": "Comment vous démontrez concrètement la valeur ajoutée du RH à une direction qui pense que 'ça pourrait tourner sans RH' ?",
+    "dim": "AUT",
+    "facette": "Impact RH"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // QUESTIONS PIÈGES RH (Q63-Q100)
+  // Un RH qui connaît les bonnes réponses va se trahir
+  // sur ces questions comportementales indirectes
+  // ═══════════════════════════════════════════════════
+
+  {
+    "id": 63,
+    "question": "Quel est le dossier RH que vous avez le moins bien géré dans votre carrière — et qu'est-ce que vous auriez fait différemment ?",
+    "dim": "ADA",
+    "facette": "Piège retrospective"
+  },
+  {
+    "id": 64,
+    "question": "Avez-vous déjà appliqué une règle que vous saviez injuste parce que c'était la politique de l'entreprise ? Comment vous vous êtes senti ?",
+    "dim": "INT",
+    "facette": "Piège intégrité"
+  },
+  {
+    "id": 65,
+    "question": "Si vous deviez évaluer honnêtement votre organisation actuelle sur La Relève, quel serait son score de friction selon vous ?",
+    "dim": "INT",
+    "facette": "Piège auto-évaluation"
+  },
+  {
+    "id": 66,
+    "question": "Qu'est-ce qui vous a décidé à travailler dans les RH — et est-ce que cette raison est toujours valable aujourd'hui ?",
+    "dim": "EMP",
+    "facette": "Piège motivation"
+  },
+  {
+    "id": 67,
+    "question": "Un employé pleure dans votre bureau. Quelle est votre réaction instinctive — et est-ce que vous pensez que c'est la bonne ?",
+    "dim": "EMP",
+    "facette": "Piège empathie"
+  },
+  {
+    "id": 68,
+    "question": "Quelle est la décision RH que vous avez prise uniquement parce que c'était la bonne chose à faire, même si politiquement c'était risqué pour vous ?",
+    "dim": "INT",
+    "facette": "Piège courage"
+  },
+  {
+    "id": 69,
+    "question": "Si un employé vous demande sincèrement si l'entreprise est un bon endroit où travailler, que lui répondez-vous ?",
+    "dim": "INT",
+    "facette": "Piège honnêteté"
+  },
+  {
+    "id": 70,
+    "question": "Vous avez rencontré dans votre carrière un manager que vous considérez comme vraiment toxique. Comment vous avez géré cette situation ?",
+    "dim": "AUT",
+    "facette": "Piège gestion toxicité"
+  },
+  {
+    "id": 71,
+    "question": "Quelle est la différence entre un RH qui protège l'entreprise et un RH qui protège les employés ? Et vous, vous êtes lequel ?",
+    "dim": "INT",
+    "facette": "Piège positionnement"
+  },
+  {
+    "id": 72,
+    "question": "Combien de fois cette année avez-vous dit non à la direction pour des raisons éthiques ou légales ?",
+    "dim": "INT",
+    "facette": "Piège courage direction"
+  },
+  {
+    "id": 73,
+    "question": "Quel est le signal d'alerte qui vous dit qu'une organisation est en train de devenir toxique — avant que ça soit évident pour tout le monde ?",
+    "dim": "EMP",
+    "facette": "Piège détection précoce"
+  },
+  {
+    "id": 74,
+    "question": "Est-ce que vous avez déjà quitté un poste RH parce que vous ne pouviez plus défendre ce que l'organisation faisait ?",
+    "dim": "INT",
+    "facette": "Piège intégrité limite"
+  },
+  {
+    "id": 75,
+    "question": "Qu'est-ce qui différencie selon vous un RH de valeur d'un RH qui exécute simplement les décisions de la direction ?",
+    "dim": "AUT",
+    "facette": "Piège définition"
+  },
+  {
+    "id": 76,
+    "question": "Décrivez une situation où vous avez dû choisir entre la loyauté envers la direction et la protection d'un employé. Qu'avez-vous choisi ?",
+    "dim": "INT",
+    "facette": "Piège loyauté"
+  },
+  {
+    "id": 77,
+    "question": "Si les employés de votre organisation pouvaient vous évaluer anonymement demain, qu'est-ce que vous pensez qu'ils diraient ?",
+    "dim": "EMP",
+    "facette": "Piège perception"
+  },
+  {
+    "id": 78,
+    "question": "Quel est le sujet RH que vous évitez de soulever avec la direction parce que vous savez que ça créerait des tensions ?",
+    "dim": "AUT",
+    "facette": "Piège sujets évités"
+  },
+  {
+    "id": 79,
+    "question": "Comment vous définissez un environnement de travail sain — en dehors des définitions officielles ?",
+    "dim": "EMP",
+    "facette": "Piège définition bien-être"
+  },
+  {
+    "id": 80,
+    "question": "Avez-vous déjà eu peur de faire votre travail correctement parce que ça déplairait à quelqu'un de puissant dans l'organisation ?",
+    "dim": "INT",
+    "facette": "Piège peur hiérarchique"
+  },
+  {
+    "id": 81,
+    "question": "Quel est le retour que vous avez reçu sur votre façon de travailler qui vous a le plus dérangé — et pourquoi ?",
+    "dim": "ADA",
+    "facette": "Piège réception feedback"
+  },
+  {
+    "id": 82,
+    "question": "Si vous pouviez changer une seule pratique RH dans votre organisation actuelle, ce serait laquelle ?",
+    "dim": "ADA",
+    "facette": "Piège changement prioritaire"
+  },
+  {
+    "id": 83,
+    "question": "Qu'est-ce que vous ne supportez pas chez certains professionnels RH que vous avez côtoyés ?",
+    "dim": "INT",
+    "facette": "Piège miroir"
+  },
+  {
+    "id": 84,
+    "question": "Un employé vous fait confiance et vous révèle quelque chose de personnel pour expliquer ses difficultés au travail. Comment vous utilisez cette information — ou vous ne l'utilisez pas ?",
+    "dim": "INT",
+    "facette": "Piège confidentialité"
+  },
+  {
+    "id": 85,
+    "question": "Quelle est la chose la plus difficile dans votre métier que les gens de l'extérieur ne comprennent pas ?",
+    "dim": "ADA",
+    "facette": "Piège complexité métier"
+  },
+  {
+    "id": 86,
+    "question": "Est-ce que vous pensez que le RH peut vraiment changer une culture d'entreprise ou est-ce que ça vient uniquement du sommet ?",
+    "dim": "AUT",
+    "facette": "Piège pouvoir RH"
+  },
+  {
+    "id": 87,
+    "question": "Quand un manager vous dit que son problème avec un employé c'est 'une question de personnalité', qu'est-ce que vous entendez vraiment ?",
+    "dim": "EMP",
+    "facette": "Piège lecture managériale"
+  },
+  {
+    "id": 88,
+    "question": "Avez-vous déjà instrumentalisé un process RH pour protéger l'entreprise au détriment d'un employé ? Comment vous vivez ça aujourd'hui ?",
+    "dim": "INT",
+    "facette": "Piège instrumentalisation"
+  },
+  {
+    "id": 89,
+    "question": "Qu'est-ce qui vous ferait quitter votre poste RH du jour au lendemain ?",
+    "dim": "INT",
+    "facette": "Piège ligne rouge"
+  },
+  {
+    "id": 90,
+    "question": "Comment vous savez qu'un manager est vraiment bienveillant versus qu'il joue le jeu de la bienveillance parce que c'est valorisé dans votre culture ?",
+    "dim": "EMP",
+    "facette": "Piège authenticité"
+  },
+  {
+    "id": 91,
+    "question": "Si vous deviez recruter votre propre remplaçant, quel profil de RH vous choisiriez — et en quoi serait-il différent de vous ?",
+    "dim": "ADA",
+    "facette": "Piège succession"
+  },
+  {
+    "id": 92,
+    "question": "Quelle est la question qu'un candidat vous a posée en entretien qui vous a vraiment surpris ou déstabilisé ?",
+    "dim": "ADA",
+    "facette": "Piège déstabilisation"
+  },
+  {
+    "id": 93,
+    "question": "Dans votre organisation, est-ce que tout le monde peut se plaindre de tout le monde — ou est-ce que certaines personnes sont intouchables ? Et quel est votre rôle là-dedans ?",
+    "dim": "INT",
+    "facette": "Piège impunité"
+  },
+  {
+    "id": 94,
+    "question": "Qu'est-ce que vous auriez aimé qu'on vous dise quand vous avez commencé dans les RH ?",
+    "dim": "ADA",
+    "facette": "Piège sagesse"
+  },
+  {
+    "id": 95,
+    "question": "Comment vous expliquez que certaines organisations HCR réussissent à fidéliser leurs équipes sur le long terme alors que d'autres perdent la moitié de leurs effectifs chaque année ?",
+    "dim": "EMP",
+    "facette": "Piège compréhension systémique"
+  },
+  {
+    "id": 96,
+    "question": "Quel est le comportement managérial que vous n'avez jamais réussi à faire changer malgré tous vos efforts ?",
+    "dim": "AUT",
+    "facette": "Piège limite d'influence"
+  },
+  {
+    "id": 97,
+    "question": "Si un employé vous demande si son manager est toxique, qu'est-ce que vous lui répondez ?",
+    "dim": "INT",
+    "facette": "Piège réponse honnête"
+  },
+  {
+    "id": 98,
+    "question": "Pourquoi vous avez passé ce test aujourd'hui — qu'est-ce que vous espérez trouver sur cette plateforme ?",
+    "dim": "ADA",
+    "facette": "Piège motivation finale"
+  },
+  {
+    "id": 99,
+    "question": "Quelle est la différence entre un bon RH et un grand RH selon vous ?",
+    "dim": "ADA",
+    "facette": "Piège excellence"
+  },
+  {
+    "id": 100,
+    "question": "Si vous pouviez poser une seule question à un candidat pour savoir s'il va bien s'intégrer dans une équipe, ce serait laquelle ?",
+    "dim": "EMP",
+    "facette": "Piège intuition RH"
+  }
+]

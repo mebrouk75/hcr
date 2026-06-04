@@ -12,8 +12,7 @@ const RolesPage = () => {
             trait: "Le Visionnaire",
             desc: "Leadership, Gestion de crise & Stratégie globale.",
             icon: <Building2 size={24} />,
-            color: "bg-indigo-50 text-indigo-600",
-            border: "hover:border-indigo-200"
+            color: "text-[#C9A84C]"
         },
         {
             role: "Manager",
@@ -21,8 +20,7 @@ const RolesPage = () => {
             trait: "Le Chef d'Orchestre",
             desc: "Pilotage terrain, Animation d'équipe & Culture du résultat.",
             icon: <Users size={24} />,
-            color: "bg-violet-50 text-violet-600",
-            border: "hover:border-violet-200"
+            color: "text-[#C9A84C]"
         },
         {
             role: "Manager Adjoint",
@@ -30,8 +28,7 @@ const RolesPage = () => {
             trait: "Le Bras Droit",
             desc: "Soutien opérationnel, Relais terrain & Fiabilité.",
             icon: <UserPlus size={24} />,
-            color: "bg-blue-50 text-blue-600",
-            border: "hover:border-blue-200"
+            color: "text-[#C9A84C]"
         },
         {
             role: "Chef de Rang",
@@ -39,8 +36,7 @@ const RolesPage = () => {
             trait: "L'Ambassadeur",
             desc: "Technique de service, Vente additionnelle & Posture.",
             icon: <UtensilsCrossed size={24} />,
-            color: "bg-orange-50 text-orange-600",
-            border: "hover:border-orange-200"
+            color: "text-[#C9A84C]"
         },
         {
             role: "Barman / Mixologue",
@@ -48,8 +44,7 @@ const RolesPage = () => {
             trait: "L'Alchimiste",
             desc: "Créativité, Gestion des stocks & Aisance relationnelle.",
             icon: <Wine size={24} />,
-            color: "bg-rose-50 text-rose-600",
-            border: "hover:border-rose-200"
+            color: "text-[#C9A84C]"
         },
         {
             role: "Serveur / Limonadier",
@@ -57,28 +52,27 @@ const RolesPage = () => {
             trait: "L'Électron Libre",
             desc: "Agilité, Mémoire immédiate & Relation client.",
             icon: <Coffee size={24} />,
-            color: "bg-emerald-50 text-emerald-600",
-            border: "hover:border-emerald-200"
+            color: "text-[#C9A84C]"
         }
     ];
 
     return (
-        <div className="min-h-screen bg-[#FAfaf9] flex flex-col font-sans selection:bg-orange-200 selection:text-orange-900">
-            <nav className="border-b-2 border-stone-900 px-6 py-5 flex justify-between items-center bg-white sticky top-0 z-50">
+        <div className="min-h-screen bg-[#0A0A0A] flex flex-col font-sans selection:bg-[#C9A84C] selection:text-black">
+            <nav className="border-b border-[#C9A84C]/15 px-6 py-5 flex justify-between items-center bg-[#0A0A0A] sticky top-0 z-50">
                 {/* LOGO */}
-                <div onClick={() => navigate('/')} className="flex items-center gap-3 cursor-pointer">
-                    <div className="bg-stone-900 text-white w-10 h-10 flex items-center justify-center font-black text-xl rounded-sm">
-                        R.
+                <div onClick={() => navigate('/')} className="flex items-center gap-3 cursor-pointer group">
+                    <div className="w-8 h-8 border border-[#C9A84C]/60 flex items-center justify-center group-hover:border-[#C9A84C] transition-colors">
+                        <span className="text-[#C9A84C] font-black text-xs">R.</span>
                     </div>
                     <div className="leading-none">
-                        <span className="block text-2xl font-black tracking-tighter uppercase">LA RELÈVE</span>
-                        <span className="block text-[10px] font-bold tracking-[0.2em] uppercase text-orange-600">
+                        <span className="block text-white font-black text-base tracking-tighter uppercase">Sentinel HCR</span>
+                        <span className="block text-[9px] font-bold tracking-[0.22em] uppercase text-[#C9A84C]/70">
                             Espace Talent
                         </span>
                     </div>
                 </div>
                 {/* LOGOUT */}
-                <button onClick={() => navigate('/')} className="text-xs font-bold uppercase tracking-widest text-stone-900 hover:text-orange-600 transition-colors">
+                <button onClick={() => navigate('/')} className="text-[10px] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors">
                     Déconnexion
                 </button>
             </nav>
@@ -86,14 +80,14 @@ const RolesPage = () => {
             <section id="roles-grid" className="w-full flex-1 py-12 md:py-24 px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16 text-center">
-                        <span className="bg-stone-900 text-white px-2 py-1 text-xs font-bold uppercase tracking-widest mb-4 inline-block">
+                        <span className="text-[#C9A84C] text-[10px] font-black uppercase tracking-[0.3em] block mb-4">
                             Mon Profil
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-black text-stone-900 mb-4 uppercase">
+                        <h2 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase">
                             Quel est votre poste ?
                         </h2>
-                        <p className="text-stone-500 max-w-2xl mx-auto text-lg font-medium">
-                            Chaque rôle a ses codes. Sélectionnez votre métier pour démarrer l'évaluation.
+                        <p className="text-stone-500 max-w-2xl mx-auto text-sm font-medium leading-relaxed">
+                            Chaque rôle a ses codes et ses exigences. Sélectionnez votre métier pour démarrer l'évaluation.
                         </p>
                     </div>
 
@@ -102,28 +96,28 @@ const RolesPage = () => {
                             <div
                                 key={index}
                                 onClick={() => navigate(`/mbti/${profile.slug}`)}
-                                className={`group relative p-8 bg-white border-2 border-stone-200 hover:border-orange-600 transition-all duration-300 cursor-pointer hover:-translate-y-1 shadow-sm hover:shadow-[4px_4px_0px_0px_#ea580c]`}
+                                className={`group relative p-8 bg-[#0D0D0D] border-2 border-stone-800 hover:border-[#C9A84C] transition-all duration-300 cursor-pointer shadow-[0_4px_24px_rgba(0,0,0,0.5)]`}
                             >
                                 <div className="flex justify-between items-start mb-6">
-                                    <div className={`p-4 rounded-none border border-stone-100 ${profile.color} bg-opacity-20`}>
+                                    <div className={`w-12 h-12 flex items-center justify-center border border-[#C9A84C]/25 bg-[#C9A84C]/5 ${profile.color}`}>
                                         {profile.icon}
                                     </div>
                                 </div>
 
-                                <h3 className="text-xl font-black text-stone-900 mb-1 group-hover:text-orange-600 transition-colors uppercase">
+                                <h3 className="text-xl font-black text-white mb-1 group-hover:text-[#C9A84C] transition-colors uppercase">
                                     {profile.role}
                                 </h3>
 
-                                <div className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-4">
+                                <div className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-4">
                                     {profile.trait}
                                 </div>
 
-                                <p className="text-stone-600 leading-relaxed font-medium text-sm">
+                                <p className="text-stone-400 leading-relaxed font-medium text-xs mb-8">
                                     {profile.desc}
                                 </p>
 
-                                <div className="mt-6 flex items-center text-xs font-bold uppercase tracking-widest text-stone-300 group-hover:text-orange-600 transition-colors">
-                                    Démarrer le test <ArrowRight size={14} className="ml-2" />
+                                <div className="mt-auto flex items-center text-[10px] font-bold uppercase tracking-widest text-[#C9A84C] opacity-70 group-hover:opacity-100 transition-opacity">
+                                    Démarrer le test <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </div>
                         ))}

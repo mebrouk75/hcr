@@ -1,0 +1,716 @@
+[
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 1 — POUVOIR & AUTORITÉ (Q1-Q17)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 1 — Tolérance à la contradiction
+  {
+    "id": 1,
+    "question": "Votre chef de salle, 8 ans d'expérience, contredit votre décision sur les plannings devant toute l'équipe. Il a probablement raison. Vous faites quoi ?",
+    "dim": "AUT",
+    "facette": "Tolérance à la contradiction"
+  },
+  {
+    "id": 2,
+    "question": "Vous venez de prendre une décision sur la carte. Votre cuisinier principal dit que ça ne marchera pas. La semaine suivante il avait raison. Comment vous gérez ça avec lui ?",
+    "dim": "AUT",
+    "facette": "Tolérance à la contradiction"
+  },
+
+  // Facette 2 — Besoin de contrôle
+  {
+    "id": 3,
+    "question": "Vous êtes en vacances 10 jours. Votre adjoint gère tout sans vous appeler une seule fois. En rentrant vous découvrez qu'il a pris 3 décisions importantes sans vous. Tout s'est bien passé. Votre réaction ?",
+    "dim": "AUT",
+    "facette": "Besoin de contrôle"
+  },
+  {
+    "id": 4,
+    "question": "Combien de fois par semaine vérifiez-vous les caisses, les stocks ou les plannings même quand votre équipe est capable de le faire seule ?",
+    "dim": "AUT",
+    "facette": "Besoin de contrôle"
+  },
+
+  // Facette 3 — Réaction quand on lui tient tête
+  {
+    "id": 5,
+    "question": "Un employé vous dit calmement en tête-à-tête que votre façon de manager crée du stress dans l'équipe. Quelle est votre première émotion et qu'est-ce que vous faites avec ?",
+    "dim": "AUT",
+    "facette": "Réaction quand on tient tête"
+  },
+  {
+    "id": 6,
+    "question": "Lors d'une réunion d'équipe, deux employés s'allient pour défendre une position contraire à la vôtre. Ils ont des arguments solides. Vous ressentez quoi et comment vous concluez la réunion ?",
+    "dim": "AUT",
+    "facette": "Réaction quand on tient tête"
+  },
+
+  // Facette 4 — Capacité à déléguer vraiment
+  {
+    "id": 7,
+    "question": "Vous déléguez la gestion des fournisseurs à votre responsable. Il négocie un contrat différent de ce que vous auriez fait mais les conditions sont meilleures. Vous validez ou vous reprenez la main ?",
+    "dim": "AUT",
+    "facette": "Délégation réelle"
+  },
+  {
+    "id": 8,
+    "question": "Votre adjoint prend une décision en votre absence que vous n'auriez pas prise. Le résultat est neutre — ni bon ni mauvais. Que lui dites-vous ?",
+    "dim": "AUT",
+    "facette": "Délégation réelle"
+  },
+
+  // Facette 5 — Ego face au succès de l'équipe
+  {
+    "id": 9,
+    "question": "Un article de presse parle de votre restaurant. Le journaliste cite et félicite votre chef de salle, pas vous. Comment vous vous sentez et qu'est-ce que vous dites à votre chef de salle ?",
+    "dim": "AUT",
+    "facette": "Ego face au succès équipe"
+  },
+
+  // Facette 6 — Réaction à l'erreur d'un employé
+  {
+    "id": 10,
+    "question": "Un serveur renverse une bouteille de vin à 80€ sur un client en plein service. C'est sa deuxième erreur du mois. Qu'est-ce que vous faites dans l'immédiat et qu'est-ce que vous lui dites après le service ?",
+    "dim": "AUT",
+    "facette": "Réaction à l'erreur"
+  },
+  {
+    "id": 11,
+    "question": "Votre responsable de salle a mal géré une réservation de groupe — 12 personnes arrivent sans que la table soit prête. Devant les clients. Comment vous intervenez ?",
+    "dim": "AUT",
+    "facette": "Réaction à l'erreur"
+  },
+
+  // Facette 7 — Rapport à la critique extérieure
+  {
+    "id": 12,
+    "question": "Un consultant mandaté par votre banque analyse votre établissement et conclut que votre organisation managériale est le principal problème. Quelle est votre réaction ?",
+    "dim": "AUT",
+    "facette": "Critique extérieure"
+  },
+  {
+    "id": 13,
+    "question": "Un avis Google 1 étoile décrit votre management comme 'autoritaire et irrespectueux envers le personnel'. Vous faites quoi ?",
+    "dim": "AUT",
+    "facette": "Critique extérieure"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 2 — ARGENT & HUMAIN (Q14-Q30)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 8 — Arbitrage salaire vs rentabilité
+  {
+    "id": 14,
+    "question": "Votre meilleur employé demande une augmentation de 150€ net. Vous n'avez pas les marges pour ça mais vous pouvez vous débrouiller. Qu'est-ce que vous faites ?",
+    "dim": "RES",
+    "facette": "Arbitrage salaire/rentabilité"
+  },
+  {
+    "id": 15,
+    "question": "Vous devez choisir entre garder un extra de qualité en CDI ou maintenir votre ratio masse salariale. Les deux ne sont pas compatibles ce trimestre. Vous décidez quoi ?",
+    "dim": "RES",
+    "facette": "Arbitrage salaire/rentabilité"
+  },
+
+  // Facette 9 — Réaction en période de pertes
+  {
+    "id": 16,
+    "question": "Trois mois consécutifs dans le rouge. Votre comptable vous dit de couper dans les effectifs. Votre instinct vous dit que c'est une erreur. Comment vous prenez la décision ?",
+    "dim": "RES",
+    "facette": "Réaction en période de pertes"
+  },
+  {
+    "id": 17,
+    "question": "Vous êtes en difficulté financière. Un de vos employés les plus fidèles — 5 ans avec vous — est aussi le poste le plus coûteux. Que faites-vous ?",
+    "dim": "RES",
+    "facette": "Réaction en période de pertes"
+  },
+
+  // Facette 10 — Fidélisation vs réduction de coûts
+  {
+    "id": 18,
+    "question": "Pour réduire vos coûts vous pourriez remplacer deux CDI par des extras. Légalement c'est possible. Humainement qu'est-ce que ça vous fait ?",
+    "dim": "RES",
+    "facette": "Fidélisation vs coûts"
+  },
+  {
+    "id": 19,
+    "question": "Un concurrent vous offre la possibilité de racheter son fonds. Ça demande un investissement qui vous forcerait à geler toutes les augmentations pendant 18 mois. Vous faites quoi ?",
+    "dim": "RES",
+    "facette": "Fidélisation vs coûts"
+  },
+
+  // Facette 11 — Transparence financière
+  {
+    "id": 20,
+    "question": "Votre équipe vous demande pourquoi il n'y a pas eu de primes cette année. Jusqu'où vous allez dans l'explication des raisons financières ?",
+    "dim": "RES",
+    "facette": "Transparence financière"
+  },
+
+  // Facette 12 — Gestion des heures supplémentaires
+  {
+    "id": 21,
+    "question": "Un employé a accumulé 23 heures sup en un mois. Vous n'avez pas le budget pour les payer toutes ce mois-ci. Comment vous gérez ça avec lui ?",
+    "dim": "INT",
+    "facette": "Heures supplémentaires"
+  },
+  {
+    "id": 22,
+    "question": "Pendant les fêtes votre équipe a travaillé bien au-delà des horaires prévus. La loi vous oblige à majorer. Votre trésorerie est tendue. Que faites-vous ?",
+    "dim": "INT",
+    "facette": "Heures supplémentaires"
+  },
+
+  // Facette 13 — Primes et gratifications
+  {
+    "id": 23,
+    "question": "Vous avez fait une belle saison. Vous pouvez distribuer une prime collective ou investir dans du matériel dont vous avez besoin. Que choisissez-vous et comment vous l'annoncez à l'équipe ?",
+    "dim": "RES",
+    "facette": "Primes et gratifications"
+  },
+
+  // Facette 14 — Décision de licenciement
+  {
+    "id": 24,
+    "question": "Vous devez vous séparer d'un employé pour motif économique. Il a une famille, 3 ans d'ancienneté, et il n'a rien fait de mal. Comment vous gérez cet entretien ?",
+    "dim": "EMP",
+    "facette": "Décision de licenciement"
+  },
+  {
+    "id": 25,
+    "question": "Un employé que vous devez licencier le prend très mal et pleure devant vous. Qu'est-ce que vous faites dans l'immédiat ?",
+    "dim": "EMP",
+    "facette": "Décision de licenciement"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 3 — ÉQUIPE & FIDÉLISATION (Q26-Q42)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 15 — Comment il recrute
+  {
+    "id": 26,
+    "question": "Vous recrutez un chef de rang. Deux candidats : l'un a le meilleur CV mais quelque chose vous dérange dans son attitude. L'autre est moins expérimenté mais vous sentez une vraie flamme. Vous choisissez qui ?",
+    "dim": "ADA",
+    "facette": "Recrutement"
+  },
+  {
+    "id": 27,
+    "question": "Vous êtes en pleine saison, vous avez besoin de quelqu'un de suite. Un candidat se présente — profil correct mais pas idéal. Vous prenez le risque ou vous attendez mieux ?",
+    "dim": "ADA",
+    "facette": "Recrutement"
+  },
+
+  // Facette 16 — Comment il intègre
+  {
+    "id": 28,
+    "question": "Un nouvel employé fait des erreurs répétées pendant sa première semaine. Il est clairement stressé. Comment vous intervenez ?",
+    "dim": "EMP",
+    "facette": "Intégration"
+  },
+  {
+    "id": 29,
+    "question": "Votre équipe en place accueille froidement le nouveau. Vous le remarquez. Qu'est-ce que vous faites ?",
+    "dim": "EMP",
+    "facette": "Intégration"
+  },
+
+  // Facette 17 — Comment il reconnaît
+  {
+    "id": 30,
+    "question": "Un employé a géré seul une situation de crise client de façon exemplaire. Vous n'étiez pas là. Comment vous le reconnaissez ?",
+    "dim": "EMP",
+    "facette": "Reconnaissance"
+  },
+  {
+    "id": 31,
+    "question": "À quelle fréquence dites-vous explicitement à vos employés ce qu'ils font bien — pas juste ce qui doit être amélioré ?",
+    "dim": "EMP",
+    "facette": "Reconnaissance"
+  },
+
+  // Facette 18 — Comment il sanctionne
+  {
+    "id": 32,
+    "question": "Un employé est en retard pour la troisième fois ce mois. C'est un très bon élément par ailleurs. Comment vous gérez ça ?",
+    "dim": "AUT",
+    "facette": "Sanction"
+  },
+  {
+    "id": 33,
+    "question": "Vous découvrez qu'un employé a menti sur son CV — il n'a pas l'expérience qu'il prétendait avoir. Mais il fait bien son travail depuis 6 mois. Votre réaction ?",
+    "dim": "INT",
+    "facette": "Sanction"
+  },
+
+  // Facette 19 — Comment il retient
+  {
+    "id": 34,
+    "question": "Votre meilleur serveur vous annonce qu'il a une offre ailleurs avec 200€ de plus. Vous ne pouvez pas vous aligner. Qu'est-ce que vous lui dites ?",
+    "dim": "EMP",
+    "facette": "Rétention"
+  },
+  {
+    "id": 35,
+    "question": "Un employé clé s'ennuie dans son poste — il vous le dit clairement. Vous n'avez pas de promotion à lui offrir. Comment vous répondez à ça ?",
+    "dim": "ADA",
+    "facette": "Rétention"
+  },
+
+  // Facette 20 — Comment il gère les départs
+  {
+    "id": 36,
+    "question": "Un bon employé part chez un concurrent. Quelle est votre première réaction et est-ce que vous faites un entretien de sortie ?",
+    "dim": "ADA",
+    "facette": "Gestion des départs"
+  },
+
+  // Facette 21 — Comment il construit la culture
+  {
+    "id": 37,
+    "question": "Vous remarquez que l'ambiance dans votre équipe s'est dégradée depuis 3 semaines. Pas d'incident particulier — juste une lourdeur. Qu'est-ce que vous faites ?",
+    "dim": "EMP",
+    "facette": "Culture"
+  },
+  {
+    "id": 38,
+    "question": "Quels sont les 3 mots que vous pensez que votre équipe utiliserait pour vous décrire en votre absence ? Et les 3 mots que vous aimeriez qu'ils utilisent ?",
+    "dim": "EMP",
+    "facette": "Culture"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 4 — ÉTHIQUE & LÉGAL (Q39-Q55)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 22 — Rapport au droit du travail
+  {
+    "id": 39,
+    "question": "Un rush exceptionnel vous force à demander à votre équipe de rester 2 heures de plus sans préavis. Légalement vous devez majorer. Vous faites quoi ?",
+    "dim": "INT",
+    "facette": "Droit du travail"
+  },
+  {
+    "id": 40,
+    "question": "Un employé vous cite un article du code du travail pour refuser une tâche. Vous pensez qu'il a tort mais vous n'êtes pas sûr. Votre réaction ?",
+    "dim": "INT",
+    "facette": "Droit du travail"
+  },
+
+  // Facette 23 — Déclarations et contrats
+  {
+    "id": 41,
+    "question": "Un extra régulier vous demande un CDI. Vous travaillez avec lui depuis 8 mois mais les CDD vous arrangent financièrement. Comment vous lui répondez ?",
+    "dim": "INT",
+    "facette": "Contrats"
+  },
+  {
+    "id": 42,
+    "question": "À l'embauche, vous proposez souvent une période d'essai non rémunérée 'pour voir si ça colle'. C'est votre pratique ou vous faites les choses dans les règles dès le premier jour ?",
+    "dim": "INT",
+    "facette": "Contrats"
+  },
+
+  // Facette 24 — Gestion des zones grises
+  {
+    "id": 43,
+    "question": "Un fournisseur vous propose une remise importante en échange d'un paiement en espèces non tracé. Votre réaction ?",
+    "dim": "INT",
+    "facette": "Zones grises"
+  },
+  {
+    "id": 44,
+    "question": "Votre comptable vous suggère une optimisation fiscale 'à la limite' de la légalité mais courante dans votre secteur. Vous acceptez ou vous refusez ?",
+    "dim": "INT",
+    "facette": "Zones grises"
+  },
+
+  // Facette 25 — Réaction à une plainte interne
+  {
+    "id": 45,
+    "question": "Un employé vous signale anonymement qu'un de vos managers le harcèle. Vous appréciez ce manager et vous avez du mal à y croire. Que faites-vous ?",
+    "dim": "INT",
+    "facette": "Plainte interne"
+  },
+  {
+    "id": 46,
+    "question": "Deux employés se plaignent du même responsable pour des raisons différentes. Le responsable est performant. Comment vous gérez la situation ?",
+    "dim": "INT",
+    "facette": "Plainte interne"
+  },
+
+  // Facette 26 — Rapport à l'inspection du travail
+  {
+    "id": 47,
+    "question": "L'inspection du travail se présente à l'improviste un vendredi soir en plein service. Comment vous vous sentez et comment vous les accueillez ?",
+    "dim": "INT",
+    "facette": "Inspection du travail"
+  },
+
+  // Facette 27 — Équité de traitement
+  {
+    "id": 48,
+    "question": "Vous avez un favori dans votre équipe — quelqu'un en qui vous avez plus confiance. Est-ce que ça se voit et est-ce que vous pensez que c'est un problème ?",
+    "dim": "INT",
+    "facette": "Équité"
+  },
+  {
+    "id": 49,
+    "question": "Deux employés font la même erreur le même jour. L'un est là depuis 3 ans, l'autre depuis 3 mois. Vous les traitez de la même façon ?",
+    "dim": "INT",
+    "facette": "Équité"
+  },
+
+  // Facette 28 — Cohérence valeurs/actes
+  {
+    "id": 50,
+    "question": "Vous affichez des valeurs de bienveillance dans votre établissement. Un soir de rush vous perdez patience et élevez la voix devant des clients. Qu'est-ce que vous faites après ?",
+    "dim": "INT",
+    "facette": "Cohérence valeurs/actes"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 5 — PRESSION & CRISE (Q51-Q72)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 29 — Qui il devient sous stress financier
+  {
+    "id": 51,
+    "question": "Vous êtes à 3 mois de ne plus pouvoir payer les salaires si rien ne change. Comment votre comportement avec votre équipe évolue-t-il dans ces moments-là ?",
+    "dim": "RES",
+    "facette": "Stress financier"
+  },
+  {
+    "id": 52,
+    "question": "Un banquier vous refuse un prêt que vous attendiez. Vous en avez besoin pour survivre les 6 prochains mois. Vous sortez de son bureau et vous appelez qui en premier ?",
+    "dim": "RES",
+    "facette": "Stress financier"
+  },
+
+  // Facette 30 — Gestion d'un rush catastrophique
+  {
+    "id": 53,
+    "question": "Un samedi soir plein, votre chef de cuisine appelle malade à 18h. Vous avez 80 couverts à 20h. Décrivez exactement ce que vous faites dans l'heure qui suit.",
+    "dim": "RES",
+    "facette": "Rush catastrophique"
+  },
+  {
+    "id": 54,
+    "question": "En plein service du midi, votre système de caisse tombe en panne. 40 personnes attendent leur addition. Comment vous gérez ça avec votre équipe ?",
+    "dim": "RES",
+    "facette": "Rush catastrophique"
+  },
+
+  // Facette 31 — Réaction face à un avis négatif viral
+  {
+    "id": 55,
+    "question": "Une vidéo circule sur les réseaux montrant un de vos serveurs traiter un client de façon incorrecte. En 24h elle fait 50 000 vues. Que faites-vous et dans quel ordre ?",
+    "dim": "RES",
+    "facette": "Crise réputationnelle"
+  },
+  {
+    "id": 56,
+    "question": "Un influenceur food publie un avis dévastateur sur votre établissement avec des détails factuellement faux. Il a 200 000 abonnés. Votre stratégie ?",
+    "dim": "RES",
+    "facette": "Crise réputationnelle"
+  },
+
+  // Facette 32 — Décision en urgence absolue
+  {
+    "id": 57,
+    "question": "Vous avez 10 minutes pour décider si vous fermez votre établissement ce soir suite à un problème technique. Vous perdez 8 000€ de CA si vous fermez. Comment vous prenez la décision ?",
+    "dim": "RES",
+    "facette": "Décision urgente"
+  },
+
+  // Facette 33 — Rapport à l'échec public
+  {
+    "id": 58,
+    "question": "Votre restaurant rate une étoile au guide que vous convoitiez. Votre équipe l'apprend en même temps que vous. Comment vous gérez ce moment ?",
+    "dim": "RES",
+    "facette": "Échec public"
+  },
+  {
+    "id": 59,
+    "question": "Vous avez pris une décision stratégique — nouveau concept, nouvelle carte — qui a clairement échoué. Vos chiffres le prouvent. Que dites-vous à votre équipe ?",
+    "dim": "RES",
+    "facette": "Échec public"
+  },
+
+  // Facette 34 — Gestion d'un conflit grave
+  {
+    "id": 60,
+    "question": "Deux membres clés de votre équipe ont un conflit personnel qui commence à affecter le service. Ils ne veulent pas se parler. Vous faites quoi ?",
+    "dim": "EMP",
+    "facette": "Conflit grave"
+  },
+  {
+    "id": 61,
+    "question": "Un client agressif insulte un de vos serveurs devant toute la salle. Votre serveur commence à perdre son sang-froid. Vous intervenez comment ?",
+    "dim": "EMP",
+    "facette": "Conflit grave"
+  },
+
+  // Facette 35 — Résistance à la panique
+  {
+    "id": 62,
+    "question": "Votre comptable vous annonce une erreur fiscale qui peut vous coûter 15 000€. Vous avez 48h pour réagir. Décrivez votre état d'esprit et vos premières actions.",
+    "dim": "RES",
+    "facette": "Résistance panique"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // DIMENSION 6 — INTELLIGENCE ÉMOTIONNELLE (Q63-Q83)
+  // ═══════════════════════════════════════════════════
+
+  // Facette 36 — Lucidité sur ses propres défauts
+  {
+    "id": 63,
+    "question": "Quel est le retour négatif sur votre façon de manager que vous entendez le plus souvent — même si vous n'êtes pas d'accord avec lui ?",
+    "dim": "ADA",
+    "facette": "Lucidité sur soi"
+  },
+  {
+    "id": 64,
+    "question": "Dans quelles situations précises vous savez que vous n'êtes pas à votre meilleur en tant que patron ?",
+    "dim": "ADA",
+    "facette": "Lucidité sur soi"
+  },
+
+  // Facette 37 — Cohérence discours/comportement
+  {
+    "id": 65,
+    "question": "Vous prônez l'équilibre vie pro/vie perso pour votre équipe. Combien d'heures vous travaillez par semaine en moyenne ? Est-ce que c'est cohérent selon vous ?",
+    "dim": "ADA",
+    "facette": "Cohérence discours/comportement"
+  },
+  {
+    "id": 66,
+    "question": "Vous dites à votre équipe que les erreurs font partie de l'apprentissage. La dernière fois qu'un employé a fait une erreur coûteuse, comment vous avez réagi concrètement ?",
+    "dim": "ADA",
+    "facette": "Cohérence discours/comportement"
+  },
+
+  // Facette 38 — Capacité à s'excuser
+  {
+    "id": 67,
+    "question": "Vous avez pris une mauvaise décision qui a créé du stress inutile pour votre équipe. Comment vous le reconnaissez auprès d'eux ?",
+    "dim": "EMP",
+    "facette": "Capacité à s'excuser"
+  },
+  {
+    "id": 68,
+    "question": "La dernière fois que vous vous êtes excusé auprès d'un employé, c'était pour quoi et comment vous l'avez fait ?",
+    "dim": "EMP",
+    "facette": "Capacité à s'excuser"
+  },
+
+  // Facette 39 — Détection de la souffrance
+  {
+    "id": 69,
+    "question": "Un employé qui était toujours souriant est devenu silencieux et moins investi depuis 2 semaines. Pas d'erreur particulière. Qu'est-ce que vous faites ?",
+    "dim": "EMP",
+    "facette": "Détection souffrance"
+  },
+  {
+    "id": 70,
+    "question": "Comment vous savez concrètement que quelqu'un dans votre équipe ne va pas bien — quels sont les signaux que vous détectez ?",
+    "dim": "EMP",
+    "facette": "Détection souffrance"
+  },
+
+  // Facette 40 — Résistance à la flatterie
+  {
+    "id": 71,
+    "question": "Un employé vous complimente abondamment sur vos décisions, même les mauvaises. Est-ce que ça vous plaît ou est-ce que ça vous méfie ?",
+    "dim": "ADA",
+    "facette": "Résistance flatterie"
+  },
+  {
+    "id": 72,
+    "question": "Un fournisseur vous invite dans un grand restaurant pour 'renforcer la relation commerciale'. Comment vous interprétez cette invitation ?",
+    "dim": "INT",
+    "facette": "Résistance flatterie"
+  },
+
+  // Facette 41 — Rapport à la solitude du dirigeant
+  {
+    "id": 73,
+    "question": "Il y a des décisions que vous ne pouvez partager avec personne dans votre établissement. Comment vous les prenez et comment vous gérez la solitude que ça implique ?",
+    "dim": "ADA",
+    "facette": "Solitude dirigeant"
+  },
+  {
+    "id": 74,
+    "question": "Quand les choses vont vraiment mal, vers qui vous tournez-vous — et est-ce que cette personne vous dit vraiment la vérité ou ce que vous voulez entendre ?",
+    "dim": "ADA",
+    "facette": "Solitude dirigeant"
+  },
+
+  // Facette 42 — Vision de son rôle dans 5 ans
+  {
+    "id": 75,
+    "question": "Dans 5 ans, qu'est-ce que vous voulez que vos anciens employés disent de vous comme patron — pas de votre restaurant, de vous ?",
+    "dim": "ADA",
+    "facette": "Vision long terme"
+  },
+  {
+    "id": 76,
+    "question": "Qu'est-ce que vous faites aujourd'hui différemment de quand vous avez commencé — et qu'est-ce que vous regrettez de ne pas avoir fait plus tôt ?",
+    "dim": "ADA",
+    "facette": "Vision long terme"
+  },
+
+  // ═══════════════════════════════════════════════════
+  // QUESTIONS PIÈGES — Détection incohérence (Q77-Q100)
+  // Ces questions semblent anodines mais croisent
+  // les réponses des dimensions précédentes
+  // ═══════════════════════════════════════════════════
+
+  {
+    "id": 77,
+    "question": "Quelle est la phrase que vous dites le plus souvent à votre équipe pendant un rush ?",
+    "dim": "AUT",
+    "facette": "Piège cohérence"
+  },
+  {
+    "id": 78,
+    "question": "Si vous deviez recruter votre propre remplaçant, quel serait votre critère éliminatoire numéro un ?",
+    "dim": "ADA",
+    "facette": "Piège projection"
+  },
+  {
+    "id": 79,
+    "question": "Quel est l'employé dont le départ vous a le plus affecté et pourquoi est-il parti ?",
+    "dim": "EMP",
+    "facette": "Piège fidélisation"
+  },
+  {
+    "id": 80,
+    "question": "Si un de vos concurrents ouvrait un établissement identique au vôtre avec les mêmes prix, qu'est-ce qui ferait que les clients choisissent le vôtre ?",
+    "dim": "ADA",
+    "facette": "Piège différenciation"
+  },
+  {
+    "id": 81,
+    "question": "Qu'est-ce qu'un bon patron selon vous — en une phrase, sans jargon managérial ?",
+    "dim": "EMP",
+    "facette": "Piège définition"
+  },
+  {
+    "id": 82,
+    "question": "La dernière fois que vous avez changé d'avis sur quelque chose d'important dans votre établissement suite au retour d'un employé, c'était quand et sur quoi ?",
+    "dim": "AUT",
+    "facette": "Piège adaptation"
+  },
+  {
+    "id": 83,
+    "question": "Qu'est-ce qui vous a poussé à passer ce test aujourd'hui ?",
+    "dim": "ADA",
+    "facette": "Piège motivation"
+  },
+  {
+    "id": 84,
+    "question": "Quel est le conseil qu'un de vos employés vous a donné et qui vous a vraiment aidé ?",
+    "dim": "AUT",
+    "facette": "Piège humilité"
+  },
+  {
+    "id": 85,
+    "question": "Si votre équipe pouvait changer une seule chose dans votre façon de manager, qu'est-ce que vous pensez que ce serait ?",
+    "dim": "ADA",
+    "facette": "Piège lucidité"
+  },
+  {
+    "id": 86,
+    "question": "Décrivez votre pire recrutement — qu'est-ce qui s'est passé et qu'est-ce que vous en avez appris ?",
+    "dim": "ADA",
+    "facette": "Piège apprentissage"
+  },
+  {
+    "id": 87,
+    "question": "Combien de temps en moyenne restent vos employés chez vous — et comment vous expliquez ce chiffre ?",
+    "dim": "EMP",
+    "facette": "Piège turnover"
+  },
+  {
+    "id": 88,
+    "question": "Quelle est la décision que vous avez prise uniquement parce que c'était la bonne chose à faire, même si financièrement c'était une mauvaise idée ?",
+    "dim": "INT",
+    "facette": "Piège éthique"
+  },
+  {
+    "id": 89,
+    "question": "Comment réagissez-vous quand vous sentez que quelqu'un de votre équipe ne vous respecte plus ?",
+    "dim": "AUT",
+    "facette": "Piège autorité"
+  },
+  {
+    "id": 90,
+    "question": "Avez-vous déjà regretté d'avoir gardé quelqu'un trop longtemps par loyauté alors que vous saviez que c'était une erreur ?",
+    "dim": "RES",
+    "facette": "Piège loyauté/performance"
+  },
+  {
+    "id": 91,
+    "question": "Qu'est-ce que vous faites quand vous voyez un de vos managers faire exactement ce que vous leur avez dit de ne pas faire ?",
+    "dim": "AUT",
+    "facette": "Piège autorité indirecte"
+  },
+  {
+    "id": 92,
+    "question": "Est-ce que vous avez déjà fermé les yeux sur quelque chose d'illégal ou de contraire à vos valeurs parce que ça vous arrangeait à ce moment-là ?",
+    "dim": "INT",
+    "facette": "Piège intégrité directe"
+  },
+  {
+    "id": 93,
+    "question": "Qu'est-ce qui vous met vraiment en colère dans la gestion d'une équipe ?",
+    "dim": "AUT",
+    "facette": "Piège déclencheurs"
+  },
+  {
+    "id": 94,
+    "question": "Quelle est la limite que vous ne franchissez jamais avec vos employés — votre ligne rouge absolue ?",
+    "dim": "INT",
+    "facette": "Piège valeurs limites"
+  },
+  {
+    "id": 95,
+    "question": "Si vous deviez évaluer votre propre establishment sur La Relève, quel score de friction pensez-vous qu'il obtiendrait ?",
+    "dim": "ADA",
+    "facette": "Piège auto-évaluation"
+  },
+  {
+    "id": 96,
+    "question": "Qu'est-ce que vous faites quand vous êtes convaincu d'avoir raison mais que toute votre équipe pense le contraire ?",
+    "dim": "AUT",
+    "facette": "Piège conviction vs collectif"
+  },
+  {
+    "id": 97,
+    "question": "Comment vous savez qu'un employé est heureux de travailler chez vous — quels sont les signaux concrets ?",
+    "dim": "EMP",
+    "facette": "Piège perception bonheur"
+  },
+  {
+    "id": 98,
+    "question": "Qu'est-ce qui différencie selon vous un environnement exigeant d'un environnement toxique ?",
+    "dim": "AUT",
+    "facette": "Piège définition friction"
+  },
+  {
+    "id": 99,
+    "question": "Si vous pouviez refaire votre parcours de patron depuis le début, qu'est-ce que vous feriez différemment avec vos équipes ?",
+    "dim": "ADA",
+    "facette": "Piège retrospective"
+  },
+  {
+    "id": 100,
+    "question": "Pourquoi selon vous certains établissements HCR ont un turnover faible alors que d'autres perdent la moitié de leur équipe chaque année ?",
+    "dim": "EMP",
+    "facette": "Piège compréhension systémique"
+  }
+]

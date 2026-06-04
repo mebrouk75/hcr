@@ -1,0 +1,702 @@
+[
+  {
+    "id": "Q_AUT_1",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Pour maintenir l'autorité de la direction, aucune décision stratégique ne doit être justifiée aux équipes de terrain.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_2",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La menace d'une sanction disciplinaire reste le levier le plus rapide pour rétablir la productivité d'un service.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_3",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "En restauration, un manager intermédiaire qui devient ami avec son équipe perd instantanément sa légitimité.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_4",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Les représentants du personnel (CSE) ont tendance à ralentir délibérément la réactivité de l'entreprise.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_5",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Un employé qui remet en question publiquement une instruction doit être recadré fermement et immédiatement devant les autres.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_6",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Le micro-management est souvent la seule méthode pour garantir le respect strict des standards d'excellence.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_7",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Il est de l'entière responsabilité du chef d'établissement d'imposer sa vision sans rechercher systématiquement le consensus.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_8",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "L'empathie venant de la direction est trop souvent perçue comme une faiblesse par le personnel d'exécution.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_9",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Le vouvoiement et une stricte distance hiérarchique sont vitaux pour asseoir l'autorité d'un directeur de site.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_10",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "En cas de faute d'un collaborateur, une sanction immédiate est toujours préférable à un long entretien d'explication.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_11",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "On demande à un salarié d'exécuter des tâches précises, pas d'avoir des opinions sur la gestion de l'établissement.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_12",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Le modèle le plus performant et fiable dans notre secteur reste une structure hiérarchique très verticale.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_13",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Faire preuve d'une fermeté absolue face aux revendications salariales empêche l'escalade des demandes collectives.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_14",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La loyauté envers l'établissement doit primer sur toutes les amitiés et solidarités entre collègues.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_15",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "L'évaluation annuelle doit souligner les erreurs et les axes d'amélioration avant même de parler des réussites.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_16",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Il vaut généralement mieux être craint et respecté que d'essayer d'être aimé par ses salariés.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_17",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Un employé qui refuse catégoriquement d'effectuer des heures supplémentaires imprévues n'a pas sa place dans nos effectifs.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_18",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Le pouvoir de décision final, même sur des aspects opérationnels mineurs, ne doit jamais être totalement délégué.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_19",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La direction n'a pas à informer l'ensemble des équipes des difficultés financières traversées par l'établissement.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_AUT_20",
+    "section": "Gouvernance & Pouvoir",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Un conflit entre salariés doit être tranché par la direction de manière brutale si nécessaire, pour couper court à la contagion.",
+    "dim": "AUT"
+  },
+  {
+    "id": "Q_EMP_1",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Préserver la santé mentale de mes équipes est un enjeu tout aussi stratégique que la rentabilité financière de mon affaire.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_2",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Prendre le temps d'écouter les problèmes personnels d'un salarié en détresse fait intégralement partie du rôle d'employeur.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_3",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Accorder exceptionnellement des jours de repos pour un coup dur personnel crée un fort engagement à long terme.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_4",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La réputation de notre 'marque employeur' passe avant tout par le soutien psychologique dont fait preuve la direction.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_5",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Comprendre les motivations intimes et personnelles d'un candidat est essentiel pour réussir son intégration.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_6",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Il est de notre responsabilité d'adapter notre mode de communication à la sensibilité de chaque employé.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_7",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Si un salarié historiquement performant baisse d'intensité, c'est généralement le symptôme d'une difficulté personnelle à accompagner.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_8",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Offrir des avantages sociaux réels (mutuelle premium, crèche) supérieurs au strict minimum légal est un devoir moral.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_9",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La reconnaissance verbale au quotidien a un impact souvent supérieur aux simples primes de résultat mensuelles.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_10",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Le processus d'intégration psychologique (onboarding) d'un nouveau collaborateur est l'investissement RH le plus critique.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_11",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Un chef d'entreprise qui sait faire preuve de vulnérabilité rapproche ses équipes et renforce la cohésion.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_12",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Il est de notre devoir d'aider un salarié à évoluer professionnellement, même si cela l'amène à quitter notre entreprise.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_13",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La fonction première des Ressources Humaines doit être d'agir comme un soutien social proactif pour les employés.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_14",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Investir massivement dans l'ergonomie et la réduction de la pénibilité physique est non négociable dans le secteur HCR.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_15",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Financer des initiatives de cohésion d'équipe et des moments festifs est un investissement très rentable sur le climat social.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_16",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Les tensions internes se règlent par de la médiation et une écoute active, plutôt que par des arbitrages autoritaires.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_17",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Il faut savoir faire preuve de clémence face à une erreur si l'on sait que l'employé traverse un drame familial.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_18",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Un taux de turnover (rotation) élevé est avant tout le signe d'un manque de considération et d'écoute de la part de la direction.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_19",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La transparence de la direction sur l'avenir de la société est le principal remède contre l'anxiété économique des salariés.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_EMP_20",
+    "section": "Politique RH & Climat Social",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Il est indispensable qu'une réunion d'équipe commence par un point sur 'comment se sent l'équipe' avant de parler des chiffres.",
+    "dim": "EMP"
+  },
+  {
+    "id": "Q_INT_1",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Le respect absolu et scrupuleux du Code du Travail prime systématiquement sur n'importe quelle urgence opérationnelle.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_2",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Verser une partie du salaire non déclarée (au noir), même à la demande pressante du salarié, est une ligne rouge à ne jamais franchir.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_3",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Une promesse faite oralement à un candidat lors d'un entretien de recrutement a la même valeur morale qu'un contrat signé.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_4",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Les plaisanteries douteuses ou sexistes n'ont absolument aucune place dans nos établissements, tolérance zéro.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_5",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Les critères d'augmentation et de promotion doivent être totalement transparents, publics et basés sur une pure équité.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_6",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Il est du devoir de la direction de licencier pour faute lourde un harceleur avéré, même s'il s'agit du chef le plus talentueux.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_7",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Toute minute travaillée supplémentaire doit être pointée et dûment rémunérée ou récupérée, sans la moindre exception.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_8",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Savoir refuser et expulser un client au comportement abusif ou humiliant envers un serveur est une obligation stricte de la direction.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_9",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Modifier manuellement les plannings rétroactivement pour lisser les heures supplémentaires est une fraude inacceptable.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_10",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Détourner des règles d'hygiène ou de sécurité sanitaire pour accélérer le service est une faute éliminatoire.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_11",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Un employeur n'a pas à juger, questionner ou influencer les choix politiques, syndicaux ou religieux de son personnel.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_12",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La dissimulation ou la fraude administrative pour 'sauver' un exercice fiscal difficile reste une faute morale impardonnable.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_13",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Le favoritisme (promotion de proches ou d'amis) est le poison le plus rapide pour détruire la méritocratie en entreprise.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_14",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Inciter les employés à privilégier les arrêts maladie de complaisance plutôt que des congés payés est une dérive inacceptable.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_15",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La direction RH doit rester totalement partiale concernant le droit du travail et ne jamais céder aux pressions politiques internes.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_16",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Le vol de marchandises par un employé, même de très faible valeur, justifie la rupture immédiate du contrat de confiance.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_17",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Les retards de paiement des salaires le 1er du mois sont une atteinte gravissime au respect dû aux collaborateurs.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_18",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "On ne peut exiger d'un salarié qu'il accomplisse des tâches sortant de sa fiche de poste contractuelle sans avenant ou compensation.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_19",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "L'usage abusif de prestataires auto-entrepreneurs pour masquer des emplois salariés réels est une fraude dommageable.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_INT_20",
+    "section": "Cadre Légal & Ethique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Dissimuler la réalité économique de l'établissement aux délégués du personnel est une faute contre l'intégrité de l'entreprise.",
+    "dim": "INT"
+  },
+  {
+    "id": "Q_RES_1",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "En période de grave crise financière, tailler violemment dans la masse salariale reste le premier et seul levier de survie rapide.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_2",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Il faut savoir privilégier les profits à court terme pour accumuler une trésorerie défensive avant la saison basse.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_3",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Travailler sous une pression extrême et en sous-effectif chronique fait partie de la normalité historique de notre secteur.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_4",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "L'amélioration constante et agressive de nos ratios de productivité justifie une certaine détérioration de l'ambiance.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_5",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Si un logiciel de prise de commande ou un robot permet de réduire les effectifs et donc les charges, il faut remplacer l'humain.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_6",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Accepter de travailler 6 jours sur 7 et renoncer à ses congés est parfois le seul moyen pour un cadre de prouver son implication.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_7",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La solidité mentale d'un manager se juge à sa capacité à sacrifier sa vie personnelle pour assurer les services du week-end.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_8",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Avoir recours à une méthode de 'Cost-Killing' permanente est indispensable, quitte à supprimer le confort au travail.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_9",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "En affaires, le chiffre d'affaires et l'EBITDA sont les seuls vrais juges de paix ; les bonnes intentions sociales ne paient pas les factures.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_10",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Exiger des résultats toujours plus ambitieux malgré un maintien gelé des effectifs forge le caractère des meilleurs éléments.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_11",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Les engagements en matière d'écologie ou de Responsabilité Sociale (RSE) sont souvent des distractions coûteuses pour les PME.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_12",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Lorsque les marges s'effritent à cause de l'inflation, il est logique de geler indéfiniment toute politique d'augmentation salariale.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_13",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "L'entreprise n'est pas une association caritative : elle n'a pas à financer le bien-être de ses salariés si cela réduit ses marges.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_14",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La direction générale doit se focaliser exclusivement sur le compte de résultat et exiger que le management gère les états d'âme.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_15",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Sacrifier légèrement la qualité de notre offre (produit ou service) est parfois le seul rempart pour sauver la rentabilité.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_16",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "On attend d'un directeur qu'il soit impitoyable de fermeté lors des négociations avec ses fournisseurs pour écraser les prix.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_17",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La souffrance d'une équipe lors d'un gros coup de feu désorganisé prouve au moins sa résilience et sa valeur au combat.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_18",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "L'augmentation des tarifs clients étant un risque commercial majeur, il vaut mieux optimiser brutalement l'exploitation RH interne.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_19",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "L'entreprise n'a pas à compenser l'inflation globale subie par les ménages ; notre grille de salaires doit rester la plus fixe possible.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_RES_20",
+    "section": "Résilience & Productivité",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Dans ce métier, mieux vaut sortir du volume rentable sans attachement aux détails humains que d'intellectualiser le management.",
+    "dim": "RES"
+  },
+  {
+    "id": "Q_ADA_1",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Je suis toujours prêt à bouleverser intégralement nos process RH historiques si une idée moderne plus performante se présente.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_2",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Proposer des horaires modulables 'à la carte' en fonction des contraintes familiales est devenu obligatoire pour recruter les meilleurs.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_3",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "La culture managériale de mon établissement n'est jamais figée, elle évolue organiquement selon les personnalités que l'on intègre.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_4",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Intégrer la semaine de 4 jours et le télétravail partiel pour nos encadrants est une nécessité absolue pour rester compétitif.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_5",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Plutôt que d'appliquer bêtement des grilles salariales rigides, je préfère faire du sur-mesure innovant pour fidéliser mes talents.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_6",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Face aux pénuries de cuisiniers ou serveurs, j'embaucherai volontiers un profil totalement issu d'un autre secteur pour tout lui apprendre.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_7",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "L'organigramme de mon entreprise est un brouillon permanent qui doit être modifié dès qu'un nouveau projet d'agrandissement l'exige.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_8",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Savoir improviser et sortir de la règle pour désamorcer une impasse salariale via des avantages en nature est l'une de mes forces.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_9",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Plafonner les missions d'un salarié parce que cela ne correspond plus à son poste d'origine est une erreur face au dynamisme d'aujourd'hui.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_10",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Aujourd'hui, un bon directeur des ressources humaines est d'abord un grand négociateur capable de s'adapter à toutes les demandes.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_11",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Si l'intelligence artificielle ou de nouveaux outils digitaux arrivent, j'exige que mes équipes les adoptent très rapidement.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_12",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Plutôt que de critiquer les exigences des nouvelles générations (Z, Millennials), nous devons repenser totalement notre modèle pour eux.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_13",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Les fiches de postes trop détaillées enferment les gens ; j'attends de mes salariés une totale polyvalence sur tous les fronts.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_14",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Pour la rémunération, je privilégie souvent un modèle opportuniste : des primes flash au résultat immédiat plutôt que des augmentations lissées.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_15",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Si cela permet de gagner en rapidité de décision dans mon entreprise, je n'hésiterais pas à supprimer brutalement une strate de managers.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_16",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "J'encourage une forme de 'désorganisation créative' au sein de mes équipes si cela permet de débloquer de bien meilleures idées.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_17",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Accepter que mes managers fassent d'énormes erreurs en testant de nouvelles méthodes est toujours préférable à l'immobilisme.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_18",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Remplacer le sempiternel et lourd entretien annuel figé par un échange informel et continu me semble primordial aujourd'hui.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_19",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Face à une recrue perle rare qui dépasse largement mon budget habituel, je suis prêt à modifier tout mon modèle économique pour le payer.",
+    "dim": "ADA"
+  },
+  {
+    "id": "Q_ADA_20",
+    "section": "Agilité & Innovation Stratégique",
+    "category": "PATRONAT_STRATEGIE",
+    "description": "Puisque la jeune génération est volatile, notre défi aujourd'hui n'est plus de réduire le turnover, mais d'accepter une rotation accélérée permanente.",
+    "dim": "ADA"
+  }
+]

@@ -1,0 +1,996 @@
+{
+  "01_DIRECTEUR_INNOVATEUR": {
+    "dimensions": {
+      "RES": 1,
+      "EMP": 46,
+      "AUT": 47,
+      "INT": 91,
+      "TOX": 0,
+      "ADA": 3
+    },
+    "globalScore": 31,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 31/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: SAGE, VISIONNAIRE, TYRAN.",
+    "topTraits": [
+      "SAGE",
+      "VISIONNAIRE",
+      "TYRAN"
+    ],
+    "roleConfig": {
+      "code": "DIR",
+      "fichier_test": "TEST_DIRECTEUR_240Q_COMPLET.json",
+      "poids_dimensions": {
+        "ADA": 2,
+        "AUT": 2,
+        "RES": 1.8,
+        "INT": 1.5,
+        "EMP": 1.2,
+        "TOX": 1
+      },
+      "focus": [
+        "ADA",
+        "AUT",
+        "RES"
+      ],
+      "seuil_minimum": 75,
+      "description": "Directeur de restaurant - Responsable P&L, stratégie, management complet"
+    },
+    "raw_scores": {
+      "RES": 3,
+      "EMP": 100,
+      "AUT": 103,
+      "INT": 200,
+      "TOX": 0,
+      "ADA": 6
+    },
+    "desc": "Stratégie long terme, Innovation, Intuition humaine. Détails/Admin freinent créativité."
+  },
+  "02_DIRECTEUR_INFLUENCE": {
+    "dimensions": {
+      "RES": 0,
+      "EMP": 23,
+      "AUT": 23,
+      "INT": 70,
+      "TOX": 25,
+      "ADA": 49
+    },
+    "globalScore": 32,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 32/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: RADAR, SAGE.",
+    "topTraits": [
+      "RADAR",
+      "SAGE"
+    ],
+    "roleConfig": {
+      "code": "DIR",
+      "fichier_test": "TEST_DIRECTEUR_240Q_COMPLET.json",
+      "poids_dimensions": {
+        "ADA": 2,
+        "AUT": 2,
+        "RES": 1.8,
+        "INT": 1.5,
+        "EMP": 1.2,
+        "TOX": 1
+      },
+      "focus": [
+        "ADA",
+        "AUT",
+        "RES"
+      ],
+      "seuil_minimum": 75,
+      "description": "Directeur de restaurant - Responsable P&L, stratégie, management complet"
+    },
+    "raw_scores": {
+      "RES": 0,
+      "EMP": 50,
+      "AUT": 50,
+      "INT": 154,
+      "TOX": 54,
+      "ADA": 108
+    },
+    "desc": "Maîtrise codes comm/empathie. Dit ce que les gens veulent entendre pour influence/autorité."
+  },
+  "03_MANAGER_TYRAN": {
+    "dimensions": {
+      "RES": 92,
+      "EMP": 0,
+      "AUT": 99,
+      "INT": 100,
+      "TOX": 53,
+      "ADA": 44
+    },
+    "globalScore": 79,
+    "verdict": "PILIER OPÉRATIONNEL",
+    "verdictColor": "text-purple-600 font-bold",
+    "flags": [],
+    "activeBonuses": [
+      "Immunité du Guerrier"
+    ],
+    "synthesisText": "Profil 79/100. PILIER OPÉRATIONNEL. Dominante: AUTORITAIRE, RIGOUREUX, FRANC.",
+    "topTraits": [
+      "AUTORITAIRE",
+      "RIGOUREUX",
+      "FRANC"
+    ],
+    "roleConfig": {
+      "code": "MGR",
+      "fichier_test": "TEST_MANAGER_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "ADA": 1.5,
+        "AUT": 1.5,
+        "INT": 1,
+        "EMP": 1,
+        "TOX": 1
+      },
+      "focus": [
+        "AUT",
+        "ADA",
+        "RES"
+      ],
+      "seuil_minimum": 70,
+      "description": "Manager - Gestion opérationnelle salle + équipe"
+    },
+    "raw_scores": {
+      "RES": 138,
+      "EMP": -5,
+      "AUT": 149,
+      "INT": 167,
+      "TOX": 80,
+      "ADA": 66
+    },
+    "desc": "Résultats seule priorité. Exigeant, 0 erreur, pression constante comme moteur."
+  },
+  "04_MANAGER_FRAGILE": {
+    "dimensions": {
+      "RES": 89,
+      "EMP": 7,
+      "AUT": 88,
+      "INT": 95,
+      "TOX": 49,
+      "ADA": 43
+    },
+    "globalScore": 66,
+    "verdict": "PROFIL STANDARD",
+    "verdictColor": "text-blue-600",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 66/100. PROFIL STANDARD. Dominante: AUTORITAIRE, RIGOUREUX, RÉSILIENT.",
+    "topTraits": [
+      "AUTORITAIRE",
+      "RIGOUREUX",
+      "RÉSILIENT"
+    ],
+    "roleConfig": {
+      "code": "MGR",
+      "fichier_test": "TEST_MANAGER_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "ADA": 1.5,
+        "AUT": 1.5,
+        "INT": 1,
+        "EMP": 1,
+        "TOX": 1
+      },
+      "focus": [
+        "AUT",
+        "ADA",
+        "RES"
+      ],
+      "seuil_minimum": 70,
+      "description": "Manager - Gestion opérationnelle salle + équipe"
+    },
+    "raw_scores": {
+      "RES": 134,
+      "EMP": 11,
+      "AUT": 132,
+      "INT": 142,
+      "TOX": 73,
+      "ADA": 65
+    },
+    "desc": "Bien-être équipe, bon technicien. Perd moyens/assurance si conflit ou décision impopulaire."
+  },
+  "05_ADJOINT_IMPOSTEUR": {
+    "dimensions": {
+      "RES": 30,
+      "EMP": 35,
+      "AUT": 43,
+      "INT": 59,
+      "TOX": 23,
+      "ADA": 9
+    },
+    "globalScore": 32,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 32/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: FRANC, PROTECTEUR, AMBITIEUX.",
+    "topTraits": [
+      "FRANC",
+      "PROTECTEUR",
+      "AMBITIEUX"
+    ],
+    "roleConfig": {
+      "code": "MGR",
+      "fichier_test": "TEST_MANAGER_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "ADA": 1.5,
+        "AUT": 1.5,
+        "INT": 1,
+        "EMP": 1,
+        "TOX": 1
+      },
+      "focus": [
+        "AUT",
+        "ADA",
+        "RES"
+      ],
+      "seuil_minimum": 70,
+      "description": "Manager - Gestion opérationnelle salle + équipe"
+    },
+    "raw_scores": {
+      "RES": 45,
+      "EMP": 53,
+      "AUT": 65,
+      "INT": 89,
+      "TOX": 34,
+      "ADA": 13
+    },
+    "desc": "Pas maîtrise technique, sens politique. Cherche à plaire hiérarchie, paraît compétent."
+  },
+  "06_MANAGER_BUREAUCRATE": {
+    "dimensions": {
+      "RES": 92,
+      "EMP": 0,
+      "AUT": 90,
+      "INT": 100,
+      "TOX": 49,
+      "ADA": 47
+    },
+    "globalScore": 77,
+    "verdict": "PILIER OPÉRATIONNEL",
+    "verdictColor": "text-purple-600 font-bold",
+    "flags": [],
+    "activeBonuses": [
+      "Immunité du Guerrier"
+    ],
+    "synthesisText": "Profil 77/100. PILIER OPÉRATIONNEL. Dominante: AUTORITAIRE, RIGOUREUX, PRAGMATIQUE.",
+    "topTraits": [
+      "AUTORITAIRE",
+      "RIGOUREUX",
+      "PRAGMATIQUE"
+    ],
+    "roleConfig": {
+      "code": "MGR",
+      "fichier_test": "TEST_MANAGER_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "ADA": 1.5,
+        "AUT": 1.5,
+        "INT": 1,
+        "EMP": 1,
+        "TOX": 1
+      },
+      "focus": [
+        "AUT",
+        "ADA",
+        "RES"
+      ],
+      "seuil_minimum": 70,
+      "description": "Manager - Gestion opérationnelle salle + équipe"
+    },
+    "raw_scores": {
+      "RES": 138,
+      "EMP": 0,
+      "AUT": 135,
+      "INT": 163,
+      "TOX": 74,
+      "ADA": 70
+    },
+    "desc": "Garant règles. Prcédures à la lettre, jamais remise en question même si illogique."
+  },
+  "07_DIRECTEUR_MACCHIAVEL": {
+    "dimensions": {
+      "RES": 0,
+      "EMP": 0,
+      "AUT": 0,
+      "INT": 15,
+      "TOX": 15,
+      "ADA": 30
+    },
+    "globalScore": 10,
+    "verdict": "PROFIL DANGEREUX - NON RECOMMANDÉ",
+    "verdictColor": "text-rose-600 font-bold",
+    "flags": [
+      "INTÉGRITÉ CRITIQUE"
+    ],
+    "activeBonuses": [],
+    "synthesisText": "Profil 10/100. PROFIL DANGEREUX - NON RECOMMANDÉ. Dominante: TYRAN, RADAR, OPPORTUNISTE.",
+    "topTraits": [
+      "TYRAN",
+      "RADAR",
+      "OPPORTUNISTE"
+    ],
+    "roleConfig": {
+      "code": "DIR",
+      "fichier_test": "TEST_DIRECTEUR_240Q_COMPLET.json",
+      "poids_dimensions": {
+        "ADA": 2,
+        "AUT": 2,
+        "RES": 1.8,
+        "INT": 1.5,
+        "EMP": 1.2,
+        "TOX": 1
+      },
+      "focus": [
+        "ADA",
+        "AUT",
+        "RES"
+      ],
+      "seuil_minimum": 75,
+      "description": "Directeur de restaurant - Responsable P&L, stratégie, management complet"
+    },
+    "raw_scores": {
+      "RES": 0,
+      "EMP": 1,
+      "AUT": 1,
+      "INT": 33,
+      "TOX": 33,
+      "ADA": 65
+    },
+    "desc": "Vision business claire. Repère faiblesses pour s'en servir. Crée clans pour contrôle."
+  },
+  "08_ADJOINT_OMBRE": {
+    "dimensions": {
+      "RES": 31,
+      "EMP": 33,
+      "AUT": 39,
+      "INT": 59,
+      "TOX": 23,
+      "ADA": 11
+    },
+    "globalScore": 32,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 32/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: FRANC, PROTECTEUR, OBÉISSANT.",
+    "topTraits": [
+      "FRANC",
+      "PROTECTEUR",
+      "OBÉISSANT"
+    ],
+    "roleConfig": {
+      "code": "MGR",
+      "fichier_test": "TEST_MANAGER_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "ADA": 1.5,
+        "AUT": 1.5,
+        "INT": 1,
+        "EMP": 1,
+        "TOX": 1
+      },
+      "focus": [
+        "AUT",
+        "ADA",
+        "RES"
+      ],
+      "seuil_minimum": 70,
+      "description": "Manager - Gestion opérationnelle salle + équipe"
+    },
+    "raw_scores": {
+      "RES": 46,
+      "EMP": 50,
+      "AUT": 59,
+      "INT": 88,
+      "TOX": 34,
+      "ADA": 17
+    },
+    "desc": "Technicien hors pair, loyal. Refuse prendre lead/trancher. Reste ombre."
+  },
+  "09_CHEF_RANG_APPRENANT": {
+    "dimensions": {
+      "RES": 74,
+      "EMP": 23,
+      "AUT": 19,
+      "INT": 59,
+      "TOX": 21,
+      "ADA": 0
+    },
+    "globalScore": 35,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 35/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: MÉTRONOME, PIRATE, SHOWMAN.",
+    "topTraits": [
+      "MÉTRONOME",
+      "PIRATE",
+      "SHOWMAN"
+    ],
+    "roleConfig": {
+      "code": "CDR",
+      "fichier_test": "TEST_CHEF_DE_RANG_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "EMP": 1.5,
+        "AUT": 1.2,
+        "INT": 1,
+        "ADA": 1.5,
+        "TOX": 1
+      },
+      "focus": [
+        "RES",
+        "EMP",
+        "ADA"
+      ],
+      "seuil_minimum": 65,
+      "description": "Chef de Rang - Gestion section + formation serveurs"
+    },
+    "raw_scores": {
+      "RES": 39,
+      "EMP": 12,
+      "AUT": 10,
+      "INT": 31,
+      "TOX": 11,
+      "ADA": -13
+    },
+    "desc": "Nouveau, manque exp. Transparent sur lacunes, pose questions, volonté apprendre."
+  },
+  "10_CHEF_RANG_SOLITAIRE": {
+    "dimensions": {
+      "RES": 100,
+      "EMP": 4,
+      "AUT": 63,
+      "INT": 2,
+      "TOX": 63,
+      "ADA": 0
+    },
+    "globalScore": 52,
+    "verdict": "PROFIL DANGEREUX - NON RECOMMANDÉ",
+    "verdictColor": "text-rose-600 font-bold",
+    "flags": [
+      "INTÉGRITÉ CRITIQUE"
+    ],
+    "activeBonuses": [
+      "Immunité du Guerrier"
+    ],
+    "synthesisText": "Profil 52/100. PROFIL DANGEREUX - NON RECOMMANDÉ. Dominante: PIRATE, MÉTRONOME, SHOWMAN.",
+    "topTraits": [
+      "PIRATE",
+      "MÉTRONOME",
+      "SHOWMAN"
+    ],
+    "roleConfig": {
+      "code": "CDR",
+      "fichier_test": "TEST_CHEF_DE_RANG_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "EMP": 1.5,
+        "AUT": 1.2,
+        "INT": 1,
+        "ADA": 1.5,
+        "TOX": 1
+      },
+      "focus": [
+        "RES",
+        "EMP",
+        "ADA"
+      ],
+      "seuil_minimum": 65,
+      "description": "Chef de Rang - Gestion section + formation serveurs"
+    },
+    "raw_scores": {
+      "RES": 67,
+      "EMP": 2,
+      "AUT": 33,
+      "INT": 1,
+      "TOX": 33,
+      "ADA": 0
+    },
+    "desc": "Expert, rapide, efficace. Mépris pour moins performants. Travaille seul."
+  },
+  "11_BARMAN_ARTISTE": {
+    "dimensions": {
+      "RES": 30,
+      "EMP": 61,
+      "AUT": 0,
+      "INT": 34,
+      "TOX": 13,
+      "ADA": 0
+    },
+    "globalScore": 25,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 25/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: MÉTRONOME, CONFIDENT, PIRATE.",
+    "topTraits": [
+      "MÉTRONOME",
+      "CONFIDENT",
+      "PIRATE"
+    ],
+    "roleConfig": {
+      "code": "BAR",
+      "fichier_test": "TEST_BARMAN_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "EMP": 1.5,
+        "ADA": 1.5,
+        "INT": 1,
+        "AUT": 0.8,
+        "TOX": 1
+      },
+      "focus": [
+        "RES",
+        "EMP",
+        "ADA"
+      ],
+      "seuil_minimum": 60,
+      "description": "Barman - Service bar + création cocktails"
+    },
+    "raw_scores": {
+      "RES": 16,
+      "EMP": 32,
+      "AUT": -3,
+      "INT": 18,
+      "TOX": 7,
+      "ADA": -6
+    },
+    "desc": "Créateur, instinct produit/client. Refuse horaires/rangement jugés inutiles."
+  },
+  "12_BARMAN_STAR_LAXISTE": {
+    "dimensions": {
+      "RES": 84,
+      "EMP": 50,
+      "AUT": 42,
+      "INT": 0,
+      "TOX": 42,
+      "ADA": 25
+    },
+    "globalScore": 46,
+    "verdict": "PROFIL DANGEREUX - NON RECOMMANDÉ",
+    "verdictColor": "text-rose-600 font-bold",
+    "flags": [
+      "INTÉGRITÉ CRITIQUE"
+    ],
+    "activeBonuses": [],
+    "synthesisText": "Profil 46/100. PROFIL DANGEREUX - NON RECOMMANDÉ. Dominante: PIRATE, SHOWMAN.",
+    "topTraits": [
+      "PIRATE",
+      "SHOWMAN"
+    ],
+    "roleConfig": {
+      "code": "BAR",
+      "fichier_test": "TEST_BARMAN_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "EMP": 1.5,
+        "ADA": 1.5,
+        "INT": 1,
+        "AUT": 0.8,
+        "TOX": 1
+      },
+      "focus": [
+        "RES",
+        "EMP",
+        "ADA"
+      ],
+      "seuil_minimum": 60,
+      "description": "Barman - Service bar + création cocktails"
+    },
+    "raw_scores": {
+      "RES": 44,
+      "EMP": 26,
+      "AUT": 22,
+      "INT": -13,
+      "TOX": 22,
+      "ADA": 13
+    },
+    "desc": "Charisme fou, vend énormément. Règles inventaire/caisse trop rigides -> libertés stocks."
+  },
+  "13_ADJOINT_CALIFE": {
+    "dimensions": {
+      "RES": 31,
+      "EMP": 39,
+      "AUT": 41,
+      "INT": 57,
+      "TOX": 23,
+      "ADA": 14
+    },
+    "globalScore": 33,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 33/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: FRANC, PROTECTEUR, AMBITIEUX.",
+    "topTraits": [
+      "FRANC",
+      "PROTECTEUR",
+      "AMBITIEUX"
+    ],
+    "roleConfig": {
+      "code": "MGR",
+      "fichier_test": "TEST_MANAGER_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "ADA": 1.5,
+        "AUT": 1.5,
+        "INT": 1,
+        "EMP": 1,
+        "TOX": 1
+      },
+      "focus": [
+        "AUT",
+        "ADA",
+        "RES"
+      ],
+      "seuil_minimum": 70,
+      "description": "Manager - Gestion opérationnelle salle + équipe"
+    },
+    "raw_scores": {
+      "RES": 46,
+      "EMP": 58,
+      "AUT": 62,
+      "INT": 85,
+      "TOX": 35,
+      "ADA": 21
+    },
+    "desc": "Estime mériter poste au-dessus. Précis, mais sème doute sur compétence supérieurs."
+  },
+  "14_CHEF_RANG_STRESSÉ": {
+    "dimensions": {
+      "RES": 0,
+      "EMP": 100,
+      "AUT": 0,
+      "INT": 4,
+      "TOX": 8,
+      "ADA": 0
+    },
+    "globalScore": 20,
+    "verdict": "PROFIL DANGEREUX - NON RECOMMANDÉ",
+    "verdictColor": "text-rose-600 font-bold",
+    "flags": [
+      "INTÉGRITÉ CRITIQUE"
+    ],
+    "activeBonuses": [],
+    "synthesisText": "Profil 20/100. PROFIL DANGEREUX - NON RECOMMANDÉ. Dominante: CONFIDENT, PIRATE, SHOWMAN.",
+    "topTraits": [
+      "CONFIDENT",
+      "PIRATE",
+      "SHOWMAN"
+    ],
+    "roleConfig": {
+      "code": "CDR",
+      "fichier_test": "TEST_CHEF_DE_RANG_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "EMP": 1.5,
+        "AUT": 1.2,
+        "INT": 1,
+        "ADA": 1.5,
+        "TOX": 1
+      },
+      "focus": [
+        "RES",
+        "EMP",
+        "ADA"
+      ],
+      "seuil_minimum": 65,
+      "description": "Chef de Rang - Gestion section + formation serveurs"
+    },
+    "raw_scores": {
+      "RES": -17,
+      "EMP": 58,
+      "AUT": -23,
+      "INT": 2,
+      "TOX": 4,
+      "ADA": 0
+    },
+    "desc": "Ambiance/Sourire. Apprécié clients. S'effondre/Fuit si stress monte."
+  },
+  "15_BARMAN_MERCENAIRE": {
+    "dimensions": {
+      "RES": 55,
+      "EMP": 38,
+      "AUT": 8,
+      "INT": 53,
+      "TOX": 15,
+      "ADA": 0
+    },
+    "globalScore": 31,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 31/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: MÉTRONOME, PIRATE, SHOWMAN.",
+    "topTraits": [
+      "MÉTRONOME",
+      "PIRATE",
+      "SHOWMAN"
+    ],
+    "roleConfig": {
+      "code": "BAR",
+      "fichier_test": "TEST_BARMAN_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "EMP": 1.5,
+        "ADA": 1.5,
+        "INT": 1,
+        "AUT": 0.8,
+        "TOX": 1
+      },
+      "focus": [
+        "RES",
+        "EMP",
+        "ADA"
+      ],
+      "seuil_minimum": 60,
+      "description": "Barman - Service bar + création cocktails"
+    },
+    "raw_scores": {
+      "RES": 29,
+      "EMP": 20,
+      "AUT": 4,
+      "INT": 28,
+      "TOX": 8,
+      "ADA": -11
+    },
+    "desc": "Efficace, propre. 0 intérêt vision. Fait heures, prend salaire, rien d'autre."
+  },
+  "16_SERVEUR_FEIGNANT_SOCIAL": {
+    "dimensions": {
+      "RES": 61,
+      "EMP": 9,
+      "AUT": 25,
+      "INT": 44,
+      "TOX": 0,
+      "ADA": 17
+    },
+    "globalScore": 27,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 27/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: AFFIRMÉ, RIGOUREUX, OBÉISSANT.",
+    "topTraits": [
+      "AFFIRMÉ",
+      "RIGOUREUX",
+      "OBÉISSANT"
+    ],
+    "roleConfig": {
+      "code": "SRV",
+      "fichier_test": "TEST_SERVEUR_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "EMP": 2,
+        "RES": 1.8,
+        "ADA": 1.2,
+        "INT": 1,
+        "AUT": 0.8,
+        "TOX": 1
+      },
+      "focus": [
+        "EMP",
+        "RES",
+        "ADA"
+      ],
+      "seuil_minimum": 60,
+      "description": "Serveur - Service client, exécution terrain"
+    },
+    "raw_scores": {
+      "RES": 91,
+      "EMP": 13,
+      "AUT": 38,
+      "INT": 66,
+      "TOX": -1,
+      "ADA": 26
+    },
+    "desc": "Social, discute. Évite tâches ingrates (nettoyage) et décharge sur collègues."
+  },
+  "17_SERVEUR_ANXIEUX": {
+    "dimensions": {
+      "RES": 24,
+      "EMP": 41,
+      "AUT": 13,
+      "INT": 43,
+      "TOX": 0,
+      "ADA": 10
+    },
+    "globalScore": 24,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 24/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: SENSIBLE, AFFIRMÉ, RIGOUREUX.",
+    "topTraits": [
+      "SENSIBLE",
+      "AFFIRMÉ",
+      "RIGOUREUX"
+    ],
+    "roleConfig": {
+      "code": "SRV",
+      "fichier_test": "TEST_SERVEUR_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "EMP": 2,
+        "RES": 1.8,
+        "ADA": 1.2,
+        "INT": 1,
+        "AUT": 0.8,
+        "TOX": 1
+      },
+      "focus": [
+        "EMP",
+        "RES",
+        "ADA"
+      ],
+      "seuil_minimum": 60,
+      "description": "Serveur - Service client, exécution terrain"
+    },
+    "raw_scores": {
+      "RES": 36,
+      "EMP": 61,
+      "AUT": 19,
+      "INT": 65,
+      "TOX": -1,
+      "ADA": 15
+    },
+    "desc": "Consciencieux, anxiété paralyse. Vérifie 3 fois -> inefficace rush."
+  },
+  "18_SERVEUR_ROBOT": {
+    "dimensions": {
+      "RES": 67,
+      "EMP": 7,
+      "AUT": 26,
+      "INT": 61,
+      "TOX": 0,
+      "ADA": 14
+    },
+    "globalScore": 30,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 30/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: RIGOUREUX, AFFIRMÉ, RÉSILIENT.",
+    "topTraits": [
+      "RIGOUREUX",
+      "AFFIRMÉ",
+      "RÉSILIENT"
+    ],
+    "roleConfig": {
+      "code": "SRV",
+      "fichier_test": "TEST_SERVEUR_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "EMP": 2,
+        "RES": 1.8,
+        "ADA": 1.2,
+        "INT": 1,
+        "AUT": 0.8,
+        "TOX": 1
+      },
+      "focus": [
+        "EMP",
+        "RES",
+        "ADA"
+      ],
+      "seuil_minimum": 60,
+      "description": "Serveur - Service client, exécution terrain"
+    },
+    "raw_scores": {
+      "RES": 100,
+      "EMP": 11,
+      "AUT": 39,
+      "INT": 92,
+      "TOX": -1,
+      "ADA": 21
+    },
+    "desc": "Machine guerre ops. 0 émotion/parole. Service chirurgical 0 erreur."
+  },
+  "19_MANAGER_CAMÉLÉON": {
+    "dimensions": {
+      "RES": 93,
+      "EMP": 0,
+      "AUT": 93,
+      "INT": 100,
+      "TOX": 51,
+      "ADA": 51
+    },
+    "globalScore": 79,
+    "verdict": "PILIER OPÉRATIONNEL",
+    "verdictColor": "text-purple-600 font-bold",
+    "flags": [],
+    "activeBonuses": [
+      "Immunité du Guerrier"
+    ],
+    "synthesisText": "Profil 79/100. PILIER OPÉRATIONNEL. Dominante: AUTORITAIRE, RIGOUREUX, FRANC.",
+    "topTraits": [
+      "AUTORITAIRE",
+      "RIGOUREUX",
+      "FRANC"
+    ],
+    "roleConfig": {
+      "code": "MGR",
+      "fichier_test": "TEST_MANAGER_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "RES": 2,
+        "ADA": 1.5,
+        "AUT": 1.5,
+        "INT": 1,
+        "EMP": 1,
+        "TOX": 1
+      },
+      "focus": [
+        "AUT",
+        "ADA",
+        "RES"
+      ],
+      "seuil_minimum": 70,
+      "description": "Manager - Gestion opérationnelle salle + équipe"
+    },
+    "raw_scores": {
+      "RES": 139,
+      "EMP": 0,
+      "AUT": 139,
+      "INT": 162,
+      "TOX": 77,
+      "ADA": 76
+    },
+    "desc": "Intelligent, calculateur. Affiche profil idéal pour promotion. Réponses lissées."
+  },
+  "20_SERVEUR_PILIER": {
+    "dimensions": {
+      "RES": 55,
+      "EMP": 13,
+      "AUT": 27,
+      "INT": 37,
+      "TOX": 0,
+      "ADA": 17
+    },
+    "globalScore": 26,
+    "verdict": "PROFIL LIMITE - FORMATION REQUISE",
+    "verdictColor": "text-amber-500",
+    "flags": [],
+    "activeBonuses": [],
+    "synthesisText": "Profil 26/100. PROFIL LIMITE - FORMATION REQUISE. Dominante: AFFIRMÉ, RIGOUREUX, RÉSILIENT.",
+    "topTraits": [
+      "AFFIRMÉ",
+      "RIGOUREUX",
+      "RÉSILIENT"
+    ],
+    "roleConfig": {
+      "code": "SRV",
+      "fichier_test": "TEST_SERVEUR_100Q_COMPLET.json",
+      "poids_dimensions": {
+        "EMP": 2,
+        "RES": 1.8,
+        "ADA": 1.2,
+        "INT": 1,
+        "AUT": 0.8,
+        "TOX": 1
+      },
+      "focus": [
+        "EMP",
+        "RES",
+        "ADA"
+      ],
+      "seuil_minimum": 60,
+      "description": "Serveur - Service client, exécution terrain"
+    },
+    "raw_scores": {
+      "RES": 82,
+      "EMP": 19,
+      "AUT": 41,
+      "INT": 55,
+      "TOX": -2,
+      "ADA": 25
+    },
+    "desc": "Pas rapide, pilier équipe. Connaît clients, ponctuel, aide tout le monde."
+  }
+}

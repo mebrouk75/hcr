@@ -13,22 +13,122 @@ import { MBTI_SERVEUR_DATA } from './data/mbti_serveur_data';
 import { MBTI_CHEF_DE_RANG_DATA } from './data/mbti_chef_de_rang_data';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { SentinelEngine } from './logic/SentinelEngine';
+import SentinelEngineV52 from './logic/SentinelEngineV52';
+import { supabase } from './lib/supabase';
 
 const SENTINEL_THEME = {
-    bg: "#f8fafc", // Slate-50 (Light)
-    card: "#ffffff", // White
-    text: "#646f88ff", // Slate-900
-    accent: "#f97316", // Orange Sentinel
+    bg: "#0A0A0A", // Slate-50 (Light)
+    card: "#0D0D0D", // White
+    text: "#ffffff", // Slate-900
+    accent: "#C9A84C", // Orange Sentinel
     success: "#22c55e",
     warning: "#eab308",
     danger: "#ef4444",
-    textMuted: "#64748b", // Slate-500
-    border: "#e2e8f0" // Slate-200
+    textMuted: "#a8a29e", // Slate-500
+    border: "#292524" // Slate-200
 };
 
-// Instantiate Engine
-
+// Instantiate Engines
 const engine = new SentinelEngine();
+const engineV52 = new SentinelEngineV52();
+
+// --- LIKERT SCALE COMPONENT (Phase 3) ---
+const LikertScale = ({ onChange, value, poleFaible, poleFort }) => {
+    return (
+        <div className="w-full flex flex-col gap-8 py-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="flex justify-between items-start gap-4">
+                <div className="flex-1 bg-[#111111] rounded-xl p-4 border-l-4 border-stone-700">
+                    <span className="text-[10px] font-black text-stone-500 uppercase tracking-tighter mb-1 block">Pôle A (Faible)</span>
+                    <p className="text-sm font-semibold text-stone-400 leading-tight">{poleFaible}</p>
+                </div>
+                <div className="flex-1 bg-[#111111] rounded-xl p-4 border-r-4 border-stone-700 text-right">
+                    <span className="text-[10px] font-black text-stone-500 uppercase tracking-tighter mb-1 block">Pôle B (Fort)</span>
+                    <p className="text-sm font-semibold text-stone-400 leading-tight">{poleFort}</p>
+                </div>
+            </div>
+
+            <div className="relative flex justify-between items-center px-2">
+                {/* Visual Gradient Line */}
+                <div className="absolute left-0 right-0 h-1 bg-gradient-to-r from-slate-200 via-orange-200 to-orange-500 top-1/2 -translate-y-1/2 rounded-full -z-10 opacity-30" />
+
+                {[1, 2, 3, 4, 5].map((val) => {
+                    const isActive = value === val;
+                    const size = val === 1 || val === 5 ? "w-14 h-14" : val === 2 || val === 4 ? "w-12 h-12" : "w-10 h-10";
+                    const activeColor = val <= 2 ? "bg-slate-700" : val === 3 ? "bg-[#C9A84C]/80" : "bg-[#C9A84C]";
+
+                    return (
+                        <button
+                            key={val}
+                            onClick={() => onChange(val)}
+                            className="flex flex-col items-center group relative"
+                        >
+                            <div className={`
+                                ${size} rounded-full flex items-center justify-center border-4 transition-all duration-300
+                                ${isActive
+                                    ? `${activeColor} border-white shadow-xl scale-110`
+                                    : "bg-[#0D0D0D] border-stone-800 hover:border-orange-300 hover:scale-105 shadow-sm"}
+                            `}>
+                                {isActive && <div className="w-3 h-3 bg-[#0D0D0D] rounded-full animate-pulse" />}
+                                {!isActive && <span className="text-xs font-bold text-stone-500">{val}</span>}
+                            </div>
+                        </button>
+                    );
+                })}
+            </div>
+
+            <div className="flex justify-between text-[10px] font-black text-stone-500 uppercase tracking-[2px] px-2">
+                <span>Désaccord Total</span>
+                <span>Neutre</span>
+                <span>Accord Total</span>
+            </div>
+        </div>
+    );
+};
+
+
+const saveResultsToSupabase = async (mappedResult, roleId) => {
+    try {
+        let authUser = (await supabase.auth.getUser()).data.user;
+        let targetUserId = authUser ? authUser.id : "00000000-0000-0000-0000-000000000000";
+        
+        let verdictText = mappedResult.verdictColor === "text-emerald-500" ? "PERFORMANCE" : (mappedResult.verdictColor === "text-rose-500" ? "INCOMPATIBLE" : "STANDARD");
+
+        const payload = {
+            user_id: targetUserId,
+            role_id: roleId,
+            role_label: roleId.toUpperCase(),
+            global_score: mappedResult.globalScore || 0,
+            verdict: verdictText,
+            dim_res: mappedResult.dimensions?.RES || 0,
+            dim_emp: mappedResult.dimensions?.EMP || 0,
+            dim_aut: mappedResult.dimensions?.AUT || 0,
+            dim_int: mappedResult.dimensions?.INT || 0,
+            dim_tox: mappedResult.dimensions?.TOX || 0,
+            dim_ada: mappedResult.dimensions?.ADA || 0,
+            top_traits: mappedResult.topTraits ? mappedResult.topTraits.map(t => t[0]) : [],
+            profil: mappedResult.dominantProfile || mappedResult.profil_dominant || "STANDARD"
+        };
+        
+        console.log("Saving to Supabase:", payload);
+        const { data, error } = await supabase.from('resultats_candidats').insert(payload);
+        if (error) throw error;
+        
+        // Save to local storage for dashboards that still rely on it
+        localStorage.setItem('sentinel_results', JSON.stringify({
+           roleLabel: payload.role_label,
+           globalScore: payload.global_score,
+           verdict: payload.verdict,
+           verdictColor: mappedResult.verdictColor,
+           dimensions: mappedResult.dimensions,
+           topTraits: payload.top_traits,
+           profil: payload.profil,
+           testDone: true
+        }));
+
+    } catch (err) {
+        console.error('Erreur sauvegarde résultats:', err);
+    }
+};
 
 export default function Sentinel() {
     const { roleId } = useParams();
@@ -77,6 +177,7 @@ export default function Sentinel() {
         if (normalizedRole === 'CHEF-DE-RANG') normalizedRole = 'CHEF_RANG';
         if (normalizedRole === 'MANAGER-ADJ') normalizedRole = 'MANAGER'; // Manager Adj uses MANAGER data
         else if (normalizedRole === 'MANAGER') normalizedRole = 'MANAGER_PRINCIPAL'; // Manager uses MANAGER_PRINCIPAL data
+        if (normalizedRole === 'AUDIT-ORGANISATIONNEL') normalizedRole = 'ADN_ENTREPRISE';
 
         const roleData = HCR_DATA[normalizedRole] || [];
 
@@ -219,14 +320,37 @@ export default function Sentinel() {
                         }
                     }
 
-                    const evaluationResult = engine.evaluateCandidate(
-                        selectedRole,
-                        questions, // Added missing questions argument
+                    // v5.2 Engine pour TOUS les rôles
+                    const roleKey = selectedRole.toUpperCase();
+                    console.log(`Using SentinelEngineV52 for ${roleKey}...`);
+                    let evaluationResult = engineV52.evaluateCandidate(
+                        roleKey,
+                        questions,
                         finalScores,
                         textAnswers
                     );
-                    console.log("Evaluation Result:", evaluationResult);
-                    setEvaluation(evaluationResult);
+
+                    // Add mapping for UnifiedResultView / DirectorResultView
+                    // v5.2 doesn't return globalScore natively for universal logic, so we compute an average or adapt
+                    const mappedResult = {
+                        ...evaluationResult,
+                        globalScore: evaluationResult.globalScore !== undefined ? evaluationResult.globalScore :
+                            (evaluationResult.macro_profils ? Math.round(Object.values(evaluationResult.macro_profils).reduce((a, b) => a + b, 0) / Math.max(1, Object.keys(evaluationResult.macro_profils).length)) : 0),
+                        reliability: evaluationResult.reliability || 95, // Fallback if missing
+                        verdictColor: evaluationResult.verdictColor || (evaluationResult.alertes && evaluationResult.alertes.some(a => a.type === "WARNING") ? "text-rose-500" : "text-emerald-500"),
+                        flags: (evaluationResult.flags || []).concat((evaluationResult.alertes || []).map(a => a.message)),
+                        hasTraitData: true,
+                        macroScores: evaluationResult.macro_profils || {},
+                        topTraits: evaluationResult.top5_facettes ? evaluationResult.top5_facettes.map(f => [f.facette, f.score]) : [],
+                        traitPercentages: evaluationResult.scores_normalises_facettes || {},
+                        dimensions: evaluationResult.dimensions_brutes || {}, // Keep dimensions for ADN_ENTREPRISE
+                        synthesisText: evaluationResult.profil_textuel,
+                        dominantProfile: evaluationResult.profil_dominant
+                    };
+
+                    console.log("Mapped Evaluation Result:", mappedResult);
+                    setEvaluation(mappedResult);
+                    saveResultsToSupabase(mappedResult, selectedRole);
                     setShowResults(true);
                 }, 100);
             }
@@ -239,36 +363,30 @@ export default function Sentinel() {
 
     // RESULTS DASHBOARD (PREMIUM UNIFIED)
     if (showResults && evaluation) {
-        // DETECT IF DIRECTOR ROLE
+        // v5.2 RESULT VIEW
         if (selectedRole === 'directeur') {
             return (
-                <div className="min-h-screen bg-slate-900 text-slate-200 p-4 font-sans">
+                <div className="min-h-screen bg-black text-slate-200 p-4 font-sans">
                     <DirectorResultView data={evaluation} mbtiProfile={mbtiProfile} />
                 </div>
             );
+        } else {
+            return (
+                <div className="min-h-screen bg-black text-slate-200 p-4 font-sans">
+                    <UnifiedResultView data={evaluation} mbtiProfile={mbtiProfile} roleId={selectedRole} onNavigateHome={() => navigate('/')} />
+                </div>
+            );
         }
-
-        // ALL OTHER ROLES: Use Unified Result View (same dark style as Directeur)
-        return (
-            <div className="min-h-screen bg-slate-900 text-slate-200 p-4 font-sans">
-                <UnifiedResultView
-                    data={evaluation}
-                    mbtiProfile={mbtiProfile}
-                    roleId={selectedRole}
-                    onNavigateHome={() => navigate('/')}
-                />
-            </div>
-        );
     }
 
 
     // If no role selected, show role selector
     if (!selectedRole || questions.length === 0) {
         return (
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
+            <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center p-6">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold text-slate-900 mb-4">Test Sentinel</h1>
-                    <p className="text-slate-600">Chargement...</p>
+                    <h1 className="text-3xl font-bold text-white mb-4">Test Sentinel</h1>
+                    <p className="text-stone-400">Chargement...</p>
                 </div>
             </div>
         );
@@ -279,13 +397,13 @@ export default function Sentinel() {
         const alert = MBTI_DIRECTEUR_DATA.pretest_alert;
         return (
             <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col items-center justify-center p-4 md:p-8 font-sans">
-                <div className="bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl border border-amber-500/30 w-full max-w-3xl mx-auto animate-in fade-in zoom-in duration-500">
+                <div className="bg-black rounded-3xl p-8 md:p-12 shadow-2xl border border-amber-500/30 w-full max-w-3xl mx-auto animate-in fade-in zoom-in duration-500">
 
                     {/* Titre */}
                     <h1 className="text-2xl md:text-4xl font-bold text-amber-400 text-center mb-4">
                         {alert.titre}
                     </h1>
-                    <p className="text-lg text-slate-400 text-center mb-8">
+                    <p className="text-lg text-stone-500 text-center mb-8">
                         {alert.sous_titre}
                     </p>
 
@@ -294,7 +412,7 @@ export default function Sentinel() {
                         <p className="text-white font-bold mb-4 text-center">{alert.message_principal}</p>
 
                         <div className="grid md:grid-cols-3 gap-4">
-                            <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
+                            <div className="bg-stone-900 rounded-xl p-4 border border-slate-700">
                                 <h3 className="text-emerald-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
                                     <Activity size={16} /> Physique
                                 </h3>
@@ -306,7 +424,7 @@ export default function Sentinel() {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
+                            <div className="bg-stone-900 rounded-xl p-4 border border-slate-700">
                                 <h3 className="text-blue-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
                                     <Brain size={16} /> Mental
                                 </h3>
@@ -318,7 +436,7 @@ export default function Sentinel() {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
+                            <div className="bg-stone-900 rounded-xl p-4 border border-slate-700">
                                 <h3 className="text-purple-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
                                     <UserCheck size={16} /> Environnement
                                 </h3>
@@ -342,7 +460,7 @@ export default function Sentinel() {
                     </div>
 
                     {/* Aperçu du test */}
-                    <div className="bg-slate-800/50 rounded-xl p-6 mb-8 border border-slate-700/50">
+                    <div className="bg-stone-900/50 rounded-xl p-6 mb-8 border border-slate-700/50">
                         <h3 className="text-white font-bold text-xs uppercase tracking-wider mb-4 text-center">📋 Structure de l'évaluation</h3>
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-3 text-xs text-center">
                             <div className="bg-slate-700/50 rounded-lg p-3 text-slate-300 border border-slate-600">
@@ -353,7 +471,7 @@ export default function Sentinel() {
                                 <span className="block font-bold mb-1 text-slate-100">Phase 2</span>
                                 {alert.apercu_test.phase_2}
                             </div>
-                            <div className="bg-amber-900/40 rounded-lg p-3 text-amber-200 border border-amber-500/30 flex items-center justify-center font-bold">
+                            <div className="bg-[#0A0A0A]mber-900/40 rounded-lg p-3 text-amber-200 border border-amber-500/30 flex items-center justify-center font-bold">
                                 ☕ {alert.apercu_test.pause}
                             </div>
                             <div className="bg-slate-700/50 rounded-lg p-3 text-slate-300 border border-slate-600">
@@ -371,7 +489,7 @@ export default function Sentinel() {
                     <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
                         <button
                             onClick={() => navigate('/choix-du-poste')}
-                            className="px-6 py-4 bg-slate-800 hover:bg-slate-700 rounded-xl font-bold transition-all text-slate-400 border border-slate-700 hover:border-slate-600"
+                            className="px-6 py-4 bg-stone-900 hover:bg-slate-700 rounded-xl font-bold transition-all text-stone-500 border border-slate-700 hover:border-slate-600"
                         >
                             {alert.boutons.reporter}
                         </button>
@@ -390,10 +508,10 @@ export default function Sentinel() {
     // LOADING GUARD
     if (!questions || questions.length === 0) {
         return (
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
+            <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center p-6">
                 <div className="text-center animate-pulse">
-                    <h1 className="text-3xl font-bold text-slate-900 mb-4">Test Sentinel</h1>
-                    <p className="text-slate-600">Chargement du test en cours...</p>
+                    <h1 className="text-3xl font-bold text-white mb-4">Test Sentinel</h1>
+                    <p className="text-stone-400">Chargement du test en cours...</p>
                 </div>
             </div>
         );
@@ -401,11 +519,11 @@ export default function Sentinel() {
 
     if (!currentQuestion) {
         return (
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
+            <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center p-6">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold text-slate-900 mb-4">Test Sentinel</h1>
-                    <p className="text-slate-600">Erreur: Aucune question disponible pour l'index {currentQuestionIndex}</p>
-                    <button onClick={() => navigate('/')} className="mt-4 px-6 py-2 bg-slate-900 text-white rounded-lg">
+                    <h1 className="text-3xl font-bold text-white mb-4">Test Sentinel</h1>
+                    <p className="text-stone-400">Erreur: Aucune question disponible pour l'index {currentQuestionIndex}</p>
+                    <button onClick={() => navigate('/')} className="mt-4 px-6 py-2 bg-black text-white rounded-lg">
                         Retour
                     </button>
                 </div>
@@ -481,7 +599,7 @@ export default function Sentinel() {
                     </p>
 
                     <h2 style={{ fontSize: '1.1rem', fontWeight: '700', lineHeight: '1.3', marginBottom: '1.5rem', minHeight: 'auto', color: '#1e293b' }}>
-                        "{currentQuestion.description}"
+                        "{currentQuestion.description || currentQuestion.text}"
                     </h2>
 
                     {/* Options Grid */}
@@ -490,9 +608,9 @@ export default function Sentinel() {
                         // MBTI LAYOUT (5-Point Scale)
                         <div className="w-full flex flex-col items-center gap-6 animate-in fade-in zoom-in duration-300">
                             {/* Option A */}
-                            <div className="w-full bg-slate-100 rounded-xl p-5 border-l-4 border-slate-500">
-                                <span className="text-[10px] font-bold text-slate-600 uppercase tracking-widest mb-2 block">Option A</span>
-                                <p className="text-base md:text-lg font-medium text-slate-700">{currentQuestion.options[0].text}</p>
+                            <div className="w-full bg-[#111111] rounded-xl p-5 border-l-4 border-slate-500">
+                                <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-2 block">Option A</span>
+                                <p className="text-base md:text-lg font-medium text-stone-300">{currentQuestion.options[0].text}</p>
                             </div>
 
                             {/* ÉCHELLE UNIQUE */}
@@ -500,11 +618,11 @@ export default function Sentinel() {
                                 <div className="flex items-center justify-between gap-2 md:gap-4">
                                     <div className="flex-1 flex justify-center gap-3 md:gap-6 items-end">
                                         {[
-                                            { val: 1, label: "← Tout à fait", color: "bg-slate-700", borderColor: "border-slate-700", bgColor: "bg-slate-50", size: "w-14 h-14" },
-                                            { val: 2, label: "D'accord", color: "bg-slate-500", borderColor: "border-slate-500", bgColor: "bg-slate-50", size: "w-12 h-12" },
-                                            { val: 3, label: "Neutre", color: "bg-slate-300", borderColor: "border-slate-300", bgColor: "bg-slate-50", size: "w-10 h-10" },
-                                            { val: 4, label: "D'accord", color: "bg-slate-500", borderColor: "border-slate-500", bgColor: "bg-slate-50", size: "w-12 h-12" },
-                                            { val: 5, label: "Tout à fait →", color: "bg-slate-700", borderColor: "border-slate-700", bgColor: "bg-slate-50", size: "w-14 h-14" }
+                                            { val: 1, label: "← Tout à fait", color: "bg-slate-700", borderColor: "border-slate-700", bgColor: "bg-[#0A0A0A]", size: "w-14 h-14" },
+                                            { val: 2, label: "D'accord", color: "bg-[#0A0A0A]0", borderColor: "border-slate-500", bgColor: "bg-[#0A0A0A]", size: "w-12 h-12" },
+                                            { val: 3, label: "Neutre", color: "bg-slate-300", borderColor: "border-stone-700", bgColor: "bg-[#0A0A0A]", size: "w-10 h-10" },
+                                            { val: 4, label: "D'accord", color: "bg-[#0A0A0A]0", borderColor: "border-slate-500", bgColor: "bg-[#0A0A0A]", size: "w-12 h-12" },
+                                            { val: 5, label: "Tout à fait →", color: "bg-slate-700", borderColor: "border-slate-700", bgColor: "bg-[#0A0A0A]", size: "w-14 h-14" }
                                         ].map((opt) => (
                                             <button
                                                 key={opt.val}
@@ -515,27 +633,34 @@ export default function Sentinel() {
                                                     ${opt.size} rounded-full flex items-center justify-center border-4 transition-all
                                                     ${scores[currentQuestion.id] === opt.val
                                                         ? `scale-110 shadow-xl ${opt.color} border-white`
-                                                        : `${opt.val === 3 ? 'border-slate-200 bg-slate-50' : `${opt.borderColor} ${opt.bgColor}`} hover:scale-105`}
+                                                        : `${opt.val === 3 ? 'border-stone-800 bg-[#0A0A0A]' : `${opt.borderColor} ${opt.bgColor}`} hover:scale-105`}
                                                 `}>
-                                                    {scores[currentQuestion.id] === opt.val && <div className="w-3 h-3 bg-white rounded-full" />}
+                                                    {scores[currentQuestion.id] === opt.val && <div className="w-3 h-3 bg-[#0D0D0D] rounded-full" />}
                                                 </div>
                                             </button>
                                         ))}
                                     </div>
                                 </div>
                                 <div className="flex justify-between w-full px-4 mt-2">
-                                    <span className="text-xs font-bold text-slate-600">ACCORD A</span>
-                                    <span className="text-xs font-bold text-slate-400">NEUTRE</span>
-                                    <span className="text-xs font-bold text-slate-600">ACCORD B</span>
+                                    <span className="text-xs font-bold text-stone-400">ACCORD A</span>
+                                    <span className="text-xs font-bold text-stone-500">NEUTRE</span>
+                                    <span className="text-xs font-bold text-stone-400">ACCORD B</span>
                                 </div>
                             </div>
 
                             {/* Option B */}
-                            <div className="w-full bg-slate-100 rounded-xl p-5 border-l-4 border-slate-500">
-                                <span className="text-[10px] font-bold text-slate-600 uppercase tracking-widest mb-2 block">Option B</span>
-                                <p className="text-base md:text-lg font-medium text-slate-700">{currentQuestion.options[1].text}</p>
+                            <div className="w-full bg-[#111111] rounded-xl p-5 border-l-4 border-slate-500">
+                                <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-2 block">Option B</span>
+                                <p className="text-base md:text-lg font-medium text-stone-300">{currentQuestion.options[1].text}</p>
                             </div>
                         </div>
+                    ) : currentQuestion.type === "DIMENSION" ? (
+                        <LikertScale
+                            onChange={handleAnswer}
+                            value={scores[currentQuestion.id]}
+                            poleFaible={currentQuestion.pole_faible}
+                            poleFort={currentQuestion.pole_fort}
+                        />
                     ) : !isTypingOpenAnswer ? (
                         <div style={{ display: 'grid', gridTemplateColumns: currentQuestion.options ? 'repeat(1, 1fr)' : 'repeat(3, 1fr)', gap: '0.75rem' }}>
                             {(currentQuestion.options ? [...currentQuestion.options].sort((a, b) => (a.value || "").localeCompare(b.value || "")) : [
@@ -606,18 +731,18 @@ export default function Sentinel() {
                         </div>
                     ) : (
                         <div className="space-y-4 animate-in fade-in zoom-in duration-300">
-                            <h3 className="text-lg font-bold text-slate-800">Votre réponse détaillée :</h3>
+                            <h3 className="text-lg font-bold text-stone-200">Votre réponse détaillée :</h3>
                             <textarea
                                 value={openAnswerDraft}
                                 onChange={(e) => setOpenAnswerDraft(e.target.value)}
                                 placeholder="Décrivez votre action ici..."
-                                className="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 min-h-[150px] text-base"
+                                className="w-full p-4 border border-stone-700 rounded-xl focus:ring-2 focus:ring-[#C9A84C] focus:border-[#C9A84C]/50 min-h-[150px] text-base"
                                 autoFocus
                             />
                             <div className="flex gap-4">
                                 <button
                                     onClick={() => setIsTypingOpenAnswer(false)}
-                                    className="flex-1 px-6 py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition-colors"
+                                    className="flex-1 px-6 py-3 bg-[#111111] text-stone-400 font-bold rounded-xl hover:bg-slate-200 transition-colors"
                                 >
                                     Annuler
                                 </button>
@@ -641,7 +766,7 @@ export default function Sentinel() {
                                         setIsTypingOpenAnswer(false);
                                         setOpenAnswerDraft("");
                                     }}
-                                    className="flex-1 px-6 py-3 bg-orange-500 text-white font-bold rounded-xl hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/20"
+                                    className="flex-1 px-6 py-3 bg-[#C9A84C] text-white font-bold rounded-xl hover:bg-[#C9A84C] transition-colors shadow-lg shadow-orange-500/20"
                                 >
                                     Valider ma réponse
                                 </button>
@@ -793,7 +918,7 @@ const ProfileSynthesis = ({ data, mbtiProfile, roleId }) => {
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                         {data.strength.map((item, idx) => (
                             <li key={idx} style={{ marginBottom: '1rem', color: '#d1d5db', fontSize: '0.95rem', lineHeight: '1.5' }}>
-                                <strong style={{ color: 'slate-800' }}>{item.label} :</strong> <span className="text-slate-600">{item.text}</span>
+                                <strong style={{ color: 'slate-800' }}>{item.label} :</strong> <span className="text-stone-400">{item.text}</span>
                             </li>
                         ))}
                     </ul>
@@ -812,7 +937,7 @@ const ProfileSynthesis = ({ data, mbtiProfile, roleId }) => {
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                         {data.weaknesses.map((item, idx) => (
                             <li key={idx} style={{ marginBottom: '1rem', color: '#d1d5db', fontSize: '0.95rem', lineHeight: '1.5' }}>
-                                <strong style={{ color: 'slate-800' }}>{item.label} :</strong> <span className="text-slate-600">{item.text}</span>
+                                <strong style={{ color: 'slate-800' }}>{item.label} :</strong> <span className="text-stone-400">{item.text}</span>
                             </li>
                         ))}
                     </ul>

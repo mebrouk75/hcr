@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MBTI_BARMAN_DATA } from './data/mbti_barman_data';
 import { MBTI_SERVEUR_DATA } from './data/mbti_serveur_data';
@@ -6,18 +6,6 @@ import { MBTI_CHEF_DE_RANG_DATA } from './data/mbti_chef_de_rang_data';
 import { MBTI_MANAGER_ADJOINT_DATA } from './data/mbti_manager_adjoint_data';
 import { MBTI_MANAGER_DATA } from './data/mbti_manager_data';
 import { MBTI_DIRECTEUR_DATA } from './data/mbti_directeur_data';
-
-const COLORS = {
-    blue: '#4A90E2',
-    blueLight: '#7FB4F0',
-    gold: '#D4AF37',
-    goldLight: '#E8D89B',
-    neutral: '#E5E5E5',
-    dark: '#0A1628',
-    darkAlt: '#1a2942',
-    text: '#334155',
-    textMuted: '#64748b',
-};
 
 const MbtiTest = () => {
     const { roleId } = useParams();
@@ -86,20 +74,6 @@ const MbtiTest = () => {
         }, 300);
     };
 
-    const handleNext = () => {
-        if (selectedValue === null) return;
-        const question = questions[currentQuestionIndex];
-        const newAnswers = { ...answers, [question.id]: selectedValue };
-        setAnswers(newAnswers);
-
-        if (currentQuestionIndex < questions.length - 1) {
-            setCurrentQuestionIndex(prev => prev + 1);
-            setSelectedValue(newAnswers[questions[currentQuestionIndex + 1]?.id] ?? null);
-        } else {
-            calculateProfile(newAnswers);
-        }
-    };
-
     const handlePrevious = () => {
         if (currentQuestionIndex > 0) {
             const prevIndex = currentQuestionIndex - 1;
@@ -110,10 +84,10 @@ const MbtiTest = () => {
 
     if (!data) {
         return (
-            <div style={{ minHeight: '100vh', background: COLORS.dark, color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 32, fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
-                <h1 style={{ fontSize: 28, fontWeight: 700, marginBottom: 16, color: '#ef4444' }}>Poste non configuré</h1>
-                <p style={{ marginBottom: 32 }}>Le test MBTI n'est pas encore disponible pour ce rôle.</p>
-                <button onClick={() => navigate(`/test/${roleId}`)} style={{ padding: '12px 24px', background: '#ef4444', color: 'white', border: 'none', borderRadius: 12, fontWeight: 700, cursor: 'pointer' }}>
+            <div className="min-h-screen bg-[#0A0A0A] flex flex-col items-center justify-center p-8 font-sans">
+                <h1 className="text-3xl font-black text-rose-500 mb-4 uppercase">Poste non configuré</h1>
+                <p className="text-stone-400 mb-8 font-medium">Le test n'est pas encore disponible pour ce rôle.</p>
+                <button onClick={() => navigate(`/test/${roleId}`)} className="bg-[#C9A84C] text-black px-6 py-3 font-black uppercase text-xs tracking-widest hover:bg-[#F0D080] transition-colors">
                     Passer au Test Technique &gt;
                 </button>
             </div>
@@ -128,183 +102,196 @@ const MbtiTest = () => {
     if (showPreTestAlert && data.pretest_alert) {
         const alert = data.pretest_alert;
         return (
-            <div style={{ minHeight: '100vh', background: `linear-gradient(135deg, ${COLORS.dark} 0%, ${COLORS.darkAlt} 100%)`, color: '#e2e8f0', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20, fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
-                <div style={{ background: 'rgba(255,255,255,0.98)', borderRadius: 24, padding: '48px 40px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)', maxWidth: 800, width: '100%' }}>
-                    <h1 style={{ fontSize: 28, fontWeight: 700, color: COLORS.dark, textAlign: 'center', marginBottom: 12 }}>{alert.titre}</h1>
-                    <p style={{ fontSize: 16, color: COLORS.textMuted, textAlign: 'center', marginBottom: 32 }}>{alert.sous_titre}</p>
+            <div className="min-h-screen bg-[#0A0A0A] flex flex-col font-sans p-6 text-white justify-center">
+                <div className="max-w-4xl mx-auto w-full">
+                    <div className="bg-[#0D0D0D] border border-stone-800 p-8 md:p-12 relative">
+                        {/* Overlay accent line */}
+                        <div className="absolute top-0 left-0 w-full h-1 bg-[#C9A84C]"></div>
 
-                    <p style={{ color: COLORS.dark, fontWeight: 700, marginBottom: 16 }}>{alert.message_principal}</p>
+                        <div className="text-center mb-10">
+                            <span className="text-[#C9A84C] text-[10px] font-black uppercase tracking-[0.3em] block mb-4">
+                                {alert.titre || "Avertissement"}
+                            </span>
+                            <h1 className="text-3xl md:text-4xl font-black uppercase mb-4 text-white">
+                                {alert.sous_titre}
+                            </h1>
+                            <p className="text-stone-400 font-medium text-sm max-w-2xl mx-auto">
+                                {alert.message_principal}
+                            </p>
+                        </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginBottom: 24 }}>
-                        {[
-                            { icon: '🏃', title: 'Physique', items: alert.conditions_requises.physique },
-                            { icon: '🧠', title: 'Mental', items: alert.conditions_requises.mental },
-                            { icon: '🏠', title: 'Environnement', items: alert.conditions_requises.environnement },
-                        ].map((section, idx) => (
-                            <div key={idx} style={{ background: '#f8fafc', borderRadius: 16, padding: 16 }}>
-                                <h3 style={{ fontSize: 12, fontWeight: 700, color: COLORS.blue, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>{section.icon} {section.title}</h3>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                    {section.items.map((c, i) => (
-                                        <li key={i} style={{ fontSize: 13, color: COLORS.text, marginBottom: 8, display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-                                            <span style={{ color: COLORS.blue, fontWeight: 700 }}>✓</span> {c}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div style={{ background: '#fef2f2', border: '1px solid #fca5a5', borderRadius: 12, padding: 16, marginBottom: 24 }}>
-                        <p style={{ color: '#dc2626', fontSize: 13, fontWeight: 500 }}>{alert.avertissement}</p>
-                    </div>
-
-                    <div style={{ background: '#f8fafc', borderRadius: 12, padding: 16, marginBottom: 32 }}>
-                        <h3 style={{ fontSize: 12, fontWeight: 700, color: COLORS.dark, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>📋 Aperçu du test</h3>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                            {[alert.apercu_test.phase_1, alert.apercu_test.phase_2, alert.apercu_test.pause, alert.apercu_test.phase_3, alert.apercu_test.phase_4].filter(Boolean).map((p, i) => (
-                                <div key={i} style={{ background: '#e2e8f0', borderRadius: 8, padding: '8px 12px', fontSize: 11, color: COLORS.text, flex: '1 1 120px', textAlign: 'center' }}>{p}</div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                            {[
+                                { icon: '🏃', title: 'Physique', items: alert.conditions_requises.physique },
+                                { icon: '🧠', title: 'Mental', items: alert.conditions_requises.mental },
+                                { icon: '🏢', title: 'Environnement', items: alert.conditions_requises.environnement },
+                            ].map((section, idx) => (
+                                <div key={idx} className="bg-[#111] border border-stone-800 p-6">
+                                    <h3 className="text-xs font-black uppercase tracking-widest text-stone-300 mb-4 flex items-center gap-2">
+                                        <span>{section.icon}</span> {section.title}
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {section.items.map((c, i) => (
+                                            <li key={i} className="flex items-start gap-3 text-xs text-stone-500 font-medium">
+                                                <span className="text-[#C9A84C] font-bold">✓</span> <span className="flex-1">{c}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             ))}
                         </div>
-                    </div>
 
-                    <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-                        <button onClick={() => navigate('/choix-du-poste')} style={{ padding: '14px 28px', background: '#f1f5f9', color: COLORS.textMuted, border: 'none', borderRadius: 12, fontWeight: 600, fontSize: 15, cursor: 'pointer' }}>
-                            {alert.boutons.reporter}
-                        </button>
-                        <button onClick={() => setShowPreTestAlert(false)} style={{ padding: '16px 36px', background: `linear-gradient(135deg, ${COLORS.blue}, #357ABD)`, color: 'white', border: 'none', borderRadius: 12, fontWeight: 700, fontSize: 17, cursor: 'pointer', boxShadow: '0 10px 25px rgba(74,144,226,0.4)' }}>
-                            {alert.boutons.commencer}
-                        </button>
+                        <div className="bg-rose-950/20 border border-rose-900/50 p-5 mb-8">
+                            <p className="text-rose-500/90 text-xs font-bold leading-relaxed uppercase tracking-wide">
+                                ⚠️ {alert.avertissement}
+                            </p>
+                        </div>
+
+                        <div className="bg-[#111] border border-stone-800 p-6 mb-10">
+                            <h3 className="text-xs font-black uppercase tracking-widest text-[#C9A84C] mb-4">
+                                Aperçu de l'évaluation
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {[alert.apercu_test.phase_1, alert.apercu_test.phase_2, alert.apercu_test.pause, alert.apercu_test.phase_3, alert.apercu_test.phase_4].filter(Boolean).map((p, i) => (
+                                    <div key={i} className="bg-stone-900 text-stone-400 text-[10px] font-bold uppercase tracking-widest px-4 py-2 border border-stone-800">
+                                        {p}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <button onClick={() => navigate('/choix-du-poste')} className="px-8 py-4 border border-stone-800 text-stone-400 text-xs font-black uppercase tracking-widest hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors">
+                                {alert.boutons.reporter}
+                            </button>
+                            <button onClick={() => setShowPreTestAlert(false)} className="px-8 py-4 bg-[#C9A84C] text-black text-xs font-black uppercase tracking-widest hover:bg-[#F0D080] transition-colors shadow-[0_0_30px_rgba(201,168,76,0.15)]">
+                                {alert.boutons.commencer}
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         );
     }
 
-    // Circle scale config
+    // Likert circle config (matched to Sentinel theme)
     const circleConfig = [
-        { val: 1, label: 'Tout à fait', borderColor: COLORS.blue, activeColor: COLORS.blue, glowColor: 'rgba(74,144,226,0.6)' },
-        { val: 2, label: 'Plutôt', borderColor: COLORS.blueLight, activeColor: COLORS.blueLight, glowColor: 'rgba(127,180,240,0.6)' },
-        { val: 3, label: 'Neutre', borderColor: COLORS.neutral, activeColor: COLORS.neutral, glowColor: 'rgba(229,229,229,0.6)' },
-        { val: 4, label: 'Plutôt', borderColor: COLORS.goldLight, activeColor: COLORS.goldLight, glowColor: 'rgba(232,216,155,0.6)' },
-        { val: 5, label: 'Tout à fait', borderColor: COLORS.gold, activeColor: COLORS.gold, glowColor: 'rgba(212,175,55,0.6)' },
+        { val: 1, label: 'Tout à fait A' },
+        { val: 2, label: 'Plutôt A' },
+        { val: 3, label: 'Neutre' },
+        { val: 4, label: 'Plutôt B' },
+        { val: 5, label: 'Tout à fait B' },
     ];
 
     return (
-        <div style={{
-            minHeight: '100vh',
-            background: `linear-gradient(135deg, ${COLORS.dark} 0%, ${COLORS.darkAlt} 100%)`,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: 20,
-            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        }}>
-            <div style={{ maxWidth: 900, width: '100%' }}>
+        <div className="min-h-screen bg-[#0A0A0A] flex flex-col font-sans">
+            {/* Nav Header */}
+            <div className="px-6 py-4 flex justify-between items-center border-b border-[#C9A84C]/15 sticky top-0 bg-[#0A0A0A] z-10 shrink-0">
+                <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 flex items-center justify-center border border-[#C9A84C]/60 text-[#C9A84C] font-black text-xs">
+                        R.
+                    </div>
+                    <div>
+                        <span className="block text-white font-black text-sm uppercase tracking-tight">Sentinel HCR</span>
+                        <span className="block text-stone-500 text-[9px] font-bold uppercase tracking-widest">Évaluation des Traits</span>
+                    </div>
+                </div>
+                <div className="text-right">
+                    <span className="block text-stone-500 text-[9px] font-bold uppercase tracking-widest">Question</span>
+                    <span className="block text-white font-black text-lg">{currentQuestionIndex + 1} / {totalQuestions}</span>
+                </div>
+            </div>
+
+            {/* Progress Bar */}
+            <div className="w-full h-1 bg-stone-900 shrink-0">
                 <div
-                    key={currentQuestion.id}
-                    style={{
-                        background: 'rgba(255, 255, 255, 0.98)',
-                        borderRadius: 24,
-                        padding: window.innerWidth < 768 ? '32px 24px' : 60,
-                        boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
-                        animation: 'fadeIn 0.4s ease-out'
-                    }}
-                >
-                    {/* Progress Bar */}
-                    <div style={{ width: '100%', height: 6, background: '#f1f5f9', borderRadius: 10, marginBottom: 40, overflow: 'hidden' }}>
-                        <div style={{
-                            height: '100%',
-                            background: `linear-gradient(90deg, ${COLORS.blue}, ${COLORS.gold})`,
-                            width: `${progress}%`,
-                            transition: 'width 0.3s ease',
-                            borderRadius: 10
-                        }} />
-                    </div>
+                    className="h-full bg-[#C9A84C] transition-all duration-300"
+                    style={{ width: `${progress}%` }}
+                />
+            </div>
 
-                    {/* Question Header */}
-                    <div style={{ textAlign: 'center', marginBottom: 50 }}>
-                        <div style={{ fontSize: 14, fontWeight: 600, color: COLORS.textMuted, letterSpacing: 1, textTransform: 'uppercase', marginBottom: 24 }}>
-                            Question {currentQuestionIndex + 1}/{totalQuestions}
+            <div className="flex-1 flex flex-col justify-center px-4 py-8">
+                <div className="max-w-3xl mx-auto w-full">
+                    {/* Question Card */}
+                    <div className="bg-[#0D0D0D] border border-stone-800 p-8 md:p-12 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+                        <div className="text-center mb-16">
+                            <span className="text-[#C9A84C] text-[10px] font-black uppercase tracking-[0.3em] block mb-6">
+                                Étape 1 · Mise en Situation
+                            </span>
+                            <h2 className="text-xl md:text-2xl font-bold text-white leading-relaxed">
+                                {currentQuestion.text}
+                            </h2>
                         </div>
-                        <div style={{ fontSize: window.innerWidth < 768 ? 22 : 28, fontWeight: 600, color: COLORS.dark, lineHeight: 1.4 }}>
-                            {currentQuestion.text}
+
+                        {/* Options */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                            {/* Option A */}
+                            <div className="bg-[#111] border border-stone-800 p-6 relative">
+                                <div className="absolute top-0 left-0 w-full h-1 bg-[#C9A84C]/50" />
+                                <span className="text-stone-500 text-[10px] font-black uppercase tracking-widest block mb-4">Option A</span>
+                                <p className="text-white text-sm font-medium leading-relaxed">
+                                    {currentQuestion.options[0].text}
+                                </p>
+                            </div>
+
+                            {/* Option B */}
+                            <div className="bg-[#111] border border-stone-800 p-6 relative">
+                                <div className="absolute top-0 left-0 w-full h-1 bg-[#C9A84C]" />
+                                <span className="text-[#C9A84C]/70 text-[10px] font-black uppercase tracking-widest block mb-4">Option B</span>
+                                <p className="text-white text-sm font-medium leading-relaxed">
+                                    {currentQuestion.options[1].text}
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Option A */}
-                    <div style={{
-                        display: 'flex', alignItems: 'center', gap: 20, marginBottom: 30, padding: 24, borderRadius: 16,
-                        background: `linear-gradient(to right, rgba(74,144,226,0.08), transparent)`,
-                        borderLeft: `4px solid ${COLORS.blue}`
-                    }}>
-                        <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', minWidth: 80, color: COLORS.blue }}>← Option A</div>
-                        <div style={{ fontSize: 16, fontWeight: 600, color: COLORS.text, lineHeight: 1.6, flex: 1 }}>{currentQuestion.options[0].text}</div>
-                    </div>
+                        {/* Likert Scale */}
+                        <div className="pt-8 border-t border-stone-800">
+                            <div className="flex justify-between items-center gap-2 mb-6 text-[10px] font-black uppercase tracking-widest text-[#C9A84C]">
+                                <span className="opacity-60 hidden sm:block">← Je penche A</span>
+                                <span className="text-center w-full">Votre réponse</span>
+                                <span className="hidden sm:block">Je penche B →</span>
+                            </div>
 
-                    {/* Arrow Labels */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 20, padding: '0 40px' }}>
-                        <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: COLORS.blue }}>← Tout à fait A</div>
-                        <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: COLORS.gold }}>Tout à fait B →</div>
-                    </div>
+                            <div className="flex justify-between items-end gap-2 sm:gap-4 max-w-xl mx-auto">
+                                {circleConfig.map((circle) => {
+                                    const isActive = selectedValue === circle.val;
+                                    let circleSize = circle.val === 3 ? 'w-10 h-10 sm:w-12 sm:h-12' : (circle.val === 2 || circle.val === 4) ? 'w-12 h-12 sm:w-14 sm:h-14' : 'w-14 h-14 sm:w-16 sm:h-16';
+                                    let bgActive = circle.val < 3 ? 'bg-[#C9A84C]/40 border-[#C9A84C]/50 text-white' : circle.val > 3 ? 'bg-[#C9A84C] border-[#C9A84C] text-black shadow-[0_0_15px_rgba(201,168,76,0.3)]' : 'bg-stone-700 border-stone-600 text-white';
 
-                    {/* Scale with circles */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 40, margin: '60px 0', position: 'relative' }}>
-                        {/* Gradient line */}
-                        <div style={{
-                            position: 'absolute', top: '35%', left: '10%', width: '80%', height: 2,
-                            background: `linear-gradient(to right, ${COLORS.blue} 0%, ${COLORS.neutral} 50%, ${COLORS.gold} 100%)`,
-                            zIndex: 0, transform: 'translateY(-50%)'
-                        }} />
-
-                        {/* Circles */}
-                        <div style={{ display: 'flex', gap: window.innerWidth < 768 ? 16 : 28, position: 'relative', zIndex: 1 }}>
-                            {circleConfig.map((circle) => {
-                                const isActive = selectedValue === circle.val;
-                                return (
-                                    <div
-                                        key={circle.val}
-                                        onClick={() => handleCircleClick(circle.val)}
-                                        style={{
-                                            display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12,
-                                            cursor: 'pointer', transition: 'transform 0.2s ease',
-                                            transform: isActive ? 'scale(1.1)' : 'scale(1)',
-                                        }}
-                                        onMouseEnter={e => { if (!isActive) e.currentTarget.style.transform = 'scale(1.1)'; }}
-                                        onMouseLeave={e => { if (!isActive) e.currentTarget.style.transform = 'scale(1)'; }}
-                                    >
-                                        <div style={{
-                                            width: 40, height: 40, borderRadius: '50%',
-                                            border: `3px solid ${circle.borderColor}`,
-                                            background: isActive ? circle.activeColor : 'white',
-                                            boxShadow: isActive ? `0 0 20px ${circle.glowColor}` : 'none',
-                                            transition: 'all 0.3s ease',
-                                            transform: isActive ? 'scale(1.2)' : 'scale(1)',
-                                        }} />
-                                        <div style={{
-                                            fontSize: 11, fontWeight: 600, color: COLORS.textMuted,
-                                            textAlign: 'center', maxWidth: 70, lineHeight: 1.3
-                                        }}>
-                                            {circle.label}
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                                    return (
+                                        <button
+                                            key={circle.val}
+                                            onClick={() => handleCircleClick(circle.val)}
+                                            className="flex flex-col items-center gap-3 group outline-none"
+                                        >
+                                            <div className={`
+                                                ${circleSize} rounded-full flex items-center justify-center transition-all duration-200 border-2
+                                                ${isActive ? bgActive : 'bg-transparent border-stone-800 group-hover:border-stone-600'}
+                                            `}>
+                                                {isActive && <div className={`w-2 h-2 rounded-full ${circle.val > 3 ? 'bg-black' : 'bg-white'}`} />}
+                                            </div>
+                                            <span className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-center
+                                                ${isActive ? (circle.val > 3 ? 'text-[#C9A84C]' : 'text-stone-300') : 'text-stone-600 group-hover:text-stone-400'}
+                                            `}>
+                                                {circle.label}
+                                            </span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
                         </div>
                     </div>
 
-                    {/* Option B */}
-                    <div style={{
-                        display: 'flex', alignItems: 'center', gap: 20, marginBottom: 30, padding: 24, borderRadius: 16,
-                        background: `linear-gradient(to left, rgba(212,175,55,0.08), transparent)`,
-                        borderRight: `4px solid ${COLORS.gold}`,
-                        marginTop: 30,
-                    }}>
-                        <div style={{ fontSize: 16, fontWeight: 600, color: COLORS.text, lineHeight: 1.6, flex: 1 }}>{currentQuestion.options[1].text}</div>
-                        <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', minWidth: 80, color: COLORS.gold, textAlign: 'right' }}>Option B →</div>
+                    {/* Footer Nav */}
+                    <div className="mt-8">
+                        <button
+                            onClick={handlePrevious}
+                            disabled={currentQuestionIndex === 0}
+                            className="text-stone-500 hover:text-white text-[10px] font-bold uppercase tracking-widest disabled:opacity-30 disabled:hover:text-stone-500 transition-colors"
+                        >
+                            ← Revenir à la question précédente
+                        </button>
                     </div>
-
-
-
                 </div>
             </div>
         </div>

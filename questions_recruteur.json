@@ -1,0 +1,32 @@
+[
+    {
+        "id": "Q_01",
+        "section": "Stratégie d'Entreprise",
+        "description": "Question d'exemple : La priorité absolue est la rentabilité immédiate, quitte à réduire les avantages sociaux.",
+        "dim": "AUT"
+    },
+    {
+        "id": "Q_02",
+        "section": "Stratégie d'Entreprise",
+        "description": "Question d'exemple : Un bon patron doit avant tout protéger la culture de son entreprise, même si cela ralentit la croissance.",
+        "dim": "INT"
+    },
+    {
+        "id": "Q_03",
+        "section": "Recrutement & Marque Employeur",
+        "description": "Question d'exemple : Le salaire est le seul véritable levier de fidélisation dans le secteur HCR.",
+        "dim": "RES"
+    },
+    {
+        "id": "Q_04",
+        "section": "Gestion des Conflits",
+        "description": "Question d'exemple : Face à une alerte remontée par le CSE, la direction doit prendre la main immédiatement.",
+        "dim": "ADA"
+    },
+    {
+        "id": "Q_05",
+        "section": "Bien-être & Santé au travail",
+        "description": "Question d'exemple : Les risques psychosociaux (RPS) sont souvent exagérés par les syndicats.",
+        "dim": "EMP"
+    }
+]

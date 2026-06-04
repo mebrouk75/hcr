@@ -1,49 +1,49 @@
 {
   "PROFIL_13_DIRECTEUR_EGO": {
     "dominantProfile": "RADAR",
-    "secondaryProfile": "SAGE",
+    "secondaryProfile": "BUREAUCRATE",
     "profileCounts": {
       "SAGE": 19,
-      "TYRAN": 13,
-      "RADAR": 35,
-      "CAMÉLÉON": 5,
+      "TYRAN": 16,
+      "BUREAUCRATE": 20,
       "OPPORTUNISTE": 17,
-      "BUREAUCRATE": 11,
-      "VISIONNAIRE": 4
+      "CAMÉLÉON": 7,
+      "VISIONNAIRE": 3,
+      "RADAR": 22
     },
     "specificScores": {
       "LEADERSHIP": 50,
-      "INFLUENCE": 38,
-      "CONSIDERATION": 71,
-      "CREATIVITE": 46,
-      "RIGUEUR": 58,
-      "EQUILIBRE": 63,
-      "STRESS": 58,
-      "DARK_EMPATHY": 29,
+      "INFLUENCE": 33,
+      "CONSIDERATION": 63,
+      "CREATIVITE": 71,
+      "RIGUEUR": 63,
+      "EQUILIBRE": 46,
+      "STRESS": 50,
+      "DARK_EMPATHY": 54,
       "DILEMME": 50
     },
     "dimensions": {
-      "RES": 66,
-      "EMP": 44,
-      "AUT": 66,
+      "RES": 71,
+      "EMP": 35,
+      "AUT": 73,
       "INT": 100,
-      "TOX": 72,
-      "ADA": 42,
+      "TOX": 67,
+      "ADA": 36,
       "LEADERSHIP": 50,
-      "INFLUENCE": 38,
-      "CONSIDERATION": 71,
-      "CREATIVITE": 46,
-      "RIGUEUR": 58,
-      "EQUILIBRE": 63,
-      "STRESS": 58,
-      "DARK_EMPATHY": 29,
+      "INFLUENCE": 33,
+      "CONSIDERATION": 63,
+      "CREATIVITE": 71,
+      "RIGUEUR": 63,
+      "EQUILIBRE": 46,
+      "STRESS": 50,
+      "DARK_EMPATHY": 54,
       "DILEMME": 50
     },
-    "globalScore": 66,
+    "globalScore": 65,
     "reliability": 100,
     "verdict": "PROFIL STANDARD. Potentiel à confirmer.",
     "verdictColor": "text-blue-600",
-    "adaptabilityVerdict": "ADAPTABILITÉ MODÉRÉE. Préfère un cadre stable mais peut gérer l'imprévu sur de courtes durées.",
+    "adaptabilityVerdict": "RIGIDITÉ STRUCTURELLE. Besoin impératif de process fixes. Risque en cas de chaos.",
     "flags": [],
     "roleConfig": {
       "focus": [
@@ -66,18 +66,18 @@
           "text": "Rigueur morale exemplaire. Respect absolu des standards et de la hiérarchie."
         },
         {
-          "label": "Indice",
-          "text": "Vigilance exacerbée. Capacité à détecter les dysfonctionnements invisibles."
+          "label": "Autorité",
+          "text": "Leadership naturel. Capacité à trancher et à fédérer sans imposer par la force."
         }
       ],
       "weaknesses": [
         {
-          "label": "Adaptabilité",
-          "text": "Rigidité cognitive. Besoin de routine, difficulté à gérer l'imprévu ou l'urgence."
-        },
-        {
           "label": "Empathie",
           "text": "Déficit d'empathie. Approche mécanique du client, risque de froissements relationnels."
+        },
+        {
+          "label": "Adaptabilité",
+          "text": "Rigidité cognitive. Besoin de routine, difficulté à gérer l'imprévu ou l'urgence."
         }
       ]
     },
@@ -91,27 +91,27 @@
     "synthesisText": "Profil bascule vers PETIT_CHEF avec une fiabilité de 100%. PROFIL STANDARD. Potentiel à confirmer.."
   },
   "PROFIL_14_MANAGER_REDRESSEUR": {
-    "dominantProfile": "AUTORITAIRE",
-    "secondaryProfile": "STRATEGIQUE",
+    "dominantProfile": "PRAGMATIQUE",
+    "secondaryProfile": "OBÉISSANT",
     "profileCounts": {},
     "specificScores": {},
     "dimensions": {
-      "RES": 59,
-      "EMP": 60,
-      "AUT": 41,
-      "INT": 74,
+      "RES": 65,
+      "EMP": 55,
+      "AUT": 48,
+      "INT": 76,
       "TOX": 0,
-      "ADA": 54,
+      "ADA": 43,
       "Leadership": 26,
-      "Diplomatie": 40,
-      "Opérationnel": 36,
-      "Autonomie": 40,
-      "Dépendance": 59
+      "Diplomatie": 31,
+      "Opérationnel": 54,
+      "Autonomie": 36,
+      "Dépendance": 54
     },
     "globalScore": 40,
     "reliability": 100,
-    "verdict": "PROFIL EN DÉVELOPPEMENT. Potentiel à confirmer sur le terrain.",
-    "verdictColor": "text-amber-500",
+    "verdict": "PROFIL OPÉRATIONNEL. Solide en terrain, vision stratégique à développer.",
+    "verdictColor": "text-blue-600",
     "adaptabilityVerdict": "ADAPTABILITÉ MODÉRÉE. Préfère un cadre stable mais peut gérer l'imprévu sur de courtes durées.",
     "flags": [],
     "roleConfig": {
@@ -131,26 +131,26 @@
     "synthesis": {
       "strengths": [
         {
-          "label": "Autoritaire",
-          "text": "Trait dominant avec 22% de présence sur 100 questions."
+          "label": "Pragmatique",
+          "text": "Trait dominant avec 24% de présence sur 100 questions."
         },
         {
-          "label": "Strategique",
-          "text": "Trait dominant avec 22% de présence sur 100 questions."
+          "label": "Obéissant",
+          "text": "Trait dominant avec 21% de présence sur 100 questions."
         },
         {
           "label": "Suiveur",
-          "text": "Trait dominant avec 21% de présence sur 100 questions."
+          "text": "Trait dominant avec 20% de présence sur 100 questions."
         }
       ],
       "weaknesses": [
         {
-          "label": "Humble",
+          "label": "Pédagogue",
           "text": "Trait faible avec 2% de présence. Axe de développement potentiel."
         },
         {
-          "label": "Pédagogue",
-          "text": "Trait faible avec 1% de présence. Axe de développement potentiel."
+          "label": "Operationnel",
+          "text": "Trait faible avec 2% de présence. Axe de développement potentiel."
         },
         {
           "label": "Autonome",
@@ -159,90 +159,92 @@
       ]
     },
     "profileData": {
-      "title": "Autoritaire",
-      "desc": "Dominance AUTORITAIRE / STRATEGIQUE",
-      "full_text": "Sur 100 situations managériales, votre profil révèle une dominante autoritaire avec des tendances strategique. Ce profil indique un style de management collaboratif avec une orientation opérationnelle marquée."
+      "title": "Pragmatique",
+      "desc": "Dominance PRAGMATIQUE / OBÉISSANT",
+      "full_text": "Sur 100 situations managériales, votre profil révèle une dominante pragmatique avec des tendances obéissant. Ce profil indique un style de management collaboratif avec une orientation opérationnelle marquée."
     },
     "textAnswers": {},
-    "synthesisText": "Profil Manager : AUTORITAIRE/STRATEGIQUE — Score 40/100. PROFIL EN DÉVELOPPEMENT. Potentiel à confirmer sur le terrain.",
+    "synthesisText": "Profil Manager : PRAGMATIQUE/OBÉISSANT — Score 40/100. PROFIL OPÉRATIONNEL. Solide en terrain, vision stratégique à développer.",
     "hasTraitData": true,
     "traitCounts": {
-      "PÉDAGOGUE": 1,
-      "FLEXIBLE": 17,
-      "SENSIBLE": 10,
-      "SUIVEUR": 21,
-      "PROTECTEUR": 10,
-      "AUTORITAIRE": 22,
-      "PRAGMATIQUE": 12,
-      "OBÉISSANT": 18,
-      "DIPLOMATE": 20,
-      "EXIGEANT": 8,
-      "RIGOUREUX": 15,
+      "PRAGMATIQUE": 24,
+      "STRATEGIQUE": 19,
+      "AUTORITAIRE": 19,
       "FRANC": 9,
+      "EXIGEANT": 7,
+      "PROTECTEUR": 10,
+      "FLEXIBLE": 12,
+      "OBÉISSANT": 21,
+      "DIPLOMATE": 11,
+      "SUIVEUR": 20,
+      "RIGOUREUX": 20,
+      "HUMBLE": 6,
       "LEADER": 4,
-      "STRATEGIQUE": 22,
-      "RÉSILIENT": 7,
-      "OPERATIONNEL": 2,
       "AUTONOME": 1,
-      "HUMBLE": 2
+      "RÉSILIENT": 8,
+      "PÉDAGOGUE": 2,
+      "SENSIBLE": 3,
+      "OPERATIONNEL": 2,
+      "AMBITIEUX": 3
     },
     "traitPercentages": {
-      "PÉDAGOGUE": 1,
-      "FLEXIBLE": 17,
-      "SENSIBLE": 10,
-      "SUIVEUR": 21,
-      "PROTECTEUR": 10,
-      "AUTORITAIRE": 22,
-      "PRAGMATIQUE": 12,
-      "OBÉISSANT": 18,
-      "DIPLOMATE": 20,
-      "EXIGEANT": 8,
-      "RIGOUREUX": 15,
+      "PRAGMATIQUE": 24,
+      "STRATEGIQUE": 19,
+      "AUTORITAIRE": 19,
       "FRANC": 9,
+      "EXIGEANT": 7,
+      "PROTECTEUR": 10,
+      "FLEXIBLE": 12,
+      "OBÉISSANT": 21,
+      "DIPLOMATE": 11,
+      "SUIVEUR": 20,
+      "RIGOUREUX": 20,
+      "HUMBLE": 6,
       "LEADER": 4,
-      "STRATEGIQUE": 22,
-      "RÉSILIENT": 7,
-      "OPERATIONNEL": 2,
       "AUTONOME": 1,
-      "HUMBLE": 2
+      "RÉSILIENT": 8,
+      "PÉDAGOGUE": 2,
+      "SENSIBLE": 3,
+      "OPERATIONNEL": 2,
+      "AMBITIEUX": 3
     },
     "macroScores": {
       "Leadership": 26,
-      "Diplomatie": 40,
-      "Opérationnel": 36,
-      "Autonomie": 40,
-      "Dépendance": 59
+      "Diplomatie": 31,
+      "Opérationnel": 54,
+      "Autonomie": 36,
+      "Dépendance": 54
     },
     "topTraits": [
       [
-        "AUTORITAIRE",
-        22
-      ],
-      [
-        "STRATEGIQUE",
-        22
-      ],
-      [
-        "SUIVEUR",
-        21
-      ],
-      [
-        "DIPLOMATE",
-        20
+        "PRAGMATIQUE",
+        24
       ],
       [
         "OBÉISSANT",
-        18
+        21
+      ],
+      [
+        "SUIVEUR",
+        20
+      ],
+      [
+        "RIGOUREUX",
+        20
+      ],
+      [
+        "STRATEGIQUE",
+        19
       ]
     ],
     "bottomTraits": [
       [
-        "HUMBLE",
+        "PÉDAGOGUE",
         2
       ],
       [
-        "PÉDAGOGUE",
-        1
+        "OPERATIONNEL",
+        2
       ],
       [
         "AUTONOME",
@@ -251,22 +253,22 @@
     ]
   },
   "PROFIL_15_ADJOINT_TECHNICIEN_FUITE": {
-    "dominantProfile": "PRAGMATIQUE",
-    "secondaryProfile": "DIPLOMATE",
+    "dominantProfile": "DIPLOMATE",
+    "secondaryProfile": "PRAGMATIQUE",
     "profileCounts": {},
     "specificScores": {},
     "dimensions": {
-      "RES": 53,
-      "EMP": 76,
-      "AUT": 34,
-      "INT": 70,
+      "RES": 50,
+      "EMP": 83,
+      "AUT": 47,
+      "INT": 68,
       "TOX": 0,
-      "ADA": 43,
-      "Leadership": 13,
-      "Diplomatie": 20,
-      "Opérationnel": 28,
-      "Autonomie": 19,
-      "Dépendance": 20
+      "ADA": 56,
+      "Leadership": 14,
+      "Diplomatie": 26,
+      "Opérationnel": 13,
+      "Autonomie": 24,
+      "Dépendance": 23
     },
     "globalScore": 20,
     "reliability": 100,
@@ -291,129 +293,125 @@
     "synthesis": {
       "strengths": [
         {
-          "label": "Pragmatique",
-          "text": "Trait dominant avec 17% de présence sur 100 questions."
+          "label": "Diplomate",
+          "text": "Trait dominant avec 20% de présence sur 100 questions."
         },
         {
-          "label": "Diplomate",
-          "text": "Trait dominant avec 13% de présence sur 100 questions."
+          "label": "Pragmatique",
+          "text": "Trait dominant avec 12% de présence sur 100 questions."
         },
         {
           "label": "Franc",
-          "text": "Trait dominant avec 11% de présence sur 100 questions."
+          "text": "Trait dominant avec 12% de présence sur 100 questions."
         }
       ],
       "weaknesses": [
         {
-          "label": "Suiveur",
+          "label": "Autoritaire",
           "text": "Trait faible avec 2% de présence. Axe de développement potentiel."
         },
         {
-          "label": "Flexible",
+          "label": "Suiveur",
           "text": "Trait faible avec 1% de présence. Axe de développement potentiel."
         },
         {
-          "label": "Visionnaire",
+          "label": "Rigoureux",
           "text": "Trait faible avec 1% de présence. Axe de développement potentiel."
         }
       ]
     },
     "profileData": {
-      "title": "Pragmatique",
-      "desc": "Dominance PRAGMATIQUE / DIPLOMATE",
-      "full_text": "Sur 100 situations managériales, votre profil révèle une dominante pragmatique avec des tendances diplomate. Ce profil indique un style de management collaboratif avec une orientation stratégique."
+      "title": "Diplomate",
+      "desc": "Dominance DIPLOMATE / PRAGMATIQUE",
+      "full_text": "Sur 100 situations managériales, votre profil révèle une dominante diplomate avec des tendances pragmatique. Ce profil indique un style de management collaboratif avec une orientation stratégique."
     },
     "textAnswers": {},
-    "synthesisText": "Profil Manager : PRAGMATIQUE/DIPLOMATE — Score 20/100. PROFIL EN DÉVELOPPEMENT. Potentiel à confirmer sur le terrain.",
+    "synthesisText": "Profil Manager : DIPLOMATE/PRAGMATIQUE — Score 20/100. PROFIL EN DÉVELOPPEMENT. Potentiel à confirmer sur le terrain.",
     "hasTraitData": true,
     "traitCounts": {
-      "PROTECTEUR": 4,
-      "OBÉISSANT": 8,
-      "AUTORITAIRE": 3,
-      "LEADER": 5,
-      "HUMBLE": 6,
-      "DIPLOMATE": 13,
-      "AUTONOME": 8,
+      "PRAGMATIQUE": 12,
+      "FRANC": 12,
+      "FLEXIBLE": 3,
+      "LEADER": 6,
+      "DIPLOMATE": 20,
+      "AUTONOME": 12,
+      "OBÉISSANT": 9,
       "SENSIBLE": 6,
-      "FRANC": 11,
-      "RÉSILIENT": 5,
-      "PRAGMATIQUE": 17,
-      "SUIVEUR": 2,
-      "RIGOUREUX": 6,
-      "AMBITIEUX": 4,
-      "FLEXIBLE": 1,
-      "VISIONNAIRE": 1
+      "PROTECTEUR": 7,
+      "AUTORITAIRE": 2,
+      "HUMBLE": 3,
+      "SUIVEUR": 1,
+      "AMBITIEUX": 6,
+      "RIGOUREUX": 1
     },
     "traitPercentages": {
-      "PROTECTEUR": 4,
-      "OBÉISSANT": 8,
-      "AUTORITAIRE": 3,
-      "LEADER": 5,
-      "HUMBLE": 6,
-      "DIPLOMATE": 13,
-      "AUTONOME": 8,
+      "PRAGMATIQUE": 12,
+      "FRANC": 12,
+      "FLEXIBLE": 3,
+      "LEADER": 6,
+      "DIPLOMATE": 20,
+      "AUTONOME": 12,
+      "OBÉISSANT": 9,
       "SENSIBLE": 6,
-      "FRANC": 11,
-      "RÉSILIENT": 5,
-      "PRAGMATIQUE": 17,
-      "SUIVEUR": 2,
-      "RIGOUREUX": 6,
-      "AMBITIEUX": 4,
-      "FLEXIBLE": 1,
-      "VISIONNAIRE": 1
+      "PROTECTEUR": 7,
+      "AUTORITAIRE": 2,
+      "HUMBLE": 3,
+      "SUIVEUR": 1,
+      "AMBITIEUX": 6,
+      "RIGOUREUX": 1
     },
     "macroScores": {
-      "Leadership": 13,
-      "Diplomatie": 20,
-      "Opérationnel": 28,
-      "Autonomie": 19,
-      "Dépendance": 20
+      "Leadership": 14,
+      "Diplomatie": 26,
+      "Opérationnel": 13,
+      "Autonomie": 24,
+      "Dépendance": 23
     },
     "topTraits": [
       [
-        "PRAGMATIQUE",
-        17
+        "DIPLOMATE",
+        20
       ],
       [
-        "DIPLOMATE",
-        13
+        "PRAGMATIQUE",
+        12
       ],
       [
         "FRANC",
-        11
-      ],
-      [
-        "OBÉISSANT",
-        8
+        12
       ],
       [
         "AUTONOME",
-        8
+        12
+      ],
+      [
+        "OBÉISSANT",
+        9
       ]
     ],
     "bottomTraits": [
       [
-        "SUIVEUR",
+        "AUTORITAIRE",
         2
       ],
       [
-        "FLEXIBLE",
+        "SUIVEUR",
         1
       ],
       [
-        "VISIONNAIRE",
+        "RIGOUREUX",
         1
       ]
     ]
   },
   "PROFIL_16_CHEF_RANG_CYNIQUE": {
     "dominantProfile": "PIRATE",
-    "secondaryProfile": "SHOWMAN",
+    "secondaryProfile": "MÉTRONOME",
     "profileCounts": {
-      "MÉTRONOME": 5,
+      "CONFIDENT": 5,
+      "SHOWMAN": 8,
       "PIRATE": 13,
-      "CONFIDENT": 8,
-      "SHOWMAN": 9
+      "MÉTRONOME": 9
     },
     "specificScores": {
       "ACCUEIL": 50,
@@ -449,12 +447,12 @@
       "EMPATHIE": 50
     },
     "dimensions": {
-      "RES": 44,
+      "RES": 67,
       "EMP": 100,
       "AUT": 50,
-      "INT": 26,
-      "TOX": 36,
-      "ADA": 65,
+      "INT": 33,
+      "TOX": 30,
+      "ADA": 57,
       "ACCUEIL": 50,
       "AUTORITÉ": 50,
       "VENTE": 50,
@@ -487,13 +485,13 @@
       "SINCÉRITÉ": 50,
       "EMPATHIE": 50
     },
-    "globalScore": 54,
+    "globalScore": 62,
     "reliability": 100,
     "verdict": "PROFIL STANDARD. Potentiel à confirmer.",
     "verdictColor": "text-blue-600",
     "adaptabilityVerdict": "ADAPTABILITÉ MODÉRÉE. Préfère un cadre stable mais peut gérer l'imprévu sur de courtes durées.",
     "flags": [
-      "ALERTE : Intégrité & Fiabilité (Honnêteté et respect des process) Insuffisant"
+      "ALERTE : Intégrité & Fiabilité (Honnêteté et respect des process) Insuffisant (<50)"
     ],
     "roleConfig": {
       "focus": [
@@ -516,18 +514,18 @@
           "text": "Intelligence émotionnelle tactique. Sait désamorcer les conflits avant qu'ils n'éclatent."
         },
         {
-          "label": "Adaptabilité",
-          "text": "Haute plasticité mentale. S'ajuste immédiatement aux changements de rythme ou de poste."
+          "label": "Résilience",
+          "text": "Résistance au stress exceptionnelle. Maintient sa lucidité même en chaos opérationnel."
         }
       ],
       "weaknesses": [
         {
-          "label": "Intégrité",
-          "text": "Risque éthique. Tendance à accommoder les règles pour son confort personnel."
-        },
-        {
           "label": "Indice",
           "text": "Naïveté organisationnelle. Ne voit pas venir les jeux politiques ou les manipulations."
+        },
+        {
+          "label": "Intégrité",
+          "text": "Risque éthique. Tendance à accommoder les règles pour son confort personnel."
         }
       ]
     },
@@ -541,13 +539,13 @@
     "synthesisText": "Profil bascule vers PASSIF avec une fiabilité de 100%. PROFIL STANDARD. Potentiel à confirmer.."
   },
   "PROFIL_17_BARMAN_ZAPPEUR": {
-    "dominantProfile": "MÉTRONOME",
-    "secondaryProfile": "CONFIDENT",
+    "dominantProfile": "CONFIDENT",
+    "secondaryProfile": "SHOWMAN",
     "profileCounts": {
-      "CONFIDENT": 9,
-      "PIRATE": 8,
-      "MÉTRONOME": 10,
-      "SHOWMAN": 8
+      "CONFIDENT": 12,
+      "MÉTRONOME": 5,
+      "SHOWMAN": 10,
+      "PIRATE": 8
     },
     "specificScores": {
       "INTEGRITÉ": 50,
@@ -579,12 +577,12 @@
       "TECHNIQUE": 50
     },
     "dimensions": {
-      "RES": 52,
+      "RES": 60,
       "EMP": 100,
       "AUT": 50,
-      "INT": 41,
-      "TOX": 22,
-      "ADA": 46,
+      "INT": 31,
+      "TOX": 31,
+      "ADA": 57,
       "INTEGRITÉ": 50,
       "STRESS": 50,
       "PSYCHOLOGIE": 50,
@@ -613,13 +611,13 @@
       "ARGENT": 50,
       "TECHNIQUE": 50
     },
-    "globalScore": 56,
+    "globalScore": 59,
     "reliability": 100,
     "verdict": "PROFIL STANDARD. Potentiel à confirmer.",
     "verdictColor": "text-blue-600",
     "adaptabilityVerdict": "ADAPTABILITÉ MODÉRÉE. Préfère un cadre stable mais peut gérer l'imprévu sur de courtes durées.",
     "flags": [
-      "ALERTE : Intégrité & Fiabilité (Honnêteté et respect des process) Insuffisant"
+      "ALERTE : Intégrité & Fiabilité (Honnêteté et respect des process) Insuffisant (<50)"
     ],
     "roleConfig": {
       "focus": [
@@ -640,6 +638,10 @@
         {
           "label": "Empathie",
           "text": "Intelligence émotionnelle tactique. Sait désamorcer les conflits avant qu'ils n'éclatent."
+        },
+        {
+          "label": "Résilience",
+          "text": "Résistance au stress exceptionnelle. Maintient sa lucidité même en chaos opérationnel."
         }
       ],
       "weaknesses": [
@@ -664,29 +666,28 @@
   },
   "PROFIL_18_SERVEUR_ETE": {
     "dominantProfile": "PRAGMATIQUE",
-    "secondaryProfile": "DISCRET",
+    "secondaryProfile": "OBÉISSANT",
     "profileCounts": {
-      "CONCILIANT": 6,
-      "PRAGMATIQUE": 22,
-      "MENEUR": 4,
-      "COMMERCIAL": 6,
-      "RIGOUREUX": 8,
+      "SENSIBLE": 5,
+      "PRAGMATIQUE": 19,
       "RÉSILIENT": 6,
-      "OBÉISSANT": 7,
-      "DÉBROUILLARD": 3,
+      "OBÉISSANT": 10,
+      "RIGOUREUX": 9,
+      "DÉBROUILLARD": 4,
+      "AFFIRMÉ": 10,
       "RAPIDE": 1,
       "TECHNIQUE": 3,
-      "DISCRET": 9,
-      "CHALEUREUX": 7,
-      "SENSIBLE": 4,
-      "AFFIRMÉ": 7,
-      "AUTONOME": 5,
-      "SUIVEUR": 1,
+      "DISCRET": 5,
+      "CHALEUREUX": 8,
+      "COMMERCIAL": 7,
+      "MENEUR": 6,
+      "AUTONOME": 4,
+      "CONCILIANT": 2,
       "CRÉATIF": 1
     },
     "specificScores": {
       "RÉSILIENT": 50,
-      "OBÉISSANT": 54,
+      "OBÉISSANT": 50,
       "CONCILIANT": 50,
       "SENSIBLE": 50,
       "RIGOUREUX": 50,
@@ -701,14 +702,14 @@
       "AUTONOME": 50
     },
     "dimensions": {
-      "RES": 58,
-      "EMP": 65,
-      "AUT": 18,
-      "INT": 68,
+      "RES": 62,
+      "EMP": 70,
+      "AUT": 25,
+      "INT": 73,
       "TOX": 0,
       "ADA": 46,
       "RÉSILIENT": 50,
-      "OBÉISSANT": 54,
+      "OBÉISSANT": 50,
       "CONCILIANT": 50,
       "SENSIBLE": 50,
       "RIGOUREUX": 50,
@@ -722,7 +723,7 @@
       "DISCRET": 50,
       "AUTONOME": 50
     },
-    "globalScore": 59,
+    "globalScore": 63,
     "reliability": 100,
     "verdict": "PROFIL STANDARD. Potentiel à confirmer.",
     "verdictColor": "text-blue-600",
@@ -774,28 +775,30 @@
     "synthesisText": "Profil bascule vers PASSIF avec une fiabilité de 100%. PROFIL STANDARD. Potentiel à confirmer.."
   },
   "PROFIL_19_SERVEUR_SYMPA_OUBLI": {
-    "dominantProfile": "PRAGMATIQUE",
-    "secondaryProfile": "OBÉISSANT",
+    "dominantProfile": "OBÉISSANT",
+    "secondaryProfile": "AFFIRMÉ",
     "profileCounts": {
-      "AFFIRMÉ": 9,
-      "OBÉISSANT": 14,
-      "RÉSILIENT": 9,
-      "DÉBROUILLARD": 3,
-      "AUTONOME": 5,
-      "CHALEUREUX": 7,
-      "RIGOUREUX": 10,
-      "MENEUR": 4,
-      "COMMERCIAL": 11,
-      "PRAGMATIQUE": 15,
+      "CONCILIANT": 3,
+      "OBÉISSANT": 15,
+      "MENEUR": 5,
+      "DÉBROUILLARD": 2,
+      "RÉSILIENT": 3,
+      "AUTONOME": 6,
+      "RIGOUREUX": 11,
+      "COMMERCIAL": 8,
+      "ATTENTIF": 1,
+      "AFFIRMÉ": 14,
+      "SUIVEUR": 1,
       "TECHNIQUE": 2,
+      "PRAGMATIQUE": 10,
+      "SENSIBLE": 4,
       "DISCRET": 8,
       "CRÉATIF": 1,
-      "CONCILIANT": 1,
-      "SENSIBLE": 1
+      "CHALEUREUX": 6
     },
     "specificScores": {
-      "OBÉISSANT": 50,
       "RÉSILIENT": 50,
+      "OBÉISSANT": 54,
       "CONCILIANT": 50,
       "SENSIBLE": 50,
       "RIGOUREUX": 50,
@@ -810,14 +813,14 @@
       "AUTONOME": 50
     },
     "dimensions": {
-      "RES": 65,
-      "EMP": 63,
-      "AUT": 20,
-      "INT": 79,
+      "RES": 62,
+      "EMP": 66,
+      "AUT": 19,
+      "INT": 83,
       "TOX": 0,
-      "ADA": 44,
-      "OBÉISSANT": 50,
+      "ADA": 40,
       "RÉSILIENT": 50,
+      "OBÉISSANT": 54,
       "CONCILIANT": 50,
       "SENSIBLE": 50,
       "RIGOUREUX": 50,
@@ -835,7 +838,7 @@
     "reliability": 100,
     "verdict": "PROFIL STANDARD. Potentiel à confirmer.",
     "verdictColor": "text-blue-600",
-    "adaptabilityVerdict": "ADAPTABILITÉ MODÉRÉE. Préfère un cadre stable mais peut gérer l'imprévu sur de courtes durées.",
+    "adaptabilityVerdict": "RIGIDITÉ STRUCTURELLE. Besoin impératif de process fixes. Risque en cas de chaos.",
     "flags": [],
     "roleConfig": {
       "focus": [
@@ -858,8 +861,8 @@
           "text": "Rigueur morale exemplaire. Respect absolu des standards et de la hiérarchie."
         },
         {
-          "label": "Résilience",
-          "text": "Résistance au stress exceptionnelle. Maintient sa lucidité même en chaos opérationnel."
+          "label": "Empathie",
+          "text": "Intelligence émotionnelle tactique. Sait désamorcer les conflits avant qu'ils n'éclatent."
         }
       ],
       "weaknesses": [
@@ -883,22 +886,22 @@
     "synthesisText": "Profil bascule vers PASSIF avec une fiabilité de 100%. PROFIL STANDARD. Potentiel à confirmer.."
   },
   "PROFIL_20_MANAGER_MOYEN": {
-    "dominantProfile": "STRATEGIQUE",
+    "dominantProfile": "FLEXIBLE",
     "secondaryProfile": "RIGOUREUX",
     "profileCounts": {},
     "specificScores": {},
     "dimensions": {
-      "RES": 62,
-      "EMP": 59,
-      "AUT": 55,
-      "INT": 65,
+      "RES": 63,
+      "EMP": 64,
+      "AUT": 49,
+      "INT": 69,
       "TOX": 0,
-      "ADA": 53,
-      "Leadership": 26,
-      "Diplomatie": 46,
-      "Opérationnel": 49,
-      "Autonomie": 47,
-      "Dépendance": 34
+      "ADA": 52,
+      "Leadership": 25,
+      "Diplomatie": 60,
+      "Opérationnel": 51,
+      "Autonomie": 27,
+      "Dépendance": 39
     },
     "globalScore": 40,
     "reliability": 100,
@@ -923,121 +926,123 @@
     "synthesis": {
       "strengths": [
         {
-          "label": "Strategique",
-          "text": "Trait dominant avec 25% de présence sur 100 questions."
+          "label": "Flexible",
+          "text": "Trait dominant avec 27% de présence sur 100 questions."
         },
         {
           "label": "Rigoureux",
           "text": "Trait dominant avec 21% de présence sur 100 questions."
         },
         {
-          "label": "Autoritaire",
-          "text": "Trait dominant avec 21% de présence sur 100 questions."
+          "label": "Pragmatique",
+          "text": "Trait dominant avec 20% de présence sur 100 questions."
         }
       ],
       "weaknesses": [
         {
           "label": "Autonome",
-          "text": "Trait faible avec 2% de présence. Axe de développement potentiel."
+          "text": "Trait faible avec 1% de présence. Axe de développement potentiel."
         },
         {
-          "label": "Obéissant",
-          "text": "Trait faible avec 2% de présence. Axe de développement potentiel."
+          "label": "Operationnel",
+          "text": "Trait faible avec 1% de présence. Axe de développement potentiel."
         },
         {
-          "label": "Visionnaire",
+          "label": "Ambitieux",
           "text": "Trait faible avec 1% de présence. Axe de développement potentiel."
         }
       ]
     },
     "profileData": {
-      "title": "Strategique",
-      "desc": "Dominance STRATEGIQUE / RIGOUREUX",
-      "full_text": "Sur 100 situations managériales, votre profil révèle une dominante strategique avec des tendances rigoureux. Ce profil indique un style de management collaboratif avec une orientation opérationnelle marquée."
+      "title": "Flexible",
+      "desc": "Dominance FLEXIBLE / RIGOUREUX",
+      "full_text": "Sur 100 situations managériales, votre profil révèle une dominante flexible avec des tendances rigoureux. Ce profil indique un style de management collaboratif avec une orientation opérationnelle marquée."
     },
     "textAnswers": {},
-    "synthesisText": "Profil Manager : STRATEGIQUE/RIGOUREUX — Score 40/100. PROFIL DIPLOMATE. Bonne gestion humaine, leadership à renforcer.",
+    "synthesisText": "Profil Manager : FLEXIBLE/RIGOUREUX — Score 40/100. PROFIL DIPLOMATE. Bonne gestion humaine, leadership à renforcer.",
     "hasTraitData": true,
     "traitCounts": {
-      "PÉDAGOGUE": 4,
-      "FLEXIBLE": 20,
-      "DIPLOMATE": 14,
-      "HUMBLE": 8,
-      "STRATEGIQUE": 25,
-      "PROTECTEUR": 17,
-      "SENSIBLE": 10,
+      "AUTONOME": 1,
+      "LEADER": 6,
+      "RÉSILIENT": 9,
+      "FLEXIBLE": 27,
+      "SENSIBLE": 13,
+      "SUIVEUR": 14,
+      "PROTECTEUR": 10,
+      "PRAGMATIQUE": 20,
       "FRANC": 14,
       "RIGOUREUX": 21,
-      "PRAGMATIQUE": 20,
-      "AUTORITAIRE": 21,
-      "LEADER": 4,
-      "EXIGEANT": 6,
-      "AUTONOME": 2,
-      "SUIVEUR": 5,
-      "RÉSILIENT": 8,
-      "VISIONNAIRE": 1,
-      "OBÉISSANT": 2
+      "DIPLOMATE": 20,
+      "HUMBLE": 8,
+      "PÉDAGOGUE": 5,
+      "AUTORITAIRE": 18,
+      "EXIGEANT": 5,
+      "STRATEGIQUE": 7,
+      "OPERATIONNEL": 1,
+      "OBÉISSANT": 2,
+      "AMBITIEUX": 1
     },
     "traitPercentages": {
-      "PÉDAGOGUE": 4,
-      "FLEXIBLE": 20,
-      "DIPLOMATE": 14,
-      "HUMBLE": 8,
-      "STRATEGIQUE": 25,
-      "PROTECTEUR": 17,
-      "SENSIBLE": 10,
+      "AUTONOME": 1,
+      "LEADER": 6,
+      "RÉSILIENT": 9,
+      "FLEXIBLE": 27,
+      "SENSIBLE": 13,
+      "SUIVEUR": 14,
+      "PROTECTEUR": 10,
+      "PRAGMATIQUE": 20,
       "FRANC": 14,
       "RIGOUREUX": 21,
-      "PRAGMATIQUE": 20,
-      "AUTORITAIRE": 21,
-      "LEADER": 4,
-      "EXIGEANT": 6,
-      "AUTONOME": 2,
-      "SUIVEUR": 5,
-      "RÉSILIENT": 8,
-      "VISIONNAIRE": 1,
-      "OBÉISSANT": 2
+      "DIPLOMATE": 20,
+      "HUMBLE": 8,
+      "PÉDAGOGUE": 5,
+      "AUTORITAIRE": 18,
+      "EXIGEANT": 5,
+      "STRATEGIQUE": 7,
+      "OPERATIONNEL": 1,
+      "OBÉISSANT": 2,
+      "AMBITIEUX": 1
     },
     "macroScores": {
-      "Leadership": 26,
-      "Diplomatie": 46,
-      "Opérationnel": 49,
-      "Autonomie": 47,
-      "Dépendance": 34
+      "Leadership": 25,
+      "Diplomatie": 60,
+      "Opérationnel": 51,
+      "Autonomie": 27,
+      "Dépendance": 39
     },
     "topTraits": [
       [
-        "STRATEGIQUE",
-        25
+        "FLEXIBLE",
+        27
       ],
       [
         "RIGOUREUX",
         21
       ],
       [
-        "AUTORITAIRE",
-        21
-      ],
-      [
-        "FLEXIBLE",
-        20
-      ],
-      [
         "PRAGMATIQUE",
         20
+      ],
+      [
+        "DIPLOMATE",
+        20
+      ],
+      [
+        "AUTORITAIRE",
+        18
       ]
     ],
     "bottomTraits": [
       [
         "AUTONOME",
-        2
+        1
       ],
       [
-        "OBÉISSANT",
-        2
+        "OPERATIONNEL",
+        1
       ],
       [
-        "VISIONNAIRE",
+        "AMBITIEUX",
         1
       ]
     ]

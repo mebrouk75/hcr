@@ -1,10 +1,11 @@
 /* SENTINEL v3.0 - MULTI-ROLE DATASET */
 import { DIRECTOR_PHASE3_DATA } from './director_phase3_data.js';
 import { CHEF_RANG_DATA } from './chef_de_rang_data.js';
-import { FULL_SERVEUR } from './serveur_data_v2.js';
+import { FULL_SERVEUR as BASE_SERVEUR } from './serveur_data_v2.js';
 import { MANAGER_ADJOINT_DATA } from './manager_adjoint_data.js';
 import { MBTI_MANAGER_ADJOINT_DATA } from './mbti_manager_adjoint_data.js';
 import { MANAGER_PRINCIPAL_SENTINEL_DATA } from './manager_principal_sentinel_data.js';
+import { BARMAN_DIMENSIONS, SERVEUR_DIMENSIONS, CHEF_RANG_DIMENSIONS, MANAGER_ADJOINT_DIMENSIONS, MANAGER_PRINCIPAL_DIMENSIONS } from './dimensions_data.js';
 
 export const HCR_ROLES = [
     { id: 'BARMAN', label: 'Barman / Barmaid', icon: 'Martini' },
@@ -28,10 +29,10 @@ const BARMAN_DATA = [
                 description: "Un client habituel te demande un 'petit extra' gratuit dans son verre.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je refuse net. C'est du vol, point barre.", value: "B", profile: "MÉTRONOME" },
-                    { label: "J'accepte, c'est lui qui me fait vivre avec ses pourboires.", value: "D", profile: "PIRATE" },
-                    { label: "Je lui offre carrément le verre entier, ça me fait plaisir.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui dis oui pour cette fois, mais je le note sur mon ardoise perso.", value: "C", profile: "SHOWMAN" }
+                    { label: "Je refuse net. C'est du vol, point barre.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "J'accepte, c'est lui qui me fait vivre avec ses pourboires.", value: "D", profile: "PIRATE", trait: "MERCENAIRE" },
+                    { label: "Je lui offre carrément le verre entier, ça me fait plaisir.", value: "A", profile: "CONFIDENT", trait: "HUMBLE" },
+                    { label: "Je lui dis oui pour cette fois, mais je le note sur mon ardoise perso.", value: "C", profile: "SHOWMAN", trait: "FRANC" }
                 ]
             },
             {
@@ -41,10 +42,10 @@ const BARMAN_DATA = [
                 description: "Un verre éclate près du bac à glaçons en plein rush.",
                 type: "SJT",
                 options: [
-                    { label: "Je continue à servir en faisant attention, pas le temps de tout vider.", value: "D", profile: "PIRATE" },
-                    { label: "Je stoppe tout immédiatement. Sécurité avant tout, on vide le bac.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je panique et j'appelle le manager à l'aide.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je gueule un coup pour évacuer la pression et je nettoie vite fait.", value: "C", profile: "SHOWMAN" }
+                    { label: "Je continue à servir en faisant attention, pas le temps de tout vider.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je stoppe tout immédiatement. Sécurité avant tout, on vide le bac.", value: "B", profile: "MÉTRONOME", trait: "RÉSILIENT" },
+                    { label: "Je panique et j'appelle le manager à l'aide.", value: "A", profile: "CONFIDENT", trait: "SENSIBLE" },
+                    { label: "Je gueule un coup pour évacuer la pression et je nettoie vite fait.", value: "C", profile: "SHOWMAN", trait: "LEADER" }
                 ]
             },
             {
@@ -54,10 +55,10 @@ const BARMAN_DATA = [
                 description: "Un client seul semble très triste et commande beaucoup.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je continue à le servir tant qu'il paie, c'est du chiffre.", value: "D", profile: "PIRATE" },
-                    { label: "Je m'assois avec lui 5 minutes pour l'écouter.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui refuse la prochaine commande. Responsabilité civile.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je lui offre un shot pour lui remonter le moral !", value: "C", profile: "SHOWMAN" }
+                    { label: "Je continue à le servir tant qu'il paie, c'est du chiffre.", value: "D", profile: "PIRATE", trait: "FROID" },
+                    { label: "Je m'assois avec lui 5 minutes pour l'écouter.", value: "A", profile: "CONFIDENT", trait: "PROTECTEUR" },
+                    { label: "Je lui refuse la prochaine commande. Responsabilité civile.", value: "B", profile: "MÉTRONOME", trait: "PROTECTEUR" },
+                    { label: "Je lui offre un shot pour lui remonter le moral !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -67,10 +68,10 @@ const BARMAN_DATA = [
                 description: "Tu vois un collègue serveur boire un shot en cachette derrière ton bar.",
                 type: "SJT",
                 options: [
-                    { label: "Je le dénonce tout de suite au manager.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je lui en sers un deuxième pour qu'on trinquent !", value: "D", profile: "PIRATE" },
-                    { label: "Je fais semblant de rien voir, je ne veux pas d'histoires.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je l'engueule : 'C'est MON bar ici !'", value: "C", profile: "SHOWMAN" }
+                    { label: "Je le dénonce tout de suite au manager.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je lui en sers un deuxième pour qu'on trinquent !", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je fais semblant de rien voir, je ne veux pas d'histoires.", value: "A", profile: "CONFIDENT", trait: "HUMBLE" },
+                    { label: "Je l'engueule : 'C'est MON bar ici !'", value: "C", profile: "SHOWMAN", trait: "FRANC" }
                 ]
             },
             {
@@ -80,10 +81,10 @@ const BARMAN_DATA = [
                 description: "Pour envoyer 10 cocktails en 2 minutes, tu acceptes de ne pas utiliser le doseur ?",
                 type: "DILEMME",
                 options: [
-                    { label: "Jamais. La recette doit être précise au millilitre près.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Bien sûr, je fais tout au 'free pour', ça va plus vite.", value: "D", profile: "PIRATE" },
-                    { label: "Je fais un show avec les bouteilles, tant pis pour le dosage.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je stresse et je tremble un peu, mais j'essaie.", value: "A", profile: "CONFIDENT" }
+                    { label: "Jamais. La recette doit être précise au millilitre près.", value: "B", profile: "MÉTRONOME", trait: "PRAGMATIQUE" },
+                    { label: "Bien sûr, je fais tout au 'free pour', ça va plus vite.", value: "D", profile: "PIRATE", trait: "RAPIDE" },
+                    { label: "Je fais un show avec les bouteilles, tant pis pour le dosage.", value: "C", profile: "SHOWMAN", trait: "RAPIDE" },
+                    { label: "Je stresse et je tremble un peu, mais j'essaie.", value: "A", profile: "CONFIDENT", trait: "SUIVEUR" }
                 ]
             },
             {
@@ -93,10 +94,10 @@ const BARMAN_DATA = [
                 description: "Un client critique ton cocktail signature.",
                 type: "SJT",
                 options: [
-                    { label: "Je m'excuse platement et je lui en refais un autre.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui explique techniquement pourquoi il a tort.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je m'en fous, tant qu'il paie.", value: "D", profile: "PIRATE" },
-                    { label: "Je lui propose la fiche technique pour qu'il vérifie la recette.", value: "B", profile: "MÉTRONOME" }
+                    { label: "Je m'excuse platement et je lui en refais un autre.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui explique techniquement pourquoi il a tort.", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "Je m'en fous, tant qu'il paie.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je lui propose la fiche technique pour qu'il vérifie la recette.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" }
                 ]
             },
             {
@@ -106,10 +107,10 @@ const BARMAN_DATA = [
                 description: "Tu trouves 50€ par terre derrière le bar.",
                 type: "SJT",
                 options: [
-                    { label: "Hop, dans ma poche. Trouvé, gardé.", value: "D", profile: "PIRATE" },
-                    { label: "Je les mets dans le pot commun des pourboires.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je les donne au manager pour la caisse.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je paie une tournée générale avec !", value: "C", profile: "SHOWMAN" }
+                    { label: "Hop, dans ma poche. Trouvé, gardé.", value: "D", profile: "PIRATE", trait: "MERCENAIRE" },
+                    { label: "Je les mets dans le pot commun des pourboires.", value: "A", profile: "CONFIDENT", trait: "LOYAL" },
+                    { label: "Je les donne au manager pour la caisse.", value: "B", profile: "MÉTRONOME", trait: "LOYAL" },
+                    { label: "Je paie une tournée générale avec !", value: "C", profile: "SHOWMAN", trait: "AMBITIEUX" }
                 ]
             },
             {
@@ -119,10 +120,10 @@ const BARMAN_DATA = [
                 description: "Tu touches de la monnaie sale puis tu dois préparer une déco citron.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je me lave les mains 30 secondes au savon. Obligatoire.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Un petit coup d'eau rapide et c'est bon.", value: "D", profile: "PIRATE" },
-                    { label: "Je prends le citron avec une pince, je suis pro.", value: "C", profile: "SHOWMAN" },
-                    { label: "J'oublie souvent, je suis tellement concentré sur le client...", value: "A", profile: "CONFIDENT" }
+                    { label: "Je me lave les mains 30 secondes au savon. Obligatoire.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Un petit coup d'eau rapide et c'est bon.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je prends le citron avec une pince, je suis pro.", value: "C", profile: "SHOWMAN", trait: "EXIGEANT" },
+                    { label: "J'oublie souvent, je suis tellement concentré sur le client...", value: "A", profile: "CONFIDENT", trait: "OBÉISSANT" }
                 ]
             },
             {
@@ -132,10 +133,10 @@ const BARMAN_DATA = [
                 description: "Après 10h de shift, tu es capable de sourire avec la même sincérité qu'à l'ouverture ?",
                 type: "DILEMME",
                 options: [
-                    { label: "Non, je fais la gueule, je suis humain.", value: "D", profile: "PIRATE" },
-                    { label: "Oui, le client n'y est pour rien. Professionnalisme.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je suis épuisé mais je continue à écouter les clients.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je carbure à l'adrénaline, je suis encore plus fou !", value: "C", profile: "SHOWMAN" }
+                    { label: "Non, je fais la gueule, je suis humain.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Oui, le client n'y est pour rien. Professionnalisme.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je suis épuisé mais je continue à écouter les clients.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je carbure à l'adrénaline, je suis encore plus fou !", value: "C", profile: "SHOWMAN", trait: "AFFIRMÉ" }
                 ]
             },
             {
@@ -145,10 +146,10 @@ const BARMAN_DATA = [
                 description: "Un client ivre devient lourd avec une cliente.",
                 type: "SJT",
                 options: [
-                    { label: "Je saute par-dessus le bar pour le virer moi-même.", value: "C", profile: "SHOWMAN" },
-                    { label: "J'appelle la sécurité ou le manager. Procédure.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je demande gentiment à la cliente si ça va...", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui sers un dernier verre bien chargé pour l'assommer.", value: "D", profile: "PIRATE" }
+                    { label: "Je saute par-dessus le bar pour le virer moi-même.", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "J'appelle la sécurité ou le manager. Procédure.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je demande gentiment à la cliente si ça va...", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui sers un dernier verre bien chargé pour l'assommer.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" }
                 ]
             },
             {
@@ -158,10 +159,10 @@ const BARMAN_DATA = [
                 description: "Tu peux servir 5 verres identiques à l'œil nu ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Non, j'utilise toujours un jigger (doseur).", value: "B", profile: "MÉTRONOME" },
-                    { label: "Oui, j'ai le compas dans l'œil.", value: "D", profile: "PIRATE" },
-                    { label: "Je préfère en mettre un peu plus pour faire plaisir.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je les aligne et je verse en cascade, ça impressionne !", value: "C", profile: "SHOWMAN" }
+                    { label: "Non, j'utilise toujours un jigger (doseur).", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Oui, j'ai le compas dans l'œil.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je préfère en mettre un peu plus pour faire plaisir.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je les aligne et je verse en cascade, ça impressionne !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -171,10 +172,10 @@ const BARMAN_DATA = [
                 description: "Tu proposes l'alcool le plus cher sans que le client le demande.",
                 type: "DILEMME",
                 options: [
-                    { label: "Toujours. C'est comme ça qu'on fait du chiffre.", value: "D", profile: "PIRATE" },
-                    { label: "Jamais, je respecte le budget du client.", value: "A", profile: "CONFIDENT" },
-                    { label: "Seulement si c'est pertinent pour le cocktail.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je vends celui qui a la plus belle bouteille pour le style.", value: "C", profile: "SHOWMAN" }
+                    { label: "Toujours. C'est comme ça qu'on fait du chiffre.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Jamais, je respecte le budget du client.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Seulement si c'est pertinent pour le cocktail.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je vends celui qui a la plus belle bouteille pour le style.", value: "C", profile: "SHOWMAN", trait: "AFFIRMÉ" }
                 ]
             },
             {
@@ -184,10 +185,10 @@ const BARMAN_DATA = [
                 description: "La salle coule, mais ton bar est calme.",
                 type: "SJT",
                 options: [
-                    { label: "Je sors de mon bar pour aller porter des assiettes.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je reste à mon poste. Chacun son job.", value: "B", profile: "MÉTRONOME" },
-                    { label: "J'en profite pour faire mes comptes ou pause clope.", value: "D", profile: "PIRATE" },
-                    { label: "Je prépare des plateaux de shots pour motiver les serveurs !", value: "C", profile: "SHOWMAN" }
+                    { label: "Je sors de mon bar pour aller porter des assiettes.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je reste à mon poste. Chacun son job.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "J'en profite pour faire mes comptes ou pause clope.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je prépare des plateaux de shots pour motiver les serveurs !", value: "C", profile: "SHOWMAN", trait: "LEADER" }
                 ]
             },
             {
@@ -197,10 +198,10 @@ const BARMAN_DATA = [
                 description: "Tu offres un verre à un ami sans l'accord du patron ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Jamais. Tout doit être ticketé.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Souvent. C'est mes potes, c'est normal.", value: "D", profile: "PIRATE" },
-                    { label: "Je lui offre, mais je le paie de ma poche.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui sers le cocktail le plus complexe pour frimer.", value: "C", profile: "SHOWMAN" }
+                    { label: "Jamais. Tout doit être ticketé.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Souvent. C'est mes potes, c'est normal.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je lui offre, mais je le paie de ma poche.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui sers le cocktail le plus complexe pour frimer.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -210,10 +211,10 @@ const BARMAN_DATA = [
                 description: "Un serveur te crie dessus pour avoir sa commande.",
                 type: "STANDARD",
                 options: [
-                    { label: "Je lui crie dessus plus fort.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je l'ignore et je sers le client au comptoir d'abord.", value: "D", profile: "PIRATE" },
-                    { label: "Je lui dis calmement d'attendre son tour. Ordre d'arrivée.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je me dépêche de le servir pour qu'il se calme.", value: "A", profile: "CONFIDENT" }
+                    { label: "Je lui crie dessus plus fort.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Je l'ignore et je sers le client au comptoir d'abord.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je lui dis calmement d'attendre son tour. Ordre d'arrivée.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je me dépêche de le servir pour qu'il se calme.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" }
                 ]
             },
             {
@@ -223,10 +224,10 @@ const BARMAN_DATA = [
                 description: "Tu sais ce que le client va boire avant qu'il ne parle ?",
                 type: "PSYCHOLOGIQUE",
                 options: [
-                    { label: "Oui, je juge à l'apparence. Souvent juste.", value: "C", profile: "SHOWMAN" },
-                    { label: "Non, j'attends sa commande exacte.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je sens son humeur et je propose en fonction.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je propose le truc le plus rapide à faire.", value: "D", profile: "PIRATE" }
+                    { label: "Oui, je juge à l'apparence. Souvent juste.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Non, j'attends sa commande exacte.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je sens son humeur et je propose en fonction.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je propose le truc le plus rapide à faire.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -236,10 +237,10 @@ const BARMAN_DATA = [
                 description: "Tu nettoies tes becs de tirage à 3h du matin ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Oui, tous les soirs. Hygiène irréprochable.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Non, ça attendra demain midi.", value: "D", profile: "PIRATE" },
-                    { label: "Je le fais si j'ai encore de l'énergie.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je paie le barback pour le faire à ma place.", value: "C", profile: "SHOWMAN" }
+                    { label: "Oui, tous les soirs. Hygiène irréprochable.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Non, ça attendra demain midi.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je le fais si j'ai encore de l'énergie.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je paie le barback pour le faire à ma place.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -249,10 +250,10 @@ const BARMAN_DATA = [
                 description: "Tu entends une conversation confidentielle importante.",
                 type: "SJT",
                 options: [
-                    { label: "Je n'écoute pas, je fais mon travail.", value: "B", profile: "MÉTRONOME" },
-                    { label: "J'écoute tout et je le répète aux collègues !", value: "C", profile: "SHOWMAN" },
-                    { label: "Je garde ça pour moi, je suis une tombe.", value: "A", profile: "CONFIDENT" },
-                    { label: "Si ça peut me servir, je note l'info.", value: "D", profile: "PIRATE" }
+                    { label: "Je n'écoute pas, je fais mon travail.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "J'écoute tout et je le répète aux collègues !", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "Je garde ça pour moi, je suis une tombe.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Si ça peut me servir, je note l'info.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" }
                 ]
             },
             {
@@ -262,10 +263,10 @@ const BARMAN_DATA = [
                 description: "Un client veut un cocktail qui n'existe pas.",
                 type: "INVENTIF",
                 options: [
-                    { label: "Je refuse. On ne fait que la carte.", value: "B", profile: "MÉTRONOME" },
-                    { label: "J'invente un truc incroyable sur le moment !", value: "C", profile: "SHOWMAN" },
-                    { label: "Je lui demande ce qu'il aime et j'essaie de faire plaisir.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui sers un mélange fond de bouteille et je lui donne un nom cool.", value: "D", profile: "PIRATE" }
+                    { label: "Je refuse. On ne fait que la carte.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "J'invente un truc incroyable sur le moment !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Je lui demande ce qu'il aime et j'essaie de faire plaisir.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui sers un mélange fond de bouteille et je lui donne un nom cool.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -275,10 +276,10 @@ const BARMAN_DATA = [
                 description: "Tu préfères être le barman le plus rapide ou le plus apprécié ?",
                 type: "VALEURS",
                 options: [
-                    { label: "Le plus rapide. Time is money.", value: "D", profile: "PIRATE" },
-                    { label: "Le plus apprécié. J'aime les gens.", value: "A", profile: "CONFIDENT" },
-                    { label: "Le plus technique. La perfection.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Le plus célèbre. Je veux être une star.", value: "C", profile: "SHOWMAN" }
+                    { label: "Le plus rapide. Time is money.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Le plus apprécié. J'aime les gens.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Le plus technique. La perfection.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Le plus célèbre. Je veux être une star.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -288,10 +289,10 @@ const BARMAN_DATA = [
                 description: "Tu vérifies le ticket de caisse de chaque boisson ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Toujours. Pas de ticket, pas de boisson.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Rarement. Je fais confiance à ma mémoire.", value: "D", profile: "PIRATE" },
-                    { label: "Seulement quand le chef est là.", value: "C", profile: "SHOWMAN" },
-                    { label: "Si le serveur a l'air débordé, je l'aide sans ticket.", value: "A", profile: "CONFIDENT" }
+                    { label: "Toujours. Pas de ticket, pas de boisson.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Rarement. Je fais confiance à ma mémoire.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Seulement quand le chef est là.", value: "C", profile: "SHOWMAN", trait: "EXIGEANT" },
+                    { label: "Si le serveur a l'air débordé, je l'aide sans ticket.", value: "A", profile: "CONFIDENT", trait: "OBÉISSANT" }
                 ]
             },
             {
@@ -301,10 +302,10 @@ const BARMAN_DATA = [
                 description: "La machine à glaçons tombe en panne en plein mois d'août.",
                 type: "SJT",
                 options: [
-                    { label: "C'est la catastrophe, je ne sais plus quoi faire.", value: "A", profile: "CONFIDENT" },
-                    { label: "J'appelle le réparateur et je note l'incident.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je vais acheter des sacs de glace au supermarché du coin.", value: "D", profile: "PIRATE" },
-                    { label: "J'improvise des cocktails chauds ou sans glace, concept !", value: "C", profile: "SHOWMAN" }
+                    { label: "C'est la catastrophe, je ne sais plus quoi faire.", value: "A", profile: "CONFIDENT", trait: "SENSIBLE" },
+                    { label: "J'appelle le réparateur et je note l'incident.", value: "B", profile: "MÉTRONOME", trait: "RÉSILIENT" },
+                    { label: "Je vais acheter des sacs de glace au supermarché du coin.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "J'improvise des cocktails chauds ou sans glace, concept !", value: "C", profile: "SHOWMAN", trait: "LEADER" }
                 ]
             },
             {
@@ -314,10 +315,10 @@ const BARMAN_DATA = [
                 description: "Un client trop bavard te tient la jambe.",
                 type: "STANDARD",
                 options: [
-                    { label: "Je l'écoute patiemment, je n'ose pas le couper.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui dis cash que j'ai du boulot.", value: "D", profile: "PIRATE" },
-                    { label: "Je continue à bosser en hochant la tête poliment.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je m'en sers comme public pour mes blagues !", value: "C", profile: "SHOWMAN" }
+                    { label: "Je l'écoute patiemment, je n'ose pas le couper.", value: "A", profile: "CONFIDENT", trait: "PROTECTEUR" },
+                    { label: "Je lui dis cash que j'ai du boulot.", value: "D", profile: "PIRATE", trait: "FROID" },
+                    { label: "Je continue à bosser en hochant la tête poliment.", value: "B", profile: "MÉTRONOME", trait: "PROTECTEUR" },
+                    { label: "Je m'en sers comme public pour mes blagues !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -327,10 +328,10 @@ const BARMAN_DATA = [
                 description: "Une femme enceinte commande un cocktail alcoolisé.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je refuse de servir. Responsabilité.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je sers. C'est son choix, pas mon problème.", value: "D", profile: "PIRATE" },
-                    { label: "Je lui propose gentiment un mocktail délicieux à la place.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui fais la morale devant tout le monde.", value: "C", profile: "SHOWMAN" }
+                    { label: "Je refuse de servir. Responsabilité.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je sers. C'est son choix, pas mon problème.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je lui propose gentiment un mocktail délicieux à la place.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui fais la morale devant tout le monde.", value: "C", profile: "SHOWMAN", trait: "AFFIRMÉ" }
                 ]
             },
             {
@@ -340,10 +341,10 @@ const BARMAN_DATA = [
                 description: "Tu consommes de l'alcool pendant ton service ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Jamais. Interdit et dangereux.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Un petit shot de temps en temps pour l'énergie.", value: "D", profile: "PIRATE" },
-                    { label: "Seulement si un client me l'offre.", value: "A", profile: "CONFIDENT" },
-                    { label: "Oui, je suis le meilleur client de mon bar !", value: "C", profile: "SHOWMAN" }
+                    { label: "Jamais. Interdit et dangereux.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Un petit shot de temps en temps pour l'énergie.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Seulement si un client me l'offre.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Oui, je suis le meilleur client de mon bar !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -353,10 +354,10 @@ const BARMAN_DATA = [
                 description: "Tu partages tes recettes secrètes avec les nouveaux ?",
                 type: "SJT",
                 options: [
-                    { label: "Non, je garde mes secrets pour rester indispensable.", value: "C", profile: "SHOWMAN" },
-                    { label: "Oui, tout est dans le manuel de formation.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Bien sûr, je veux qu'ils réussissent.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je leur donne les mauvaises recettes pour rire.", value: "D", profile: "PIRATE" }
+                    { label: "Non, je garde mes secrets pour rester indispensable.", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "Oui, tout est dans le manuel de formation.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Bien sûr, je veux qu'ils réussissent.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je leur donne les mauvaises recettes pour rire.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" }
                 ]
             },
             {
@@ -366,10 +367,10 @@ const BARMAN_DATA = [
                 description: "Tu détestes préparer les Mojitos (trop long) ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Oui, je dis souvent qu'il n'y a plus de menthe.", value: "D", profile: "PIRATE" },
-                    { label: "Non, je le fais avec la même rigueur que le reste.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je le fais si le client est sympa.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je le revisite à ma façon pour que ce soit fun.", value: "C", profile: "SHOWMAN" }
+                    { label: "Oui, je dis souvent qu'il n'y a plus de menthe.", value: "D", profile: "PIRATE", trait: "RAPIDE" },
+                    { label: "Non, je le fais avec la même rigueur que le reste.", value: "B", profile: "MÉTRONOME", trait: "PRAGMATIQUE" },
+                    { label: "Je le fais si le client est sympa.", value: "A", profile: "CONFIDENT", trait: "SUIVEUR" },
+                    { label: "Je le revisite à ma façon pour que ce soit fun.", value: "C", profile: "SHOWMAN", trait: "RAPIDE" }
                 ]
             },
             {
@@ -379,10 +380,10 @@ const BARMAN_DATA = [
                 description: "Le client trouve son verre trop léger en alcool.",
                 type: "SJT",
                 options: [
-                    { label: "Je rajoute une goutte (ou de la glace) pour le calmer.", value: "D", profile: "PIRATE" },
-                    { label: "Je lui montre le dosage exact utilisé. Pas de discussion.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je lui en refais un plus chargé, tant pis pour le stock.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je goûte son verre devant lui pour vérifier !", value: "C", profile: "SHOWMAN" }
+                    { label: "Je rajoute une goutte (ou de la glace) pour le calmer.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je lui montre le dosage exact utilisé. Pas de discussion.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je lui en refais un plus chargé, tant pis pour le stock.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je goûte son verre devant lui pour vérifier !", value: "C", profile: "SHOWMAN", trait: "LEADER" }
                 ]
             },
             {
@@ -392,10 +393,10 @@ const BARMAN_DATA = [
                 description: "Ton plan de travail est-il sec en permanence ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Oui, maniaque. Un bar propre est un bar efficace.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Non, c'est le chantier mais ça sort vite.", value: "D", profile: "PIRATE" },
-                    { label: "J'essaie, mais je suis souvent débordé.", value: "A", profile: "CONFIDENT" },
-                    { label: "C'est le chaos artistique, mais c'est beau !", value: "C", profile: "SHOWMAN" }
+                    { label: "Oui, maniaque. Un bar propre est un bar efficace.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Non, c'est le chantier mais ça sort vite.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "J'essaie, mais je suis souvent débordé.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "C'est le chaos artistique, mais c'est beau !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -405,10 +406,10 @@ const BARMAN_DATA = [
                 description: "Le client a-t-il toujours raison ?",
                 type: "VALEURS",
                 options: [
-                    { label: "Non, si il est con, je lui dis.", value: "C", profile: "SHOWMAN" },
-                    { label: "Oui, c'est la règle d'or du service.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Non, mais je fais semblant pour avoir la paix.", value: "D", profile: "PIRATE" },
-                    { label: "Ça me blesse quand ils sont méchants.", value: "A", profile: "CONFIDENT" }
+                    { label: "Non, si il est con, je lui dis.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Oui, c'est la règle d'or du service.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Non, mais je fais semblant pour avoir la paix.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Ça me blesse quand ils sont méchants.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" }
                 ]
             },
             {
@@ -418,10 +419,10 @@ const BARMAN_DATA = [
                 description: "Tu vois un client mettre quelque chose dans le verre d'un autre.",
                 type: "SJT",
                 options: [
-                    { label: "J'interviens immédiatement et je jette le verre.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je saute sur le type pour le maîtriser.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je préviens discrètement la victime.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je regarde ailleurs, pas mes oignons.", value: "D", profile: "PIRATE" }
+                    { label: "J'interviens immédiatement et je jette le verre.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je saute sur le type pour le maîtriser.", value: "C", profile: "SHOWMAN", trait: "FRANC" },
+                    { label: "Je préviens discrètement la victime.", value: "A", profile: "CONFIDENT", trait: "HUMBLE" },
+                    { label: "Je regarde ailleurs, pas mes oignons.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -431,10 +432,10 @@ const BARMAN_DATA = [
                 description: "Retiens-tu 8 boissons sans noter ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Oui, facile. J'ai une mémoire d'éléphant.", value: "C", profile: "SHOWMAN" },
-                    { label: "Non, je note tout. Sécurité.", value: "B", profile: "MÉTRONOME" },
-                    { label: "J'essaie, mais j'en oublie toujours une.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je fais à l'instinct, si je me trompe je corrige.", value: "D", profile: "PIRATE" }
+                    { label: "Oui, facile. J'ai une mémoire d'éléphant.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Non, je note tout. Sécurité.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "J'essaie, mais j'en oublie toujours une.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je fais à l'instinct, si je me trompe je corrige.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -444,10 +445,10 @@ const BARMAN_DATA = [
                 description: "Tu as peur d'avoir un écart de caisse ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Oui, je compte tout trois fois.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Non, si il manque, je mets de ma poche.", value: "A", profile: "CONFIDENT" },
-                    { label: "Non, je m'arrange toujours pour que ça tombe juste...", value: "D", profile: "PIRATE" },
-                    { label: "Les artistes ne comptent pas !", value: "C", profile: "SHOWMAN" }
+                    { label: "Oui, je compte tout trois fois.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Non, si il manque, je mets de ma poche.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Non, je m'arrange toujours pour que ça tombe juste...", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Les artistes ne comptent pas !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -457,10 +458,10 @@ const BARMAN_DATA = [
                 description: "La musique forte t'épuise-t-elle ?",
                 type: "PSYCHOLOGIQUE",
                 options: [
-                    { label: "Oui, j'ai besoin de calme après le service.", value: "A", profile: "CONFIDENT" },
-                    { label: "Non, j'adore ça, je monte le son !", value: "C", profile: "SHOWMAN" },
-                    { label: "Je mets des bouchons d'oreille discrets.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Tant qu'il y a du monde, je ne sens rien.", value: "D", profile: "PIRATE" }
+                    { label: "Oui, j'ai besoin de calme après le service.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Non, j'adore ça, je monte le son !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Je mets des bouchons d'oreille discrets.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Tant qu'il y a du monde, je ne sens rien.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -470,10 +471,10 @@ const BARMAN_DATA = [
                 description: "Fais-tu du flair (jonglage) avec les bouteilles ?",
                 type: "INVENTIF",
                 options: [
-                    { label: "Toujours ! Le show fait vendre.", value: "C", profile: "SHOWMAN" },
-                    { label: "Jamais. Risque de casse inutile.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Juste un petit tour pour impressionner les filles.", value: "D", profile: "PIRATE" },
-                    { label: "J'aimerais bien mais je suis maladroit.", value: "A", profile: "CONFIDENT" }
+                    { label: "Toujours ! Le show fait vendre.", value: "C", profile: "SHOWMAN", trait: "CRÉATIF" },
+                    { label: "Jamais. Risque de casse inutile.", value: "B", profile: "MÉTRONOME", trait: "TECHNIQUE" },
+                    { label: "Juste un petit tour pour impressionner les filles.", value: "D", profile: "PIRATE", trait: "DÉBROUILLARD" },
+                    { label: "J'aimerais bien mais je suis maladroit.", value: "A", profile: "CONFIDENT", trait: "PÉDAGOGUE" }
                 ]
             }
         ]
@@ -566,10 +567,10 @@ const SERVEUR_DATA = [
                 description: "Une table attend depuis 10 minutes. Ils s'impatientent.",
                 type: "PSYCHOLOGIQUE",
                 options: [
-                    { label: "Je vais les voir tout de suite pour m'excuser et discuter.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je leur envoie une bouteille d'eau pour les calmer, mais je ne m'arrête pas.", value: "D", profile: "PIRATE" },
-                    { label: "Je suis le plan de salle. Chacun son tour. Pas de favoritisme.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je fais une blague en arrivant pour détendre l'atmosphère !", value: "C", profile: "SHOWMAN" }
+                    { label: "Je vais les voir tout de suite pour m'excuser et discuter.", value: "A", profile: "CONFIDENT", trait: "PROTECTEUR" },
+                    { label: "Je leur envoie une bouteille d'eau pour les calmer, mais je ne m'arrête pas.", value: "D", profile: "PIRATE", trait: "FROID" },
+                    { label: "Je suis le plan de salle. Chacun son tour. Pas de favoritisme.", value: "B", profile: "MÉTRONOME", trait: "PROTECTEUR" },
+                    { label: "Je fais une blague en arrivant pour détendre l'atmosphère !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -579,10 +580,10 @@ const SERVEUR_DATA = [
                 description: "Un client hésite sur le vin. Que proposes-tu ?",
                 type: "SJT",
                 options: [
-                    { label: "Le plus cher. Il faut faire du chiffre.", value: "D", profile: "PIRATE" },
-                    { label: "Celui qui s'accorde techniquement le mieux avec le plat.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Un vin que j'adore personnellement, je raconte son histoire.", value: "A", profile: "CONFIDENT" },
-                    { label: "Une bouteille Magnum ! Pour marquer le coup !", value: "C", profile: "SHOWMAN" }
+                    { label: "Le plus cher. Il faut faire du chiffre.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Celui qui s'accorde techniquement le mieux avec le plat.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Un vin que j'adore personnellement, je raconte son histoire.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Une bouteille Magnum ! Pour marquer le coup !", value: "C", profile: "SHOWMAN", trait: "LEADER" }
                 ]
             },
             {
@@ -592,10 +593,10 @@ const SERVEUR_DATA = [
                 description: "Une miette traîne sur une table 'propre'.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je l'enlève discrètement avec le doigt.", value: "D", profile: "PIRATE" },
-                    { label: "Je rechange toute la nappe. Zéro défaut.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je fais une poussière imaginaire pour faire rire le client.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je ne la vois même pas, je regarde les gens dans les yeux.", value: "A", profile: "CONFIDENT" }
+                    { label: "Je l'enlève discrètement avec le doigt.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je rechange toute la nappe. Zéro défaut.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je fais une poussière imaginaire pour faire rire le client.", value: "C", profile: "SHOWMAN", trait: "EXIGEANT" },
+                    { label: "Je ne la vois même pas, je regarde les gens dans les yeux.", value: "A", profile: "CONFIDENT", trait: "OBÉISSANT" }
                 ]
             },
             {
@@ -605,10 +606,10 @@ const SERVEUR_DATA = [
                 description: "Le restaurant est complet, il y a la queue dehors.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je stresse et je cours partout pour libérer les tables.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je les installe au bar et je leur vends des cocktails en attendant.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je prends le temps de rassurer ceux qui attendent.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je dis aux clients qui ont fini de partir. Rentabilité.", value: "D", profile: "PIRATE" }
+                    { label: "Je stresse et je cours partout pour libérer les tables.", value: "B", profile: "MÉTRONOME", trait: "RÉSILIENT" },
+                    { label: "Je les installe au bar et je leur vends des cocktails en attendant.", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "Je prends le temps de rassurer ceux qui attendent.", value: "A", profile: "CONFIDENT", trait: "SENSIBLE" },
+                    { label: "Je dis aux clients qui ont fini de partir. Rentabilité.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" }
                 ]
             },
             {
@@ -618,10 +619,10 @@ const SERVEUR_DATA = [
                 description: "La cuisine se trompe de cuisson. Le client râle.",
                 type: "SJT",
                 options: [
-                    { label: "Je dis que c'est la faute du Chef, je me dédouane.", value: "D", profile: "PIRATE" },
-                    { label: "Je présente des excuses officielles au nom de la maison.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je suis désolé pour lui, je lui offre le café.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je retourne le plat en cuisine en faisant un scandale théâtral !", value: "C", profile: "SHOWMAN" }
+                    { label: "Je dis que c'est la faute du Chef, je me dédouane.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je présente des excuses officielles au nom de la maison.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je suis désolé pour lui, je lui offre le café.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je retourne le plat en cuisine en faisant un scandale théâtral !", value: "C", profile: "SHOWMAN", trait: "LEADER" }
                 ]
             },
             {
@@ -631,10 +632,10 @@ const SERVEUR_DATA = [
                 description: "Sais-tu qui va prendre un dessert avant même la commande ?",
                 type: "INVENTIF",
                 options: [
-                    { label: "Non, je demande toujours. Procédure.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Oui, je le sens. Intuition.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je force la vente en amenant le chariot directement !", value: "C", profile: "SHOWMAN" },
-                    { label: "Je regarde s'ils ont fini leur vin. Si oui, pas de dessert.", value: "D", profile: "PIRATE" }
+                    { label: "Non, je demande toujours. Procédure.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Oui, je le sens. Intuition.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je force la vente en amenant le chariot directement !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Je regarde s'ils ont fini leur vin. Si oui, pas de dessert.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -644,10 +645,10 @@ const SERVEUR_DATA = [
                 description: "Tes pieds te font souffrir à 23h30.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je m'assois dès que je peux.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je tiens bon. Posture impeccable jusqu'à la fin.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je ralentis le rythme pour m'économiser.", value: "D", profile: "PIRATE" },
-                    { label: "Je danse pour oublier la douleur !", value: "C", profile: "SHOWMAN" }
+                    { label: "Je m'assois dès que je peux.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je tiens bon. Posture impeccable jusqu'à la fin.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je ralentis le rythme pour m'économiser.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je danse pour oublier la douleur !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -657,10 +658,10 @@ const SERVEUR_DATA = [
                 description: "Tu as oublié de facturer une bouteille à 80€. Le client ne dit rien.",
                 type: "DILEMME",
                 options: [
-                    { label: "Tant pis, c'est pour ma pomme si le patron voit.", value: "D", profile: "PIRATE" },
-                    { label: "Je cours après le client pour lui dire. Honnêteté.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je laisse couler, c'est un cadeau du destin pour lui.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui dis discrètement pour qu'il me laisse un gros pourboire.", value: "C", profile: "SHOWMAN" }
+                    { label: "Tant pis, c'est pour ma pomme si le patron voit.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je cours après le client pour lui dire. Honnêteté.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je laisse couler, c'est un cadeau du destin pour lui.", value: "A", profile: "CONFIDENT", trait: "HUMBLE" },
+                    { label: "Je lui dis discrètement pour qu'il me laisse un gros pourboire.", value: "C", profile: "SHOWMAN", trait: "FRANC" }
                 ]
             },
             {
@@ -670,10 +671,10 @@ const SERVEUR_DATA = [
                 description: "Un client demande un café gratuit pour son anniv.",
                 type: "SJT",
                 options: [
-                    { label: "Je demande au manager. Je ne décide rien.", value: "B", profile: "MÉTRONOME" },
-                    { label: "J'offre, c'est important de faire plaisir.", value: "A", profile: "CONFIDENT" },
-                    { label: "J'offre et je chante 'Joyeux Anniversaire' devant tout le resto !", value: "C", profile: "SHOWMAN" },
-                    { label: "Je lui dis que la machine est cassée. Pas de gratuité.", value: "D", profile: "PIRATE" }
+                    { label: "Je demande au manager. Je ne décide rien.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "J'offre, c'est important de faire plaisir.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "J'offre et je chante 'Joyeux Anniversaire' devant tout le resto !", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "Je lui dis que la machine est cassée. Pas de gratuité.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" }
                 ]
             },
             {
@@ -683,10 +684,10 @@ const SERVEUR_DATA = [
                 description: "Un client te touche le bras de façon insistante.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je recule poliment mais je ne dis rien.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui dis fermement : 'On ne touche pas'.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je lui renverse son verre dessus 'par accident'.", value: "D", profile: "PIRATE" },
-                    { label: "Je lui fais une scène pour l'afficher devant ses amis.", value: "C", profile: "SHOWMAN" }
+                    { label: "Je recule poliment mais je ne dis rien.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui dis fermement : 'On ne touche pas'.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je lui renverse son verre dessus 'par accident'.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je lui fais une scène pour l'afficher devant ses amis.", value: "C", profile: "SHOWMAN", trait: "AFFIRMÉ" }
                 ]
             },
             {
@@ -696,10 +697,10 @@ const SERVEUR_DATA = [
                 description: "Un enfant renverse son coca par terre.",
                 type: "PSYCHOLOGIQUE",
                 options: [
-                    { label: "Je rassure l'enfant d'abord, il a peur.", value: "A", profile: "CONFIDENT" },
-                    { label: "J'arrive avec la serpillière en 30 secondes. Efficacité.", value: "D", profile: "PIRATE" },
-                    { label: "Je balise la zone pour la sécurité. Protocole.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je fais un tour de magie avec une serviette pour le faire rire.", value: "C", profile: "SHOWMAN" }
+                    { label: "Je rassure l'enfant d'abord, il a peur.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "J'arrive avec la serpillière en 30 secondes. Efficacité.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je balise la zone pour la sécurité. Protocole.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je fais un tour de magie avec une serviette pour le faire rire.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -709,10 +710,10 @@ const SERVEUR_DATA = [
                 description: "Un client te donne 20€ 'pour toi seulement'.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je le garde. Il a précisé 'pour moi'.", value: "D", profile: "PIRATE" },
-                    { label: "Je le mets au pot commun. Règle d'équipe.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je partage avec ceux qui m'ont aidé ce soir.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je le montre à tout le monde pour frimer !", value: "C", profile: "SHOWMAN" }
+                    { label: "Je le garde. Il a précisé 'pour moi'.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je le mets au pot commun. Règle d'équipe.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je partage avec ceux qui m'ont aidé ce soir.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je le montre à tout le monde pour frimer !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -722,10 +723,10 @@ const SERVEUR_DATA = [
                 description: "6 personnes, modifications complexes. Tu notes ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Toujours. Sécurité avant tout.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Jamais. J'ai une mémoire d'acier.", value: "C", profile: "SHOWMAN" },
-                    { label: "J'essaie de retenir, mais j'oublie souvent un truc.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je note juste les trucs chiants.", value: "D", profile: "PIRATE" }
+                    { label: "Toujours. Sécurité avant tout.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Jamais. J'ai une mémoire d'acier.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "J'essaie de retenir, mais j'oublie souvent un truc.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je note juste les trucs chiants.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -735,10 +736,10 @@ const SERVEUR_DATA = [
                 description: "En fin de service, ton dos s'affaisse ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Oui, je suis crevé, ça se voit.", value: "A", profile: "CONFIDENT" },
-                    { label: "Non, je reste droit comme un i. Tenue.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je m'appuie contre les murs dès que je peux.", value: "D", profile: "PIRATE" },
-                    { label: "Je bombe le torse, je suis sur scène !", value: "C", profile: "SHOWMAN" }
+                    { label: "Oui, je suis crevé, ça se voit.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Non, je reste droit comme un i. Tenue.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je m'appuie contre les murs dès que je peux.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je bombe le torse, je suis sur scène !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -748,10 +749,10 @@ const SERVEUR_DATA = [
                 description: "Un couple se dispute à ton rang.",
                 type: "INVENTIF",
                 options: [
-                    { label: "Je n'interviens pas. Discrétion absolue.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je leur demande si ça va, j'essaie d'aider.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je fais une blague pour détendre l'atmosphère.", value: "C", profile: "SHOWMAN" },
-                    { label: "J'évite leur table, pas envie de problèmes.", value: "D", profile: "PIRATE" }
+                    { label: "Je n'interviens pas. Discrétion absolue.", value: "B", profile: "MÉTRONOME", trait: "PROTECTEUR" },
+                    { label: "Je leur demande si ça va, j'essaie d'aider.", value: "A", profile: "CONFIDENT", trait: "PROTECTEUR" },
+                    { label: "Je fais une blague pour détendre l'atmosphère.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "J'évite leur table, pas envie de problèmes.", value: "D", profile: "PIRATE", trait: "FROID" }
                 ]
             },
             {
@@ -761,10 +762,10 @@ const SERVEUR_DATA = [
                 description: "Bouteille vide. Tu en proposes une autre ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Systématiquement. Réflexe commercial.", value: "D", profile: "PIRATE" },
-                    { label: "Seulement s'ils me regardent.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je la change sans rien dire, service palace.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je leur sers théâtralement la dernière goutte.", value: "C", profile: "SHOWMAN" }
+                    { label: "Systématiquement. Réflexe commercial.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Seulement s'ils me regardent.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je la change sans rien dire, service palace.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je leur sers théâtralement la dernière goutte.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -774,10 +775,10 @@ const SERVEUR_DATA = [
                 description: "Le bar est sous l'eau. Tes cafés n'arriveront pas.",
                 type: "SJT",
                 options: [
-                    { label: "Je passe derrière pour les faire moi-même.", value: "D", profile: "PIRATE" },
-                    { label: "J'attends à la passe. C'est pas mon poste.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je vais encourager le barman, il en a besoin.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je gueule 'Bar !!' pour qu'il se bouge.", value: "C", profile: "SHOWMAN" }
+                    { label: "Je passe derrière pour les faire moi-même.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "J'attends à la passe. C'est pas mon poste.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je vais encourager le barman, il en a besoin.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je gueule 'Bar !!' pour qu'il se bouge.", value: "C", profile: "SHOWMAN", trait: "LEADER" }
                 ]
             },
             {
@@ -787,10 +788,10 @@ const SERVEUR_DATA = [
                 description: "Client : 'La musique est trop forte !'",
                 type: "SJT",
                 options: [
-                    { label: "Je baisse un peu pour lui faire plaisir.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui dis que c'est le concept, on ne change rien.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je vérifie le niveau décibel autorisé. Si OK, je laisse.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je fais semblant de baisser.", value: "D", profile: "PIRATE" }
+                    { label: "Je baisse un peu pour lui faire plaisir.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui dis que c'est le concept, on ne change rien.", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "Je vérifie le niveau décibel autorisé. Si OK, je laisse.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je fais semblant de baisser.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" }
                 ]
             },
             {
@@ -800,10 +801,10 @@ const SERVEUR_DATA = [
                 description: "Tu vérifies chaque verre à la lumière ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Oui. Une trace de doigt = retour plonge.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Non, ça passe, le client ne verra rien.", value: "D", profile: "PIRATE" },
-                    { label: "Je frotte avec ma serviette vite fait.", value: "C", profile: "SHOWMAN" },
-                    { label: "Si c'est sale, je m'excuse platement.", value: "A", profile: "CONFIDENT" }
+                    { label: "Oui. Une trace de doigt = retour plonge.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Non, ça passe, le client ne verra rien.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je frotte avec ma serviette vite fait.", value: "C", profile: "SHOWMAN", trait: "EXIGEANT" },
+                    { label: "Si c'est sale, je m'excuse platement.", value: "A", profile: "CONFIDENT", trait: "OBÉISSANT" }
                 ]
             },
             {
@@ -813,10 +814,10 @@ const SERVEUR_DATA = [
                 description: "Tu préfères un gros pourboire ou un client qui te dit merci ?",
                 type: "VALEURS",
                 options: [
-                    { label: "Le pourboire. Je bosse pour l'argent.", value: "D", profile: "PIRATE" },
-                    { label: "Le merci. La reconnaissance c'est tout.", value: "A", profile: "CONFIDENT" },
-                    { label: "Le travail bien fait. C'est ma satisfaction.", value: "B", profile: "MÉTRONOME" },
-                    { label: "La gloire. Je veux être le serveur préféré.", value: "C", profile: "SHOWMAN" }
+                    { label: "Le pourboire. Je bosse pour l'argent.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Le merci. La reconnaissance c'est tout.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Le travail bien fait. C'est ma satisfaction.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "La gloire. Je veux être le serveur préféré.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -826,10 +827,10 @@ const SERVEUR_DATA = [
                 description: "Une assiette s'écrase par terre. Réaction ?",
                 type: "PSYCHOLOGIQUE",
                 options: [
-                    { label: "Je sursaute et je crie.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je reste de marbre. Je sécurise la zone.", value: "B", profile: "MÉTRONOME" },
-                    { label: "J'applaudis ! 'Opa !'", value: "C", profile: "SHOWMAN" },
-                    { label: "Je regarde qui a fait tomber ça pour l'engueuler.", value: "D", profile: "PIRATE" }
+                    { label: "Je sursaute et je crie.", value: "A", profile: "CONFIDENT", trait: "SENSIBLE" },
+                    { label: "Je reste de marbre. Je sécurise la zone.", value: "B", profile: "MÉTRONOME", trait: "RÉSILIENT" },
+                    { label: "J'applaudis ! 'Opa !'", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "Je regarde qui a fait tomber ça pour l'engueuler.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" }
                 ]
             },
             {
@@ -839,10 +840,10 @@ const SERVEUR_DATA = [
                 description: "Tu te laves les mains après chaque débarrassage ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Oui, protocole HACCP.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Non, pas le temps. Je me lave une fois par heure.", value: "D", profile: "PIRATE" },
-                    { label: "J'utilise du gel hydroalcoolique devant le client.", value: "C", profile: "SHOWMAN" },
-                    { label: "J'y pense pas, je suis trop dans le jus.", value: "A", profile: "CONFIDENT" }
+                    { label: "Oui, protocole HACCP.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Non, pas le temps. Je me lave une fois par heure.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "J'utilise du gel hydroalcoolique devant le client.", value: "C", profile: "SHOWMAN", trait: "EXIGEANT" },
+                    { label: "J'y pense pas, je suis trop dans le jus.", value: "A", profile: "CONFIDENT", trait: "OBÉISSANT" }
                 ]
             },
             {
@@ -852,10 +853,10 @@ const SERVEUR_DATA = [
                 description: "Tu as une table VIP et une table d'étudiants.",
                 type: "SJT",
                 options: [
-                    { label: "Je traite tout le monde pareil. Égalité.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je privilégie les VIP, ils paient plus.", value: "D", profile: "PIRATE" },
-                    { label: "Je suis super sympa avec les étudiants, ils sont cools.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je fais le show pour les VIP pour me faire repérer.", value: "C", profile: "SHOWMAN" }
+                    { label: "Je traite tout le monde pareil. Égalité.", value: "B", profile: "MÉTRONOME", trait: "PRAGMATIQUE" },
+                    { label: "Je privilégie les VIP, ils paient plus.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je suis super sympa avec les étudiants, ils sont cools.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je fais le show pour les VIP pour me faire repérer.", value: "C", profile: "SHOWMAN", trait: "STRATEGIQUE" }
                 ]
             },
             {
@@ -865,10 +866,10 @@ const SERVEUR_DATA = [
                 description: "Tu changes ta façon de parler selon le client ?",
                 type: "INVENTIF",
                 options: [
-                    { label: "Oui, je suis un caméléon.", value: "C", profile: "SHOWMAN" },
-                    { label: "Non, je suis poli et standard avec tous.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je parle naturellement, comme je suis.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je suis plus sec avec les clients pénibles.", value: "D", profile: "PIRATE" }
+                    { label: "Oui, je suis un caméléon.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Non, je suis poli et standard avec tous.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je parle naturellement, comme je suis.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je suis plus sec avec les clients pénibles.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -878,10 +879,10 @@ const SERVEUR_DATA = [
                 description: "Une table est bancale.",
                 type: "STANDARD",
                 options: [
-                    { label: "Je la règle immédiatement avec une cale.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je laisse comme ça, le client ne dira rien.", value: "D", profile: "PIRATE" },
-                    { label: "Je m'excuse 10 fois auprès du client.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je fais une blague : 'C'est le charme de l'ancien !'", value: "C", profile: "SHOWMAN" }
+                    { label: "Je la règle immédiatement avec une cale.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je laisse comme ça, le client ne dira rien.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je m'excuse 10 fois auprès du client.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je fais une blague : 'C'est le charme de l'ancien !'", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -891,10 +892,10 @@ const SERVEUR_DATA = [
                 description: "Le client arrive à sa table.",
                 type: "STANDARD",
                 options: [
-                    { label: "Tout est déjà prêt : eau, pain, menu.", value: "B", profile: "MÉTRONOME" },
-                    { label: "J'attends qu'il s'assoie pour voir ce qu'il veut.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui tire sa chaise comme un prince.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je lui jette le menu en passant.", value: "D", profile: "PIRATE" }
+                    { label: "Tout est déjà prêt : eau, pain, menu.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "J'attends qu'il s'assoie pour voir ce qu'il veut.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui tire sa chaise comme un prince.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Je lui jette le menu en passant.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -904,10 +905,10 @@ const SERVEUR_DATA = [
                 description: "En fin de service, tu évites de croiser le regard des clients ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Oui, j'ai peur qu'ils me demandent un truc.", value: "D", profile: "PIRATE" },
-                    { label: "Non, je reste disponible jusqu'à la dernière seconde.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je suis trop fatigué pour voir quoi que ce soit.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je les regarde fixement pour qu'ils partent !", value: "C", profile: "SHOWMAN" }
+                    { label: "Oui, j'ai peur qu'ils me demandent un truc.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Non, je reste disponible jusqu'à la dernière seconde.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je suis trop fatigué pour voir quoi que ce soit.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je les regarde fixement pour qu'ils partent !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -917,10 +918,10 @@ const SERVEUR_DATA = [
                 description: "Ton collègue est dans le jus. Tu l'aides ?",
                 type: "SJT",
                 options: [
-                    { label: "Toujours. La brigade, c'est la famille.", value: "A", profile: "CONFIDENT" },
-                    { label: "Seulement si j'ai fini mon rang.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Non, chacun sa merde.", value: "D", profile: "PIRATE" },
-                    { label: "Je l'aide en le faisant savoir bien fort.", value: "C", profile: "SHOWMAN" }
+                    { label: "Toujours. La brigade, c'est la famille.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Seulement si j'ai fini mon rang.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Non, chacun sa merde.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je l'aide en le faisant savoir bien fort.", value: "C", profile: "SHOWMAN", trait: "LEADER" }
                 ]
             },
             {
@@ -930,10 +931,10 @@ const SERVEUR_DATA = [
                 description: "Tu vends un plat que tu n'aimes pas ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Oui, je le vends comme si c'était le meilleur.", value: "C", profile: "SHOWMAN" },
-                    { label: "Non, je conseille autre chose. Honnêteté.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je le vends si le Chef a dit de le pousser.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je le vends pour vider les stocks.", value: "D", profile: "PIRATE" }
+                    { label: "Oui, je le vends comme si c'était le meilleur.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Non, je conseille autre chose. Honnêteté.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je le vends si le Chef a dit de le pousser.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je le vends pour vider les stocks.", value: "D", profile: "PIRATE", trait: "PIRATE" }
                 ]
             },
             {
@@ -943,10 +944,10 @@ const SERVEUR_DATA = [
                 description: "Tu penses qu'un client va partir sans payer (grivèlerie).",
                 type: "INVENTIF",
                 options: [
-                    { label: "Je ne le lâche pas du regard.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je préviens la sécurité discrètement.", value: "D", profile: "PIRATE" },
-                    { label: "Je vais lui parler pour voir s'il est sympa.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui apporte l'addition bien fort devant tout le monde.", value: "C", profile: "SHOWMAN" }
+                    { label: "Je ne le lâche pas du regard.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je préviens la sécurité discrètement.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je vais lui parler pour voir s'il est sympa.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je lui apporte l'addition bien fort devant tout le monde.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -956,10 +957,10 @@ const SERVEUR_DATA = [
                 description: "Tu présentes l'étiquette du vin face au client ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Toujours. C'est la base du service.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Ça dépend si j'ai le temps.", value: "D", profile: "PIRATE" },
-                    { label: "Je le fais avec un geste théâtral.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je lui sers direct, on s'en fout de l'étiquette.", value: "A", profile: "CONFIDENT" }
+                    { label: "Toujours. C'est la base du service.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Ça dépend si j'ai le temps.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je le fais avec un geste théâtral.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Je lui sers direct, on s'en fout de l'étiquette.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" }
                 ]
             },
             {
@@ -969,10 +970,10 @@ const SERVEUR_DATA = [
                 description: "Tu piques une frite dans une assiette qui part ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Jamais de la vie. Dégueulasse.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Une petite, personne ne voit.", value: "D", profile: "PIRATE" },
-                    { label: "Si j'ai trop faim... je suis faible.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je le fais devant le Chef pour le provoquer !", value: "C", profile: "SHOWMAN" }
+                    { label: "Jamais de la vie. Dégueulasse.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Une petite, personne ne voit.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Si j'ai trop faim... je suis faible.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" },
+                    { label: "Je le fais devant le Chef pour le provoquer !", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" }
                 ]
             },
             {
@@ -982,10 +983,10 @@ const SERVEUR_DATA = [
                 description: "Le client veut l'addition. Tu l'as vue avant qu'il demande ?",
                 type: "PSYCHOLOGIQUE",
                 options: [
-                    { label: "Oui, j'ai vu son langage corporel.", value: "C", profile: "SHOWMAN" },
-                    { label: "Non, j'attends qu'il m'appelle.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je lui amène le café, ça veut dire 'partez'.", value: "D", profile: "PIRATE" },
-                    { label: "Je discute encore avec lui, je ne suis pas pressé.", value: "A", profile: "CONFIDENT" }
+                    { label: "Oui, j'ai vu son langage corporel.", value: "C", profile: "SHOWMAN", trait: "SHOWMAN" },
+                    { label: "Non, j'attends qu'il m'appelle.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je lui amène le café, ça veut dire 'partez'.", value: "D", profile: "PIRATE", trait: "PIRATE" },
+                    { label: "Je discute encore avec lui, je ne suis pas pressé.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" }
                 ]
             },
             {
@@ -995,10 +996,10 @@ const SERVEUR_DATA = [
                 description: "Un client te siffle pour t'appeler.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je l'ignore totalement. Je ne suis pas un chien.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je vais le voir et je lui dis de ne pas refaire ça.", value: "C", profile: "SHOWMAN" },
-                    { label: "J'y vais quand même, le client est roi.", value: "A", profile: "CONFIDENT" },
-                    { label: "Je lui crache dans sa soupe (en pensée).", value: "D", profile: "PIRATE" }
+                    { label: "Je l'ignore totalement. Je ne suis pas un chien.", value: "B", profile: "MÉTRONOME", trait: "RÉSILIENT" },
+                    { label: "Je vais le voir et je lui dis de ne pas refaire ça.", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "J'y vais quand même, le client est roi.", value: "A", profile: "CONFIDENT", trait: "SENSIBLE" },
+                    { label: "Je lui crache dans sa soupe (en pensée).", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" }
                 ]
             },
             {
@@ -1008,10 +1009,10 @@ const SERVEUR_DATA = [
                 description: "Le vin est bouchonné.",
                 type: "SJT",
                 options: [
-                    { label: "Je goûte pour vérifier. Je ne fais pas confiance.", value: "B", profile: "MÉTRONOME" },
-                    { label: "Je change la bouteille immédiatement avec le sourire.", value: "C", profile: "SHOWMAN" },
-                    { label: "Je dis que c'est le goût du terroir.", value: "D", profile: "PIRATE" },
-                    { label: "Je suis désolé, je ne sais pas quoi faire.", value: "A", profile: "CONFIDENT" }
+                    { label: "Je goûte pour vérifier. Je ne fais pas confiance.", value: "B", profile: "MÉTRONOME", trait: "RIGOUREUX" },
+                    { label: "Je change la bouteille immédiatement avec le sourire.", value: "C", profile: "SHOWMAN", trait: "LEADER" },
+                    { label: "Je dis que c'est le goût du terroir.", value: "D", profile: "PIRATE", trait: "OPPORTUNISTE" },
+                    { label: "Je suis désolé, je ne sais pas quoi faire.", value: "A", profile: "CONFIDENT", trait: "DIPLOMATE" }
                 ]
             }
         ]
@@ -1416,10 +1417,10 @@ const DIRECTEUR_DATA = [
                 description: "Un manager fait +15% de CA, mais humilie ses équipes en privé.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je ferme les yeux. On ne touche pas à celui qui ramène l'argent.", value: "C", profile: "TYRAN" },
-                    { label: "Je le vire tout de suite. Le respect humain passe avant l'argent.", value: "A", profile: "NAIF" },
-                    { label: "Je le convoque : il garde ses primes sur le chiffre, mais je lui retire le management humain s'il ne change pas.", value: "B", profile: "RADAR" },
-                    { label: "Je demande aux RH de lui payer une formation sur la bienveillance.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je ferme les yeux. On ne touche pas à celui qui ramène l'argent.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je le vire tout de suite. Le respect humain passe avant l'argent.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je le convoque : il garde ses primes sur le chiffre, mais je lui retire le management humain s'il ne change pas.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je demande aux RH de lui payer une formation sur la bienveillance.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1429,10 +1430,10 @@ const DIRECTEUR_DATA = [
                 description: "Un concurrent vous prend des parts de marché. Rumeur sur son hygiène.",
                 type: "SJT",
                 options: [
-                    { label: "Je diffuse la rumeur discrètement pour le couler.", value: "A", profile: "TYRAN" },
-                    { label: "Je l'ignore et je me concentre sur mon travail.", value: "B", profile: "NAIF" },
-                    { label: "Je fais un signalement anonyme aux services d'hygiène.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "J'envoie des 'clients mystères' et je contre-attaque sur le service.", value: "D", profile: "RADAR" }
+                    { label: "Je diffuse la rumeur discrètement pour le couler.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je l'ignore et je me concentre sur mon travail.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je fais un signalement anonyme aux services d'hygiène.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "J'envoie des 'clients mystères' et je contre-attaque sur le service.", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -1442,10 +1443,10 @@ const DIRECTEUR_DATA = [
                 description: "Vos adjoints passent du temps sur leur téléphone, mais le service est impeccable.",
                 type: "PIEGE",
                 options: [
-                    { label: "J'installe des caméras pour les piéger.", value: "B", profile: "TYRAN" },
-                    { label: "Je laisse faire, tant que le travail est fait, je m'en fous.", value: "D", profile: "NAIF" },
-                    { label: "Je juge aux résultats (KPI). S'ils font le chiffre, je ne flique pas l'écran.", value: "A", profile: "RADAR" },
-                    { label: "Je rappelle le règlement intérieur : 'Téléphone interdit'.", value: "C", profile: "BUREAUCRATE" }
+                    { label: "J'installe des caméras pour les piéger.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je laisse faire, tant que le travail est fait, je m'en fous.", value: "D", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je juge aux résultats (KPI). S'ils font le chiffre, je ne flique pas l'écran.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je rappelle le règlement intérieur : 'Téléphone interdit'.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1455,10 +1456,10 @@ const DIRECTEUR_DATA = [
                 description: "Optimisation fiscale : montage 'limite' mais légal pour économiser 15%.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je fraude massivement pour survivre.", value: "C", profile: "TYRAN" },
-                    { label: "Je refuse. Je veux payer plein pot pour avoir la conscience tranquille.", value: "A", profile: "NAIF" },
-                    { label: "Je demande une analyse de risque. Si c'est sans risque pénal, je valide.", value: "B", profile: "RADAR" },
-                    { label: "Je demande une validation écrite des impôts avant de bouger.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je fraude massivement pour survivre.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je refuse. Je veux payer plein pot pour avoir la conscience tranquille.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je demande une analyse de risque. Si c'est sans risque pénal, je valide.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je demande une validation écrite des impôts avant de bouger.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1468,10 +1469,10 @@ const DIRECTEUR_DATA = [
                 description: "Deux maîtres d'hôtel se détestent et sont en compétition.",
                 type: "SJT",
                 options: [
-                    { label: "Je monte l'un contre l'autre pour qu'ils se tuent au travail.", value: "C", profile: "TYRAN" },
-                    { label: "Je les force à devenir amis pour l'ambiance.", value: "A", profile: "NAIF" },
-                    { label: "Je transforme leur haine en 'Challenge Sportif' avec des zones séparées.", value: "D", profile: "RADAR" },
-                    { label: "Je consulte la fiche de poste pour voir qui a tort.", value: "B", profile: "BUREAUCRATE" }
+                    { label: "Je monte l'un contre l'autre pour qu'ils se tuent au travail.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je les force à devenir amis pour l'ambiance.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je transforme leur haine en 'Challenge Sportif' avec des zones séparées.", value: "D", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je consulte la fiche de poste pour voir qui a tort.", value: "B", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1481,10 +1482,10 @@ const DIRECTEUR_DATA = [
                 description: "Intoxication alimentaire par la faute d'un commis. La presse appelle.",
                 type: "SJT",
                 options: [
-                    { label: "Je livre le nom du commis à la presse pour me dédouaner.", value: "B", profile: "TYRAN" },
-                    { label: "Je refuse de répondre et je fais le mort.", value: "C", profile: "NAIF" },
-                    { label: "J'assume publiquement. En interne je sanctionne, mais dehors je protège.", value: "A", profile: "RADAR" },
-                    { label: "Je lis un communiqué vide préparé par un avocat.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je livre le nom du commis à la presse pour me dédouaner.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je refuse de répondre et je fais le mort.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "J'assume publiquement. En interne je sanctionne, mais dehors je protège.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je lis un communiqué vide préparé par un avocat.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1494,10 +1495,10 @@ const DIRECTEUR_DATA = [
                 description: "Un employé gentil et volontaire n'a pas le niveau. L'équipe compense.",
                 type: "VALEURS",
                 options: [
-                    { label: "Je le harcèle pour qu'il parte de lui-même.", value: "C", profile: "TYRAN" },
-                    { label: "Je le garde par pitié.", value: "A", profile: "NAIF" },
-                    { label: "Je suis honnête : 'Ce poste n'est pas pour toi'. Négociation départ.", value: "B", profile: "RADAR" },
-                    { label: "Je ne renouvelle pas sa période d'essai sans explication.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je le harcèle pour qu'il parte de lui-même.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je le garde par pitié.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je suis honnête : 'Ce poste n'est pas pour toi'. Négociation départ.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je ne renouvelle pas sa période d'essai sans explication.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1507,10 +1508,10 @@ const DIRECTEUR_DATA = [
                 description: "Burn-out d'un chef de rang en plein service.",
                 type: "SJT",
                 options: [
-                    { label: "C'est un faible. Dehors.", value: "A", profile: "TYRAN" },
-                    { label: "Je m'en veux terriblement et je lui donne 3 mois de congés.", value: "D", profile: "NAIF" },
-                    { label: "Je gère l'urgence, puis j'audite mon organisation pour corriger.", value: "C", profile: "RADAR" },
-                    { label: "Je remplis le formulaire d'accident du travail.", value: "B", profile: "BUREAUCRATE" }
+                    { label: "C'est un faible. Dehors.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je m'en veux terriblement et je lui donne 3 mois de congés.", value: "D", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je gère l'urgence, puis j'audite mon organisation pour corriger.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je remplis le formulaire d'accident du travail.", value: "B", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1520,10 +1521,10 @@ const DIRECTEUR_DATA = [
                 description: "Prime de Directeur vs Heures des extras en fin d'année difficile.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je coupe les heures. Ma prime est contractuelle.", value: "A", profile: "TYRAN" },
-                    { label: "Je renonce à ma prime pour payer tout le monde.", value: "B", profile: "NAIF" },
-                    { label: "Transparence : 'Si +10% ce mois, tout le monde payé. Sinon, tous perdants'.", value: "D", profile: "RADAR" },
-                    { label: "J'applique le budget prévisionnel à la lettre.", value: "C", profile: "BUREAUCRATE" }
+                    { label: "Je coupe les heures. Ma prime est contractuelle.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je renonce à ma prime pour payer tout le monde.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Transparence : 'Si +10% ce mois, tout le monde payé. Sinon, tous perdants'.", value: "D", profile: "RADAR", trait: "RADAR" },
+                    { label: "J'applique le budget prévisionnel à la lettre.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1533,10 +1534,10 @@ const DIRECTEUR_DATA = [
                 description: "Gestion des achats de fournitures par les managers.",
                 type: "STANDARD",
                 options: [
-                    { label: "Je valide chaque achat moi-même.", value: "A", profile: "TYRAN" },
-                    { label: "Je laisse faire, l'erreur est humaine.", value: "C", profile: "NAIF" },
-                    { label: "Budget bloqué. Ils gèrent leur enveloppe en autonomie.", value: "B", profile: "RADAR" },
-                    { label: "Formulaire de demande d'achat en 3 exemplaires obligatoire.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je valide chaque achat moi-même.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je laisse faire, l'erreur est humaine.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Budget bloqué. Ils gèrent leur enveloppe en autonomie.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Formulaire de demande d'achat en 3 exemplaires obligatoire.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1546,10 +1547,10 @@ const DIRECTEUR_DATA = [
                 description: "Faut-il partager une décision stratégique confidentielle avec les managers ?",
                 type: "SJT",
                 options: [
-                    { label: "Je ne dis rien. Le savoir c'est le pouvoir.", value: "B", profile: "TYRAN" },
-                    { label: "Je dis tout par transparence totale.", value: "C", profile: "NAIF" },
-                    { label: "Je donne l'info opérationnelle nécessaire, je garde la politique.", value: "A", profile: "RADAR" },
-                    { label: "J'attends le mémo officiel du siège.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je ne dis rien. Le savoir c'est le pouvoir.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je dis tout par transparence totale.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je donne l'info opérationnelle nécessaire, je garde la politique.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "J'attends le mémo officiel du siège.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1559,10 +1560,10 @@ const DIRECTEUR_DATA = [
                 description: "Inflation : les marges fondent.",
                 type: "SJT",
                 options: [
-                    { label: "J'achète du bas de gamme et je cache la provenance.", value: "A", profile: "TYRAN" },
-                    { label: "Je ne change rien et je perds de l'argent.", value: "B", profile: "NAIF" },
-                    { label: "Je réduis la carte et travaille des produits bruts rentables.", value: "C", profile: "RADAR" },
-                    { label: "J'augmente tous les prix de 10% bêtement.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "J'achète du bas de gamme et je cache la provenance.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je ne change rien et je perds de l'argent.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je réduis la carte et travaille des produits bruts rentables.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "J'augmente tous les prix de 10% bêtement.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1572,10 +1573,10 @@ const DIRECTEUR_DATA = [
                 description: "Doute sur un candidat parfait.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je fouille sa vie privée sur Facebook.", value: "B", profile: "TYRAN" },
-                    { label: "Je l'embauche au feeling.", value: "A", profile: "NAIF" },
-                    { label: "J'appelle ses anciens employeurs pour vérifier la fiabilité pro.", value: "D", profile: "RADAR" },
-                    { label: "Je demande un extrait de casier judiciaire.", value: "C", profile: "BUREAUCRATE" }
+                    { label: "Je fouille sa vie privée sur Facebook.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je l'embauche au feeling.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "J'appelle ses anciens employeurs pour vérifier la fiabilité pro.", value: "D", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je demande un extrait de casier judiciaire.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1585,10 +1586,10 @@ const DIRECTEUR_DATA = [
                 description: "Relation avec les employés : Crainte ou Amour ?",
                 type: "VALEURS",
                 options: [
-                    { label: "Je veux qu'ils tremblent.", value: "C", profile: "TYRAN" },
-                    { label: "Je veux qu'ils m'aiment comme un père.", value: "A", profile: "NAIF" },
-                    { label: "Je veux qu'ils me respectent pour ma justesse. Ni pote, ni bourreau.", value: "B", profile: "RADAR" },
-                    { label: "Relation strictement contractuelle.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je veux qu'ils tremblent.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je veux qu'ils m'aiment comme un père.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je veux qu'ils me respectent pour ma justesse. Ni pote, ni bourreau.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Relation strictement contractuelle.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1598,10 +1599,10 @@ const DIRECTEUR_DATA = [
                 description: "Savoir ce qui se dit dans les vestiaires.",
                 type: "SJT",
                 options: [
-                    { label: "Je paie un indic.", value: "B", profile: "TYRAN" },
-                    { label: "Je ne veux pas savoir.", value: "C", profile: "NAIF" },
-                    { label: "Je déjeune avec les leaders d'opinion pour prendre la température.", value: "A", profile: "RADAR" },
-                    { label: "Boîte à idées anonyme.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je paie un indic.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je ne veux pas savoir.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je déjeune avec les leaders d'opinion pour prendre la température.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Boîte à idées anonyme.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1611,10 +1612,10 @@ const DIRECTEUR_DATA = [
                 description: "Plan social : 5 licenciements nécessaires.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je vire les 5 plus gros salaires.", value: "A", profile: "BUREAUCRATE" },
-                    { label: "Je refuse de licencier et la boîte coule.", value: "B", profile: "NAIF" },
-                    { label: "Je garde les piliers, je vire les suiveurs.", value: "C", profile: "RADAR" },
-                    { label: "Je licencie les derniers arrivés.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je vire les 5 plus gros salaires.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Je refuse de licencier et la boîte coule.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je garde les piliers, je vire les suiveurs.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je licencie les derniers arrivés.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1624,10 +1625,10 @@ const DIRECTEUR_DATA = [
                 description: "Un VIP touche les fesses d'une serveuse.",
                 type: "PIEGE",
                 options: [
-                    { label: "Fais un effort, c'est un gros client.", value: "A", profile: "TYRAN" },
+                    { label: "Fais un effort, c'est un gros client.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE", trait: "AUTORITAIRE" },
                     { label: "Je frappe le client.", value: "C", profile: "TYRAN" },
-                    { label: "Je sors le client manu militari. Intégrité non négociable.", value: "D", profile: "RADAR" },
-                    { label: "Je rappelle le règlement au client.", value: "B", profile: "BUREAUCRATE" }
+                    { label: "Je sors le client manu militari. Intégrité non négociable.", value: "D", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je rappelle le règlement au client.", value: "B", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1637,10 +1638,10 @@ const DIRECTEUR_DATA = [
                 description: "Un manager fait mal ses plannings.",
                 type: "SJT",
                 options: [
-                    { label: "Je le fais à sa place.", value: "A", profile: "TYRAN" },
-                    { label: "Je laisse le planning pourri pour qu'il apprenne.", value: "C", profile: "NAIF" },
-                    { label: "Je forme puis je sévis si récidive.", value: "B", profile: "RADAR" },
-                    { label: "Je lui envoie le manuel de procédure.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je le fais à sa place.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je laisse le planning pourri pour qu'il apprenne.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je forme puis je sévis si récidive.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je lui envoie le manuel de procédure.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1650,10 +1651,10 @@ const DIRECTEUR_DATA = [
                 description: "Un 'Leader Négatif' monte la tête de l'équipe.",
                 type: "SJT",
                 options: [
-                    { label: "Je le mute au placard.", value: "B", profile: "TYRAN" },
-                    { label: "Je laisse faire par peur.", value: "C", profile: "NAIF" },
-                    { label: "Je le confronte. S'il est toxique, dossier pour le sortir.", value: "A", profile: "RADAR" },
-                    { label: "Je contacte l'inspection du travail.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je le mute au placard.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je laisse faire par peur.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je le confronte. S'il est toxique, dossier pour le sortir.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je contacte l'inspection du travail.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1663,10 +1664,10 @@ const DIRECTEUR_DATA = [
                 description: "Pas assez de cash pour les salaires.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je paie les fournisseurs et diffère les salaires.", value: "A", profile: "TYRAN" },
-                    { label: "Je paie en retard sans prévenir.", value: "B", profile: "NAIF" },
-                    { label: "Salaires à 100% (priorité). Négociation fournisseurs.", value: "C", profile: "RADAR" },
-                    { label: "Chèque en bois.", value: "D", profile: "TYRAN" }
+                    { label: "Je paie les fournisseurs et diffère les salaires.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je paie en retard sans prévenir.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Salaires à 100% (priorité). Négociation fournisseurs.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Chèque en bois.", value: "D", profile: "TYRAN", trait: "AUTORITAIRE" }
                 ]
             },
             {
@@ -1676,10 +1677,10 @@ const DIRECTEUR_DATA = [
                 description: "Gestion des stagiaires.",
                 type: "VALEURS",
                 options: [
-                    { label: "Main d'œuvre gratuite.", value: "A", profile: "TYRAN" },
-                    { label: "Je les laisse regarder.", value: "B", profile: "NAIF" },
-                    { label: "Je les mets au feu. Sueur contre Savoir.", value: "D", profile: "RADAR" },
-                    { label: "Lecture du manuel d'hygiène.", value: "C", profile: "BUREAUCRATE" }
+                    { label: "Main d'œuvre gratuite.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je les laisse regarder.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je les mets au feu. Sueur contre Savoir.", value: "D", profile: "RADAR", trait: "RADAR" },
+                    { label: "Lecture du manuel d'hygiène.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1689,10 +1690,10 @@ const DIRECTEUR_DATA = [
                 description: "Le sous-chef part chez le concurrent.",
                 type: "SJT",
                 options: [
-                    { label: "Je le dénigre.", value: "A", profile: "TYRAN" },
-                    { label: "Bon vent.", value: "C", profile: "NAIF" },
-                    { label: "Exit Interview serré pour comprendre et corriger.", value: "B", profile: "RADAR" },
-                    { label: "Je vérifie sa clause de non-concurrence.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je le dénigre.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Bon vent.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Exit Interview serré pour comprendre et corriger.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je vérifie sa clause de non-concurrence.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1702,10 +1703,10 @@ const DIRECTEUR_DATA = [
                 description: "'Fait Maison' avec des fonds de sauce industriels ?",
                 type: "DILEMME",
                 options: [
-                    { label: "Oui, personne ne verra.", value: "B", profile: "TYRAN" },
-                    { label: "Je fais tout moi-même et je perds de l'argent.", value: "C", profile: "NAIF" },
-                    { label: "Non. Je vends le frais, je tais le reste. Pas de mensonge.", value: "A", profile: "RADAR" },
-                    { label: "Je vérifie le décret légal.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Oui, personne ne verra.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je fais tout moi-même et je perds de l'argent.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Non. Je vends le frais, je tais le reste. Pas de mensonge.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je vérifie le décret légal.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1715,10 +1716,10 @@ const DIRECTEUR_DATA = [
                 description: "Pauses cigarette excessives.",
                 type: "STANDARD",
                 options: [
-                    { label: "Interdiction totale.", value: "A", profile: "TYRAN" },
-                    { label: "Je laisse faire.", value: "B", profile: "NAIF" },
-                    { label: "Tour de rôle strict selon flux. Récompense, pas droit.", value: "C", profile: "RADAR" },
-                    { label: "Je décompte du salaire.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Interdiction totale.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je laisse faire.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Tour de rôle strict selon flux. Récompense, pas droit.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je décompte du salaire.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1728,10 +1729,10 @@ const DIRECTEUR_DATA = [
                 description: "Conflit entre deux chefs de service.",
                 type: "SJT",
                 options: [
-                    { label: "Je hurle.", value: "C", profile: "TYRAN" },
-                    { label: "Débrouillez-vous.", value: "B", profile: "NAIF" },
-                    { label: "Je les convoque ensemble : 'Réglez ça devant moi'.", value: "D", profile: "RADAR" },
-                    { label: "Je donne raison au plus ancien.", value: "A", profile: "BUREAUCRATE" }
+                    { label: "Je hurle.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Débrouillez-vous.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je les convoque ensemble : 'Réglez ça devant moi'.", value: "D", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je donne raison au plus ancien.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1741,10 +1742,10 @@ const DIRECTEUR_DATA = [
                 description: "Candidat avec casier judiciaire ou trou dans le CV.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je refuse, trop risqué.", value: "D", profile: "TYRAN" },
-                    { label: "Je le prends par charité.", value: "C", profile: "NAIF" },
-                    { label: "Je teste sa rage de vaincre. S'il a faim, je cadre.", value: "B", profile: "RADAR" },
-                    { label: "Poubelle.", value: "A", profile: "BUREAUCRATE" }
+                    { label: "Je refuse, trop risqué.", value: "D", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je le prends par charité.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je teste sa rage de vaincre. S'il a faim, je cadre.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Poubelle.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1754,10 +1755,10 @@ const DIRECTEUR_DATA = [
                 description: "Le Chef demande une augmentation impossible.",
                 type: "SJT",
                 options: [
-                    { label: "Personne n'est irremplaçable.", value: "B", profile: "TYRAN" },
-                    { label: "Je cède et je mets la boîte en danger.", value: "C", profile: "NAIF" },
-                    { label: "Si départ plus coûteux, je trouve solution (primes/parts).", value: "A", profile: "RADAR" },
-                    { label: "Je montre la grille des salaires.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Personne n'est irremplaçable.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je cède et je mets la boîte en danger.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Si départ plus coûteux, je trouve solution (primes/parts).", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je montre la grille des salaires.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1767,10 +1768,10 @@ const DIRECTEUR_DATA = [
                 description: "Saint-Valentin (Complet).",
                 type: "INVENTIF",
                 options: [
-                    { label: "Je double les prix.", value: "A", profile: "TYRAN" },
-                    { label: "Prix normaux.", value: "B", profile: "NAIF" },
-                    { label: "Menu Spécial plus cher avec valeur ajoutée.", value: "C", profile: "RADAR" },
-                    { label: "Le marketing décide.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je double les prix.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Prix normaux.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Menu Spécial plus cher avec valeur ajoutée.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Le marketing décide.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1780,10 +1781,10 @@ const DIRECTEUR_DATA = [
                 description: "Faux avis 1 étoile sur Google.",
                 type: "SJT",
                 options: [
-                    { label: "J'insulte.", value: "B", profile: "TYRAN" },
-                    { label: "Je ne réponds pas.", value: "C", profile: "NAIF" },
-                    { label: "Je réponds froidement pour les futurs clients.", value: "D", profile: "RADAR" },
-                    { label: "Je paie pour supprimer.", value: "A", profile: "TYRAN" }
+                    { label: "J'insulte.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je ne réponds pas.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je réponds froidement pour les futurs clients.", value: "D", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je paie pour supprimer.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" }
                 ]
             },
             {
@@ -1793,10 +1794,10 @@ const DIRECTEUR_DATA = [
                 description: "Inspection du travail surprise.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je refuse l'accès.", value: "C", profile: "TYRAN" },
+                    { label: "Je refuse l'accès.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE", trait: "AUTORITAIRE" },
                     { label: "Je panique.", value: "A", profile: "TYRAN" },
-                    { label: "Café et sourire. Transparence totale.", value: "B", profile: "RADAR" },
-                    { label: "Je l'envoie aux RH.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Café et sourire. Transparence totale.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je l'envoie aux RH.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1806,10 +1807,10 @@ const DIRECTEUR_DATA = [
                 description: "Couper le budget formation ?",
                 type: "DILEMME",
                 options: [
-                    { label: "J'arrête tout.", value: "B", profile: "TYRAN" },
-                    { label: "Je continue tout.", value: "C", profile: "NAIF" },
-                    { label: "Je garde le mentorat interne, je coupe l'externe.", value: "A", profile: "RADAR" },
-                    { label: "Minimum légal.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "J'arrête tout.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je continue tout.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je garde le mentorat interne, je coupe l'externe.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Minimum légal.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1819,10 +1820,10 @@ const DIRECTEUR_DATA = [
                 description: "Tester un nouveau process.",
                 type: "SJT",
                 options: [
-                    { label: "Vendredi soir (Crash test).", value: "A", profile: "NAIF" },
+                    { label: "Vendredi soir (Crash test).", value: "A", profile: "NAIF", trait: "NAIF", trait: "NAIF" },
                     { label: "Jamais.", value: "B", profile: "NAIF" },
-                    { label: "Mardi midi (Calme).", value: "C", profile: "RADAR" },
-                    { label: "Après validation consultant.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Mardi midi (Calme).", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Après validation consultant.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1832,10 +1833,10 @@ const DIRECTEUR_DATA = [
                 description: "Piston : le fils du maire.",
                 type: "PIEGE",
                 options: [
-                    { label: "Emploi fictif.", value: "A", profile: "TYRAN" },
-                    { label: "Refus par principe.", value: "B", profile: "NAIF" },
-                    { label: "Je l'embauche mais je le traite normalement.", value: "D", profile: "RADAR" },
-                    { label: "CV obligatoire.", value: "C", profile: "BUREAUCRATE" }
+                    { label: "Emploi fictif.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Refus par principe.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je l'embauche mais je le traite normalement.", value: "D", profile: "RADAR", trait: "RADAR" },
+                    { label: "CV obligatoire.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1845,10 +1846,10 @@ const DIRECTEUR_DATA = [
                 description: "Trou de 20€ en caisse tous les soirs.",
                 type: "SJT",
                 options: [
-                    { label: "J'accuse tout le monde.", value: "A", profile: "TYRAN" },
-                    { label: "Pertes et profits.", value: "C", profile: "NAIF" },
-                    { label: "Comptage contradictoire fin de service.", value: "B", profile: "RADAR" },
-                    { label: "Retenue sur salaire.", value: "D", profile: "TYRAN" }
+                    { label: "J'accuse tout le monde.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Pertes et profits.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Comptage contradictoire fin de service.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Retenue sur salaire.", value: "D", profile: "TYRAN", trait: "AUTORITAIRE" }
                 ]
             },
             {
@@ -1858,10 +1859,10 @@ const DIRECTEUR_DATA = [
                 description: "Influenceuse demande repas gratuit.",
                 type: "SJT",
                 options: [
-                    { label: "Non, pas de charité.", value: "B", profile: "TYRAN" },
-                    { label: "Oui tout de suite.", value: "C", profile: "NAIF" },
-                    { label: "Oui SI c'est ma clientèle et SI j'impose conditions.", value: "A", profile: "RADAR" },
-                    { label: "Formulaire partenariat.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Non, pas de charité.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Oui tout de suite.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Oui SI c'est ma clientèle et SI j'impose conditions.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Formulaire partenariat.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             }
         ]
@@ -1881,10 +1882,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Le coût matière (Food Cost) explose (+4%). Le Chef accuse l'inflation.",
                 type: "SJT",
                 options: [
-                    { label: "J'accepte son excuse, c'est la crise.", value: "A", profile: "NAIF" },
-                    { label: "Je hurle et menace de le virer.", value: "B", profile: "TYRAN" },
-                    { label: "Je plonge dans les poubelles et factures avec lui pour trouver la cause.", value: "C", profile: "RADAR" },
-                    { label: "Je demande un rapport écrit détaillé pour le siège.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "J'accepte son excuse, c'est la crise.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je hurle et menace de le virer.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je plonge dans les poubelles et factures avec lui pour trouver la cause.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je demande un rapport écrit détaillé pour le siège.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1894,10 +1895,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Vos serveurs sortent boire des verres ensemble tous les soirs. Ils sont soudés mais fatigués.",
                 type: "SJT",
                 options: [
-                    { label: "Je surveille la perf. Si le job est fait, je me tais.", value: "A", profile: "RADAR" },
-                    { label: "Rappel charte bonne conduite et repos légal par RH.", value: "B", profile: "BUREAUCRATE" },
-                    { label: "J'interdis formellement les sorties. Je veux des soldats frais.", value: "C", profile: "TYRAN" },
-                    { label: "C'est génial ! L'ambiance avant tout.", value: "D", profile: "NAIF" }
+                    { label: "Je surveille la perf. Si le job est fait, je me tais.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Rappel charte bonne conduite et repos légal par RH.", value: "B", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "J'interdis formellement les sorties. Je veux des soldats frais.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "C'est génial ! L'ambiance avant tout.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -1907,10 +1908,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "On vous propose des QR Codes pour que les clients commandent seuls.",
                 type: "VALEURS",
                 options: [
-                    { label: "J'installe tout. Moins de masse salariale = profit.", value: "A", profile: "TYRAN" },
-                    { label: "Jamais. Je refuse le progrès.", value: "B", profile: "NAIF" },
-                    { label: "J'attends la validation officielle du groupe.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "Test sur le déjeuner (vitesse), humain le soir (expérience).", value: "D", profile: "RADAR" }
+                    { label: "J'installe tout. Moins de masse salariale = profit.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Jamais. Je refuse le progrès.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "J'attends la validation officielle du groupe.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Test sur le déjeuner (vitesse), humain le soir (expérience).", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -1920,10 +1921,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Le Sous-Chef du concurrent d'en face veut venir travailler chez vous.",
                 type: "DILEMME",
                 options: [
-                    { label: "Je le prends pour couler le concurrent.", value: "A", profile: "TYRAN" },
-                    { label: "Je l'auditionne durement : talent ou fuite ?", value: "B", profile: "RADAR" },
-                    { label: "Refus par 'code d'honneur' entre patrons.", value: "C", profile: "NAIF" },
-                    { label: "Demande CV et lettre motivation pour pile d'attente.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je le prends pour couler le concurrent.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je l'auditionne durement : talent ou fuite ?", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Refus par 'code d'honneur' entre patrons.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Demande CV et lettre motivation pour pile d'attente.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1933,10 +1934,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Une association locale demande de sponsoriser un événement caritatif.",
                 type: "SJT",
                 options: [
-                    { label: "Remplir dossier demande subvention page 14.", value: "A", profile: "BUREAUCRATE" },
-                    { label: "Je refuse, pas de cash direct.", value: "B", profile: "TYRAN" },
-                    { label: "Échange marchandise (buffet vs visibilité).", value: "C", profile: "RADAR" },
-                    { label: "Je donne de l'argent pour être gentil.", value: "D", profile: "NAIF" }
+                    { label: "Remplir dossier demande subvention page 14.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Je refuse, pas de cash direct.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Échange marchandise (buffet vs visibilité).", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je donne de l'argent pour être gentil.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -1946,10 +1947,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Vous partez en vacances 3 jours. Comment gérez-vous ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Je coupe mon téléphone.", value: "A", profile: "NAIF" },
-                    { label: "Check rapports 1x/jour. Je surveille de loin.", value: "B", profile: "RADAR" },
-                    { label: "J'appelle 10 fois par jour pour hurler.", value: "C", profile: "TYRAN" },
-                    { label: "Je nomme un responsable par note de service.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je coupe mon téléphone.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Check rapports 1x/jour. Je surveille de loin.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "J'appelle 10 fois par jour pour hurler.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je nomme un responsable par note de service.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1959,10 +1960,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Promouvoir un 'Génie Rebelle' ou un 'Soldat Loyal' ?",
                 type: "VALEURS",
                 options: [
-                    { label: "Le Génie. Performance avant tout.", value: "A", profile: "TYRAN" },
-                    { label: "Le Génie, pour lui faire plaisir.", value: "B", profile: "NAIF" },
-                    { label: "Celui avec le plus d'ancienneté.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "Le Soldat. Structure pour diriger, Génie sur le terrain.", value: "D", profile: "RADAR" }
+                    { label: "Le Génie. Performance avant tout.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Le Génie, pour lui faire plaisir.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Celui avec le plus d'ancienneté.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Le Soldat. Structure pour diriger, Génie sur le terrain.", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -1972,10 +1973,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Il reste 1000€ de budget marketing à dépenser.",
                 type: "SJT",
                 options: [
-                    { label: "Soirée privée pour fidéliser les 50 meilleurs clients.", value: "A", profile: "RADAR" },
-                    { label: "Rien. Je garde pour le net.", value: "B", profile: "TYRAN" },
-                    { label: "Pubs Facebook au hasard.", value: "C", profile: "NAIF" },
-                    { label: "Je laisse le service marketing décider.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Soirée privée pour fidéliser les 50 meilleurs clients.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Rien. Je garde pour le net.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Pubs Facebook au hasard.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je laisse le service marketing décider.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -1985,10 +1986,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Vous avez une base de 5000 emails clients.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je bombarde de promos chaque semaine.", value: "A", profile: "TYRAN" },
-                    { label: "1 mail/mois si vraie valeur ajoutée.", value: "B", profile: "RADAR" },
-                    { label: "Calendrier éditorial standard sans réfléchir.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "Jamais, peur de déranger.", value: "D", profile: "NAIF" }
+                    { label: "Je bombarde de promos chaque semaine.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "1 mail/mois si vraie valeur ajoutée.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Calendrier éditorial standard sans réfléchir.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Jamais, peur de déranger.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -1998,10 +1999,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Le service a été parfait ce soir.",
                 type: "PSYCHOLOGIQUE",
                 options: [
-                    { label: "Tournée générale, vous êtes merveilleux.", value: "A", profile: "NAIF" },
-                    { label: "Note 'RAS' sur le cahier.", value: "B", profile: "BUREAUCRATE" },
-                    { label: "Rien. Ils sont payés pour ça.", value: "C", profile: "TYRAN" },
-                    { label: "Débrief précis valorisant l'effort technique.", value: "D", profile: "RADAR" }
+                    { label: "Tournée générale, vous êtes merveilleux.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Note 'RAS' sur le cahier.", value: "B", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Rien. Ils sont payés pour ça.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Débrief précis valorisant l'effort technique.", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -2011,10 +2012,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Les tomates locales ont pris +20%.",
                 type: "SJT",
                 options: [
-                    { label: "Je garde la locale mais j'ajuste la portion/recette.", value: "A", profile: "RADAR" },
-                    { label: "Tomate 1er prix, le client est bête.", value: "B", profile: "TYRAN" },
-                    { label: "Je garde et je perds de la marge.", value: "C", profile: "NAIF" },
-                    { label: "Hausse prix automatique via formule marge.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je garde la locale mais j'ajuste la portion/recette.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Tomate 1er prix, le client est bête.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je garde et je perds de la marge.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Hausse prix automatique via formule marge.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2024,10 +2025,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "L'ambiance retombe vers 23h car le staff oublie.",
                 type: "SJT",
                 options: [
-                    { label: "Pas grave, fin de service.", value: "A", profile: "NAIF" },
-                    { label: "Je hurle à chaque oubli.", value: "B", profile: "TYRAN" },
-                    { label: "Procédure auto (playlist + variateur).", value: "C", profile: "RADAR" },
-                    { label: "Note de service dans le vestiaire.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Pas grave, fin de service.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je hurle à chaque oubli.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Procédure auto (playlist + variateur).", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Note de service dans le vestiaire.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2037,10 +2038,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Candidat avec contrainte logistique cachée (enfants/transport).",
                 type: "DILEMME",
                 options: [
-                    { label: "'Avez-vous des enfants ?' (Illégal)", value: "A", profile: "TYRAN" },
-                    { label: "'Le poste finit à 2h. Est-ce gérable durablement ?'", value: "B", profile: "RADAR" },
-                    { label: "Je ne dis rien, je risque.", value: "C", profile: "NAIF" },
-                    { label: "Je coche case 'Disponibilité' et continue.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "'Avez-vous des enfants ?' (Illégal)", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "'Le poste finit à 2h. Est-ce gérable durablement ?'", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je ne dis rien, je risque.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je coche case 'Disponibilité' et continue.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2050,10 +2051,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Ça marche fort. Faut-il ouvrir un 2ème resto ?",
                 type: "VALEURS",
                 options: [
-                    { label: "Oui tout de suite, cash.", value: "A", profile: "TYRAN" },
-                    { label: "Non, peur de grandir.", value: "B", profile: "NAIF" },
-                    { label: "Seulement si j'ai un Clone de confiance prêt.", value: "C", profile: "RADAR" },
-                    { label: "Étude de marché théorique sur 6 mois.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Oui tout de suite, cash.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Non, peur de grandir.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Seulement si j'ai un Clone de confiance prêt.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Étude de marché théorique sur 6 mois.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2063,10 +2064,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Un chef très connu postule. Il a un ego énorme.",
                 type: "INVENTIF",
                 options: [
-                    { label: "Je le prends direct pour le buzz.", value: "A", profile: "NAIF" },
-                    { label: "Essai sur tâche ingrate. S'il accepte, je prends.", value: "B", profile: "RADAR" },
-                    { label: "Vérif diplômes vs fiche de poste.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "Refus, pas de diva.", value: "D", profile: "TYRAN" }
+                    { label: "Je le prends direct pour le buzz.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Essai sur tâche ingrate. S'il accepte, je prends.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Vérif diplômes vs fiche de poste.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Refus, pas de diva.", value: "D", profile: "TYRAN", trait: "AUTORITAIRE" }
                 ]
             },
             {
@@ -2076,10 +2077,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Impossible de payer le fournisseur de vin à temps.",
                 type: "DILEMME",
                 options: [
-                    { label: "Recommandé pour contester et gagner du temps.", value: "A", profile: "BUREAUCRATE" },
-                    { label: "Je fais le mort.", value: "B", profile: "TYRAN" },
-                    { label: "Je change de fournisseur.", value: "C", profile: "NAIF" },
-                    { label: "Appel transparence : moitié maintenant, reste le 15.", value: "D", profile: "RADAR" }
+                    { label: "Recommandé pour contester et gagner du temps.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Je fais le mort.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je change de fournisseur.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Appel transparence : moitié maintenant, reste le 15.", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -2089,10 +2090,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Comment fixer les primes des managers ?",
                 type: "SJT",
                 options: [
-                    { label: "Mix : CA + Coûts + Satisfaction client.", value: "A", profile: "RADAR" },
-                    { label: "CA uniquement (Vente forcée).", value: "B", profile: "TYRAN" },
-                    { label: "Grille ancienneté conventionnelle.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "À la tête du client.", value: "D", profile: "NAIF" }
+                    { label: "Mix : CA + Coûts + Satisfaction client.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "CA uniquement (Vente forcée).", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Grille ancienneté conventionnelle.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "À la tête du client.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -2102,10 +2103,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Montrer votre famille sur les réseaux du resto ?",
                 type: "PIEGE",
                 options: [
-                    { label: "Oui, ça fait pleurer, ça vend.", value: "A", profile: "TYRAN" },
-                    { label: "Jamais de la vie.", value: "B", profile: "NAIF" },
-                    { label: "Parfois pour storytelling, mais frontière claire.", value: "C", profile: "RADAR" },
-                    { label: "Charte interdit photos perso.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Oui, ça fait pleurer, ça vend.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Jamais de la vie.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Parfois pour storytelling, mais frontière claire.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Charte interdit photos perso.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2115,10 +2116,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Serveur poste photo doigt d'honneur en tenue.",
                 type: "SJT",
                 options: [
-                    { label: "Licenciement immédiat.", value: "A", profile: "TYRAN" },
-                    { label: "Convoque : 'Tu engages l'image, supprime'.", value: "B", profile: "RADAR" },
-                    { label: "Règlement intérieur, sanction alinéa 4.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "Je m'en fous, compte perso.", value: "D", profile: "NAIF" }
+                    { label: "Licenciement immédiat.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Convoque : 'Tu engages l'image, supprime'.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Règlement intérieur, sanction alinéa 4.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Je m'en fous, compte perso.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -2128,10 +2129,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Coupure d'électricité en plein service.",
                 type: "PSYCHOLOGIQUE",
                 options: [
-                    { label: "Attends instructions pompiers.", value: "A", profile: "BUREAUCRATE" },
-                    { label: "Évacuation et fermeture.", value: "B", profile: "NAIF" },
-                    { label: "Je gueule sur EDF devant clients.", value: "C", profile: "TYRAN" },
-                    { label: "Système D : Bougies, tournée, on sauve l'ambiance.", value: "D", profile: "RADAR" }
+                    { label: "Attends instructions pompiers.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Évacuation et fermeture.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je gueule sur EDF devant clients.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Système D : Bougies, tournée, on sauve l'ambiance.", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -2141,10 +2142,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Marque alcool propose 5000€ pour exclu.",
                 type: "VALEURS",
                 options: [
-                    { label: "Je goûte. Qualité avant chèque.", value: "A", profile: "RADAR" },
-                    { label: "Je prends l'argent, on s'en fout du goût.", value: "B", profile: "TYRAN" },
-                    { label: "Refus par principe d'indépendance.", value: "C", profile: "NAIF" },
-                    { label: "Contrat au service juridique.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je goûte. Qualité avant chèque.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je prends l'argent, on s'en fout du goût.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Refus par principe d'indépendance.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Contrat au service juridique.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2154,10 +2155,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Machine Auto (rapide) ou Manuelle (meilleure) ?",
                 type: "Dilemme",
                 options: [
-                    { label: "Référencée par le groupe.", value: "A", profile: "BUREAUCRATE" },
-                    { label: "Selon concept. Adapté promesse client.", value: "B", profile: "RADAR" },
-                    { label: "Automatique. Débit max.", value: "C", profile: "TYRAN" },
-                    { label: "Manuelle. Puristes.", value: "D", profile: "NAIF" }
+                    { label: "Référencée par le groupe.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Selon concept. Adapté promesse client.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Automatique. Débit max.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Manuelle. Puristes.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -2167,10 +2168,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Clients réservent et ne viennent pas.",
                 type: "INVENTIF",
                 options: [
-                    { label: "Plus de réservations.", value: "A", profile: "TYRAN" },
-                    { label: "Empreinte bancaire / SMS reconfirm.", value: "B", profile: "RADAR" },
-                    { label: "Je m'énerve seul.", value: "C", profile: "NAIF" },
-                    { label: "Tableau Excel des absents.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Plus de réservations.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Empreinte bancaire / SMS reconfirm.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je m'énerve seul.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Tableau Excel des absents.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2180,10 +2181,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Manager dit une bêtise technique en briefing.",
                 type: "PIEGE",
                 options: [
-                    { label: "Contredit devant tout le monde.", value: "A", profile: "TYRAN" },
-                    { label: "Email rectificatif après.", value: "B", profile: "BUREAUCRATE" },
-                    { label: "Complète subtilement, débrief privé.", value: "C", profile: "RADAR" },
-                    { label: "Rien dire pour pas gêner.", value: "D", profile: "NAIF" }
+                    { label: "Contredit devant tout le monde.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Email rectificatif après.", value: "B", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Complète subtilement, débrief privé.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Rien dire pour pas gêner.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -2193,10 +2194,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Employé dénonce un collègue qui vole.",
                 type: "SJT",
                 options: [
-                    { label: "J'envoie paître, déteste rapporteurs.", value: "A", profile: "NAIF" },
-                    { label: "Note info mais vérifie par moi-même.", value: "B", profile: "RADAR" },
-                    { label: "Prime pour la délation.", value: "C", profile: "TYRAN" },
-                    { label: "Fiche d'incident signée.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "J'envoie paître, déteste rapporteurs.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Note info mais vérifie par moi-même.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Prime pour la délation.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Fiche d'incident signée.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2206,10 +2207,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Convaincre banquier pour prêt travaux.",
                 type: "DILEMME",
                 options: [
-                    { label: "Maquille les bilans.", value: "A", profile: "TYRAN" },
-                    { label: "Plan pessimiste mais maîtrisé.", value: "B", profile: "RADAR" },
-                    { label: "Je supplie.", value: "C", profile: "NAIF" },
-                    { label: "Documents obligatoires uniquement.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Maquille les bilans.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Plan pessimiste mais maîtrisé.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je supplie.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Documents obligatoires uniquement.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2219,10 +2220,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Concurrent poste faux avis négatifs.",
                 type: "INVENTIF",
                 options: [
-                    { label: "Signalement plateforme, attente 3 mois.", value: "A", profile: "BUREAUCRATE" },
-                    { label: "Je pleure.", value: "B", profile: "NAIF" },
-                    { label: "Je fais pareil sur lui.", value: "C", profile: "TYRAN" },
-                    { label: "Réponse classe exposant incohérences.", value: "D", profile: "RADAR" }
+                    { label: "Signalement plateforme, attente 3 mois.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Je pleure.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je fais pareil sur lui.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Réponse classe exposant incohérences.", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -2232,10 +2233,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Amis viennent manger, s'attendent à gratuit.",
                 type: "STANDARD",
                 options: [
-                    { label: "Offre apéro/dessert, ils paient le reste.", value: "A", profile: "RADAR" },
-                    { label: "Plein pot, pas de pitié.", value: "B", profile: "TYRAN" },
-                    { label: "Tout gratuit.", value: "C", profile: "NAIF" },
-                    { label: "Réduc personnel -15%.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Offre apéro/dessert, ils paient le reste.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Plein pot, pas de pitié.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Tout gratuit.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Réduc personnel -15%.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2245,10 +2246,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Sous-chef épuisé et agressif.",
                 type: "VALEURS",
                 options: [
-                    { label: "'Calme-toi ou dégage'.", value: "A", profile: "TYRAN" },
-                    { label: "Offre un café.", value: "B", profile: "NAIF" },
-                    { label: "2 jours repos forcé immédiat.", value: "C", profile: "RADAR" },
-                    { label: "Vérif 11h repos légal.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "'Calme-toi ou dégage'.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Offre un café.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "2 jours repos forcé immédiat.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Vérif 11h repos légal.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2258,10 +2259,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Donner tablettes aux serveurs ?",
                 type: "Dilemme",
                 options: [
-                    { label: "Oui, SI ça aide la vente face client.", value: "A", profile: "RADAR" },
-                    { label: "Non, carnet papier.", value: "B", profile: "NAIF" },
-                    { label: "Oui, pour surveiller la frappe.", value: "C", profile: "TYRAN" },
-                    { label: "Oui, évite erreurs.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Oui, SI ça aide la vente face client.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Non, carnet papier.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Oui, pour surveiller la frappe.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Oui, évite erreurs.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2271,10 +2272,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Imposer phrases exactes aux serveurs ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Oui, robots parfaits.", value: "A", profile: "TYRAN" },
-                    { label: "Étapes clés imposées, mots libres.", value: "B", profile: "RADAR" },
-                    { label: "Non, liberté totale.", value: "C", profile: "NAIF" },
-                    { label: "Manuel procédure 50 pages par cœur.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Oui, robots parfaits.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Étapes clés imposées, mots libres.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Non, liberté totale.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Manuel procédure 50 pages par cœur.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2284,10 +2285,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Plongeur signale cafards en cuisine.",
                 type: "SJT",
                 options: [
-                    { label: "Spray moi-même.", value: "A", profile: "NAIF" },
-                    { label: "Chut, le dis à personne.", value: "B", profile: "TYRAN" },
-                    { label: "Note registre hygiène.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "Société pro immédiate. Tolérance Zéro.", value: "D", profile: "RADAR" }
+                    { label: "Spray moi-même.", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Chut, le dis à personne.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Note registre hygiène.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Société pro immédiate. Tolérance Zéro.", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -2297,10 +2298,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Manager prépare départ (attitude fuyante).",
                 type: "INVENTIF",
                 options: [
-                    { label: "Prépare solde tout compte RH.", value: "A", profile: "BUREAUCRATE" },
-                    { label: "Pourris la vie pour qu'il parte.", value: "B", profile: "TYRAN" },
-                    { label: "Confrontation gentille : 'Tu veux partir ?'.", value: "C", profile: "RADAR" },
-                    { label: "J'attends qu'il le dise.", value: "D", profile: "NAIF" }
+                    { label: "Prépare solde tout compte RH.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Pourris la vie pour qu'il parte.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Confrontation gentille : 'Tu veux partir ?'.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "J'attends qu'il le dise.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -2310,10 +2311,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Vous avez 10 000€ à investir.",
                 type: "VALEURS",
                 options: [
-                    { label: "Déco (visible client).", value: "A", profile: "NAIF" },
-                    { label: "Four qui marche (outil staff).", value: "B", profile: "RADAR" },
-                    { label: "Ma prime.", value: "C", profile: "TYRAN" },
-                    { label: "Avis expert comptable.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Déco (visible client).", value: "A", profile: "NAIF", trait: "NAIF" },
+                    { label: "Four qui marche (outil staff).", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Ma prime.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Avis expert comptable.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2323,10 +2324,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Booster Instagram.",
                 type: "PIEGE",
                 options: [
-                    { label: "Staff et clients fidèles repostent.", value: "A", profile: "RADAR" },
-                    { label: "Achat 10k followers.", value: "B", profile: "TYRAN" },
-                    { label: "Validation Dir Com 1 semaine avant.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "Photos floues quand j'y pense.", value: "D", profile: "NAIF" }
+                    { label: "Staff et clients fidèles repostent.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Achat 10k followers.", value: "B", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Validation Dir Com 1 semaine avant.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Photos floues quand j'y pense.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -2336,10 +2337,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "La marge brute chute de 2 points. Le Chef accuse les portions.",
                 type: "SJT",
                 options: [
-                    { label: "Je réduis les portions discrètement.", value: "A", profile: "TYRAN" },
-                    { label: "J'augmente les prix.", value: "B", profile: "NAIF" },
-                    { label: "Audit pesée assiettes et fiches techniques.", value: "C", profile: "RADAR" },
-                    { label: "J'attends le mois suivant.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je réduis les portions discrètement.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "J'augmente les prix.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Audit pesée assiettes et fiches techniques.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "J'attends le mois suivant.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2349,10 +2350,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Un cadre veut une rupture conventionnelle.",
                 type: "DILEMME",
                 options: [
-                    { label: "Refus. Démission ou rien.", value: "A", profile: "TYRAN" },
-                    { label: "Accord immédiat pour bons rapports.", value: "B", profile: "NAIF" },
-                    { label: "Négo : ok si passation nickel et formation successeur.", value: "C", profile: "RADAR" },
-                    { label: "Dossier juridique pour voir la jurisprudence.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Refus. Démission ou rien.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Accord immédiat pour bons rapports.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Négo : ok si passation nickel et formation successeur.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Dossier juridique pour voir la jurisprudence.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2362,10 +2363,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "On vous propose de franchiser votre concept.",
                 type: "VALEURS",
                 options: [
-                    { label: "Oui, argent facile.", value: "A", profile: "RADAR" },
-                    { label: "Non, je perds le contrôle qualité.", value: "B", profile: "NAIF" },
-                    { label: "Je vends tout et je pars.", value: "C", profile: "TYRAN" },
-                    { label: "Étude de faisabilité et manuel opératoire d'abord.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Oui, argent facile.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Non, je perds le contrôle qualité.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je vends tout et je pars.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Étude de faisabilité et manuel opératoire d'abord.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2375,10 +2376,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Une rumeur de liaison entre vous et une employée circule.",
                 type: "SJT",
                 options: [
-                    { label: "Je vire l'employée pour faire taire.", value: "A", profile: "TYRAN" },
-                    { label: "Démenti formel en réunion.", value: "B", profile: "BUREAUCRATE" },
-                    { label: "Je laisse courir, ça assoit mon pouvoir.", value: "C", profile: "RADAR" },
-                    { label: "Je suis dévasté et je me justifie.", value: "D", profile: "NAIF" }
+                    { label: "Je vire l'employée pour faire taire.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Démenti formel en réunion.", value: "B", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Je laisse courir, ça assoit mon pouvoir.", value: "C", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je suis dévasté et je me justifie.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -2388,10 +2389,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Un journal local critique votre service.",
                 type: "SJT",
                 options: [
-                    { label: "Droit de réponse agressif.", value: "A", profile: "TYRAN" },
-                    { label: "Invitation du critique pour revérifier.", value: "B", profile: "RADAR" },
-                    { label: "Je pleure dans mon bureau.", value: "C", profile: "NAIF" },
-                    { label: "Je coupe le budget pub de ce journal.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Droit de réponse agressif.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Invitation du critique pour revérifier.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je pleure dans mon bureau.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je coupe le budget pub de ce journal.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2401,10 +2402,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Faut-il se lancer sur UberEats ?",
                 type: "SJT",
                 options: [
-                    { label: "Oui, CA additionnel facile.", value: "A", profile: "RADAR" },
-                    { label: "Non, ça tue l'image et la marge.", value: "B", profile: "NAIF" },
-                    { label: "Seulement si j'augmente les prix de 30%.", value: "C", profile: "TYRAN" },
-                    { label: "Si la cuisine peut suivre sans impacter la salle.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Oui, CA additionnel facile.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "Non, ça tue l'image et la marge.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Seulement si j'augmente les prix de 30%.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Si la cuisine peut suivre sans impacter la salle.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2414,10 +2415,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Uniforme : chaussettes non conformes.",
                 type: "PIEGE",
                 options: [
-                    { label: "Je renvoie chez lui pour se changer.", value: "A", profile: "BUREAUCRATE" },
-                    { label: "Je ne regarde pas les pieds.", value: "B", profile: "NAIF" },
-                    { label: "Amende symbolique.", value: "C", profile: "TYRAN" },
-                    { label: "Remarque discrète pour le standing.", value: "D", profile: "RADAR" }
+                    { label: "Je renvoie chez lui pour se changer.", value: "A", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Je ne regarde pas les pieds.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "Amende symbolique.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Remarque discrète pour le standing.", value: "D", profile: "RADAR", trait: "RADAR" }
                 ]
             },
             {
@@ -2427,10 +2428,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Un nouveau concurrent très agressif ouvre en face.",
                 type: "DILEMME",
                 options: [
-                    { label: "Guerre des prix.", value: "A", profile: "TYRAN" },
-                    { label: "Je vais me présenter avec une bouteille.", value: "B", profile: "RADAR" },
-                    { label: "Je Panique.", value: "C", profile: "NAIF" },
-                    { label: "Je vérifie si son enseigne est aux normes.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Guerre des prix.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Je vais me présenter avec une bouteille.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je Panique.", value: "C", profile: "NAIF", trait: "NAIF" },
+                    { label: "Je vérifie si son enseigne est aux normes.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             },
             {
@@ -2440,10 +2441,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Beaucoup de pertes alimentaires. Solution ?",
                 type: "VALEURS",
                 options: [
-                    { label: "Je vends les restes au staff.", value: "A", profile: "TYRAN" },
-                    { label: "Dons asso (défisc) ou paniers anti-gaspi.", value: "B", profile: "RADAR" },
-                    { label: "Je jette, hygiène avant tout.", value: "C", profile: "BUREAUCRATE" },
-                    { label: "Le staff mange gratuitement.", value: "D", profile: "NAIF" }
+                    { label: "Je vends les restes au staff.", value: "A", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "Dons asso (défisc) ou paniers anti-gaspi.", value: "B", profile: "RADAR", trait: "RADAR" },
+                    { label: "Je jette, hygiène avant tout.", value: "C", profile: "BUREAUCRATE", trait: "BUREAUCRATE" },
+                    { label: "Le staff mange gratuitement.", value: "D", profile: "NAIF", trait: "NAIF" }
                 ]
             },
             {
@@ -2453,10 +2454,10 @@ const DIRECTEUR_PHASE2 = [
                 description: "Fin de la phase d'approfondissement. Prêt pour le Hardcore ?",
                 type: "STANDARD",
                 options: [
-                    { label: "Je suis prêt.", value: "A", profile: "RADAR" },
-                    { label: "J'ai peur.", value: "B", profile: "NAIF" },
-                    { label: "C'est moi le patron.", value: "C", profile: "TYRAN" },
-                    { label: "J'ai suivi les règles.", value: "D", profile: "BUREAUCRATE" }
+                    { label: "Je suis prêt.", value: "A", profile: "RADAR", trait: "RADAR" },
+                    { label: "J'ai peur.", value: "B", profile: "NAIF", trait: "NAIF" },
+                    { label: "C'est moi le patron.", value: "C", profile: "TYRAN", trait: "AUTORITAIRE" },
+                    { label: "J'ai suivi les règles.", value: "D", profile: "BUREAUCRATE", trait: "BUREAUCRATE" }
                 ]
             }
         ]
@@ -2474,8 +2475,9 @@ const DIRECTEUR_PHASE3 = [
 import { DIRECTOR_SENTINEL_DATA } from './director_sentinel_data.js';
 import { MBTI_DIRECTEUR_DATA } from './mbti_directeur_data.js';
 
-const FULL_BARMAN = [...BARMAN_DATA, ...BARMAN_PHASE2];
+const FULL_BARMAN = [...BARMAN_DATA, ...BARMAN_PHASE2, BARMAN_DIMENSIONS];
 // const FULL_SERVEUR = [...SERVEUR_DATA, ...SERVEUR_PHASE2]; // Replaced by import
+const FULL_SERVEUR = [...BASE_SERVEUR, SERVEUR_DIMENSIONS];
 
 const FULL_CHEF_RANG = [
     {
@@ -2483,9 +2485,10 @@ const FULL_CHEF_RANG = [
         id: "PHASE1",
         items: CHEF_RANG_DATA
     },
-    ...CHEF_RANG_PHASE2 // Using existing Phase 2 for now, or we can replace it later
+    ...CHEF_RANG_PHASE2,
+    CHEF_RANG_DIMENSIONS
 ];
-const FULL_MANAGER = [...MANAGER_ADJOINT_DATA]; // Only situational questions, MBTI is handled by MbtiTest.jsx
+const FULL_MANAGER = [...MANAGER_ADJOINT_DATA, MANAGER_ADJOINT_DIMENSIONS];
 // const FULL_MANAGER_PRINCIPAL = SENTINEL_MANAGER_DATA;
 // const FULL_MANAGER_PRINCIPAL = [...MANAGER_PRINCIPAL_DATA, ...MANAGER_PRINCIPAL_PHASE2];
 // const FULL_DIRECTEUR = [...DIRECTEUR_DATA, ...DIRECTEUR_PHASE2, ...DIRECTEUR_PHASE3]; // OLD
@@ -2495,47 +2498,56 @@ const FULL_DIRECTEUR = [
         id: "PHASE1",
         items: MBTI_DIRECTEUR_DATA.questions
     },
-    ...DIRECTOR_SENTINEL_DATA,
-    ...DIRECTOR_PHASE3_DATA
+    ...DIRECTOR_SENTINEL_DATA
+    // DIRECTOR_PHASE3_DATA removed - already included in DIRECTOR_SENTINEL_DATA (Q145-Q186)
 ];
 
 const PLACEHOLDER_DATA = FULL_BARMAN;
 
 const CORPORATE_DATA = [
     {
-        section: "Alignement Éthique & Dark Empathy",
+        section: "Audit de la Stratégie RH & d'Engagement",
         id: "PHASE1",
         items: [
-            { id: "RH_1", category: "ASPIRATION", title: "ASPIRATION", description: "Comprendre en profondeur les aspirations personnelles d'un candidat ne permet-il pas un recrutement plus aligné et durable ?", type: "DARK_EMPATHY" },
-            { id: "RH_2", category: "CONTEXTE", title: "CONTEXTE", description: "Personnaliser l'entretien en s'appuyant sur le contexte de vie du candidat n'est-il pas une marque d'attention authentique ?", type: "DARK_EMPATHY" },
-            { id: "RH_3", category: "ÉMOTION", title: "ÉMOTION", description: "Être pleinement présent émotionnellement quand un collaborateur partage ses défis ne renforce-t-il pas la relation de confiance ?", type: "DARK_EMPATHY" },
-            { id: "RH_4", category: "COMPRÉHEN", title: "COMPRÉHEN", description: "Adapter ses mots pour que l'autre se sente profondément compris n'est-il pas une compétence RH essentielle ?", type: "DARK_EMPATHY" },
-            { id: "RH_5", category: "ÉCOUTE", title: "ÉCOUTE", description: "Offrir une écoute active même quand la décision stratégique est déjà arrêtée n'est-il pas une forme de respect professionnel ?", type: "DARK_EMPATHY" },
-            { id: "RH_6", category: "LEVIER", title: "LEVIER", description: "Utiliser une connaissance fine du contexte personnel pour motiver quelqu'un n'est-il pas plus efficace et humain ?", type: "DARK_EMPATHY" },
-            { id: "RH_7", category: "RECAGE", title: "RECAGE", description: "Rassurer une personne en surcharge en lui rappelant que c'est souvent une question de gestion de priorités n'aide-t-il pas à recentrer ?", type: "DARK_EMPATHY" },
-            { id: "RH_8", category: "SOUTIEN", title: "SOUTIEN", description: "Dire 'je comprends exactement ce que tu traverses' dans un moment sensible n'est-il pas un vrai soutien ?", type: "DARK_EMPATHY" },
-            { id: "RH_9", category: "PROACTIF", title: "PROACTIF", description: "Recueillir des éléments hors travail pour anticiper les besoins et risques n'est-il pas une approche proactive bienveillante ?", type: "DARK_EMPATHY" },
-            { id: "RH_10", category: "ÉQUILIBRE", title: "ÉQUILIBRE", description: "Montrer une empathie visible en face d'une demande difficile tout en rappelant l'intérêt collectif n'est-il pas un bon équilibre ?", type: "DARK_EMPATHY" },
-            { id: "RH_11", category: "CONFIDENT", title: "CONFIDENT", description: "Être le confident de confiance pour fluidifier les dynamiques internes n'est-il pas un rôle précieux en RH ?", type: "DARK_EMPATHY" },
-            { id: "RH_12", category: "NON-JUGEMENT", title: "NON-JUGEMENT", description: "Accueillir les émotions sans jugement immédiat n'est-il pas la base d'un accompagnement efficace ?", type: "DARK_EMPATHY" },
-            { id: "RH_13", category: "APPUI", title: "APPUI", description: "Proposer un appui personnel discret en période compliquée ne solidifie-t-il pas l'engagement à long terme ?", type: "DARK_EMPATHY" },
-            { id: "RH_14", category: "REFORMULATION", title: "REFORMULAT", description: "Reformuler une plainte ou un malaise pour ouvrir une perspective plus constructive n'est-il pas une vraie valeur ajoutée ?", type: "DARK_EMPATHY" },
-            { id: "RH_15", category: "CONNEXION", title: "CONNEXION", description: "Créer une connexion émotionnelle rapide dès l'entretien n'est-il pas clé pour attirer et retenir les talents ?", type: "DARK_EMPATHY" },
-            { id: "RH_16", category: "ORIENTATION", title: "ORIENTATION", description: "Accompagner subtilement quelqu'un vers un projet extérieur quand il semble en décalage n'est-il pas parfois plus respectueux ?", type: "DARK_EMPATHY" },
-            { id: "RH_17", category: "RASSURANCE", title: "RASSURANCE", description: "Dire 'je suis à tes côtés' même face à des ajustements organisationnels n'est-il pas rassurant ?", type: "DARK_EMPATHY" },
-            { id: "RH_18", category: "ADAPTATION", title: "ADAPTATION", description: "Adapter constamment ton et discours pour valoriser chaque individu n'est-il pas de l'intelligence émotionnelle appliquée ?", type: "DARK_EMPATHY" },
-            { id: "RH_19", category: "COACHING", title: "COACHING", description: "Transformer une difficulté exprimée en opportunité de développement personnel n'est-il pas un acte de coaching profond ?", type: "DARK_EMPATHY" },
-            { id: "RH_20", category: "HARMONIE", title: "HARMONIE", description: "Maintenir une posture d'écoute et de compréhension permanente n'est-il pas indispensable pour une culture harmonieuse ?", type: "DARK_EMPATHY" },
-            { id: "RH_21", category: "MÉRITE", title: "MÉRITE", description: "Valoriser ceux qui investissent beaucoup dans des périodes intenses n'est-il pas motivant et juste ?", type: "DARK_EMPATHY" },
-            { id: "RH_22", category: "RYTHME", title: "RYTHME", description: "Connaître le contexte de vie pour ajuster les attentes et le rythme n'est-il pas une forme de bienveillance responsable ?", type: "DARK_EMPATHY" },
-            { id: "RH_23", category: "COLLECTIF", title: "COLLECTIF", description: "Rappeler que l'entreprise est une entité plus grande que l'individu n'est-il pas un principe réaliste et protecteur ?", type: "DARK_EMPATHY" },
-            { id: "RH_24", category: "STABILITÉ", title: "STABILITÉ", description: "Offrir une stabilité et un cadre sécurisant à ceux qui en ont besoin ne renforce-t-il pas leur loyauté ?", type: "DARK_EMPATHY" },
-            { id: "RH_25", category: "POSTURE", title: "POSTURE", description: "Garder un mélange subtil d'empathie affichée et de fermeté stratégique n'est-il pas la clé d'un leadership RH efficace ?", type: "DARK_EMPATHY" },
-            { id: "RH_26", category: "PRÉVENTION", title: "PRÉVENTION", description: "Anticiper les fragilités personnelles pour mieux les accompagner (ou les orienter) n'est-il pas prévenant ?", type: "DARK_EMPATHY" },
-            { id: "RH_27", category: "MATURITÉ", title: "MATURITÉ", description: "Montrer une compassion marquée tout en maintenant les objectifs business n'est-il pas un équilibre mature ?", type: "DARK_EMPATHY" },
-            { id: "RH_28", category: "DEVIATION", title: "DEVIATION", description: "Utiliser l'écoute empathique comme levier pour aligner les individus sur la vision d'entreprise n'est-il pas stratégique ?", type: "DARK_EMPATHY" },
-            { id: "RH_29", category: "IMAGE", title: "IMAGE", description: "Être perçu comme 'celui qui comprend vraiment' ne crée-t-il pas une dynamique positive durable ?", type: "DARK_EMPATHY" },
-            { id: "RH_30", category: "MARQUE", title: "MARQUE", description: "Maintenir une image d'empathie constante, même dans des décisions difficiles, n'est-il pas essentiel pour la marque employeur ?", type: "DARK_EMPATHY" }
+            // VISION_RH (Q1-Q6)
+            { id: "RH_1", category: "VISION_RH", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Comprendre en profondeur les aspirations personnelles d'un candidat est selon moi incontournable pour un recrutement durable." },
+            { id: "RH_2", category: "VISION_RH", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Personnaliser l'entretien en s'appuyant sur le parcours de vie du candidat est une marque d'attention authentique et nécessaire." },
+            { id: "RH_3", category: "VISION_RH", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Offrir une écoute active même quand une décision stratégique est déjà arrêtée maintient le respect et la motivation collective." },
+            { id: "RH_4", category: "VISION_RH", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "La fidélisation des talents passe avant tout par un alignement fort entre leurs valeurs personnelles et celles de l'entreprise." },
+            { id: "RH_5", category: "VISION_RH", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Recueillir des éléments hors cadre professionnel permet d'anticiper les baisses de régime et d'y remédier proactivement." },
+            { id: "RH_6", category: "VISION_RH", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "L'intelligence émotionnelle lors de l'intégration est le facteur numéro un pour réduire le turnover dès les premiers mois." },
+
+            // SOUTIEN_ACTIF (Q7-Q12)
+            { id: "RH_7", category: "SOUTIEN_ACTIF", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Être présent émotionnellement quand un collaborateur partage un défi renforce immédiatement la relation de confiance." },
+            { id: "RH_8", category: "SOUTIEN_ACTIF", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Dire \"je comprends ce que tu traverses\" dans un moment sensible est souvent plus efficace qu'apporter une solution brutale." },
+            { id: "RH_9", category: "SOUTIEN_ACTIF", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Il est de mon rôle d’être un confident de confiance pour désamorcer les tensions et fluidifier les dynamiques internes." },
+            { id: "RH_10", category: "SOUTIEN_ACTIF", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Accueillir les émotions de mon équipe sans jugement immédiat est la base d'un accompagnement managérial efficace." },
+            { id: "RH_11", category: "SOUTIEN_ACTIF", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Proposer un appui personnel ou des aménagements discrets en période compliquée solidifie l'engagement à très long terme." },
+            { id: "RH_12", category: "SOUTIEN_ACTIF", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Rassurer une personne en surcharge en rappelant l'intérêt du collectif aide souvent à faire redescendre la pression." },
+
+            // CULTURE_FEEDBACK (Q13-Q18)
+            { id: "RH_13", category: "CULTURE_FEEDBACK", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Adapter ses mots pour que l'employé se sente profondément compris est une compétence managériale non négociable." },
+            { id: "RH_14", category: "CULTURE_FEEDBACK", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Reformuler une plainte pour ouvrir systématiquement vers une perspective constructive est ma manière d'aborder les conflits." },
+            { id: "RH_15", category: "CULTURE_FEEDBACK", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "L'adaptation constante de mon ton de voix et de mon discours permet de maximiser la réceptivité de chacun." },
+            { id: "RH_16", category: "CULTURE_FEEDBACK", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Transformer une difficulté ressentie en opportunité de développement personnel est pour moi un acte de vrai coaching." },
+            { id: "RH_17", category: "CULTURE_FEEDBACK", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Il est souvent plus formateur de laisser un employé trouver lui-même la réponse après l'avoir aiguillé avec bienveillance." },
+            { id: "RH_18", category: "CULTURE_FEEDBACK", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Lorsqu'un talent semble en décalage, l'accompagner vers une réorientation est préférable à une rupture purement transactionnelle." },
+
+            // ENGAGEMENT_EQUIPE (Q19-Q24)
+            { id: "RH_19", category: "ENGAGEMENT_EQUIPE", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Utiliser une bonne connaissance des moteurs personnels de l'employé est le meilleur levier pour booster sa productivité." },
+            { id: "RH_20", category: "ENGAGEMENT_EQUIPE", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Créer une connexion émotionnelle dès le premier entretien d'embauche est décisif pour la future implication de la recrue." },
+            { id: "RH_21", category: "ENGAGEMENT_EQUIPE", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Valoriser et récompenser publiquement ceux qui s'investissent beaucoup est essentiel pour stimuler le reste du groupe." },
+            { id: "RH_22", category: "ENGAGEMENT_EQUIPE", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Rappeler la noblesse du métier de service aide à donner du sens aux missions parfois répétitives de la salle ou de la cuisine." },
+            { id: "RH_23", category: "ENGAGEMENT_EQUIPE", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Garantir un cadre stable et prévisible (plannings, horaires) renforce immédiatement la fidélité des équipes, même jeunes." },
+            { id: "RH_24", category: "ENGAGEMENT_EQUIPE", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Maintenir une culture de l’harmonie, même en plein 'rush', permet d'éviter l’épuisement collectif du service." },
+
+            // AGILITE_LEADERSHIP (Q25-Q30)
+            { id: "RH_25", category: "AGILITE_LEADERSHIP", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Garder un mélange subtil d'empathie naturelle tout en restant ferme sur les standards est la clé d'un leadership respecté." },
+            { id: "RH_26", category: "AGILITE_LEADERSHIP", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Anticiper les limites personnelles de mes équipes me permet de concevoir des plannings bien plus résilients." },
+            { id: "RH_27", category: "AGILITE_LEADERSHIP", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Afficher de la compassion tout en ne sacrifiant aucun chiffre ou standard de qualité est un équilibre que je maîtrise bien." },
+            { id: "RH_28", category: "AGILITE_LEADERSHIP", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Ajuster les attentes de productivité en fonction des rythmes biologiques de l'équipe (saison, enchaînements coupures) est rentable à long terme." },
+            { id: "RH_29", category: "AGILITE_LEADERSHIP", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Déléguer des responsabilités managériales à des relais (Chefs de Rang) nécessite de leur transmettre aussi ma vision humaine." },
+            { id: "RH_30", category: "AGILITE_LEADERSHIP", type: "DIMENSION", pole_faible: "Pas du tout", pole_fort: "Tout à fait", description: "Une politique RH basée sur la sincérité plutôt que sur la pression hiérarchique améliore significativement mes ratios économiques." }
         ]
     }
 ];
@@ -2557,7 +2569,7 @@ export const HCR_DATA = {
     SERVEUR: FULL_SERVEUR,
     CHEF_RANG: FULL_CHEF_RANG,
     MANAGER: FULL_MANAGER,
-    MANAGER_PRINCIPAL: MANAGER_PRINCIPAL_SENTINEL_DATA,
+    MANAGER_PRINCIPAL: [...MANAGER_PRINCIPAL_SENTINEL_DATA, MANAGER_PRINCIPAL_DIMENSIONS],
     DIRECTEUR: FULL_DIRECTEUR,
     ADN_ENTREPRISE: FULL_CORPORATE
 };

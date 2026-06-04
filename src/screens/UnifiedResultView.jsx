@@ -99,6 +99,22 @@ const ROLE_CONFIG = {
             "Délégation vs. contrôle total",
             "Maintien de l'exemplarité sous pression"
         ]
+    },
+    'adn_entreprise': {
+        title: 'AUDIT RH',
+        subtitle: 'Analyse approfondie de votre ADN managérial et de vos pratiques de fidélisation.',
+        accent: '#eab308', // Amber/Gold for recruiter
+        showLeadership: false, // Don't show MBTI cross-analysis
+        forcesList: [
+            "Compréhension des enjeux humains",
+            "Capacité à fidéliser les talents",
+            "Vision stratégique du recrutement"
+        ],
+        vigilancesList: [
+            "Alignement entre discours et actes sur le terrain",
+            "Attention à la pression opérationnelle vs bien-être",
+            "Besoin de process d'intégration plus solides"
+        ]
     }
 };
 
@@ -149,7 +165,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                 <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white">
                     RÉSULTATS <span style={{ color: config.accent }}>SENTINEL</span> {config.title}
                 </h1>
-                <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+                <p className="text-stone-500 text-lg max-w-2xl mx-auto">
                     {config.subtitle}
                 </p>
             </div>
@@ -158,7 +174,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-slate-800/50 rounded-3xl p-8 border border-slate-700/50 backdrop-blur-sm"
+                className="bg-stone-900/50 rounded-3xl p-8 border border-slate-700/50 backdrop-blur-sm"
             >
                 <div className="flex items-center gap-4 mb-6 border-b border-slate-700 pb-4">
                     <Activity className={reliabilityColor} size={28} />
@@ -169,7 +185,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                     <div>
                         <div className="text-6xl font-black mb-2 flex items-baseline gap-2">
                             <span className={reliabilityColor}>{safeReliability}%</span>
-                            <span className="text-lg text-slate-500 font-medium uppercase tracking-widest">Fiabilité</span>
+                            <span className="text-lg text-stone-500 font-medium uppercase tracking-widest">Fiabilité</span>
                         </div>
                         <p className={`text-xl font-bold mb-4 ${reliabilityColor}`}>
                             Niveau : {reliabilityText}
@@ -185,8 +201,8 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                     <div className="space-y-3">
                         {/* Score global */}
                         <div className="bg-slate-700/30 border border-slate-600/50 p-6 rounded-xl text-center">
-                            <div className="text-xs text-slate-400 font-bold uppercase tracking-widest mb-2">Score Global</div>
-                            <div className="text-5xl font-black" style={{ color: config.accent }}>{globalScore || 0}<span className="text-xl text-slate-500">/100</span></div>
+                            <div className="text-xs text-stone-500 font-bold uppercase tracking-widest mb-2">Score Global</div>
+                            <div className="text-5xl font-black" style={{ color: config.accent }}>{globalScore || 0}<span className="text-xl text-stone-500">/100</span></div>
                         </div>
                         {/* Flags */}
                         {flags && flags.length > 0 && flags.map((flag, i) => (
@@ -210,7 +226,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="bg-slate-800/50 rounded-3xl p-8 border border-slate-700/50"
+                    className="bg-stone-900/50 rounded-3xl p-8 border border-slate-700/50"
                 >
                     <div className="flex items-center gap-4 mb-6 border-b border-slate-700 pb-4">
                         <Brain className="text-purple-400" size={28} />
@@ -221,7 +237,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                         <h3 className="text-6xl font-black text-white mb-2 tracking-tighter">{safeMbti.code}</h3>
                         <div className="text-2xl font-bold text-purple-400 mb-1">{safeMbti.title}</div>
                         {safeMbti.aka && (
-                            <div className="text-sm text-slate-400 uppercase tracking-widest">{safeMbti.aka}</div>
+                            <div className="text-sm text-stone-500 uppercase tracking-widest">{safeMbti.aka}</div>
                         )}
                     </div>
 
@@ -242,7 +258,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                 <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="bg-slate-800/50 rounded-3xl p-8 border border-slate-700/50"
+                    className="bg-stone-900/50 rounded-3xl p-8 border border-slate-700/50"
                 >
                     <div className="flex items-center gap-4 mb-6 border-b border-slate-700 pb-4">
                         <Award style={{ color: config.accent }} size={28} />
@@ -255,7 +271,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                                 <h3 className="text-3xl font-black mb-2" style={{ color: config.accent }}>
                                     {profileData.title}
                                 </h3>
-                                <p className="text-slate-400 uppercase tracking-widest text-sm font-bold">
+                                <p className="text-stone-500 uppercase tracking-widest text-sm font-bold">
                                     {profileData.desc}
                                 </p>
                             </div>
@@ -268,12 +284,12 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                             <h3 className="text-4xl font-black mb-2" style={{ color: config.accent }}>
                                 {dominantProfile}
                             </h3>
-                            <p className="text-slate-400 uppercase tracking-widest text-sm font-bold">
+                            <p className="text-stone-500 uppercase tracking-widest text-sm font-bold">
                                 Profil Dominant Détecté
                             </p>
                         </div>
                     ) : (
-                        <div className="text-center text-slate-500 italic py-4">
+                        <div className="text-center text-stone-500 italic py-4">
                             Données de profil insuffisantes
                         </div>
                     )}
@@ -281,7 +297,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                     {/* Verdict */}
                     {verdict && (
                         <div className="mt-6 bg-slate-700/30 rounded-xl p-4 border border-slate-600/50">
-                            <div className="text-xs text-slate-400 font-bold uppercase tracking-widest mb-2">Verdict Global</div>
+                            <div className="text-xs text-stone-500 font-bold uppercase tracking-widest mb-2">Verdict Global</div>
                             <p className="text-lg font-bold" style={{ color: verdictColor?.includes('red') || verdictColor?.includes('rose') ? '#ef4444' : verdictColor?.includes('green') || verdictColor?.includes('emerald') ? '#10b981' : config.accent }}>
                                 {verdict}
                             </p>
@@ -295,7 +311,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="bg-slate-800/50 rounded-3xl p-8 border border-slate-700/50"
+                className="bg-stone-900/50 rounded-3xl p-8 border border-slate-700/50"
             >
                 <div className="flex items-center gap-4 mb-8 border-b border-slate-700 pb-4">
                     <BarChart2 className="text-orange-400" size={28} />
@@ -306,7 +322,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
 
                 <div className="grid lg:grid-cols-2 gap-12">
                     {/* RADAR CHART */}
-                    <div className="h-[350px] w-full bg-slate-900/50 rounded-2xl border border-slate-800 p-4 flex items-center justify-center">
+                    <div className="h-[350px] w-full bg-black/50 rounded-2xl border border-stone-800 p-4 flex items-center justify-center">
                         <ResponsiveContainer width="100%" height="100%">
                             <RadarChart cx="50%" cy="50%" outerRadius="70%" data={radarData}>
                                 <PolarGrid stroke="#334155" />
@@ -340,7 +356,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                                         style={{ backgroundColor: barColor(d.A) }}
                                     />
                                 </div>
-                                <p className="text-xs text-slate-500 mt-1 italic">
+                                <p className="text-xs text-stone-500 mt-1 italic">
                                     {d.A > 75 ? "Point fort majeur" : d.A < 40 ? "Zone de vigilance critique" : "Niveau opérationnel standard"}
                                 </p>
                             </div>
@@ -389,7 +405,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                     className="rounded-3xl p-1"
                     style={{ background: `linear-gradient(to right, ${config.accent}33, #8b5cf633)` }}
                 >
-                    <div className="bg-slate-900 rounded-[22px] p-8 md:p-12 text-center relative overflow-hidden">
+                    <div className="bg-black rounded-[22px] p-8 md:p-12 text-center relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-8 opacity-5">
                             <Zap size={120} />
                         </div>
@@ -400,7 +416,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                         </div>
 
                         <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-                            {safeMbti.code} <span className="text-slate-600 mx-2">×</span> <span style={{ color: config.accent }}>{config.title}</span>
+                            {safeMbti.code} <span className="text-stone-400 mx-2">×</span> <span style={{ color: config.accent }}>{config.title}</span>
                         </h2>
 
                         <div className="text-2xl font-medium text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -417,27 +433,27 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                         )}
 
                         <div className="grid md:grid-cols-3 gap-6 text-left max-w-5xl mx-auto">
-                            <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
+                            <div className="bg-stone-900/50 p-6 rounded-2xl border border-slate-700/50">
                                 <h4 className="font-bold text-white mb-2 flex items-center gap-2">
                                     <TrendingUp size={18} className="text-emerald-400" /> Synergies
                                 </h4>
-                                <p className="text-sm text-slate-400">
+                                <p className="text-sm text-stone-500">
                                     Votre profil {safeMbti.code} apporte une vision naturelle qui renforce vos compétences sur le poste de {config.title}.
                                 </p>
                             </div>
-                            <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
+                            <div className="bg-stone-900/50 p-6 rounded-2xl border border-slate-700/50">
                                 <h4 className="font-bold text-white mb-2 flex items-center gap-2">
                                     <AlertTriangle size={18} className="text-amber-400" /> Tensions
                                 </h4>
-                                <p className="text-sm text-slate-400">
+                                <p className="text-sm text-stone-500">
                                     {adaptabilityVerdict || "Évaluez l'équilibre entre vos préférences naturelles et les exigences du poste."}
                                 </p>
                             </div>
-                            <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
+                            <div className="bg-stone-900/50 p-6 rounded-2xl border border-slate-700/50">
                                 <h4 className="font-bold text-white mb-2 flex items-center gap-2">
                                     <Target size={18} style={{ color: config.accent }} /> Impact
                                 </h4>
-                                <p className="text-sm text-slate-400">
+                                <p className="text-sm text-stone-500">
                                     Score global de {globalScore || 0}/100 — {globalScore > 70 ? "Profil très prometteur pour ce poste." : globalScore > 50 ? "Potentiel avec axes d'amélioration." : "Accompagnement recommandé."}
                                 </p>
                             </div>
@@ -453,7 +469,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="bg-slate-800/50 rounded-3xl p-8 border border-slate-700/50"
+                    className="bg-stone-900/50 rounded-3xl p-8 border border-slate-700/50"
                 >
                     <h3 className="text-xl font-bold text-emerald-400 mb-6 flex items-center gap-2">
                         <CheckCircle /> VOS FORCES
@@ -473,7 +489,7 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 }}
-                    className="bg-slate-800/50 rounded-3xl p-8 border border-slate-700/50"
+                    className="bg-stone-900/50 rounded-3xl p-8 border border-slate-700/50"
                 >
                     <h3 className="text-xl font-bold text-rose-400 mb-6 flex items-center gap-2">
                         <AlertTriangle /> POINTS DE VIGILANCE
@@ -490,11 +506,11 @@ const UnifiedResultView = ({ data, mbtiProfile, roleId, onNavigateHome }) => {
             </div>
 
             {/* FOOTER */}
-            <div className="border-t border-slate-800 pt-12 text-center text-slate-500 text-sm">
+            <div className="border-t border-stone-800 pt-12 text-center text-stone-500 text-sm">
                 <p>Analyse générée par HCR Sentinel v3.0 • Confidentialité garantie</p>
                 <div className="flex justify-center gap-4 mt-4">
-                    <button className="text-slate-400 hover:text-white transition-colors">Télécharger PDF</button>
-                    <button className="text-slate-400 hover:text-white transition-colors">Partager</button>
+                    <button className="text-stone-500 hover:text-white transition-colors">Télécharger PDF</button>
+                    <button className="text-stone-500 hover:text-white transition-colors">Partager</button>
                     <button
                         onClick={onNavigateHome}
                         className="px-6 py-2 rounded-xl font-bold transition-colors border border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white ml-4"

@@ -1,230 +1,696 @@
 {
-    "project": "HCR SENTINELLE v3.0",
-    "global_settings": {
-        "reliability_threshold": 70,
-        "stress_test_multiplier": 1.2,
-        "dark_empathy_detection": true
-    },
-    "dimensions": {
-        "RES": "Résilience (Capacité à tenir sous la pression du rush)",
-        "EMP": "Empathie Tactique (Gestion émotionnelle du client/équipe)",
-        "AUT": "Autorité & Leadership (Capacité à diriger/trancher)",
-        "INT": "Intégrité & Fiabilité (Honnêteté et respect des process)",
-        "TOX": "Indice Organisationnel (Niveau de friction/toxicité)",
-        "ADA": "Adaptabilité (Réaction face à l'imprévu)"
-    },
-    "roles_logic": {
-        "ADN_ENTREPRISE": {
-            "focus": [
-                "TOX",
-                "INT",
-                "EMP"
-            ],
-            "weights": {
-                "TOX": 2.0,
-                "INT": 1.5,
-                "EMP": 0.5,
-                "RES": 1.0
+    "sentinelle_hcr_v3": {
+        "meta": {
+            "version": "3.2",
+            "nom": "HCR SENTINELLE - Méritocratie Universelle",
+            "description": "Système de scoring psychométrique basé sur 6 dimensions universelles"
+        },
+        "dimensions": {
+            "RES": {
+                "nom": "Résilience",
+                "description": "Capacité de travail et tenue sous pression",
+                "poids_base": 2.0
             },
-            "verdict_labels": {
-                "high": "Structure à haute résilience, environnement sain.",
-                "medium": "Frictions managériales détectées, vigilance requise.",
-                "low": "Alerte : Environnement à risque, turnover prévisible élevé."
-            }
-        },
-        "BARMAN": {
-            "focus": [
-                "RES",
-                "INT",
-                "ADA"
-            ],
-            "weights": {
-                "RES": 1.8,
-                "INT": 1.5,
-                "ADA": 1.2,
-                "EMP": 1.0
+            "EMP": {
+                "nom": "Empathie",
+                "description": "Intelligence émotionnelle et relation client/équipe",
+                "poids_base": 1.0
             },
-            "critical_fail": "INT < 50"
-        },
-        "SERVEUR": {
-            "focus": [
-                "EMP",
-                "RES",
-                "ADA"
-            ],
-            "weights": {
-                "EMP": 1.8,
-                "RES": 1.5,
-                "ADA": 1.3,
-                "INT": 1.0
-            }
-        },
-        "CHEF_RANG": {
-            "focus": [
-                "EMP",
-                "AUT",
-                "RES"
-            ],
-            "weights": {
-                "EMP": 1.5,
-                "AUT": 1.5,
-                "RES": 1.5,
-                "ADA": 1.0
-            }
-        },
-        "MANAGER": {
-            "focus": [
-                "AUT",
-                "RES",
-                "EMP"
-            ],
-            "weights": {
-                "AUT": 1.6,
-                "RES": 1.6,
-                "EMP": 1.2,
-                "INT": 1.4
-            }
-        },
-        "MANAGER_PRINCIPAL": {
-            "focus": [
-                "AUT",
-                "INT",
-                "RES"
-            ],
-            "weights": {
-                "AUT": 2.0,
-                "INT": 1.5,
-                "RES": 1.5,
-                "EMP": 0.8
+            "AUT": {
+                "nom": "Autorité & Leadership",
+                "description": "Capacité à trancher et diriger",
+                "poids_base": 1.0
             },
-            "special_check": "Dark Empathy Analysis"
-        },
-        "DIRECTEUR": {
-            "focus": [
-                "AUT",
-                "ADA",
-                "RES"
-            ],
-            "weights": {
-                "AUT": 2.2,
-                "ADA": 1.8,
-                "RES": 1.5,
-                "INT": 1.5
-            }
-        },
-        "RH_AUDIT": {
-            "focus": [
-                "INT",
-                "EMP",
-                "AUT"
-            ],
-            "weights": {
-                "INT": 2.0,
-                "EMP": 1.8,
-                "AUT": 1.2,
-                "RES": 1.0
+            "INT": {
+                "nom": "Intégrité & Rigueur",
+                "description": "Respect des règles et fiabilité",
+                "poids_base": 1.0
             },
-            "alert_flag": "Dark Empathy > 80%"
-        },
-        "CUISINE": {
-            "focus": [
-                "RES",
-                "ADA",
-                "INT"
-            ],
-            "weights": {
-                "RES": 2.2,
-                "ADA": 1.5,
-                "INT": 1.2,
-                "EMP": 0.5
-            }
-        },
-        "RECEPTION": {
-            "focus": [
-                "EMP",
-                "INT",
-                "ADA"
-            ],
-            "weights": {
-                "EMP": 2.0,
-                "INT": 1.5,
-                "ADA": 1.5,
-                "RES": 1.0
-            }
-        }
-    },
-    "consistency_check": {
-        "pairs": [
-            {
-                "q_ref": 12,
-                "q_mirror": 45,
-                "penalty": 15,
-                "desc": "Ordre vs Désordre"
+            "TOX": {
+                "nom": "Indice de Friction",
+                "description": "Caractère difficile et toxicité (NÉGATIF)",
+                "poids_base": 1.0
             },
-            {
-                "q_ref": 5,
-                "q_mirror": 82,
-                "penalty": 20,
-                "desc": "Argent vs Passion"
-            },
-            {
-                "q_ref": 18,
-                "q_mirror": 93,
-                "penalty": 25,
-                "desc": "Pardon vs Autorité"
+            "ADA": {
+                "nom": "Stratégie & Vision",
+                "description": "Adaptabilité et intelligence stratégique",
+                "poids_base": 1.5
             }
-        ]
-    },
-    "feedback_library": {
-        "RES": {
-            "high": "Résistance au stress exceptionnelle. Maintient sa lucidité même en chaos opérationnel.",
-            "low": "Fragilité sous pression. Risque de perte de moyens ou d'agressivité en situation de crise."
         },
-        "EMP": {
-            "high": "Intelligence émotionnelle tactique. Sait désamorcer les conflits avant qu'ils n'éclatent.",
-            "low": "Déficit d'empathie. Approche mécanique du client, risque de froissements relationnels."
+        "mapping_dimensions_directeur": {
+            "INFLUENCE": {
+                "dim": "AUT",
+                "weight": 2
+            },
+            "CONSIDERATION": {
+                "dim": "EMP",
+                "weight": 2
+            },
+            "CREATIVITE": {
+                "dim": "ADA",
+                "weight": 2
+            },
+            "RIGUEUR": {
+                "dim": "INT",
+                "weight": 2
+            },
+            "EQUILIBRE": {
+                "dim": "RES",
+                "weight": 1
+            },
+            "STRESS": {
+                "dim": "RES",
+                "weight": 1
+            },
+            "DARK_EMPATHY": {
+                "dim": "TOX",
+                "weight": 2
+            }
         },
-        "AUT": {
-            "high": "Leadership naturel. Capacité à trancher et à fédérer sans imposer par la force.",
-            "low": "Manque d'affirmation. Difficulté à tenir un cadre ou à se faire respecter par l'équipe."
+        "mapping_traits_vers_dimensions": {
+            "LEADER": {
+                "dimensions": {
+                    "AUT": 2,
+                    "EMP": 1,
+                    "RES": 1
+                },
+                "description": "Leader = Autorité forte + Empathie pour mobiliser + Résilience"
+            },
+            "SUIVEUR": {
+                "dimensions": {
+                    "AUT": -2,
+                    "RES": 1,
+                    "TOX": 0
+                },
+                "description": "Suiveur = Faible autorité, exécutant fiable mais pas décideur"
+            },
+            "DIPLOMATE": {
+                "dimensions": {
+                    "EMP": 2,
+                    "ADA": 1,
+                    "INT": 1
+                },
+                "description": "Diplomate = Empathie forte + Adaptabilité + Intégrité relationnelle"
+            },
+            "FRANC": {
+                "dimensions": {
+                    "INT": 2,
+                    "AUT": 1,
+                    "TOX": 1
+                },
+                "description": "Franc = Intégrité directe + Autorité assumée + peut générer friction"
+            },
+            "STRATEGIQUE": {
+                "dimensions": {
+                    "ADA": 2,
+                    "AUT": 1,
+                    "INT": 1
+                },
+                "description": "Stratégique = Vision/Adaptabilité + Autorité décisionnelle + Rigueur"
+            },
+            "OPERATIONNEL": {
+                "dimensions": {
+                    "RES": 2,
+                    "INT": 1,
+                    "ADA": 1
+                },
+                "description": "Opérationnel = Résilience au quotidien + Rigueur + Adaptabilité terrain"
+            },
+            "AUTONOME": {
+                "dimensions": {
+                    "AUT": 1,
+                    "RES": 2,
+                    "ADA": 1
+                },
+                "description": "Autonome = Se débrouille seul + Résilience + Adaptabilité"
+            },
+            "OBÉISSANT": {
+                "dimensions": {
+                    "AUT": -2,
+                    "INT": 2,
+                    "RES": 1
+                },
+                "description": "Obéissant = Pas d'autorité propre + Respecte les règles + Fiable"
+            },
+            "PROTECTEUR": {
+                "dimensions": {
+                    "EMP": 2,
+                    "INT": 1,
+                    "AUT": 1
+                },
+                "description": "Protecteur = Empathie forte + Intégrité envers équipe + Autorité bienveillante"
+            },
+            "AUTORITAIRE": {
+                "dimensions": {
+                    "AUT": 2,
+                    "TOX": 1,
+                    "EMP": -1
+                },
+                "description": "Autoritaire = Autorité forte + Risque toxicité + Faible empathie"
+            },
+            "PÉDAGOGUE": {
+                "dimensions": {
+                    "EMP": 2,
+                    "INT": 1,
+                    "ADA": 1
+                },
+                "description": "Pédagogue = Empathie + Rigueur transmission + Adaptabilité pédagogique"
+            },
+            "EXIGEANT": {
+                "dimensions": {
+                    "RES": 2,
+                    "AUT": 1,
+                    "TOX": 1
+                },
+                "description": "Exigeant = Résilience élevée attendue + Autorité + Peut créer friction"
+            },
+            "FLEXIBLE": {
+                "dimensions": {
+                    "ADA": 2,
+                    "EMP": 1,
+                    "INT": -1
+                },
+                "description": "Flexible = Adaptabilité forte + Empathie + Moins rigoureux sur règles"
+            },
+            "RIGOUREUX": {
+                "dimensions": {
+                    "INT": 2,
+                    "RES": 1,
+                    "ADA": 0
+                },
+                "description": "Rigoureux = Intégrité/Respect règles + Fiabilité + Moins adaptable"
+            },
+            "VISIONNAIRE": {
+                "dimensions": {
+                    "ADA": 2,
+                    "AUT": 1,
+                    "RES": 1
+                },
+                "description": "Visionnaire = Vision/Stratégie forte + Leadership + Résilience innovation"
+            },
+            "PRAGMATIQUE": {
+                "dimensions": {
+                    "RES": 1,
+                    "ADA": 1,
+                    "INT": 1
+                },
+                "description": "Pragmatique = Résilience terrain + Adaptabilité + Rigueur pratique"
+            },
+            "AMBITIEUX": {
+                "dimensions": {
+                    "AUT": 2,
+                    "RES": 1,
+                    "TOX": 1
+                },
+                "description": "Ambitieux = Autorité recherchée + Résilience forte + Risque friction"
+            },
+            "HUMBLE": {
+                "dimensions": {
+                    "EMP": 1,
+                    "AUT": -1,
+                    "TOX": -1
+                },
+                "description": "Humble = Empathie + Faible ego autoritaire + Pas toxique"
+            },
+            "RÉSILIENT": {
+                "dimensions": {
+                    "RES": 2,
+                    "ADA": 1
+                },
+                "description": "Résilient = Résilience maximale + Adaptabilité sous pression"
+            },
+            "SENSIBLE": {
+                "dimensions": {
+                    "EMP": 2,
+                    "RES": -1,
+                    "TOX": 0
+                },
+                "description": "Sensible = Empathie forte + Fragilité sous pression + Non toxique"
+            },
+            "SHOWMAN": {
+                "dimensions": {
+                    "EMP": 2,
+                    "ADA": 1,
+                    "INT": -1
+                },
+                "description": "Showman = Fort relationnel/charisme + Adaptabilité + Rigueur moyenne (Legacy)"
+            },
+            "PIRATE": {
+                "dimensions": {
+                    "RES": 2,
+                    "TOX": 1,
+                    "AUT": 1
+                },
+                "description": "Pirate = Résistance forte + Autorité rebelle + Risque toxicité (Legacy)"
+            },
+            "MÉTRONOME": {
+                "dimensions": {
+                    "INT": 2,
+                    "RES": 1,
+                    "ADA": -1
+                },
+                "description": "Métronome = Rigueur absolue + Fiabilité + Manque adaptabilité (Legacy)"
+            },
+            "CONFIDENT": {
+                "dimensions": {
+                    "EMP": 2,
+                    "RES": -1,
+                    "AUT": -1
+                },
+                "description": "Confident = Empathie maximale + Sensibilité stress + Manque autorité (Legacy)"
+            },
+            "SOLITAIRE": {
+                "dimensions": {
+                    "RES": 2,
+                    "EMP": -1,
+                    "INT": 1
+                },
+                "description": "Solitaire = Efficacité individuelle + Rigueur + Manque esprit équipe (Legacy)"
+            },
+            "DIVA": {
+                "dimensions": {
+                    "TOX": 2,
+                    "EMP": -1,
+                    "AUT": 1
+                },
+                "description": "Diva = Exigence toxique + Manque considération autrui + Autorité mal placée (Legacy)"
+            },
+            "CRÉATIF": {
+                "dimensions": {
+                    "ADA": 2,
+                    "INT": -1,
+                    "RES": 1
+                },
+                "description": "Créatif = Adaptabilité/Vision + Moins rigoureux + Résilience innovation (Legacy)"
+            },
+            "DÉBUTANT": {
+                "dimensions": {
+                    "INT": 1,
+                    "AUT": -1,
+                    "RES": -1
+                },
+                "description": "Débutant = Volonté bien faire (Rigueur) + Manque autorité/expérience (Legacy)"
+            },
+            "PARASITE": {
+                "dimensions": {
+                    "TOX": 2,
+                    "RES": -2,
+                    "INT": -1
+                },
+                "description": "Parasite = Toxicité élevée + Faible effort + Manque fiabilité (Legacy)"
+            },
+            "MERCENAIRE": {
+                "dimensions": {
+                    "RES": 1,
+                    "EMP": -1,
+                    "INT": 1
+                },
+                "description": "Mercenaire = Efficace pour soi + Rigueur contrat + Pas d'esprit corps (Legacy)"
+            },
+            "OPPORTUNISTE": {
+                "dimensions": {
+                    "ADA": 1,
+                    "TOX": 1,
+                    "INT": -1
+                },
+                "description": "Opportuniste = Adaptable pour gain perso + Risque manipulation + Fiabilité douteuse (Legacy)"
+            },
+            "BUREAUCRATE": {
+                "dimensions": {
+                    "INT": 2,
+                    "ADA": -2,
+                    "RES": 1
+                },
+                "description": "Bureaucrate = Rigueur excessive + Rigidité totale + Résistance au changement (Legacy)"
+            },
+            "CAMÉLÉON": {
+                "dimensions": {
+                    "ADA": 2,
+                    "INT": -1,
+                    "TOX": 1
+                },
+                "description": "Caméléon = Adaptabilité maximale (survie) + Manque authenticité + Manipulation (Legacy)"
+            },
+            "SAGE": {
+                "dimensions": {
+                    "INT": 2,
+                    "EMP": 1,
+                    "AUT": 1
+                },
+                "description": "Sage = Expérience + Intégrité + Bienveillance (Legacy)"
+            },
+            "RADAR": {
+                "dimensions": {
+                    "ADA": 2,
+                    "INT": 1,
+                    "TOX": 1
+                },
+                "description": "Radar = Conscience environnementale + Adaptabilité + Calculateur (Legacy)"
+            },
+            "PASSIF": {
+                "dimensions": {
+                    "RES": -1,
+                    "AUT": -2,
+                    "EMP": 1
+                },
+                "description": "Passif = Manque initiative/autorité + Empathie parfois présente (Legacy)"
+            },
+            "TECHNIQUE": {
+                "dimensions": {
+                    "INT": 2,
+                    "RES": 1,
+                    "ADA": 0
+                },
+                "description": "Technique = Compétence pure + Rigueur + Manque soft skills (Legacy)"
+            },
+            "ADAPTABLE": {
+                "dimensions": {
+                    "ADA": 2,
+                    "RES": 1,
+                    "INT": 0
+                },
+                "description": "Adaptable = Flexibilité cognitive + Résilience (Legacy)"
+            },
+            "LENT": {
+                "dimensions": {
+                    "RES": -1,
+                    "ADA": -1,
+                    "INT": 1
+                },
+                "description": "Lent = Manque rythme (Résilience) + Rigueur possible (Legacy)"
+            },
+            "FROID": {
+                "dimensions": {
+                    "EMP": -2,
+                    "INT": 1,
+                    "AUT": 1
+                },
+                "description": "Froid = Manque empathie total + Rigueur + Autorité distante (Legacy)"
+            },
+            "LOYAL": {
+                "dimensions": {
+                    "INT": 2,
+                    "EMP": 1,
+                    "TOX": -1
+                },
+                "description": "Loyal = Intégrité forte + Esprit équipe + Fiable (Legacy)"
+            },
+            "STABLE": {
+                "dimensions": {
+                    "RES": 1,
+                    "EMP": 1,
+                    "ADA": -1
+                },
+                "description": "Stable = Fiable sur la durée + Empathie constante + Peu innovant (Legacy)"
+            },
+            "CONCILIANT": {
+                "dimensions": {
+                    "EMP": 2,
+                    "AUT": -1,
+                    "TOX": -1
+                },
+                "description": "Conciliant = Cherche accord + Empathie + Évite conflit (Legacy)"
+            },
+            "AFFIRMÉ": {
+                "dimensions": {
+                    "AUT": 2,
+                    "RES": 1,
+                    "EMP": 0
+                },
+                "description": "Affirmé = Pose limites + Autorité saine + Résilience (Legacy)"
+            },
+            "DÉBROUILLARD": {
+                "dimensions": {
+                    "ADA": 2,
+                    "RES": 1,
+                    "INT": -1
+                },
+                "description": "Débrouillard = Solutionneur + Adaptabilité + Rigueur flexible (Legacy)"
+            },
+            "MENEUR": {
+                "dimensions": {
+                    "AUT": 2,
+                    "EMP": 1,
+                    "TOX": 0
+                },
+                "description": "Meneur = Leadership naturel + Entraîneur + Positif (Legacy)"
+            },
+            "COMMERCIAL": {
+                "dimensions": {
+                    "EMP": 1,
+                    "ADA": 1,
+                    "INT": 0
+                },
+                "description": "Commercial = Sens client + Opportunité + Adaptabilité (Legacy)"
+            }
         },
-        "INT": {
-            "high": "Rigueur morale exemplaire. Respect absolu des standards et de la hiérarchie.",
-            "low": "Risque éthique. Tendance à accommoder les règles pour son confort personnel."
+        "postes": {
+            "DIRECTEUR": {
+                "code": "DIR",
+                "fichier_test": "TEST_DIRECTEUR_240Q_COMPLET.json",
+                "poids_dimensions": {
+                    "ADA": 2.0,
+                    "AUT": 2.0,
+                    "RES": 1.8,
+                    "INT": 1.5,
+                    "EMP": 1.2,
+                    "TOX": 1.0
+                },
+                "focus": [
+                    "ADA",
+                    "AUT",
+                    "RES"
+                ],
+                "seuil_minimum": 75,
+                "description": "Directeur de restaurant - Responsable P&L, stratégie, management complet"
+            },
+            "MANAGER": {
+                "code": "MGR",
+                "fichier_test": "TEST_MANAGER_100Q_COMPLET.json",
+                "poids_dimensions": {
+                    "RES": 2.0,
+                    "ADA": 1.5,
+                    "AUT": 1.5,
+                    "INT": 1.0,
+                    "EMP": 1.0,
+                    "TOX": 1.0
+                },
+                "focus": [
+                    "AUT",
+                    "ADA",
+                    "RES"
+                ],
+                "seuil_minimum": 70,
+                "description": "Manager - Gestion opérationnelle salle + équipe"
+            },
+            "MANAGER_ADJOINT": {
+                "code": "MADJ",
+                "fichier_test": "TEST_MANAGER_ADJOINT_100Q_COMPLET.json",
+                "poids_dimensions": {
+                    "RES": 2.0,
+                    "AUT": 1.3,
+                    "EMP": 1.5,
+                    "INT": 1.2,
+                    "ADA": 1.3,
+                    "TOX": 1.0
+                },
+                "focus": [
+                    "RES",
+                    "AUT",
+                    "EMP"
+                ],
+                "seuil_minimum": 65,
+                "description": "Manager Adjoint - Support Manager, gestion équipe"
+            },
+            "CHEF_DE_RANG": {
+                "code": "CDR",
+                "fichier_test": "TEST_CHEF_DE_RANG_100Q_COMPLET.json",
+                "poids_dimensions": {
+                    "RES": 2.0,
+                    "EMP": 1.5,
+                    "AUT": 1.2,
+                    "INT": 1.0,
+                    "ADA": 1.5,
+                    "TOX": 1.0
+                },
+                "focus": [
+                    "RES",
+                    "EMP",
+                    "ADA"
+                ],
+                "seuil_minimum": 65,
+                "description": "Chef de Rang - Gestion section + formation serveurs"
+            },
+            "SERVEUR": {
+                "code": "SRV",
+                "fichier_test": "TEST_SERVEUR_100Q_COMPLET.json",
+                "poids_dimensions": {
+                    "EMP": 2.0,
+                    "RES": 1.8,
+                    "ADA": 1.2,
+                    "INT": 1.0,
+                    "AUT": 0.8,
+                    "TOX": 1.0
+                },
+                "focus": [
+                    "EMP",
+                    "RES",
+                    "ADA"
+                ],
+                "seuil_minimum": 60,
+                "description": "Serveur - Service client, exécution terrain"
+            },
+            "BARMAN": {
+                "code": "BAR",
+                "fichier_test": "TEST_BARMAN_100Q_COMPLET.json",
+                "poids_dimensions": {
+                    "RES": 2.0,
+                    "EMP": 1.5,
+                    "ADA": 1.5,
+                    "INT": 1.0,
+                    "AUT": 0.8,
+                    "TOX": 1.0
+                },
+                "focus": [
+                    "RES",
+                    "EMP",
+                    "ADA"
+                ],
+                "seuil_minimum": 60,
+                "description": "Barman - Service bar + création cocktails"
+            }
         },
-        "TOX": {
-            "high": "Vigilance exacerbée. Capacité à détecter les dysfonctionnements invisibles.",
-            "low": "Naïveté organisationnelle. Ne voit pas venir les jeux politiques ou les manipulations."
+        "algorithme_scoring": {
+            "etape_1": "Récupérer tous les traits de toutes les réponses du candidat",
+            "etape_2": "Pour chaque trait, appliquer le mapping vers les 6 dimensions",
+            "etape_3": "Additionner les scores par dimension",
+            "etape_4": "Normaliser sur 100 (diviser par nombre total de points possible)",
+            "etape_5": "Appliquer les poids du poste",
+            "etape_6": "Calculer score final pondéré",
+            "etape_7": "Appliquer les bonus universels (GENIUS_OVERRIDE, WORKHORSE_IMMUNITY, etc.)",
+            "etape_8": "Vérifier les seuils critiques (absolute_red_line)",
+            "etape_9": "Générer le verdict final"
         },
-        "ADA": {
-            "high": "Haute plasticité mentale. S'ajuste immédiatement aux changements de rythme ou de poste.",
-            "low": "Rigidité cognitive. Besoin de routine, difficulté à gérer l'imprévu ou l'urgence."
-        }
-    },
-    "profiles_library": {
-        "SENTINEL": {
-            "title": "LEADER SENTINEL",
-            "subtitle": "Profil de Référence HCR",
-            "desc": "Profil équilibré capable de basculer du directif au participatif.",
-            "full_text": "Candidat idéal pour les postes à responsabilités. Le Sentinel combine une haute résilience opérationnelle avec une autorité naturelle tempérée par une bonne écoute. Il sait imposer un cadre strict (standards) tout en désamorçant les conflits par la diplomatie. Fiabilité et engagement maximal détectés."
+        "exemple_calcul": {
+            "description": "Exemple pour Question 1 du Manager, réponse A",
+            "question": "Q001 - Samedi soir plein, ton Manager Adjoint appelle malade 30 min avant le service",
+            "reponse_A": {
+                "texte": "Je gère seul, je redistribue les rangs",
+                "traits": [
+                    "AUTONOME",
+                    "LEADER",
+                    "RÉSILIENT"
+                ]
+            },
+            "calcul_dimensions": {
+                "AUTONOME": {
+                    "AUT": 1,
+                    "RES": 2,
+                    "ADA": 1
+                },
+                "LEADER": {
+                    "AUT": 2,
+                    "EMP": 1,
+                    "RES": 1
+                },
+                "RÉSILIENT": {
+                    "RES": 2,
+                    "ADA": 1
+                }
+            },
+            "totaux_question_1": {
+                "AUT": 3,
+                "RES": 5,
+                "ADA": 2,
+                "EMP": 1,
+                "INT": 0,
+                "TOX": 0
+            },
+            "apres_100_questions": {
+                "description": "On additionne toutes les questions puis on normalise",
+                "formule": "Score_dimension = (Total_dimension / Points_max_possibles) * 100"
+            }
         },
-        "PETIT_CHEF": {
-            "title": "LE PETIT CHEF",
-            "subtitle": "Risque Managérial Élevé",
-            "desc": "Excès d'autorité, manque de régulation émotionnelle.",
-            "full_text": "Profil performant techniquement mais dangereux humainement. Le 'Petit Chef' compense son insécurité par une autorité écrasante et un manque d'empathie. Risque élevé de créer du turnover dans les équipes et de froisser la clientèle par une rigidité excessive. À canaliser impérativement."
+        "bonus_universels": {
+            "GENIUS_OVERRIDE": {
+                "nom": "Immunité du Stratège Bosseur",
+                "description": "Si ADA > 85 ET RES > 80, on ignore TOX et INT faibles",
+                "condition": "ADA > 85 && RES > 80",
+                "effet": {
+                    "ignore_penalty": [
+                        "TOX",
+                        "INT"
+                    ],
+                    "bonus_points": 20,
+                    "verdict_force": "PROFIL HAUT POTENTIEL (Atypique)"
+                }
+            },
+            "WORKHORSE_IMMUNITY": {
+                "nom": "Immunité du Guerrier",
+                "description": "Si RES > 90, on pardonne EMP et INT faibles",
+                "condition": "RES > 90",
+                "effet": {
+                    "reduce_weight": {
+                        "EMP": 0.5,
+                        "INT": 0.5
+                    },
+                    "bonus_points": 10,
+                    "verdict_force": "PILIER OPÉRATIONNEL"
+                }
+            },
+            "LEADER_NATURAL": {
+                "nom": "Immunité du Chef Né",
+                "description": "Si AUT > 85 ET ADA > 80, potentiel management détecté",
+                "condition": "AUT > 85 && ADA > 80",
+                "effet": {
+                    "bonus_points": 15,
+                    "flag": "POTENTIEL MANAGEMENT DÉTECTÉ"
+                }
+            }
         },
-        "PASSIF": {
-            "title": "PASSIF CONCILIANT",
-            "subtitle": "Fragilité Structurelle",
-            "desc": "Trop d'empathie, difficulté à tenir le cadre.",
-            "full_text": "Candidat attachant et très apprécié pour sa gentillesse, mais inadapté aux fonctions de commandement ou de haute pression. Tendance à se laisser déborder par le service ou par les requêtes de l'équipe. Manque d'assertivité pour faire respecter les standards. Excellent exécutant encadré, mais pas leader."
+        "seuils_critiques": {
+            "absolute_red_line": {
+                "description": "Seuils critiques infranchissables",
+                "condition": "INT < 20 || TOX > 90",
+                "verdict": "PROFIL DANGEREUX - NON RECOMMANDÉ"
+            },
+            "performance": {
+                "score_min": 75,
+                "verdict": "PROFIL HAUTE PERFORMANCE"
+            },
+            "standard": {
+                "score_min": 50,
+                "score_max": 74,
+                "verdict": "PROFIL STANDARD"
+            },
+            "limite": {
+                "score_max": 49,
+                "verdict": "PROFIL LIMITE - FORMATION REQUISE"
+            }
         },
-        "OPS": {
-            "title": "PROFIL EXÉCUTANT",
-            "subtitle": "Technicien Pur",
-            "desc": "Bon technicien mais manque de hauteur de vue.",
-            "full_text": "Profil utilitaire. Fait le job techniquement mais ne s'investit pas dans la vision globale ou la dynamique d'équipe. Ni leader, ni toxique, c'est un 'mercenaire' opérationnel qui a besoin d'instructions claires et précises. Fiabilité correcte mais initiative limitée."
+        "format_resultat": {
+            "candidat": {
+                "nom": "string",
+                "prenom": "string",
+                "poste_vise": "string"
+            },
+            "scores_dimensions": {
+                "RES": "0-100",
+                "EMP": "0-100",
+                "AUT": "0-100",
+                "INT": "0-100",
+                "TOX": "0-100 (négatif)",
+                "ADA": "0-100"
+            },
+            "score_final": "0-100",
+            "bonus_appliques": [
+                "string"
+            ],
+            "flags": [
+                "string"
+            ],
+            "verdict": "string",
+            "recommandation": "string"
         }
     }
 }
